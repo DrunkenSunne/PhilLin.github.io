@@ -2,6 +2,16 @@
 
 Last updated: 2026-06-15
 
+## 2026-06-15 Gripe Added - Pathogen Exam
+
+User provided a gripe text and mood `崩溃`.
+
+- Added a sixth `window.BAR_GRIPES` entry to `assets/gripes.js`.
+- Published gripe: `考个线上的病原生物学实验理论考试就因为坐在教室所以紧张的钥匙。我的绩点。。。怎么会这样。。。`
+- Recorded mood as `崩溃`, emoji as `😭`, and timestamp as `2026-06-15 14:03:23`.
+- Updated `AGENT_CONTEXT.md` and `AGENT_HANDOFF.md` so future recovery sees the current gripe count and latest entry.
+- Visual verification skipped by project preference.
+
 ## 2026-06-15 Gripe Added - Exam Outlet
 
 User provided a gripe text and mood `烦躁`.
