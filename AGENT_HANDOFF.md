@@ -41,6 +41,7 @@ Follow-up after phase-one sealing:
 - Published the fourth gripe with mood `烦躁`, emoji `😤`, and timestamp `2026-06-15 12:27:20`.
 - Published the fifth gripe with mood `烦躁`, emoji `😤`, and timestamp `2026-06-15 12:53:09`.
 - Published the sixth gripe with mood `崩溃`, emoji `😭`, and timestamp `2026-06-15 14:03:23`.
+- Published the seventh gripe with mood `崩溃`, emoji `😭`, and timestamp `2026-06-15 14:41:39`.
 
 - Project-level preference localized from user request: skip visual verification by default unless the user explicitly asks later or a higher-priority instruction requires it.
 - Abstract redesign follow-up:
@@ -72,7 +73,7 @@ Follow-up after phase-one sealing:
   - `assets/site.js` adds a pointer-following bar cursor and drink-name hover labels for menu items.
 - Current cache-busting query string is `bar-menu-20260612-fix1`; it was updated after deployed GitHub Pages layout differed from local, likely due stale cached CSS/JS.
 - Gripe rail:
-  - `assets/gripes.js` stores static `window.BAR_GRIPES` entries; it currently contains six entries.
+  - `assets/gripes.js` stores static `window.BAR_GRIPES` entries; it currently contains seven entries.
   - `assets/site.js` injects the rail and handles page-size calculation and pagination.
   - `assets/styles.css` positions the rail on the right for desktop and makes it responsive on narrower screens.
   - Current scale strategy is scheme 2: keep gripe data separate from `assets/content.js` and render only the current page.

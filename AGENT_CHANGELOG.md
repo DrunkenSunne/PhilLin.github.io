@@ -2,6 +2,16 @@
 
 Last updated: 2026-06-15
 
+## 2026-06-15 Gripe Added - Study Pressure
+
+User provided a gripe text and mood `崩溃`.
+
+- Added a seventh `window.BAR_GRIPES` entry to `assets/gripes.js`.
+- Published gripe: `哎哟这几个小时之内不知道为什么学习压力陡增，而且我知道这个压力会一直持续到7.9考完试，但我还有实验要做。`
+- Recorded mood as `崩溃`, emoji as `😭`, and timestamp as `2026-06-15 14:41:39`.
+- Updated `AGENT_CONTEXT.md` and `AGENT_HANDOFF.md` so future recovery sees the current gripe count and latest entry.
+- Visual verification skipped by project preference.
+
 ## 2026-06-15 Gripe Added - Pathogen Exam
 
 User provided a gripe text and mood `崩溃`.
