@@ -2,7 +2,17 @@
 
 Last updated: 2026-06-15
 
-## 2026-06-15 Gripe Added
+## 2026-06-15 Gripe Added - Exam Outlet
+
+User provided a gripe text and mood `烦躁`.
+
+- Added a fifth `window.BAR_GRIPES` entry to `assets/gripes.js`.
+- Published gripe: `为什么考试的教室插座没电。`
+- Recorded mood as `烦躁`, emoji as `😤`, and timestamp as `2026-06-15 12:53:09`.
+- Updated `AGENT_CONTEXT.md` and `AGENT_HANDOFF.md` so future recovery sees the current gripe count and latest entry.
+- Visual verification skipped by project preference.
+
+## 2026-06-15 Gripe Added - Question Bank
 
 User provided a gripe text and mood `烦躁`.
 

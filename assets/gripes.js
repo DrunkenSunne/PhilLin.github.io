@@ -23,4 +23,10 @@ window.BAR_GRIPES = [
     emoji: "😤",
     publishedAt: "2026-06-15 12:27:20",
   },
+  {
+    text: "为什么考试的教室插座没电。",
+    mood: "烦躁",
+    emoji: "😤",
+    publishedAt: "2026-06-15 12:53:09",
+  },
 ];
