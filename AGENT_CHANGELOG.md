@@ -1,6 +1,16 @@
 # AGENT_CHANGELOG
 
-Last updated: 2026-06-13
+Last updated: 2026-06-15
+
+## 2026-06-15 Gripe Added
+
+User provided a gripe text and mood `烦躁`.
+
+- Added a fourth `window.BAR_GRIPES` entry to `assets/gripes.js`.
+- Published gripe: `我真的一点也不喜欢复习任何科目，除非给我题库刷。本质做题区。`
+- Recorded mood as `烦躁`, emoji as `😤`, and timestamp as `2026-06-15 12:27:20`.
+- Updated `AGENT_CONTEXT.md` and `AGENT_HANDOFF.md` so future recovery sees the current gripe count and latest entry.
+- Visual verification skipped by project preference.
 
 ## 2026-06-13 Gripe Added
 
