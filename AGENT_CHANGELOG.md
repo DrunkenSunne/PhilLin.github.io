@@ -1,6 +1,16 @@
 # AGENT_CHANGELOG
 
-Last updated: 2026-06-15
+Last updated: 2026-06-17
+
+## 2026-06-17 Gripe Added - Writing Urge
+
+User provided a gripe text and asked Codex to choose the mood.
+
+- Added an eighth `window.BAR_GRIPES` entry to `assets/gripes.js`.
+- Published gripe: `今晚突然一时兴起想要写点东西，准备择日不如撞日喝点开写，但是想到时间太晚且明天事情也不少遂放弃。我会在端午节假期高频率更新的。`
+- Chose mood `微醺`, emoji `🍸`, and timestamp `2026-06-17 00:57:39`.
+- Updated `AGENT_CONTEXT.md` and `AGENT_HANDOFF.md` so future recovery sees the current gripe count and latest entry.
+- Visual verification skipped by project preference.
 
 ## 2026-06-15 Gripe Added - Study Pressure
 
