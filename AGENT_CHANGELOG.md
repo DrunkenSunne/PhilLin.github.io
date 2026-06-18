@@ -2,6 +2,23 @@
 
 Last updated: 2026-06-17
 
+## 2026-06-18 Word Article Published
+
+User provided `20260618.docx` and requested upload with careful typography and visual fit to the site's current aesthetic.
+
+- Read the Word document from the user-provided desktop path.
+- Extracted text and confirmed there are no embedded media files.
+- Detected the Word text uses `华文行楷`; preserved that handwriting feel in selected accents while keeping body copy in the site's readable article typography.
+- Generated `preview-20260618.html` as a review-only article preview.
+- After user approval, generated the final article file `article-two-bottles-writing-touch.html`.
+- Added a `BAR_POSTS` metadata entry pointing to `article-two-bottles-writing-touch.html`.
+- Deleted `preview-20260618.html`.
+- Proposed title: `两瓶酒后，找回写字的手感`.
+- Proposed tag: `一些思绪`.
+- Proposed summary: `便利店买来的酒、深夜随机播放的音乐和对写作手感的怀念，串成一段关于微醺、表达和过去自己的独白。`
+- The article now appears through the home recent-posts area, `posts.html`, and `tag-thoughts.html`.
+- Visual verification skipped by project preference.
+
 ## 2026-06-17 Gripe Added - Writing Urge
 
 User provided a gripe text and asked Codex to choose the mood.

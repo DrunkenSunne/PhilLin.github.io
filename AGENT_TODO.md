@@ -63,6 +63,12 @@ Use this file before starting phase two or any future multi-file work. Do not re
   - Generate `article-<article-id>.html`.
   - Add one metadata object to `assets/content.js`.
   - Verify generated article path from `posts.html`.
+- [x] Published approved 2026-06-18 Word article preview:
+  - Confirmed `preview-20260618.html` was acceptable.
+  - Generated final static article HTML at `article-two-bottles-writing-touch.html`.
+  - Added one metadata object to `assets/content.js` with tag `一些思绪`.
+  - Deleted `preview-20260618.html`.
+  - Verified generated article path from metadata.
 - [ ] Add a reusable article HTML template for generated articles, based on `_drafts/article-format-reference.html`.
 - [ ] Make `reviews.html` render from `window.BAR_REVIEWS` instead of hardcoded placeholder cards.
 - [ ] If gripe count grows large, revisit scheme 3 or 4 for the gripe rail: paginated static files or JSON on-demand loading.
@@ -78,6 +84,7 @@ Use this file before starting phase two or any future multi-file work. Do not re
 - [ ] `git` is not available in current shell; cannot produce authoritative git status or diff.
 - [ ] In-app browser automation has been unreliable/blocked; visual verification cannot be claimed until a browser check succeeds.
 - [x] One Word document has been published as `article-first-words-on-the-bar.html`.
+- [x] One Word document has been published as `article-two-bottles-writing-touch.html`.
 - [ ] No explicit phase-two scope has been approved after first-stage sealing.
 
 ## 5. Needs Human Confirmation

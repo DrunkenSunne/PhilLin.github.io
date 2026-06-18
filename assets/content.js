@@ -2,6 +2,14 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利"];
 
 window.BAR_POSTS = [
   {
+    id: "two-bottles-writing-touch",
+    title: "两瓶酒后，找回写字的手感",
+    tag: "一些思绪",
+    publishedAt: "2026-06-18",
+    summary: "便利店买来的酒、深夜随机播放的音乐和对写作手感的怀念，串成一段关于微醺、表达和过去自己的独白。",
+    url: "article-two-bottles-writing-touch.html",
+  },
+  {
     id: "first-words-on-the-bar",
     title: "把第一杯文字放上吧台",
     tag: "一些思绪",

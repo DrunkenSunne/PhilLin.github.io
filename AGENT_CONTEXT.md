@@ -98,7 +98,7 @@ Verified in files:
 
 - `assets/content.js`
   - `window.BAR_TAGS` has exactly `["生活日志", "一些思绪", "种草安利"]`.
-  - `window.BAR_POSTS` contains one public article entry for `article-first-words-on-the-bar.html`.
+  - `window.BAR_POSTS` contains two public article entries: `article-two-bottles-writing-touch.html` and `article-first-words-on-the-bar.html`.
   - `window.BAR_REVIEWS` contains placeholder review metadata.
 
 - `posts.html`
@@ -111,7 +111,7 @@ Verified in files:
   - `tag-recommendations.html` renders posts with `data-tag-posts="种草安利"`.
 
 - Article pages:
-  - One public static article page currently exists: `article-first-words-on-the-bar.html`.
+  - Two public static article pages currently exist: `article-two-bottles-writing-touch.html` and `article-first-words-on-the-bar.html`.
   - `article.html` is a dynamic fallback/detail renderer for posts that include inline `content` in `content.js`; current recommended pattern is separate static article HTML files, so this dynamic page is retained for compatibility but is not the primary authoring path.
   - `_drafts/article-format-reference.html` is retained as a format/reference draft and is not linked from public page lists.
 
@@ -152,6 +152,7 @@ Verified in files:
 - No comment system was added.
 - No real cocktail review content or real photography portfolio content was authored beyond placeholders.
 - One Word document was published as `article-first-words-on-the-bar.html`.
+- One Word document was published as `article-two-bottles-writing-touch.html`.
 
 ## 5. Current Code Architecture Understanding
 
@@ -168,7 +169,7 @@ Static site architecture:
   - tag page rendering
   - dynamic article rendering fallback
 - `assets/content.js` is a lightweight metadata index.
-- Public article bodies should live in separate article HTML files. `assets/content.js` should point to those files via `url`. It currently has one public article entry.
+- Public article bodies should live in separate article HTML files. `assets/content.js` should point to those files via `url`. It currently has two public article entries.
 - Article images should be placed under `assets/posts/<article-id>/` when generated from Word or other rich sources.
 
 ## 6. Key Files And Modules
@@ -179,6 +180,7 @@ Static site architecture:
 - `tag-thoughts.html`: tag landing page for `一些思绪`.
 - `tag-recommendations.html`: tag landing page for `种草安利`.
 - `article.html`: dynamic article fallback for metadata-driven inline content.
+- `article-two-bottles-writing-touch.html`: second published article, tag `一些思绪`.
 - `article-first-words-on-the-bar.html`: first published article, tag `一些思绪`.
 - `_drafts/article-format-reference.html`: non-public reference article template.
 - `reviews.html`: cocktail review placeholder page.

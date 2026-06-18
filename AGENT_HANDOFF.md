@@ -4,7 +4,7 @@ Last updated: 2026-06-17
 
 ## 1. One-Sentence Project State
 
-`Phil Lin的Bar` is currently a static GitHub Pages personal site with a dark cocktail-bar visual style, metadata-driven article lists/tags, separate static article-file direction, one public article, friend links, review placeholders, gallery placeholders, and no writer/editor feature.
+`Phil Lin的Bar` is currently a static GitHub Pages personal site with a dark cocktail-bar visual style, metadata-driven article lists/tags, separate static article-file direction, two public articles, friend links, review placeholders, gallery placeholders, and no writer/editor feature.
 
 ## 2. Phase-One Completion Summary
 
@@ -89,7 +89,7 @@ Follow-up after phase-one sealing:
 - Article architecture:
   - Home/archive/tag pages read summary metadata from `assets/content.js`.
   - Real article bodies should live in separate HTML files, for example `article-my-post.html`.
-  - There is currently one public article entry: `article-first-words-on-the-bar.html`.
+  - There are currently two public article entries: `article-two-bottles-writing-touch.html` and `article-first-words-on-the-bar.html`.
   - Future article images should go under `assets/posts/<article-id>/`.
 - `article.html` remains as a dynamic compatibility fallback, but static article HTML files are the recommended primary path.
 
@@ -119,6 +119,7 @@ Before any future work, run `git status --short` and `git diff --stat` in an env
 - `tag-thoughts.html`: `一些思绪` tag page.
 - `tag-recommendations.html`: `种草安利` tag page.
 - `article.html`: dynamic article fallback.
+- `article-two-bottles-writing-touch.html`: second published article, tag `一些思绪`.
 - `article-first-words-on-the-bar.html`: first published article, tag `一些思绪`.
 - `_drafts/article-format-reference.html`: retained non-public format/reference draft.
 - `friends.html`: friend links, currently StarCried and CrescentYves.
