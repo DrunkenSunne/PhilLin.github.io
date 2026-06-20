@@ -1,6 +1,26 @@
 # AGENT_CHANGELOG
 
-Last updated: 2026-06-17
+Last updated: 2026-06-20
+
+## 2026-06-20 Gripe Added - Forgotten Inspiration
+
+User provided a gripe text and mood `无语`.
+
+- Added a tenth `window.BAR_GRIPES` entry to `assets/gripes.js`.
+- Published gripe: `昨天忘了什么时候突然想才思泉涌一下，今天就什么都不记得了，真的很搞笑。`
+- Recorded mood as `无语`, emoji as `😶`, and timestamp as `2026-06-20 15:42:08`.
+- Updated `AGENT_CONTEXT.md` and `AGENT_HANDOFF.md` so future recovery sees the current gripe count and latest entry.
+- Visual verification skipped by project preference.
+
+## 2026-06-20 Gripe Added - Screen Return
+
+User provided a gripe text and mood `无语`.
+
+- Added a ninth `window.BAR_GRIPES` entry to `assets/gripes.js`.
+- Published gripe: `前天给电脑屏幕摔坏了，昨天没更新，不过其实也没时间更新，终于回来了。`
+- Recorded mood as `无语`, emoji as `😶`, and timestamp as `2026-06-20 15:40:42`.
+- Updated `AGENT_CONTEXT.md` and `AGENT_HANDOFF.md` so future recovery sees the current gripe count and latest entry.
+- Visual verification skipped by project preference.
 
 ## 2026-06-18 Word Article Published
 
