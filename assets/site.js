@@ -224,23 +224,32 @@ function initAmbientMotion() {
   ctx = canvas.getContext("2d");
   if (!ctx) return;
 
-  window.addEventListener("resize", resizeCanvas);
+  function syncCursorPosition() {
+    if (!pointer.active) return;
+    cursor.dataset.hidden = "false";
+    cursor.style.transform = `translate(${pointer.x}px, ${pointer.y}px) translate(-50%, -50%)`;
+  }
 
-  window.addEventListener("pointermove", (event) => {
+  function moveCursor(event) {
     pointer.x = event.clientX;
     pointer.y = event.clientY;
     pointer.active = true;
-    cursor.style.transform = `translate(${event.clientX}px, ${event.clientY}px) translate(-50%, -50%)`;
-  });
+    syncCursorPosition();
+  }
+
+  window.addEventListener("resize", resizeCanvas);
+
+  window.addEventListener("pointermove", moveCursor);
+  document.addEventListener("pointerover", moveCursor);
+  window.addEventListener("wheel", syncCursorPosition, { passive: true });
+  window.addEventListener("scroll", syncCursorPosition, { passive: true });
 
   window.addEventListener("pointerleave", () => {
     pointer.active = false;
     cursor.dataset.hidden = "true";
   });
 
-  window.addEventListener("pointerenter", () => {
-    cursor.dataset.hidden = "false";
-  });
+  window.addEventListener("pointerenter", syncCursorPosition);
 
   document.querySelectorAll("[data-drink]").forEach((item) => {
     item.addEventListener("pointerenter", () => {

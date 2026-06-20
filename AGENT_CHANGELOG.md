@@ -2,6 +2,36 @@
 
 Last updated: 2026-06-20
 
+## 2026-06-20 Playlist Detail Pages
+
+User requested every `夜间歌单` card to map to its own page, with each page containing a different song list.
+
+- Converted the six cards in `playlist.html` into links to dedicated playlist detail pages.
+- Added six static detail pages: `playlist-faye-fable.html`, `playlist-faye-restless.html`, `playlist-chungking.html`, `playlist-only-lovers.html`, `playlist-after-ddl.html`, and `playlist-drinking.html`.
+- Added lightweight track-list styling in `assets/styles.css`.
+- Kept the implementation static, with no audio embedding, no autoplay, no lyrics, and no new dependencies.
+- Updated public and draft HTML asset query strings to `bar-art-20260620-fix7`.
+
+## 2026-06-20 Image Asset Recovery
+
+User reported friend-link images and then the site badge disappeared.
+
+- Audited all bitmap assets under `assets/` by file signature.
+- Confirmed `assets/bar-badge.png`, `assets/cocktail-hero.png`, `assets/hero-workspace.png`, `assets/starcried-avatar.png`, and `assets/crescentyves-avatar.jpg` were affected by invalid binary content in current `HEAD` or working tree.
+- Restored valid binary versions from earlier Git history for the five image assets.
+- Added cache-busting query strings for friend avatars and the shared badge references so browsers request the recovered image files.
+- Hardened friend-card layering in `assets/styles.css` so decorative pseudo-elements stay behind real avatar images.
+- Updated all public and draft HTML asset query strings to `bar-art-20260620-fix6`.
+
+## 2026-06-20 Cursor Reentry And Scroll Follow Fix
+
+User reported the mouse effect still stopped following after the mouse left the page or after scrolling downward.
+
+- Updated `assets/site.js` so cursor placement is centralized in `syncCursorPosition()` / `moveCursor()`.
+- Cursor state now clears `data-hidden` whenever a new pointer move/over event is received, so returning to the page does not depend only on `window.pointerenter`.
+- Added passive `wheel` and `scroll` sync hooks so the cursor reuses the latest viewport pointer coordinate after scrolling instead of staying in a stale hidden/frozen state.
+- Updated all public and draft HTML asset query strings to `bar-art-20260620-fix5` so browsers request the corrected `assets/site.js`.
+
 ## 2026-06-20 Acceptance Rework
 
 User requested deployment consistency checks plus restrained acceptance fixes without restructuring the site.

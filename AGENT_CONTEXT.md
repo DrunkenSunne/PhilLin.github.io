@@ -72,7 +72,10 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - 2026-06-20 cursor alignment fix: `.bar-cursor` in `assets/site.js` must keep `translate(...px, ...px) translate(-50%, -50%)` so the cursor ring center follows the pointer.
 - 2026-06-20 acceptance rework confirmed the live site had the latest pre-rework homepage/reviews/about content at deployed `main` commit `2ec95306b342498f92bb8e4ac3d2e09f74310134`; local acceptance rework still requires commit/push before appearing online.
 - Reduced motion and mobile/coarse-pointer contexts should not create the canvas, custom cursor, or pointer animation listeners.
-- Current cache-busting query string is `bar-art-20260620-fix4`.
+- 2026-06-20 cursor reentry/scroll fix: `assets/site.js` must keep cursor placement centralized in `syncCursorPosition()` / `moveCursor()` and clear `cursor.dataset.hidden` on fresh pointer movement, so the bar cursor recovers after page leave/reentry and scroll.
+- 2026-06-20 image asset recovery: all bitmap assets in `assets/` were audited after the badge and friend avatars disappeared. Valid historical binaries were restored for `assets/bar-badge.png`, `assets/cocktail-hero.png`, `assets/hero-workspace.png`, `assets/starcried-avatar.png`, and `assets/crescentyves-avatar.jpg`. Keep image files binary-safe; avoid text/PowerShell redirection for image blobs.
+- 2026-06-20 playlist detail update: `playlist.html` cards now link to six static detail pages, each with its own restrained song list. No lyrics, audio embeds, autoplay, or new dependencies were added.
+- Current cache-busting query string is `bar-art-20260620-fix7`.
 
 ## 1. Current Project Goal
 
@@ -282,7 +285,7 @@ Alternatives not chosen:
 - Introduce build-hash tooling.
 
 Current cache-busting query string:
-- As of the 2026-06-20 acceptance rework, public HTML pages use `bar-art-20260620-fix4` for `assets/styles.css`, `assets/content.js`, `assets/gripes.js`, and `assets/site.js`.
+- As of the 2026-06-20 playlist detail update, public HTML pages use `bar-art-20260620-fix7` for `assets/styles.css`, `assets/content.js`, `assets/gripes.js`, `assets/site.js`, and cache-busted shared image references.
 
 ## 8. Current Constraints
 

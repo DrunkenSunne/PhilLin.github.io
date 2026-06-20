@@ -79,6 +79,9 @@ Use this file before starting phase two or any future multi-file work. Do not re
 - [x] Improve art completion after user feedback: CSS-only homepage atmosphere layer, richer rainy-glass/menu-board material, stronger badge glow, and updated asset cache string `bar-art-20260620-fix2`.
 - [x] Fix mouse effect alignment by centering `.bar-cursor` on the pointer and updating asset cache string to `bar-art-20260620-fix3`.
 - [x] Acceptance rework: checked live Pages content and Actions deployment, added explicit mobile breakpoints, completed reduced-motion/mobile motion suppression, refined Tonight/About copy, added Cellar noscript fallback, and updated asset cache string to `bar-art-20260620-fix4`.
+- [x] Fix mouse cursor reentry/scroll follow: clear hidden state on fresh pointer movement, sync cursor on wheel/scroll, and update asset cache string to `bar-art-20260620-fix5`.
+- [x] Recover corrupted bitmap assets after badge and friend avatars disappeared; restore valid historical binaries for all five `assets/` bitmap images and update cache string to `bar-art-20260620-fix6`.
+- [x] Split `playlist.html` cards into dedicated playlist detail pages, with each detail page containing its own song list.
 - [ ] If gripe count grows large, revisit scheme 3 or 4 for the gripe rail: paginated static files or JSON on-demand loading.
 - [ ] Add real photography entries to `gallery.html` and decide image folder structure, likely `assets/gallery/`.
 - [ ] Add better empty-state text for tag pages with no articles.
