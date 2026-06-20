@@ -2,6 +2,27 @@
 
 Last updated: 2026-06-20
 
+## 2026-06-20 Cursor Alignment Fix
+
+User reported the mouse effect was misaligned.
+
+- Fixed the pointer-following `.bar-cursor` transform in `assets/site.js` so the cursor ring is centered on the pointer instead of placing its top-left corner at the pointer coordinate.
+- Updated all public and draft HTML asset query strings to `bar-art-20260620-fix3` so browsers request the corrected `assets/site.js`.
+- Verification performed: `node --check assets/site.js`, `node --check assets/content.js`, `node --check assets/gripes.js`, asset-query search, stale writer/cache search, local HTML link target check, `git status --short`, `git diff --stat`, `git diff -- .`, and `git diff --check`.
+- Visual verification skipped by project preference.
+
+## 2026-06-20 Art Completion Pass
+
+User said the art/design completion was still not enough and asked for further modification.
+
+- Added a lightweight CSS-only homepage atmosphere layer in `index.html`: rain/glass reflection, bottle silhouette, window grid, and bar counter glow.
+- Strengthened `assets/styles.css` art direction with richer rainy-glass background, amber/wine/cool-cyan highlights, stronger badge glow, more finished menu-board material, nav pill states, and layered card surfaces.
+- Improved homepage visual depth by putting content above an internal art layer and adding more polished menu-card shadows, separators, and glass highlights.
+- Added mobile handling so decorative bottle/window layers do not crowd the small-screen layout.
+- Updated all public and draft HTML asset query strings to `bar-art-20260620-fix2` to avoid stale cached CSS/JS.
+- Verification performed: `node --check assets/site.js`, `node --check assets/content.js`, `node --check assets/gripes.js`, asset-query search, local HTML link target check, and `git diff --stat`.
+- Visual verification skipped by project preference.
+
 ## 2026-06-20 Style Strengthening And Lightweight Structure
 
 User requested a restrained "style strengthening + lightweight structure optimization" for the static GitHub Pages site without changing the tech stack, removing content, or turning the site into a film/music-themed site.

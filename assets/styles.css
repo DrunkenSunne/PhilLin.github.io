@@ -1785,6 +1785,338 @@ body::after {
   border-style: dashed;
 }
 
+/* Art completion pass: rainy glass, private-bar glow, and finished card surfaces */
+:root {
+  --cyan: #6ca9a4;
+  --deep-wine: #631d1c;
+  --glass-line: rgba(255, 241, 204, 0.08);
+}
+
+body {
+  background:
+    radial-gradient(circle at 48% -10rem, rgba(255, 210, 138, 0.16), transparent 30rem),
+    radial-gradient(circle at 10% 18%, rgba(111, 164, 157, 0.12), transparent 20rem),
+    radial-gradient(circle at 88% 58%, rgba(99, 29, 28, 0.16), transparent 24rem),
+    linear-gradient(180deg, #110705 0%, #080303 56%, #050202 100%),
+    #070302;
+}
+
+body::before {
+  background:
+    linear-gradient(102deg, transparent 0 18%, rgba(255, 241, 204, 0.035) 18.1% 18.24%, transparent 18.36% 100%),
+    linear-gradient(72deg, transparent 0 54%, rgba(108, 169, 164, 0.04) 54.1% 54.22%, transparent 54.34% 100%),
+    repeating-linear-gradient(100deg, rgba(255, 241, 204, 0.032) 0 1px, transparent 1px 44px),
+    repeating-linear-gradient(0deg, rgba(255, 241, 204, 0.028) 0 1px, transparent 1px 5px),
+    radial-gradient(circle at 18% 31%, rgba(255, 210, 138, 0.08), transparent 16rem),
+    radial-gradient(circle at 82% 69%, rgba(159, 47, 40, 0.07), transparent 16rem);
+  opacity: 0.95;
+}
+
+body::after {
+  inset: 0.85rem;
+  border-color: rgba(255, 210, 138, 0.16);
+  background:
+    linear-gradient(32deg, transparent 0 18%, rgba(255, 210, 138, 0.12) 18.08% 18.2%, transparent 18.32% 100%),
+    linear-gradient(118deg, transparent 0 35%, rgba(108, 169, 164, 0.12) 35.08% 35.2%, transparent 35.32% 100%),
+    linear-gradient(148deg, transparent 0 54%, rgba(159, 47, 40, 0.12) 54.08% 54.2%, transparent 54.32% 100%),
+    radial-gradient(circle at 9% 23%, rgba(255, 210, 138, 0.24) 0 0.16rem, transparent 0.18rem),
+    radial-gradient(circle at 29% 34%, rgba(108, 169, 164, 0.2) 0 0.14rem, transparent 0.16rem),
+    radial-gradient(circle at 83% 41%, rgba(159, 47, 40, 0.22) 0 0.16rem, transparent 0.18rem);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 241, 204, 0.026),
+    inset 0 0 110px rgba(0, 0, 0, 0.54);
+}
+
+.site-header {
+  border-bottom-color: rgba(255, 210, 138, 0.24);
+  box-shadow: 0 14px 46px rgba(0, 0, 0, 0.34);
+}
+
+.brand-badge,
+.menu-mini-badge {
+  box-shadow:
+    0 0 0 1px rgba(255, 210, 138, 0.24),
+    0 0 28px rgba(240, 164, 58, 0.3),
+    0 0 58px rgba(159, 47, 40, 0.18);
+}
+
+.brand span {
+  text-shadow: 0 0 18px rgba(255, 210, 138, 0.16);
+}
+
+.nav-links a {
+  border-radius: 999px;
+  padding-inline: 0.55rem;
+  transition: color 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+  background: rgba(255, 241, 204, 0.055);
+  box-shadow: inset 0 0 0 1px rgba(255, 210, 138, 0.1);
+}
+
+.menu-board {
+  isolation: isolate;
+  border-color: rgba(255, 210, 138, 0.36);
+  background:
+    linear-gradient(180deg, rgba(255, 241, 204, 0.075), rgba(255, 241, 204, 0.018) 28%, transparent 58%),
+    linear-gradient(116deg, transparent 0 48%, rgba(108, 169, 164, 0.07) 48.2% 48.7%, transparent 49% 100%),
+    repeating-linear-gradient(90deg, rgba(255, 210, 138, 0.042) 0 1px, transparent 1px 7rem),
+    rgba(11, 6, 5, 0.82);
+  box-shadow:
+    0 30px 100px rgba(0, 0, 0, 0.64),
+    0 0 0 1px rgba(255, 241, 204, 0.025),
+    inset 0 1px 0 rgba(255, 241, 204, 0.11),
+    inset 0 -42px 90px rgba(0, 0, 0, 0.22);
+}
+
+.hero-atmosphere {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.menu-intro,
+.bar-shelf,
+.menu-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-atmosphere span {
+  position: absolute;
+  display: block;
+}
+
+.atmo-rain {
+  inset: -10% -6%;
+  background:
+    repeating-linear-gradient(104deg, rgba(255, 241, 204, 0.07) 0 1px, transparent 1px 34px),
+    repeating-linear-gradient(104deg, transparent 0 16px, rgba(108, 169, 164, 0.075) 16px 17px, transparent 17px 54px);
+  opacity: 0.32;
+  transform: rotate(0.01deg);
+}
+
+.atmo-bottle {
+  right: clamp(1.6rem, 5vw, 5rem);
+  top: clamp(1rem, 4vw, 3rem);
+  width: clamp(5rem, 12vw, 9rem);
+  height: clamp(12rem, 28vw, 20rem);
+  border: 1px solid rgba(255, 210, 138, 0.14);
+  border-radius: 999px 999px 1.1rem 1.1rem;
+  background:
+    linear-gradient(90deg, transparent 0 26%, rgba(255, 241, 204, 0.08) 27% 30%, transparent 31% 100%),
+    linear-gradient(180deg, rgba(255, 241, 204, 0.06), rgba(99, 29, 28, 0.1) 46%, rgba(0, 0, 0, 0.18));
+  opacity: 0.48;
+  filter: blur(0.1px);
+}
+
+.atmo-bottle::before {
+  position: absolute;
+  left: 50%;
+  top: -2.9rem;
+  width: 38%;
+  height: 3.4rem;
+  border: 1px solid rgba(255, 210, 138, 0.14);
+  border-bottom: 0;
+  border-radius: 0.45rem 0.45rem 0 0;
+  background: rgba(255, 241, 204, 0.035);
+  content: "";
+  transform: translateX(-50%);
+}
+
+.atmo-window {
+  left: clamp(1rem, 4vw, 3rem);
+  top: 18%;
+  width: min(36rem, 44vw);
+  height: min(18rem, 34vw);
+  border: 1px solid rgba(108, 169, 164, 0.12);
+  background:
+    linear-gradient(90deg, transparent 0 18%, rgba(108, 169, 164, 0.1) 18.2% 18.6%, transparent 18.8% 100%),
+    linear-gradient(0deg, transparent 0 54%, rgba(255, 210, 138, 0.09) 54.2% 54.55%, transparent 54.8% 100%);
+  opacity: 0.36;
+  transform: skewX(-8deg);
+}
+
+.atmo-counter {
+  right: -2rem;
+  bottom: 5.4rem;
+  left: -2rem;
+  height: 4.2rem;
+  background:
+    linear-gradient(180deg, rgba(255, 210, 138, 0.12), rgba(99, 29, 28, 0.11) 42%, rgba(0, 0, 0, 0.18)),
+    repeating-linear-gradient(90deg, rgba(255, 241, 204, 0.06) 0 1px, transparent 1px 4rem);
+  box-shadow: 0 -14px 48px rgba(255, 210, 138, 0.07);
+  opacity: 0.72;
+}
+
+.menu-kicker {
+  border-right-color: rgba(255, 210, 138, 0.28);
+  background:
+    linear-gradient(90deg, rgba(255, 241, 204, 0.05), transparent),
+    rgba(255, 241, 204, 0.018);
+  padding-left: 0.75rem;
+}
+
+.menu-mini-badge {
+  width: 4.1rem;
+  height: 4.1rem;
+}
+
+.menu-title h1 {
+  text-shadow:
+    0 0 18px rgba(255, 210, 138, 0.2),
+    0 0 54px rgba(159, 47, 40, 0.28);
+}
+
+.menu-title h1::before {
+  position: absolute;
+  inset: -0.24em -0.12em -0.18em;
+  z-index: -1;
+  border: 1px solid rgba(255, 210, 138, 0.12);
+  border-radius: 0.28rem;
+  background:
+    linear-gradient(90deg, rgba(255, 241, 204, 0.038), transparent 58%),
+    radial-gradient(circle at 15% 50%, rgba(240, 164, 58, 0.12), transparent 12rem);
+  content: "";
+}
+
+.hero-lede {
+  color: #f2d9b0;
+  text-shadow: 0 0 22px rgba(255, 210, 138, 0.12);
+}
+
+.hero-note {
+  border-top: 1px solid rgba(255, 210, 138, 0.14);
+  padding-top: 1rem;
+}
+
+.menu-grid {
+  gap: 1rem;
+}
+
+.menu-drink {
+  min-height: 18.2rem;
+  border-color: rgba(255, 210, 138, 0.24);
+  background:
+    linear-gradient(180deg, rgba(255, 241, 204, 0.06), transparent 38%),
+    radial-gradient(circle at 88% 14%, rgba(255, 210, 138, 0.12), transparent 6rem),
+    rgba(12, 7, 5, 0.8);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 241, 204, 0.08),
+    inset 0 -32px 52px rgba(0, 0, 0, 0.24);
+}
+
+.menu-drink::after {
+  position: absolute;
+  right: 0.85rem;
+  bottom: 0.85rem;
+  left: 0.85rem;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 210, 138, 0.44), rgba(108, 169, 164, 0.24), transparent);
+  content: "";
+  opacity: 0.72;
+}
+
+.menu-drink:hover {
+  box-shadow:
+    0 26px 64px rgba(0, 0, 0, 0.34),
+    0 0 38px rgba(240, 164, 58, 0.12),
+    inset 0 1px 0 rgba(255, 241, 204, 0.14);
+}
+
+.menu-drink .drink-glyph {
+  filter:
+    drop-shadow(0 0 16px rgba(255, 210, 138, 0.18))
+    drop-shadow(0 0 36px rgba(159, 47, 40, 0.1));
+}
+
+.post-card,
+.toolbar,
+.guide-card,
+.aside-block,
+.feature-card,
+.topic-card,
+.friend-profile,
+.photo-tile,
+.gripe-rail,
+.status-card,
+.playlist-card,
+.cellar-card {
+  border-color: rgba(255, 210, 138, 0.21);
+  box-shadow:
+    0 22px 70px rgba(0, 0, 0, 0.48),
+    inset 0 1px 0 rgba(255, 241, 204, 0.06);
+}
+
+.post-card::after,
+.guide-card::after,
+.friend-profile::after,
+.status-card::after,
+.playlist-card::after,
+.cellar-card::after {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-top: 1px solid rgba(255, 210, 138, 0.24);
+  border-right: 1px solid rgba(108, 169, 164, 0.18);
+  content: "";
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+.drink-heading,
+.article-header {
+  border-bottom-color: rgba(255, 210, 138, 0.22);
+}
+
+.drink-heading {
+  max-width: 860px;
+}
+
+.drink-portrait {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 241, 204, 0.06),
+    0 0 34px rgba(240, 164, 58, 0.08);
+}
+
+.status-card,
+.playlist-card,
+.cellar-card {
+  min-height: 12rem;
+}
+
+.status-card.featured,
+.playlist-card.featured,
+.cellar-card.featured {
+  box-shadow:
+    0 26px 80px rgba(0, 0, 0, 0.5),
+    0 0 48px rgba(240, 164, 58, 0.12),
+    inset 0 1px 0 rgba(255, 241, 204, 0.08);
+}
+
+.cellar-fields div {
+  border-color: rgba(255, 210, 138, 0.18);
+  background:
+    linear-gradient(145deg, rgba(255, 241, 204, 0.045), rgba(108, 169, 164, 0.025)),
+    rgba(255, 241, 204, 0.026);
+}
+
+.photo-tile {
+  box-shadow:
+    0 24px 72px rgba(0, 0, 0, 0.44),
+    inset 0 0 0 1px rgba(255, 241, 204, 0.03);
+}
+
+.friend-photo {
+  filter: saturate(0.86) contrast(0.98);
+}
+
 @media (max-width: 980px) {
   .menu-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1822,6 +2154,16 @@ body::after {
     justify-self: start;
     text-align: left;
   }
+
+  .atmo-bottle {
+    opacity: 0.26;
+    right: -1.5rem;
+  }
+
+  .atmo-window {
+    width: 62vw;
+    opacity: 0.24;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1832,6 +2174,20 @@ body::after {
 
   .menu-board {
     padding: 0.85rem;
+  }
+
+  .hero-atmosphere {
+    opacity: 0.72;
+  }
+
+  .atmo-bottle,
+  .atmo-window {
+    display: none;
+  }
+
+  .atmo-counter {
+    bottom: 3.4rem;
+    height: 2.4rem;
   }
 
   .menu-grid {

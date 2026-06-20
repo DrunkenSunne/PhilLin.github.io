@@ -67,6 +67,10 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - The homepage preserves `Phil Lin的Bar`, the badge, and `I flutter in circle never landing on nothing`, with restrained copy around giving unfinished thoughts a night-space.
 - `酒鬼医学生` is preserved in a self-aware low-intensity form in about/footer copy; do not make it the homepage's largest visual identity tag.
 - Article reading styles were tightened for long-form reading: max article width around 720px, looser line height, paragraph spacing, link/image/blockquote styling, and article endnotes.
+- 2026-06-20 art completion pass added a CSS-only homepage atmosphere layer: rain/glass reflection, bottle silhouette, window grid, and bar counter glow.
+- The latest art direction uses stronger badge glow, rainy glass, amber/wine/cool-cyan highlights, more finished menu-board material, nav pill states, and layered card surfaces.
+- 2026-06-20 cursor alignment fix: `.bar-cursor` in `assets/site.js` must keep `translate(...px, ...px) translate(-50%, -50%)` so the cursor ring center follows the pointer.
+- Current cache-busting query string is `bar-art-20260620-fix3`.
 
 ## 1. Current Project Goal
 
@@ -276,7 +280,7 @@ Alternatives not chosen:
 - Introduce build-hash tooling.
 
 Current cache-busting query string:
-- As of 2026-06-12 online-layout mismatch fix, public HTML pages use `bar-menu-20260612-fix1` for `assets/styles.css`, `assets/content.js`, `assets/gripes.js`, and `assets/site.js`.
+- As of the 2026-06-20 cursor alignment fix, public HTML pages use `bar-art-20260620-fix3` for `assets/styles.css`, `assets/content.js`, `assets/gripes.js`, and `assets/site.js`.
 
 ## 8. Current Constraints
 
@@ -311,7 +315,7 @@ Current cache-busting query string:
 - `assets/cocktail-hero.png` and `assets/hero-workspace.png` exist; current verified pages do not reference them, but they increase repository size.
 - `article.html` renders `post.content` if present, but current recommended metadata-only pattern does not include content. It remains a compatibility fallback.
 - The article archive, recent posts, and tag pages now show empty states until a new public article is added.
-- `reviews.html` currently hardcodes review placeholder cards instead of rendering from `window.BAR_REVIEWS`; `BAR_REVIEWS` is currently metadata documentation/future hook.
+- `reviews.html` now renders structured Cellar / 酒柜 cards from `window.BAR_REVIEWS`; future risk is that placeholder review metadata still needs real content.
 - `data-accent` logic remains in `site.js`, but current visible pages may not use it.
 - Word-to-HTML conversion is not yet implemented; future conversion must preserve images and paths carefully.
 - External link `https://starcried.github.io/` was not revalidated during this sealing pass.

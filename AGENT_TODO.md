@@ -76,6 +76,8 @@ Use this file before starting phase two or any future multi-file work. Do not re
 - [x] Reframe `reviews.html` as Cellar / 酒柜 and render structured cards from `window.BAR_REVIEWS`.
 - [x] Strengthen homepage copy/entry structure while preserving badge, `Phil Lin的Bar`, and `I flutter in circle never landing on nothing`.
 - [x] Improve article long-form reading styles and mobile responsiveness in shared CSS.
+- [x] Improve art completion after user feedback: CSS-only homepage atmosphere layer, richer rainy-glass/menu-board material, stronger badge glow, and updated asset cache string `bar-art-20260620-fix2`.
+- [x] Fix mouse effect alignment by centering `.bar-cursor` on the pointer and updating asset cache string to `bar-art-20260620-fix3`.
 - [ ] If gripe count grows large, revisit scheme 3 or 4 for the gripe rail: paginated static files or JSON on-demand loading.
 - [ ] Add real photography entries to `gallery.html` and decide image folder structure, likely `assets/gallery/`.
 - [ ] Add better empty-state text for tag pages with no articles.

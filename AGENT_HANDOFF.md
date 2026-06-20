@@ -8,6 +8,10 @@ Last updated: 2026-06-20
 
 2026-06-20 update: the site also has lightweight `tonight.html` and `playlist.html` pages, and the old 酒评 page has been reframed as Cellar / 酒柜.
 
+2026-06-20 art completion update: the homepage now has a CSS-only rainy-glass/bar-counter atmosphere layer, stronger badge glow, richer menu-board material, and asset query string `bar-art-20260620-fix3`.
+
+2026-06-20 cursor alignment update: `.bar-cursor` now centers on the pointer with `translate(...px, ...px) translate(-50%, -50%)`; current asset query string is `bar-art-20260620-fix3`.
+
 ## 2. Phase-One Completion Summary
 
 2026-06-12 visual redesign update: the site now uses an abstract bar-menu concept. The home page is a menu board, each destination is paired with a cocktail, and secondary pages present a drink identity badge. Friend-link information and avatars must remain unchanged unless the user explicitly asks.
@@ -70,6 +74,8 @@ Follow-up after phase-one sealing:
   - `playlist.html` records music and film atmosphere references without lyrics, autoplay, or embedded players.
   - `reviews.html` now renders Cellar / 酒柜 cards from `window.BAR_REVIEWS`.
   - `酒鬼医学生` should remain a restrained self-aware line in about/footer/description areas, not the homepage's main visual label.
+  - Latest art pass added homepage atmosphere spans (`hero-atmosphere`, `atmo-rain`, `atmo-bottle`, `atmo-window`, `atmo-counter`) and CSS-only rainy glass/bar counter treatment. Keep these lightweight and avoid replacing them with heavy background images unless explicitly requested.
+  - Pointer-following `.bar-cursor` should keep its `translate(-50%, -50%)` centering transform; otherwise the ring appears down/right of the actual pointer.
 
 ## 3. Current Code State
 
@@ -84,7 +90,7 @@ Follow-up after phase-one sealing:
   - CSS-only drink glyphs, dot fields, line grids, polygon overlays, and a menu-board home layout.
   - `assets/site.js` adds a pointer-following bar cursor and drink-name hover labels for menu items.
   - `assets/styles.css` now also includes shared Tonight, Playlist, Cellar, article-reading, mobile navigation, and reduced-motion polish.
-- Current cache-busting query string is `bar-menu-20260612-fix1`; it was updated after deployed GitHub Pages layout differed from local, likely due stale cached CSS/JS.
+- Current cache-busting query string is `bar-art-20260620-fix3`; it was updated after the cursor alignment fix to avoid stale cached CSS/JS.
 - Gripe rail:
   - `assets/gripes.js` stores static `window.BAR_GRIPES` entries; it currently contains ten entries.
   - `assets/site.js` injects the rail and handles page-size calculation and pagination.
@@ -153,7 +159,7 @@ Before any future work, run `git status --short` and `git diff --stat`.
 - Browser visual verification was not completed in the final sealed state.
 - Article archive, recent posts, and `一些思绪` tag page depend on `assets/content.js` loading successfully.
 - `assets/cocktail-hero.png` and `assets/hero-workspace.png` appear present but currently unused; do not delete without user approval and reference search.
-- `reviews.html` hardcodes review placeholder cards; `BAR_REVIEWS` is not yet wired to render reviews.
+- `reviews.html` renders `BAR_REVIEWS`, but review metadata is still placeholder content.
 - `article.html` can confuse future article flow; current preferred flow is separate static article HTML plus index entry.
 - Large/base64 article images should not be placed in `assets/content.js`.
 

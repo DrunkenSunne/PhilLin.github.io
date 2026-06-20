@@ -189,7 +189,7 @@ window.addEventListener("pointermove", (event) => {
   pointer.x = event.clientX;
   pointer.y = event.clientY;
   pointer.active = true;
-  cursor.style.transform = `translate(${event.clientX}px, ${event.clientY}px)`;
+  cursor.style.transform = `translate(${event.clientX}px, ${event.clientY}px) translate(-50%, -50%)`;
 });
 
 window.addEventListener("pointerleave", () => {
