@@ -39,7 +39,7 @@ Use this file before starting phase two or any future multi-file work. Do not re
 - [ ] If visual verification is skipped after frontend changes, report residual visual risk instead of claiming browser/layout verification.
 - [ ] Verify `assets/cocktail-hero.png` and `assets/hero-workspace.png` are truly unused before deleting or keeping intentionally.
 - [ ] Decide whether `article.html` should remain as compatibility fallback or be removed after static article pages are fully adopted.
-- [ ] Decide whether `BAR_REVIEWS` should render `reviews.html` dynamically or remain a future data hook.
+- [x] Decide whether `BAR_REVIEWS` should render `reviews.html` dynamically or remain a future data hook; as of 2026-06-20 `reviews.html` renders Cellar / 酒柜 cards from `window.BAR_REVIEWS`.
 - [ ] Verify the online GitHub Pages deployment reflects local files after push.
 
 ## 3. Phase-Two Candidate Tasks
@@ -70,7 +70,12 @@ Use this file before starting phase two or any future multi-file work. Do not re
   - Deleted `preview-20260618.html`.
   - Verified generated article path from metadata.
 - [ ] Add a reusable article HTML template for generated articles, based on `_drafts/article-format-reference.html`.
-- [ ] Make `reviews.html` render from `window.BAR_REVIEWS` instead of hardcoded placeholder cards.
+- [x] Make `reviews.html` render from `window.BAR_REVIEWS` instead of hardcoded placeholder cards.
+- [x] Add lightweight `tonight.html` page combining Now / 今晚状态 and Aftertaste / 余味.
+- [x] Add lightweight `playlist.html` page for night playlist and atmosphere references without players, lyrics, or autoplay.
+- [x] Reframe `reviews.html` as Cellar / 酒柜 and render structured cards from `window.BAR_REVIEWS`.
+- [x] Strengthen homepage copy/entry structure while preserving badge, `Phil Lin的Bar`, and `I flutter in circle never landing on nothing`.
+- [x] Improve article long-form reading styles and mobile responsiveness in shared CSS.
 - [ ] If gripe count grows large, revisit scheme 3 or 4 for the gripe rail: paginated static files or JSON on-demand loading.
 - [ ] Add real photography entries to `gallery.html` and decide image folder structure, likely `assets/gallery/`.
 - [ ] Add better empty-state text for tag pages with no articles.
@@ -81,11 +86,11 @@ Use this file before starting phase two or any future multi-file work. Do not re
 
 ## 4. Current Blockers
 
-- [ ] `git` is not available in current shell; cannot produce authoritative git status or diff.
+- [x] `git` is available in the current shell as of 2026-06-20; `git status --short`, `git diff --stat`, and `git diff -- .` can be run.
 - [ ] In-app browser automation has been unreliable/blocked; visual verification cannot be claimed until a browser check succeeds.
 - [x] One Word document has been published as `article-first-words-on-the-bar.html`.
 - [x] One Word document has been published as `article-two-bottles-writing-touch.html`.
-- [ ] No explicit phase-two scope has been approved after first-stage sealing.
+- [x] User approved the 2026-06-20 style strengthening and lightweight structure optimization scope.
 
 ## 5. Needs Human Confirmation
 

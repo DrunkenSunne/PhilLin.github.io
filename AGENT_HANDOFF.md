@@ -6,6 +6,8 @@ Last updated: 2026-06-20
 
 `Phil Lin的Bar` is currently a static GitHub Pages personal site with a dark cocktail-bar visual style, metadata-driven article lists/tags, separate static article-file direction, two public articles, friend links, review placeholders, gallery placeholders, and no writer/editor feature.
 
+2026-06-20 update: the site also has lightweight `tonight.html` and `playlist.html` pages, and the old 酒评 page has been reframed as Cellar / 酒柜.
+
 ## 2. Phase-One Completion Summary
 
 2026-06-12 visual redesign update: the site now uses an abstract bar-menu concept. The home page is a menu board, each destination is paired with a cocktail, and secondary pages present a drink identity badge. Friend-link information and avatars must remain unchanged unless the user explicitly asks.
@@ -61,6 +63,13 @@ Follow-up after phase-one sealing:
   - Visual bugfix: the five vertical lines on subpage headings came from sharing the homepage recipe-tick strip with `.drink-heading::before` and `.article-header::before`; keep that strip homepage-only.
   - Visual bugfix: subpage drink icons should use full glyph geometry scaled uniformly in `.drink-portrait`; do not shrink the internal glyph span dimensions directly.
   - Current subpage drink badge is intentionally larger: `.drink-portrait` font size `0.95rem`, icon frame `4.55rem`, glyph scale `0.72`.
+  - Posts archive and tag-page card titles should remain visually uniform across all cards.
+  - Public page particle-toggle buttons use `切换烛光微粒` with the `✦` icon.
+  - Latest style strengthening added `今晚`, `酒柜`, and `夜间歌单` navigation entries while keeping the static site architecture.
+  - `tonight.html` combines Now / Aftertaste style status fragments.
+  - `playlist.html` records music and film atmosphere references without lyrics, autoplay, or embedded players.
+  - `reviews.html` now renders Cellar / 酒柜 cards from `window.BAR_REVIEWS`.
+  - `酒鬼医学生` should remain a restrained self-aware line in about/footer/description areas, not the homepage's main visual label.
 
 ## 3. Current Code State
 
@@ -74,6 +83,7 @@ Follow-up after phase-one sealing:
 - Current abstract visual system:
   - CSS-only drink glyphs, dot fields, line grids, polygon overlays, and a menu-board home layout.
   - `assets/site.js` adds a pointer-following bar cursor and drink-name hover labels for menu items.
+  - `assets/styles.css` now also includes shared Tonight, Playlist, Cellar, article-reading, mobile navigation, and reduced-motion polish.
 - Current cache-busting query string is `bar-menu-20260612-fix1`; it was updated after deployed GitHub Pages layout differed from local, likely due stale cached CSS/JS.
 - Gripe rail:
   - `assets/gripes.js` stores static `window.BAR_GRIPES` entries; it currently contains ten entries.
@@ -100,14 +110,14 @@ Follow-up after phase-one sealing:
 Verified:
 
 - `.git/config` remote URL is `https://github.com/Phillin-lrz/Phillin-lrz.github.io.git`.
+- `git status --short`, `git diff --stat`, and `git diff -- .` are available in the current shell as of 2026-06-20.
 
-Not verified:
+Current caution:
 
-- `git status` could not be run because the shell reports `git` is not recognized.
-- `git diff` could not be run for the same reason.
-- No commit or push was performed during context sealing.
+- The working tree may include uncommitted local changes from recent site updates.
+- No commit or push was performed during the 2026-06-20 style strengthening pass.
 
-Before any future work, run `git status --short` and `git diff --stat` in an environment where Git is installed.
+Before any future work, run `git status --short` and `git diff --stat`.
 
 ## 5. Important File Index
 
@@ -125,9 +135,12 @@ Before any future work, run `git status --short` and `git diff --stat` in an env
 - `article-first-words-on-the-bar.html`: first published article, tag `一些思绪`.
 - `_drafts/article-format-reference.html`: retained non-public format/reference draft.
 - `friends.html`: friend links, currently StarCried and CrescentYves.
-- `reviews.html`: cocktail review placeholder page.
+- `reviews.html`: Cellar / 酒柜 page, rendered from `window.BAR_REVIEWS`.
+- `tonight.html`: Tonight / 今晚 lightweight status page.
+- `playlist.html`: Playlist / 夜间歌单 lightweight atmosphere page.
 - `gallery.html`: gallery placeholder page.
 - `about.html`: about page.
+  - Current contact email is `phillin.lrz0714@gmail.com`.
 - `assets/content.js`: tags, article metadata, review metadata.
 - `assets/gripes.js`: static gripe data.
 - `assets/site.js`: canvas interaction and post rendering.
@@ -136,7 +149,7 @@ Before any future work, run `git status --short` and `git diff --stat` in an env
 
 ## 6. Known Risks
 
-- Git status/diff are unverified due missing Git command.
+- Git is currently available, but uncommitted local changes may be present.
 - Browser visual verification was not completed in the final sealed state.
 - Article archive, recent posts, and `一些思绪` tag page depend on `assets/content.js` loading successfully.
 - `assets/cocktail-hero.png` and `assets/hero-workspace.png` appear present but currently unused; do not delete without user approval and reference search.

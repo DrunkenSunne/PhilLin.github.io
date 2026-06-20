@@ -1,8 +1,11 @@
 const root = document.documentElement;
 const savedParticles = localStorage.getItem("blog-particles");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (savedParticles) {
   root.dataset.particles = savedParticles;
+} else if (reduceMotion) {
+  root.dataset.particles = "off";
 }
 
 document.querySelectorAll("#themeToggle").forEach((button) => {
@@ -210,7 +213,9 @@ document.querySelectorAll("[data-drink]").forEach((item) => {
 });
 
 resizeCanvas();
-draw();
+if (!reduceMotion) {
+  draw();
+}
 
 function allPosts() {
   const builtInPosts = window.BAR_POSTS || [];
@@ -261,7 +266,7 @@ function renderPostList(tag = "all") {
   if (!container) return;
   const posts = tag === "all" ? allPosts() : allPosts().filter((post) => post.tag === tag);
   container.innerHTML = posts.length
-    ? posts.map((post, index) => postCard({ ...post }, index === 0 ? "h2" : "h3")).join("")
+    ? posts.map((post) => postCard({ ...post }, "h2")).join("")
     : '<article class="post-card"><span class="post-date">亟待创作</span><h2>这个标签还没有文章</h2><p>新的内容会在发布后出现在这里。</p></article>';
 }
 
@@ -283,7 +288,7 @@ function renderTagPages() {
     const tag = container.dataset.tagPosts;
     const posts = allPosts().filter((post) => post.tag === tag);
     container.innerHTML = posts.length
-      ? posts.map((post, index) => postCard(post, index === 0 ? "h2" : "h3")).join("")
+      ? posts.map((post) => postCard(post, "h2")).join("")
       : `<article class="post-card"><span class="post-date">${escapeHtml(tag)}</span><h2>亟待创作</h2><p>这个分类还在等待第一篇文章。</p></article>`;
   });
 }
@@ -314,6 +319,32 @@ function renderArticlePage() {
   meta.textContent = `发布时间：${post.publishedAt} · 标签：${post.tag}`;
   content.innerHTML = post.content || `<p>${escapeHtml(post.summary || "")}</p>`;
   tagRow.innerHTML = `<span>${escapeHtml(post.tag)}</span>`;
+}
+
+function renderReviewList() {
+  document.querySelectorAll("[data-review-list]").forEach((container) => {
+    const reviews = window.BAR_REVIEWS || [];
+    container.innerHTML = reviews.length
+      ? reviews.map((review, index) => `
+        <article class="cellar-card${index === 0 ? " featured" : ""}">
+          <div class="cellar-card-main">
+            <span class="post-date">${escapeHtml(review.cocktail)} · ${escapeHtml(review.status || "记录中")}</span>
+            <h2>${escapeHtml(review.title)}</h2>
+            <p>${escapeHtml(review.summary || "")}</p>
+          </div>
+          <dl class="cellar-fields">
+            <div><dt>类型</dt><dd>${escapeHtml(review.type || "待补充")}</dd></div>
+            <div><dt>场景</dt><dd>${escapeHtml(review.scene || "待补充")}</dd></div>
+            <div><dt>渠道</dt><dd>${escapeHtml(review.channel || "待补充")}</dd></div>
+            <div><dt>风味</dt><dd>${escapeHtml(review.flavor || "待补充")}</dd></div>
+            <div><dt>醉意</dt><dd>${escapeHtml(review.tipsy || "待补充")}</dd></div>
+            <div><dt>当晚情绪</dt><dd>${escapeHtml(review.mood || "待补充")}</dd></div>
+            <div><dt>是否会再喝</dt><dd>${escapeHtml(review.revisit || "待补充")}</dd></div>
+          </dl>
+        </article>
+      `).join("")
+      : '<article class="cellar-card"><span class="post-date">Cellar</span><h2>酒柜还在整理</h2><p>新的记录会放在这里。</p></article>';
+  });
 }
 
 function allGripes() {
@@ -401,4 +432,5 @@ renderRecentPosts();
 initPostFilters();
 renderTagPages();
 renderArticlePage();
+renderReviewList();
 renderGripeRail();

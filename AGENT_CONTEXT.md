@@ -57,6 +57,16 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - Subpage visual bugfix: do not apply the recipe-tick strip to `.drink-heading::before` or `.article-header::before`; it created five unexplained vertical lines on subpages. That decoration should remain homepage-only via `.menu-board .menu-intro::after`.
 - Subpage drink icon bugfix: `.drink-portrait .drink-glyph > span` must keep the full `5.2rem` glyph geometry and use `transform: scale(0.62)`; shrinking the internal box directly causes pseudo-element drink graphics to drift out of alignment.
 - Current subpage drink badge sizing uses `.drink-portrait` min-height `5.4rem`, font size `0.95rem`, `.drink-glyph` `4.55rem`, and full glyph geometry scaled with `transform: scale(0.72)`.
+- Posts archive and tag-page post cards should keep consistent title sizing; do not make the first visible card larger only because it is first in the list.
+- Public page particle-toggle buttons use `切换烛光微粒` with the `✦` icon.
+- 2026-06-20 style strengthening kept the static HTML/CSS/JS architecture and added only lightweight pages/styles.
+- Public navigation now includes `今晚`, `酒柜`, and `夜间歌单`.
+- `tonight.html` is the lightweight Tonight / 今晚 page combining Now and Aftertaste style status fragments.
+- `playlist.html` is the lightweight Playlist / 夜间歌单 page. It may reference 王菲、《寓言》《浮躁》、《重庆森林》, and Only Lovers Left Alive as atmosphere notes, but must not become a music/film theme site, quote lyrics, embed players, or autoplay audio.
+- `reviews.html` is now framed as Cellar / 酒柜, rendered from structured `window.BAR_REVIEWS` fields in `assets/content.js`.
+- The homepage preserves `Phil Lin的Bar`, the badge, and `I flutter in circle never landing on nothing`, with restrained copy around giving unfinished thoughts a night-space.
+- `酒鬼医学生` is preserved in a self-aware low-intensity form in about/footer copy; do not make it the homepage's largest visual identity tag.
+- Article reading styles were tightened for long-form reading: max article width around 720px, looser line height, paragraph spacing, link/image/blockquote styling, and article endnotes.
 
 ## 1. Current Project Goal
 
@@ -126,9 +136,12 @@ Verified in files:
   - Avatar file is `assets/crescentyves-avatar.jpg`.
 
 - Pages added or retained:
-  - `reviews.html` shows cocktail-review placeholder cards.
+  - `reviews.html` is now the Cellar / 酒柜 page and renders structured `BAR_REVIEWS` cards.
+  - `tonight.html` shows lightweight current-state and aftertaste cards.
+  - `playlist.html` shows lightweight music/film atmosphere notes without audio embeds.
   - `gallery.html` shows gallery placeholder tiles.
   - `about.html` is the about page.
+  - `about.html` contact email is `phillin.lrz0714@gmail.com`.
 
 - Visual design:
   - `assets/styles.css` defines the dark cocktail/bar palette and glass glyph styling.
@@ -271,7 +284,7 @@ Current cache-busting query string:
 - No server-side write capability.
 - No database schema exists.
 - No package manager or bundler exists.
-- `git` command is unavailable in the current shell environment; git status/diff could not be executed.
+- `git` command is available in the current shell environment as of 2026-06-20; keep running status and diff checks before and after work.
 - In-app browser automation is unreliable/blocked in this environment.
 - Keep CSS/JS paths relative for GitHub Pages portability.
 - Avoid storing large base64 images in `content.js`.
@@ -293,7 +306,7 @@ Current cache-busting query string:
 
 ## 10. Known Risks
 
-- `git` command is unavailable, so actual working-tree state and diff are not verified through git.
+- Git status/diff can now be verified in the current shell, but the working tree may contain uncommitted local changes.
 - Browser visual verification could not be completed during final sealing.
 - `assets/cocktail-hero.png` and `assets/hero-workspace.png` exist; current verified pages do not reference them, but they increase repository size.
 - `article.html` renders `post.content` if present, but current recommended metadata-only pattern does not include content. It remains a compatibility fallback.

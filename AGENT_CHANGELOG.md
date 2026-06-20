@@ -2,6 +2,42 @@
 
 Last updated: 2026-06-20
 
+## 2026-06-20 Style Strengthening And Lightweight Structure
+
+User requested a restrained "style strengthening + lightweight structure optimization" for the static GitHub Pages site without changing the tech stack, removing content, or turning the site into a film/music-themed site.
+
+- Added `tonight.html` as a lightweight Tonight / 今晚 page combining Now and Aftertaste style content.
+- Added `playlist.html` as a lightweight 夜间歌单 page for music and film atmosphere references without lyrics, autoplay, or embedded players.
+- Updated public navigation and `_drafts/article-format-reference.html` to include `今晚`, `酒柜`, and `夜间歌单`.
+- Reframed `reviews.html` from 酒评 into Cellar / 酒柜 and made it render structured cards from `window.BAR_REVIEWS`.
+- Expanded `assets/content.js` review metadata with type, scene, channel, flavor, tipsy, mood, and revisit fields.
+- Updated `index.html` with a more restrained homepage premise, primary entry buttons, and Tonight / Playlist entry cards while preserving `Phil Lin的Bar`, the badge, and `I flutter in circle never landing on nothing`.
+- Updated `about.html` copy to keep `酒鬼医学生` in a self-aware, lower-intensity form instead of making it the homepage visual focus.
+- Improved article reading styles in `assets/styles.css`: narrower readable width, looser line height, paragraph spacing, links, images, blockquotes, and article endnotes.
+- Added shared styles for Tonight, Playlist, Cellar cards, mobile navigation scrolling, responsive single-column layouts, page fade-in, hover polish, and `prefers-reduced-motion` handling.
+- Updated `assets/site.js` to respect reduced-motion by default and render cellar cards.
+- Updated README with current page structure and Cellar maintenance notes.
+- Verification performed: `node --check assets/site.js`, `node --check assets/content.js`, `node --check assets/gripes.js`, writer/stale-cache reference search, local HTML link target check, `git status --short`, `git diff --stat`, `git diff -- .`, and `git diff --check`.
+- Visual verification skipped by project preference.
+
+## 2026-06-20 Post List Format Unification
+
+User reported mismatched title sizes on the posts page and asked for a broader format pass.
+
+- Updated `assets/site.js` so archive and tag-page post cards use the same heading level instead of making only the first card larger.
+- Added a scoped `assets/styles.css` rule so non-compact post-list card titles stay visually consistent even if mixed heading tags appear later.
+- Unified the public page particle-toggle button copy/icon to `切换烛光微粒` / `✦`.
+- Updated `_drafts/article-format-reference.html` asset query strings and particle-toggle copy to match the current site format.
+- Visual verification skipped by project preference.
+
+## 2026-06-20 Copy And Contact Update
+
+User requested a site copy correction and contact email update.
+
+- Corrected the home eyebrow text to `Chungking Express`.
+- Updated the about page contact email to `phillin.lrz0714@gmail.com`.
+- Visual verification skipped by project preference.
+
 ## 2026-06-20 Gripe Added - Forgotten Inspiration
 
 User provided a gripe text and mood `无语`.

@@ -1,6 +1,6 @@
 # Phil Lin的Bar 博客模板
 
-这是一个可直接发布到 GitHub Pages 的静态个人博客模板，结构参考了“GitHub Pages + Hexo 搭建博客”的常见流程。
+这是一个可直接发布到 GitHub Pages 的静态个人网站，核心气质是 `Phil Lin的Bar`：文字、酒、照片、音乐线索和私人档案。
 
 ## 预览
 
@@ -8,11 +8,22 @@
 
 ## 修改网站装饰
 
-- 首页大图：替换 `assets/hero-workspace.png`
 - 站点名称：全局搜索并替换 `Phil Lin的Bar`
 - 颜色：修改 `assets/styles.css` 里的 `--accent`、`--paper`、`--ink`
 - 导航：修改每个页面顶部的 `nav`
 - 页脚：修改每个页面底部的 `footer`
+- 徽章：保留 `assets/bar-badge.png`，不要直接替换成模板图
+
+## 页面结构
+
+- `index.html`：Bar Counter / 吧台首页
+- `posts.html`：Paper Plane / 文章归档
+- `tonight.html`：Tonight / 今晚状态，合并 Now 和 Aftertaste
+- `reviews.html`：Cellar / 酒柜，非专业酒评记录
+- `playlist.html`：Playlist / 夜间歌单，不放播放器和歌词
+- `gallery.html`：French 75 / 摄影作品
+- `friends.html`：Tom Collins / 友链
+- `about.html`：Martini / 关于我
 
 ## 发布文章
 
@@ -55,9 +66,9 @@ hexo server
 
 文章会出现在 `source/_posts`，用 Markdown 编辑即可。
 
-## 新增酒评
+## 新增酒柜记录
 
-在 `assets/content.js` 里的 `window.BAR_REVIEWS` 中新增条目。当前酒评页面保留了“亟待创作”的展示格式，后续可以把每个酒评扩展成独立页面。
+在 `assets/content.js` 里的 `window.BAR_REVIEWS` 中新增条目。`reviews.html` 会自动渲染酒名、类型、场景、渠道、风味、醉意、当晚情绪和是否会再喝等字段。
 
 ## 新增吐槽
 
