@@ -25,6 +25,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -38,6 +39,7 @@ body {
   font-family: Inter, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
   line-height: 1.7;
   animation: page-fade 420ms ease both;
+  overflow-x: hidden;
 }
 
 @keyframes page-fade {
@@ -436,6 +438,11 @@ h3 {
 
 .button.full {
   width: 100%;
+}
+
+.icon-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
 }
 
 .section,
@@ -1556,6 +1563,14 @@ body::after {
   line-height: 1.55;
 }
 
+.static-note {
+  border: 1px dashed rgba(255, 210, 138, 0.28);
+  border-radius: var(--radius);
+  padding: 1rem;
+  background: rgba(255, 241, 204, 0.04);
+  color: var(--muted);
+}
+
 .paper-plane-glyph > span::before,
 .paper-plane-glyph > span::after {
   position: absolute;
@@ -2246,6 +2261,220 @@ body::after {
   }
 }
 
+@media (max-width: 900px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0.8rem 1rem;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.45rem 0.7rem;
+    overflow-x: hidden;
+  }
+
+  .nav-links a {
+    padding: 0.2rem 0.45rem;
+    white-space: nowrap;
+  }
+
+  .section,
+  .page,
+  .article-layout,
+  .menu-hero {
+    width: min(100% - 1.5rem, 1120px);
+  }
+
+  .section,
+  .page {
+    padding-block: 2.4rem;
+  }
+
+  .menu-board {
+    padding: clamp(1rem, 5vw, 1.8rem);
+  }
+
+  .split-section,
+  .article-layout,
+  .guide-grid,
+  .friend-grid,
+  .friend-profile,
+  .cocktail-signatures,
+  .intro-grid,
+  .feature-grid,
+  .gallery-grid,
+  .tonight-board,
+  .playlist-grid,
+  .cellar-card,
+  .cellar-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .article-layout {
+    gap: 1.4rem;
+  }
+
+  .article-aside {
+    position: static;
+    order: 2;
+  }
+
+  .hero-note .hero-actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 720px) {
+  .menu-hero {
+    min-height: auto;
+    padding-block: 1rem 1.5rem;
+  }
+
+  .menu-board {
+    min-height: auto;
+  }
+
+  .menu-intro {
+    gap: 0.85rem;
+  }
+
+  .brand-mark {
+    width: 1.85rem;
+    height: 1.85rem;
+  }
+
+  .menu-mini-badge {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  h1 {
+    font-size: clamp(2.25rem, 12vw, 3.35rem);
+  }
+
+  .menu-title h1 {
+    font-size: clamp(2.45rem, 13vw, 3.8rem);
+  }
+
+  .intro-grid,
+  .feature-grid,
+  .cellar-list,
+  .friend-showcase,
+  .friend-profile {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions,
+  .article-actions,
+  .control-row,
+  .tag-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hero-actions .button,
+  .article-actions .button,
+  .control-row .button,
+  .control-row .chip,
+  .tag-row .button,
+  .tag-row .chip {
+    width: 100%;
+  }
+
+  .status-card.featured,
+  .status-card.aftertaste,
+  .playlist-card.featured {
+    grid-column: auto;
+  }
+
+  .site-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .gripe-rail {
+    width: min(100% - 1.5rem, 1120px);
+  }
+}
+
+@media (max-width: 480px) {
+  body::after {
+    display: none;
+  }
+
+  .site-header {
+    gap: 0.55rem;
+    padding: 0.7rem 0.75rem;
+  }
+
+  .brand {
+    max-width: 100%;
+  }
+
+  .brand span {
+    font-size: 0.9rem;
+  }
+
+  .nav-links {
+    gap: 0.25rem 0.45rem;
+    font-size: 0.84rem;
+  }
+
+  .nav-links a {
+    padding-inline: 0.32rem;
+  }
+
+  .section,
+  .page,
+  .article-layout,
+  .menu-hero {
+    width: min(100% - 1rem, 1120px);
+  }
+
+  .menu-board,
+  .post-card,
+  .guide-card,
+  .feature-card,
+  .friend-profile,
+  .status-card,
+  .playlist-card,
+  .cellar-card {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 13vw, 2.75rem);
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  .menu-title h1 {
+    font-size: clamp(2.1rem, 15vw, 3rem);
+  }
+
+  .menu-mini-badge {
+    width: 2.55rem;
+    height: 2.55rem;
+  }
+
+  .article p,
+  .page-heading p,
+  .hero-lede {
+    font-size: 0.98rem;
+  }
+
+  #particleCanvas,
+  .bar-cursor {
+    display: none !important;
+  }
+}
+
 @media (max-width: 820px) {
   .split-section,
   .article-layout,
@@ -2346,12 +2575,20 @@ body::after {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   *,
   *::before,
   *::after {
-    animation-duration: 1ms !important;
+    animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-    transition-duration: 1ms !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  #particleCanvas,
+  .bar-cursor {
+    display: none !important;
   }
 }

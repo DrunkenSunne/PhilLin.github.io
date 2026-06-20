@@ -1,18 +1,42 @@
 const root = document.documentElement;
 const savedParticles = localStorage.getItem("blog-particles");
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+const mobileMotionQuery = window.matchMedia("(max-width: 720px), (hover: none), (pointer: coarse)");
+const reduceMotion = reduceMotionQuery.matches;
+const defaultMotionOff = reduceMotion || mobileMotionQuery.matches;
 
 if (savedParticles) {
   root.dataset.particles = savedParticles;
-} else if (reduceMotion) {
+} else if (defaultMotionOff) {
   root.dataset.particles = "off";
 }
 
+function updateMotionButton(button) {
+  const isOff = root.dataset.particles === "off";
+  button.setAttribute("aria-pressed", String(!isOff));
+  button.title = reduceMotion ? "系统已减少动态效果" : isOff ? "打开烛光微粒" : "关闭烛光微粒";
+  button.setAttribute("aria-label", button.title);
+}
+
 document.querySelectorAll("#themeToggle").forEach((button) => {
+  updateMotionButton(button);
+  if (reduceMotion) {
+    button.disabled = true;
+  }
   button.addEventListener("click", () => {
+    if (reduceMotion) return;
     const next = root.dataset.particles === "off" ? "on" : "off";
     root.dataset.particles = next;
     localStorage.setItem("blog-particles", next);
+    updateMotionButton(button);
+    if (next === "on") {
+      if (!canvas) {
+        initAmbientMotion();
+      } else if (!animationFrame) {
+        startTime = performance.now();
+        draw();
+      }
+    }
   });
 });
 
@@ -24,20 +48,13 @@ document.querySelectorAll("[data-accent]").forEach((button) => {
   });
 });
 
-const canvas = document.createElement("canvas");
-canvas.id = "particleCanvas";
-canvas.setAttribute("aria-hidden", "true");
-document.body.prepend(canvas);
-
-const cursor = document.createElement("div");
-cursor.className = "bar-cursor";
-cursor.setAttribute("aria-hidden", "true");
-document.body.append(cursor);
-
-const ctx = canvas.getContext("2d");
 const pointer = { x: 0, y: 0, active: false };
 let barNodes = [];
 let startTime = performance.now();
+let canvas = null;
+let cursor = null;
+let ctx = null;
+let animationFrame = null;
 
 const cocktailConstellations = [
   {
@@ -174,48 +191,73 @@ function drawGarnishes(time) {
 }
 
 function draw() {
+  if (root.dataset.particles === "off") {
+    animationFrame = null;
+    return;
+  }
   const time = performance.now() - startTime;
   ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
   drawGarnishes(time);
   drawConstellationLines(time);
   barNodes.forEach((node) => drawNode(node, time));
   drawPointerConnections();
-  requestAnimationFrame(draw);
+  animationFrame = requestAnimationFrame(draw);
 }
 
-window.addEventListener("resize", resizeCanvas);
+function shouldStartAmbientMotion() {
+  return !reduceMotion && !mobileMotionQuery.matches && root.dataset.particles !== "off";
+}
 
-window.addEventListener("pointermove", (event) => {
-  pointer.x = event.clientX;
-  pointer.y = event.clientY;
-  pointer.active = true;
-  cursor.style.transform = `translate(${event.clientX}px, ${event.clientY}px) translate(-50%, -50%)`;
-});
+function initAmbientMotion() {
+  if (!shouldStartAmbientMotion()) return;
 
-window.addEventListener("pointerleave", () => {
-  pointer.active = false;
-  cursor.dataset.hidden = "true";
-});
+  canvas = document.createElement("canvas");
+  canvas.id = "particleCanvas";
+  canvas.setAttribute("aria-hidden", "true");
+  document.body.prepend(canvas);
 
-window.addEventListener("pointerenter", () => {
-  cursor.dataset.hidden = "false";
-});
+  cursor = document.createElement("div");
+  cursor.className = "bar-cursor";
+  cursor.setAttribute("aria-hidden", "true");
+  document.body.append(cursor);
 
-document.querySelectorAll("[data-drink]").forEach((item) => {
-  item.addEventListener("pointerenter", () => {
-    cursor.dataset.drink = item.dataset.drink || "";
-    cursor.dataset.active = "true";
+  ctx = canvas.getContext("2d");
+  if (!ctx) return;
+
+  window.addEventListener("resize", resizeCanvas);
+
+  window.addEventListener("pointermove", (event) => {
+    pointer.x = event.clientX;
+    pointer.y = event.clientY;
+    pointer.active = true;
+    cursor.style.transform = `translate(${event.clientX}px, ${event.clientY}px) translate(-50%, -50%)`;
   });
-  item.addEventListener("pointerleave", () => {
-    cursor.dataset.drink = "";
-    cursor.dataset.active = "false";
-  });
-});
 
-resizeCanvas();
-if (!reduceMotion) {
+  window.addEventListener("pointerleave", () => {
+    pointer.active = false;
+    cursor.dataset.hidden = "true";
+  });
+
+  window.addEventListener("pointerenter", () => {
+    cursor.dataset.hidden = "false";
+  });
+
+  document.querySelectorAll("[data-drink]").forEach((item) => {
+    item.addEventListener("pointerenter", () => {
+      cursor.dataset.drink = item.dataset.drink || "";
+      cursor.dataset.active = "true";
+    });
+    item.addEventListener("pointerleave", () => {
+      cursor.dataset.drink = "";
+      cursor.dataset.active = "false";
+    });
+  });
+
+  resizeCanvas();
   draw();
 }
+
+initAmbientMotion();
 
 function allPosts() {
   const builtInPosts = window.BAR_POSTS || [];

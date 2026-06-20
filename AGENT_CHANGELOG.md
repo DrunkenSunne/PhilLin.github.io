@@ -2,6 +2,21 @@
 
 Last updated: 2026-06-20
 
+## 2026-06-20 Acceptance Rework
+
+User requested deployment consistency checks plus restrained acceptance fixes without restructuring the site.
+
+- Checked the live GitHub Pages homepage, reviews page, and about page with cache-busting query parameters; live pages already contained the new `今晚 / 酒柜 / 夜间歌单` navigation, the new homepage line `白天把事情做完，夜里给没想明白的事留一点位置。`, `Cellar · 酒柜`, and the newer about copy.
+- Checked GitHub Actions via the public API; latest `pages build and deployment` run was on `main`, completed successfully, and deployed commit `2ec95306b342498f92bb8e4ac3d2e09f74310134`. Public Pages-source API returned 404 and `gh` CLI was unavailable, so exact Pages Settings source could not be read from settings.
+- Added explicit mobile breakpoints in `assets/styles.css` for `max-width: 900px`, `720px`, and `480px`, including single-column grids, mobile navigation wrapping, smaller badges/headings, full-width mobile buttons, vertical footer layout, simplified decorative border, and mobile cursor hiding.
+- Completed CSS reduced-motion handling and tightened `assets/site.js` so reduced-motion and mobile/coarse-pointer contexts do not create the canvas, do not create the custom cursor, and do not attach pointer animation listeners.
+- Made the motion toggle semantics clearer and ensured turning particles off stops the draw loop.
+- Lightly revised `tonight.html` copy with more concrete student/DDL/experiment pressure while keeping the restrained tone.
+- Lightly revised `about.html` to strengthen the day/night contrast while keeping `酒鬼医学生`, and added a `reviews.html` noscript fallback for the JS-rendered cellar list.
+- Updated public and draft HTML asset query strings to `bar-art-20260620-fix4`.
+- Verification performed: live HTML/API checks with Node `fetch`, `node --check assets/site.js`, `node --check assets/content.js`, `node --check assets/gripes.js`, stale runtime reference search, `git diff --check`, `git status --short`, `git diff --stat`, `git diff --name-status`, and targeted `git diff`.
+- Mobile browser scroll verification was attempted but the automation tool was rejected by the environment usage limit, so mobile no-horizontal-scroll was checked by CSS/static reasoning only.
+
 ## 2026-06-20 Cursor Alignment Fix
 
 User reported the mouse effect was misaligned.

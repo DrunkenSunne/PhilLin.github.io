@@ -8,9 +8,11 @@ Last updated: 2026-06-20
 
 2026-06-20 update: the site also has lightweight `tonight.html` and `playlist.html` pages, and the old 酒评 page has been reframed as Cellar / 酒柜.
 
-2026-06-20 art completion update: the homepage now has a CSS-only rainy-glass/bar-counter atmosphere layer, stronger badge glow, richer menu-board material, and asset query string `bar-art-20260620-fix3`.
+2026-06-20 art completion update: the homepage now has a CSS-only rainy-glass/bar-counter atmosphere layer, stronger badge glow, richer menu-board material, and asset query string `bar-art-20260620-fix2`.
 
-2026-06-20 cursor alignment update: `.bar-cursor` now centers on the pointer with `translate(...px, ...px) translate(-50%, -50%)`; current asset query string is `bar-art-20260620-fix3`.
+2026-06-20 cursor alignment update: `.bar-cursor` now centers on the pointer with `translate(...px, ...px) translate(-50%, -50%)`; asset query string was `bar-art-20260620-fix3`.
+
+2026-06-20 acceptance rework: live GitHub Pages was checked and already had the pre-rework new navigation/home/reviews/about content from deployed `main` commit `2ec95306b342498f92bb8e4ac3d2e09f74310134`; local rework added explicit `900/720/480` responsive rules, reduced-motion/mobile motion suppression, Tonight/About copy refinements, reviews noscript fallback, and asset query string `bar-art-20260620-fix4`.
 
 ## 2. Phase-One Completion Summary
 
@@ -76,6 +78,7 @@ Follow-up after phase-one sealing:
   - `酒鬼医学生` should remain a restrained self-aware line in about/footer/description areas, not the homepage's main visual label.
   - Latest art pass added homepage atmosphere spans (`hero-atmosphere`, `atmo-rain`, `atmo-bottle`, `atmo-window`, `atmo-counter`) and CSS-only rainy glass/bar counter treatment. Keep these lightweight and avoid replacing them with heavy background images unless explicitly requested.
   - Pointer-following `.bar-cursor` should keep its `translate(-50%, -50%)` centering transform; otherwise the ring appears down/right of the actual pointer.
+  - Reduced motion and mobile/coarse-pointer contexts should not create the canvas, custom cursor, or pointer animation listeners.
 
 ## 3. Current Code State
 
@@ -90,7 +93,7 @@ Follow-up after phase-one sealing:
   - CSS-only drink glyphs, dot fields, line grids, polygon overlays, and a menu-board home layout.
   - `assets/site.js` adds a pointer-following bar cursor and drink-name hover labels for menu items.
   - `assets/styles.css` now also includes shared Tonight, Playlist, Cellar, article-reading, mobile navigation, and reduced-motion polish.
-- Current cache-busting query string is `bar-art-20260620-fix3`; it was updated after the cursor alignment fix to avoid stale cached CSS/JS.
+- Current cache-busting query string is `bar-art-20260620-fix4`; it was updated after the acceptance rework to avoid stale cached CSS/JS.
 - Gripe rail:
   - `assets/gripes.js` stores static `window.BAR_GRIPES` entries; it currently contains ten entries.
   - `assets/site.js` injects the rail and handles page-size calculation and pagination.
