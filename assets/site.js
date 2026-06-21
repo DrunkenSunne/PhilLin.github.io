@@ -219,6 +219,7 @@ function initAmbientMotion() {
   cursor = document.createElement("div");
   cursor.className = "bar-cursor";
   cursor.setAttribute("aria-hidden", "true");
+  cursor.dataset.hidden = "true";
   document.body.append(cursor);
 
   ctx = canvas.getContext("2d");
@@ -227,7 +228,8 @@ function initAmbientMotion() {
   function syncCursorPosition() {
     if (!pointer.active) return;
     cursor.dataset.hidden = "false";
-    cursor.style.transform = `translate(${pointer.x}px, ${pointer.y}px) translate(-50%, -50%)`;
+    cursor.style.left = `${pointer.x}px`;
+    cursor.style.top = `${pointer.y}px`;
   }
 
   function moveCursor(event) {
@@ -241,8 +243,6 @@ function initAmbientMotion() {
 
   window.addEventListener("pointermove", moveCursor);
   document.addEventListener("pointerover", moveCursor);
-  window.addEventListener("wheel", syncCursorPosition, { passive: true });
-  window.addEventListener("scroll", syncCursorPosition, { passive: true });
 
   window.addEventListener("pointerleave", () => {
     pointer.active = false;

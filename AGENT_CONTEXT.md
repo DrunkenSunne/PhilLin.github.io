@@ -76,7 +76,8 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - 2026-06-20 cursor reentry/scroll fix: `assets/site.js` must keep cursor placement centralized in `syncCursorPosition()` / `moveCursor()` and clear `cursor.dataset.hidden` on fresh pointer movement, so the bar cursor recovers after page leave/reentry and scroll.
 - 2026-06-20 image asset recovery: all bitmap assets in `assets/` were audited after the badge and friend avatars disappeared. Valid historical binaries were restored for `assets/bar-badge.png`, `assets/cocktail-hero.png`, `assets/hero-workspace.png`, `assets/starcried-avatar.png`, and `assets/crescentyves-avatar.jpg`. Keep image files binary-safe; avoid text/PowerShell redirection for image blobs.
 - 2026-06-20 playlist detail update: `playlist.html` cards now link to six static detail pages, each with its own restrained song list. No lyrics, audio embeds, autoplay, or new dependencies were added.
-- Current cache-busting query string is `bar-art-20260620-fix7`.
+- 2026-06-21 cursor scroll-offset fix: the custom cursor now uses fixed `left` / `top` from viewport `clientX` / `clientY`, and the `body` page-fade animation no longer uses `transform`, so scrolling should not make the cursor appear above the pointer.
+- Current cache-busting query string is `bar-art-20260621-fix8`.
 
 ## 1. Current Project Goal
 
@@ -286,7 +287,7 @@ Alternatives not chosen:
 - Introduce build-hash tooling.
 
 Current cache-busting query string:
-- As of the 2026-06-20 playlist detail update, public HTML pages use `bar-art-20260620-fix7` for `assets/styles.css`, `assets/content.js`, `assets/gripes.js`, `assets/site.js`, and cache-busted shared image references.
+- As of the 2026-06-21 cursor scroll-offset fix, public HTML pages use `bar-art-20260621-fix8` for `assets/styles.css`, `assets/content.js`, `assets/gripes.js`, `assets/site.js`, and cache-busted shared image references.
 
 ## 8. Current Constraints
 

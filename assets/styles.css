@@ -45,12 +45,10 @@ body {
 @keyframes page-fade {
   from {
     opacity: 0;
-    transform: translateY(0.6rem);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -1005,7 +1003,7 @@ body::after {
   border-radius: 50%;
   opacity: 0.62;
   pointer-events: none;
-  transform: translate(-100px, -100px);
+  transform: translate(-50%, -50%);
   transition: width 160ms ease, height 160ms ease, opacity 160ms ease, border-color 160ms ease;
 }
 

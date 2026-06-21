@@ -2,6 +2,16 @@
 
 Last updated: 2026-06-21
 
+## 2026-06-21 Cursor Scroll Offset Fix
+
+User reported the mouse effect still appeared above the pointer after the page had moved downward.
+
+- Removed transform movement from the `body` page-fade animation in `assets/styles.css`; a transformed page container can make fixed-position cursor children behave relative to the scrolled document instead of the viewport in some browsers.
+- Changed `.bar-cursor` positioning to keep its centering transform static and let `assets/site.js` update `left` / `top` from `event.clientX` / `event.clientY`.
+- Removed scroll/wheel cursor resync listeners so scroll does not reapply stale or document-relative cursor math.
+- Updated public and draft HTML asset query strings to `bar-art-20260621-fix8`.
+- Visual verification skipped by project preference.
+
 ## 2026-06-21 Gripe Added - Productive Exam Sprint
 
 User provided a gripe text and mood `兴奋`.

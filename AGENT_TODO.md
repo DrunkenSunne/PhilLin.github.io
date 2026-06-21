@@ -82,6 +82,7 @@ Use this file before starting phase two or any future multi-file work. Do not re
 - [x] Fix mouse cursor reentry/scroll follow: clear hidden state on fresh pointer movement, sync cursor on wheel/scroll, and update asset cache string to `bar-art-20260620-fix5`.
 - [x] Recover corrupted bitmap assets after badge and friend avatars disappeared; restore valid historical binaries for all five `assets/` bitmap images and update cache string to `bar-art-20260620-fix6`.
 - [x] Split `playlist.html` cards into dedicated playlist detail pages, with each detail page containing its own song list.
+- [x] Fix mouse cursor scroll-offset drift by removing body transform movement and updating the fixed cursor with viewport `left` / `top` coordinates.
 - [ ] If gripe count grows large, revisit scheme 3 or 4 for the gripe rail: paginated static files or JSON on-demand loading.
 - [ ] Add real photography entries to `gallery.html` and decide image folder structure, likely `assets/gallery/`.
 - [ ] Add better empty-state text for tag pages with no articles.
