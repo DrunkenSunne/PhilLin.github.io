@@ -44,6 +44,14 @@ Use this file before starting phase two or any future multi-file work. Do not re
 
 ## 3. Phase-Two Candidate Tasks
 
+- [x] Published `C:\Users\Phil Lin\Desktop\临时用\1.docx`:
+  - Generated final article file `article-good-luck-day.html`.
+  - Deleted review-only `preview-20260621.html`.
+  - Added one metadata object to `assets/content.js`.
+  - User supplied tag `生活日志`.
+  - Final title is `祝我好运的一天`.
+  - Publication date is `2026-06-21`, taken from the first paragraph in the Word document.
+  - No embedded media files were found in the Word document.
 - [x] Implement broad abstract cocktail-bar visual redesign:
   - Home page becomes a bar-menu style board.
   - Secondary pages present as different drink identities.

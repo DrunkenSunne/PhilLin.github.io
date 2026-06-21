@@ -2,6 +2,14 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利"];
 
 window.BAR_POSTS = [
   {
+    id: "good-luck-day",
+    title: "祝我好运的一天",
+    tag: "生活日志",
+    publishedAt: "2026-06-21",
+    summary: "一段很短的日常记录：复习细胞生物学实验理论考试、做科研调研，也在齐豫和梦飞船的歌里给接下来疲惫的日子留下一句祝福。",
+    url: "article-good-luck-day.html",
+  },
+  {
     id: "two-bottles-writing-touch",
     title: "两瓶酒后，找回写字的手感",
     tag: "一些思绪",

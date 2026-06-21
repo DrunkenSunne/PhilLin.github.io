@@ -2,6 +2,8 @@
 
 Last updated: 2026-06-21
 
+2026-06-22 publication: user provided `C:\Users\Phil Lin\Desktop\临时用\1.docx` with tag `生活日志`. The final article is `article-good-luck-day.html`, title `祝我好运的一天`, publication date `2026-06-21`, and no extracted images. It has been added to `assets/content.js`; `preview-20260621.html` was deleted.
+
 ## 1. One-Sentence Project State
 
 `Phil Lin的Bar` is currently a static GitHub Pages personal site with a dark cocktail-bar visual style, metadata-driven article lists/tags, separate static article-file direction, two public articles, friend links, review placeholders, gallery placeholders, and no writer/editor feature.
