@@ -89,6 +89,7 @@ Use this file before starting phase two or any future multi-file work. Do not re
 - [x] Simplify the homepage article/category menu into one grouped Martini-family card with three distinct child variants.
 - [x] Fix tablet Index menu layout and mobile/tablet drink glyph alignment by keeping glyph internals at canonical size.
 - [x] Fix Edge/non-Chrome cursor effect by avoiding coarse-pointer desktop suppression and adding mouse event fallbacks.
+- [x] Fix tablet Index hero intro by collapsing the desktop three-column menu intro across iPad-sized widths.
 - [ ] If gripe count grows large, revisit scheme 3 or 4 for the gripe rail: paginated static files or JSON on-demand loading.
 - [ ] Add real photography entries to `gallery.html` and decide image folder structure, likely `assets/gallery/`.
 - [ ] Add better empty-state text for tag pages with no articles.

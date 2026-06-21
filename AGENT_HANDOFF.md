@@ -30,6 +30,8 @@ Last updated: 2026-06-21
 
 2026-06-21 Edge cursor effect fix: ambient motion now disables only for reduced motion or `max-width: 720px`, not `(pointer: coarse)` / `(hover: none)`, and `assets/site.js` has mouse event fallbacks alongside pointer events; current asset query string is `bar-art-20260621-fix15`.
 
+2026-06-21 tablet home intro fix: the homepage `menu-intro` collapses to one column across `721px` to `1179px`, with horizontal kicker/buttons, to avoid iPad-sized screens squeezing copy into narrow vertical columns; current asset query string is `bar-art-20260621-fix16`.
+
 ## 2. Phase-One Completion Summary
 
 2026-06-12 visual redesign update: the site now uses an abstract bar-menu concept. The home page is a menu board, each destination is paired with a cocktail, and secondary pages present a drink identity badge. Friend-link information and avatars must remain unchanged unless the user explicitly asks.
@@ -88,6 +90,7 @@ Follow-up after phase-one sealing:
   - Current subpage drink badge is intentionally larger: `.drink-portrait` font size `0.95rem`, icon frame `4.55rem`, glyph scale `0.72`.
   - Responsive glyph bugfix: mobile/tablet breakpoints should keep `.drink-glyph > span` at `5.2rem` square and only alter `transform: scale(...)`; shrinking the internal box causes cocktail pseudo-elements to drift.
   - Tablet Index layout bugfix: the `721px` to `900px` breakpoint should restore menu cards to card-style layout instead of inheriting the phone list-card grid.
+  - Tablet Index intro bugfix: across `721px` to `1179px`, `.menu-intro` should be single-column with a horizontal `menu-kicker`; the desktop three-column intro starts above `1179px`.
   - Posts archive and tag-page card titles should remain visually uniform across all cards.
   - Public page particle-toggle buttons use `切换烛光微粒` with the `✦` icon.
   - Latest style strengthening added `今晚`, `酒柜`, and `夜间歌单` navigation entries while keeping the static site architecture.
@@ -119,7 +122,7 @@ Follow-up after phase-one sealing:
   - CSS-only drink glyphs, dot fields, line grids, polygon overlays, and a menu-board home layout.
   - `assets/site.js` adds a pointer-following bar cursor and drink-name hover labels for menu items.
   - `assets/styles.css` now also includes shared Tonight, Playlist, Cellar, article-reading, mobile navigation, and reduced-motion polish.
-- Current cache-busting query string is `bar-art-20260621-fix15`; it was updated after the Edge cursor compatibility fix to avoid stale cached CSS/JS.
+- Current cache-busting query string is `bar-art-20260621-fix16`; it was updated after the tablet home intro collapse fix to avoid stale cached CSS.
 - Gripe rail:
   - `assets/gripes.js` stores static `window.BAR_GRIPES` entries; it currently contains eleven entries.
   - `assets/site.js` injects the rail and handles page-size calculation and pagination.

@@ -2,6 +2,15 @@
 
 Last updated: 2026-06-21
 
+## 2026-06-21 Tablet Home Intro Collapse Fix
+
+User provided a tablet screenshot showing the Index hero intro squeezed into narrow vertical columns.
+
+- Added a shared `721px` to `1179px` tablet rule that collapses the homepage `menu-intro` from desktop three-column layout into a single-column tablet layout.
+- Converted the tablet `menu-kicker` to a compact horizontal lockup and restored the hero note/buttons to normal wrapping rows.
+- Kept the large desktop three-column bar-menu intro above `1179px` and phone-specific list layout below `720px`.
+- Visual verification skipped by project preference.
+
 ## 2026-06-21 Edge Cursor Effect Fix
 
 User reported that Microsoft Edge and other non-Chrome browsers did not show the mouse effect.

@@ -61,6 +61,7 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - Current subpage drink badge sizing uses `.drink-portrait` min-height `5.4rem`, font size `0.95rem`, `.drink-glyph` `4.55rem`, and full glyph geometry scaled with `transform: scale(0.72)`.
 - Mobile and tablet drink glyph responsive rules should also keep the internal `5.2rem` geometry and only change `transform: scale(...)`; do not shrink `.drink-glyph > span` dimensions inside breakpoints.
 - The tablet Index menu should use real card layout again in the `721px` to `900px` range; phone list-style menu cards should remain scoped below `720px`.
+- Tablet Index `menu-intro` should collapse to one column across `721px` to `1179px`; do not let the desktop three-column intro squeeze copy/buttons into narrow vertical columns on iPad-sized screens.
 - Posts archive and tag-page post cards should keep consistent title sizing; do not make the first visible card larger only because it is first in the list.
 - Public page particle-toggle buttons use `切换烛光微粒` with the `✦` icon.
 - 2026-06-20 style strengthening kept the static HTML/CSS/JS architecture and added only lightweight pages/styles.
@@ -83,7 +84,7 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - 2026-06-21 cursor scroll-offset fix: the custom cursor now uses fixed `left` / `top` from viewport `clientX` / `clientY`, and the `body` page-fade animation no longer uses `transform`, so scrolling should not make the cursor appear above the pointer.
 - 2026-06-21 mobile index polish: homepage mobile layout was refined only inside small-screen media queries, with compact nav pills, tighter hero spacing, reduced decoration, and denser menu-entry cards. Desktop/base homepage rules should remain unaffected.
 - 2026-06-21 homepage article menu simplification: article/category entries are grouped into one homepage Martini Flight card; `posts.html` shows `Martini · 文章`, category pages show `Gibson · 生活日志`, `Dirty Martini · 一些思绪`, and `Vesper · 种草安利`, and `about.html` now uses `Last Word · 关于我`.
-- Current cache-busting query string is `bar-art-20260621-fix15`.
+- Current cache-busting query string is `bar-art-20260621-fix16`.
 
 ## 1. Current Project Goal
 
@@ -293,7 +294,7 @@ Alternatives not chosen:
 - Introduce build-hash tooling.
 
 Current cache-busting query string:
-- As of the 2026-06-21 Edge cursor effect fix, public HTML pages use `bar-art-20260621-fix15` for `assets/styles.css`, `assets/content.js`, `assets/gripes.js`, `assets/site.js`, and cache-busted shared image references.
+- As of the 2026-06-21 tablet home intro collapse fix, public HTML pages use `bar-art-20260621-fix16` for `assets/styles.css`, `assets/content.js`, `assets/gripes.js`, `assets/site.js`, and cache-busted shared image references.
 
 ## 8. Current Constraints
 
