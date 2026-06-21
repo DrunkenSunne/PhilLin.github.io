@@ -17,13 +17,16 @@
 ## 页面结构
 
 - `index.html`：Bar Counter / 吧台首页
-- `posts.html`：Paper Plane / 文章归档
-- `tonight.html`：Tonight / 今晚状态，合并 Now 和 Aftertaste
-- `reviews.html`：Cellar / 酒柜，非专业酒评记录
-- `playlist.html`：Playlist / 夜间歌单，不放播放器和歌词
+- `posts.html`：Martini / 文章归档
+- `tag-lab.html`：Gibson / 生活日志
+- `tag-thoughts.html`：Dirty Martini / 一些思绪
+- `tag-recommendations.html`：Vesper / 种草安利
+- `tonight.html`：Gimlet / 今晚状态，合并 Now 和 Aftertaste
+- `reviews.html`：Boulevardier / 酒柜，非专业酒评记录
+- `playlist.html`：Sazerac / 夜间歌单，不放播放器和歌词
 - `gallery.html`：French 75 / 摄影作品
 - `friends.html`：Tom Collins / 友链
-- `about.html`：Martini / 关于我
+- `about.html`：Last Word / 关于我
 
 ## 发布文章
 
@@ -52,6 +55,19 @@
 2. 改成新的文章文件名，例如 `article-my-first-post.html`
 3. 修改文章标题、发布时间、标签和正文
 4. 在 `assets/content.js` 中新增对应文章，并把 `url` 指向这个 HTML 文件
+
+### 文章页面格式
+
+以后新增文章建议保持下面这个大概结构：
+
+- 文件名使用 `article-英文或拼音短标题.html`，例如 `article-my-first-post.html`
+- 页面主体使用 `article-layout drink-page drink-martini`
+- 文章页酒标统一使用 `martini-glyph`，显示名为 `Martini · 文章正文`
+- 正文放在 `<article class="article">` 内，顶部使用 `<header class="article-header">`
+- 标题使用 `<h1>`，日期和标签使用 `发布时间：YYYY-MM-DD · 标签：标签名`
+- 摘要放在标题区最后一个段落，正文再接若干 `<p>` 或 `<section>`
+- 右侧栏保留 `article-aside`，放文章标签和“回到文章归档”按钮
+- 如果文章有图片，放到 `assets/posts/<文章id>/`，不要把大图或 base64 放进 `assets/content.js`
 
 Hexo 方式：
 

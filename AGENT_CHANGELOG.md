@@ -2,6 +2,45 @@
 
 Last updated: 2026-06-21
 
+## 2026-06-21 Article Detail Badge And Format Notes
+
+User requested the two concrete article pages' drink label/name be updated and the project documentation define the rough future article format.
+
+- Updated `article-first-words-on-the-bar.html` and `article-two-bottles-writing-touch.html` from `Coupe · Article` to `Martini · 文章正文`.
+- Updated `article.html` compatibility fallback and `_drafts/article-format-reference.html` so future article pages start from the same `Martini · 文章正文` badge.
+- Updated `README.md` page-structure notes to match the current Martini family article system and `Last Word · 关于我`.
+- Added a README article-format section covering file naming, `article-layout drink-page drink-martini`, header/meta shape, sidebar, and image placement under `assets/posts/<文章id>/`.
+- Updated durable agent state so future recovery does not restore the old `Coupe · Article` identity.
+- Visual verification skipped by project preference.
+
+## 2026-06-21 Tablet Layout Pass
+
+User requested a tablet adaptation pass after the homepage article menu simplification.
+
+- Added a tablet landscape / large-tablet responsive layer for `901px` to `1179px`.
+- Added a tablet portrait responsive layer for `721px` to `900px`.
+- Tuned tablet navigation so links wrap into scan-friendly pill grids instead of cramped desktop spacing.
+- Adjusted the homepage menu board for tablets: three-column rhythm on larger tablets, two-column rhythm on portrait tablets, and a full-width grouped article card on portrait tablets.
+- Tuned tablet card sizing, drink glyph scale, menu variant chips, split sections, gallery, playlist, Tonight, and guide grids so they do not collapse into phone-style single columns too early.
+- Kept existing phone breakpoints unchanged below `720px`.
+- Updated public and draft HTML asset query strings to `bar-art-20260621-fix13`.
+- Visual verification skipped by project preference.
+
+## 2026-06-21 Homepage Article Menu Simplification
+
+User noted that ten homepage menu entries felt redundant and asked for the main article entry plus its three child pages to become one drink family with three variations, while avoiding duplicate entry semantics.
+
+- Simplified the homepage menu: the article system is now one grouped `Martini Flight` card instead of four separate large cards.
+- The grouped article card uses `Martini` as the family/main identity and links to `posts.html` through a distinct `进入文章归档` action.
+- The three child category links are now only the variants: `Gibson · 生活日志`, `Dirty Martini · 一些思绪`, and `Vesper · 种草安利`.
+- Updated `posts.html` to show `Martini · 文章`.
+- Updated `tag-lab.html`, `tag-thoughts.html`, and `tag-recommendations.html` to show the three Martini-family variants above.
+- Reassigned `about.html` and the homepage About card from `Martini · 关于我` to `Last Word · 关于我` so `Martini` is reserved for the article family.
+- Added CSS-only `gibson-glyph`, `dirty-martini-glyph`, `vesper-glyph`, and `last-word-glyph` marks while keeping the existing fixed glyph geometry so drink badges do not drift.
+- Added `menu-primary-link` and `menu-variants` styles and changed the desktop homepage menu grid back to four columns for a lighter seven-card board.
+- Updated public and draft HTML asset query strings to `bar-art-20260621-fix13`.
+- Visual verification skipped by project preference.
+
 ## 2026-06-21 Home Menu And Drink Identity Rework
 
 User reported that the homepage menu no longer matched the expanded pages and that drink identities were duplicated, especially `Highball` being used for both `生活日志` and `今晚`.
@@ -12,7 +51,7 @@ User reported that the homepage menu no longer matched the expanded pages and th
 - Updated `tonight.html`, `reviews.html`, `playlist.html`, and the playlist detail pages to use their new page badge class, visible English name, and glyph.
 - Added CSS-only `gimlet-glyph`, `boulevardier-glyph`, and `sazerac-glyph` logo marks in `assets/styles.css`.
 - Changed the desktop homepage menu grid to five columns so the ten-entry menu forms a clean two-row board.
-- Updated public and draft HTML asset query strings to `bar-art-20260621-fix11`.
+- Updated public and draft HTML asset query strings to `bar-art-20260621-fix13`.
 - Visual verification skipped by project preference.
 
 ## 2026-06-21 Drink Badge Consistency Fix

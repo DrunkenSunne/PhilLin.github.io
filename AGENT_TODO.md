@@ -69,7 +69,7 @@ Use this file before starting phase two or any future multi-file work. Do not re
   - Added one metadata object to `assets/content.js` with tag `一些思绪`.
   - Deleted `preview-20260618.html`.
   - Verified generated article path from metadata.
-- [ ] Add a reusable article HTML template for generated articles, based on `_drafts/article-format-reference.html`.
+- [x] Add a reusable article HTML template for generated articles, based on `_drafts/article-format-reference.html`.
 - [x] Make `reviews.html` render from `window.BAR_REVIEWS` instead of hardcoded placeholder cards.
 - [x] Add lightweight `tonight.html` page combining Now / 今晚状态 and Aftertaste / 余味.
 - [x] Add lightweight `playlist.html` page for night playlist and atmosphere references without players, lyrics, or autoplay.
@@ -86,10 +86,11 @@ Use this file before starting phase two or any future multi-file work. Do not re
 - [x] Polish mobile `index.html` layout with mobile-only nav, hero, and menu-card refinements while leaving desktop rules untouched.
 - [x] Audit and fix page drink badge consistency: align visible English names with glyph/page identities and add a dedicated French 75 glyph.
 - [x] Rework homepage menu and top-level page drink identities so all public navigation destinations appear in the menu and no top-level page drink identity is duplicated.
+- [x] Simplify the homepage article/category menu into one grouped Martini-family card with three distinct child variants.
 - [ ] If gripe count grows large, revisit scheme 3 or 4 for the gripe rail: paginated static files or JSON on-demand loading.
 - [ ] Add real photography entries to `gallery.html` and decide image folder structure, likely `assets/gallery/`.
 - [ ] Add better empty-state text for tag pages with no articles.
-- [ ] Add a small documentation section showing how to manually add a new static article.
+- [x] Add a small documentation section showing how to manually add a new static article.
 - [ ] Reassess whether `article.html` dynamic fallback is still needed after static article generation is stable.
 - [ ] Audit all pages for consistent footer text and theme toggle labels.
 - [ ] Consider moving repeated header/nav/footer into a generation workflow only if user approves introducing tooling.

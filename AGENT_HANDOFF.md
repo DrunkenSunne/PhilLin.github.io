@@ -24,7 +24,7 @@ Last updated: 2026-06-21
 
 2026-06-21 mobile index polish: the homepage mobile layout now has compact nav pills, tighter hero spacing, reduced mobile decoration, and denser list-style menu cards; current asset query string is `bar-art-20260621-fix9`.
 
-2026-06-21 home menu and drink identity rework: the homepage menu now includes all ten public navigation destinations and uses unique top-level drink identities: `Paper Plane · 文章`, `Highball · 生活日志`, `Old Fashioned · 一些思绪`, `Paloma · 种草安利`, `Gimlet · 今晚`, `Boulevardier · 酒柜`, `Sazerac · 夜间歌单`, `French 75 · 摄影作品`, `Tom Collins · 友链`, and `Martini · 关于我`; current asset query string is `bar-art-20260621-fix11`.
+2026-06-21 homepage article menu simplification: the homepage menu is now a lighter seven-card board. Article/category entries are grouped into one `Martini Flight · 文章` card; the archive is `Martini · 文章`, and child variants are `Gibson · 生活日志`, `Dirty Martini · 一些思绪`, and `Vesper · 种草安利`. About now uses `Last Word · 关于我`; current asset query string is `bar-art-20260621-fix13`.
 
 ## 2. Phase-One Completion Summary
 
@@ -69,8 +69,8 @@ Follow-up after phase-one sealing:
 
 - Project-level preference localized from user request: skip visual verification by default unless the user explicitly asks later or a higher-priority instruction requires it.
 - Abstract redesign follow-up:
-  - Home menu pairings are `Paper Plane · 文章`, `Highball · 生活日志`, `Old Fashioned · 一些思绪`, `Paloma · 种草安利`, `Gimlet · 今晚`, `Boulevardier · 酒柜`, `Sazerac · 夜间歌单`, `French 75 · 摄影作品`, `Tom Collins · 友链`, and `Martini · 关于我`.
-  - Article pages use `Coupe · Article`.
+  - Home menu pairings are grouped `Martini Flight · 文章`, plus `Gimlet · 今晚`, `Boulevardier · 酒柜`, `Sazerac · 夜间歌单`, `French 75 · 摄影作品`, `Tom Collins · 友链`, and `Last Word · 关于我`. The article child variants are `Gibson · 生活日志`, `Dirty Martini · 一些思绪`, and `Vesper · 种草安利`.
+  - Article detail pages use `Martini · 文章正文`, matching the article archive's Martini identity.
   - Keep `assets/starcried-avatar.png` and `assets/crescentyves-avatar.jpg` for friend links.
   - User cancelled screenshot generation and will review by opening local `.html` files directly.
   - Follow-up homepage refinement removed the orphaned final tile by making the menu a strict 4-by-2 grid and grouping Friends/recent-posts in a `home-followup` section.
@@ -94,7 +94,7 @@ Follow-up after phase-one sealing:
   - Cursor reentry and scroll recovery depends on clearing `cursor.dataset.hidden` inside the shared pointer movement path, not only on `window.pointerenter`.
   - Do not reintroduce transform-based page movement on `body` while `.bar-cursor` is a fixed child; it can recreate scroll-offset cursor drift.
   - Homepage mobile polish is intentionally scoped to small-screen media queries; avoid changing desktop/base menu-board rules unless the user explicitly asks.
-  - Page drink badges should keep class, glyph, and visible English name aligned. Current newer section identities are `Gimlet · 今晚`, `Boulevardier · 酒柜`, and `Sazerac · 夜间歌单`; French 75 remains for `摄影作品` and uses `french-75-glyph`, not `coupe-glyph`.
+  - Page drink badges should keep class, glyph, and visible English name aligned. Current newer section identities are `Gimlet · 今晚`, `Boulevardier · 酒柜`, `Sazerac · 夜间歌单`, `Martini · 文章`, `Gibson · 生活日志`, `Dirty Martini · 一些思绪`, `Vesper · 种草安利`, and `Last Word · 关于我`; French 75 remains for `摄影作品` and uses `french-75-glyph`, not `coupe-glyph`.
   - Image assets must be handled as binary files. Do not restore or copy PNG/JPG files through text-encoding paths; use binary-safe Git extraction or normal file copy.
   - Playlist detail pages should stay lightweight: no lyrics, no audio embeds, no autoplay, and no new dependency unless the user explicitly changes scope.
   - Reduced motion and mobile/coarse-pointer contexts should not create the canvas, custom cursor, or pointer animation listeners.
@@ -112,7 +112,7 @@ Follow-up after phase-one sealing:
   - CSS-only drink glyphs, dot fields, line grids, polygon overlays, and a menu-board home layout.
   - `assets/site.js` adds a pointer-following bar cursor and drink-name hover labels for menu items.
   - `assets/styles.css` now also includes shared Tonight, Playlist, Cellar, article-reading, mobile navigation, and reduced-motion polish.
-- Current cache-busting query string is `bar-art-20260621-fix11`; it was updated after the home menu and drink identity rework to avoid stale cached CSS/JS and stale badge/avatar images.
+- Current cache-busting query string is `bar-art-20260621-fix13`; it was updated after the homepage article menu simplification to avoid stale cached CSS/JS and stale badge/avatar images.
 - Gripe rail:
   - `assets/gripes.js` stores static `window.BAR_GRIPES` entries; it currently contains eleven entries.
   - `assets/site.js` injects the rail and handles page-size calculation and pagination.
