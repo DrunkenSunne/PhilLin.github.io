@@ -87,6 +87,8 @@ Use this file before starting phase two or any future multi-file work. Do not re
 - [x] Audit and fix page drink badge consistency: align visible English names with glyph/page identities and add a dedicated French 75 glyph.
 - [x] Rework homepage menu and top-level page drink identities so all public navigation destinations appear in the menu and no top-level page drink identity is duplicated.
 - [x] Simplify the homepage article/category menu into one grouped Martini-family card with three distinct child variants.
+- [x] Fix tablet Index menu layout and mobile/tablet drink glyph alignment by keeping glyph internals at canonical size.
+- [x] Fix Edge/non-Chrome cursor effect by avoiding coarse-pointer desktop suppression and adding mouse event fallbacks.
 - [ ] If gripe count grows large, revisit scheme 3 or 4 for the gripe rail: paginated static files or JSON on-demand loading.
 - [ ] Add real photography entries to `gallery.html` and decide image folder structure, likely `assets/gallery/`.
 - [ ] Add better empty-state text for tag pages with no articles.

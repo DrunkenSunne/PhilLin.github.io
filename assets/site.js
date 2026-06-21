@@ -1,9 +1,9 @@
 const root = document.documentElement;
 const savedParticles = localStorage.getItem("blog-particles");
 const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-const mobileMotionQuery = window.matchMedia("(max-width: 720px), (hover: none), (pointer: coarse)");
+const compactMotionQuery = window.matchMedia("(max-width: 720px)");
 const reduceMotion = reduceMotionQuery.matches;
-const defaultMotionOff = reduceMotion || mobileMotionQuery.matches;
+const defaultMotionOff = reduceMotion || compactMotionQuery.matches;
 
 if (savedParticles) {
   root.dataset.particles = savedParticles;
@@ -205,7 +205,7 @@ function draw() {
 }
 
 function shouldStartAmbientMotion() {
-  return !reduceMotion && !mobileMotionQuery.matches && root.dataset.particles !== "off";
+  return !reduceMotion && !compactMotionQuery.matches && root.dataset.particles !== "off";
 }
 
 function initAmbientMotion() {
@@ -239,27 +239,36 @@ function initAmbientMotion() {
     syncCursorPosition();
   }
 
+  function hideCursor() {
+    pointer.active = false;
+    cursor.dataset.hidden = "true";
+  }
+
   window.addEventListener("resize", resizeCanvas);
 
   window.addEventListener("pointermove", moveCursor);
   document.addEventListener("pointerover", moveCursor);
-
-  window.addEventListener("pointerleave", () => {
-    pointer.active = false;
-    cursor.dataset.hidden = "true";
-  });
-
+  window.addEventListener("mousemove", moveCursor);
+  document.addEventListener("mouseover", moveCursor);
+  window.addEventListener("pointerleave", hideCursor);
+  window.addEventListener("mouseleave", hideCursor);
   window.addEventListener("pointerenter", syncCursorPosition);
+  window.addEventListener("mouseenter", syncCursorPosition);
 
   document.querySelectorAll("[data-drink]").forEach((item) => {
-    item.addEventListener("pointerenter", () => {
+    const activateDrink = () => {
       cursor.dataset.drink = item.dataset.drink || "";
       cursor.dataset.active = "true";
-    });
-    item.addEventListener("pointerleave", () => {
+    };
+    const clearDrink = () => {
       cursor.dataset.drink = "";
       cursor.dataset.active = "false";
-    });
+    };
+
+    item.addEventListener("pointerenter", activateDrink);
+    item.addEventListener("mouseenter", activateDrink);
+    item.addEventListener("pointerleave", clearDrink);
+    item.addEventListener("mouseleave", clearDrink);
   });
 
   resizeCanvas();

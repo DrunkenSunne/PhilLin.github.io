@@ -2,6 +2,25 @@
 
 Last updated: 2026-06-21
 
+## 2026-06-21 Edge Cursor Effect Fix
+
+User reported that Microsoft Edge and other non-Chrome browsers did not show the mouse effect.
+
+- Changed ambient-motion suppression from `(hover: none), (pointer: coarse)` to the narrower `max-width: 720px` check so desktop Edge on touch-capable devices is not mistaken for mobile.
+- Added mouse event fallbacks alongside pointer events for cursor movement and menu drink hover states.
+- Updated public and draft HTML asset query strings to `bar-art-20260621-fix15`.
+- Visual verification skipped by project preference.
+
+## 2026-06-21 Tablet Index And Glyph Alignment Fix
+
+User reported that the tablet Index layout still had problems and that mobile/tablet drink labels were misaligned.
+
+- Updated mobile and tablet CSS so drink glyph internals keep the canonical `5.2rem` geometry and only scale through `transform`, avoiding pseudo-element drift.
+- Restored tablet Index menu cards to true card layouts in the `721px` to `900px` range instead of inheriting the phone list layout.
+- Kept the phone menu as compact list-style cards, but fixed their glyph scaling so the drink graphics remain centered.
+- Updated public and draft HTML asset query strings to `bar-art-20260621-fix14`.
+- Visual verification skipped by project preference.
+
 ## 2026-06-21 Article Detail Badge And Format Notes
 
 User requested the two concrete article pages' drink label/name be updated and the project documentation define the rough future article format.

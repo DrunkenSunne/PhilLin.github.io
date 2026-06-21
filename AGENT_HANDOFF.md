@@ -26,6 +26,10 @@ Last updated: 2026-06-21
 
 2026-06-21 homepage article menu simplification: the homepage menu is now a lighter seven-card board. Article/category entries are grouped into one `Martini Flight · 文章` card; the archive is `Martini · 文章`, and child variants are `Gibson · 生活日志`, `Dirty Martini · 一些思绪`, and `Vesper · 种草安利`. About now uses `Last Word · 关于我`; current asset query string is `bar-art-20260621-fix13`.
 
+2026-06-21 tablet Index/glyph fix: tablet Index cards in the `721px` to `900px` range were restored to true card layout, while mobile/tablet drink glyph internals now keep the canonical `5.2rem` geometry and only use transform scaling; current asset query string is `bar-art-20260621-fix14`.
+
+2026-06-21 Edge cursor effect fix: ambient motion now disables only for reduced motion or `max-width: 720px`, not `(pointer: coarse)` / `(hover: none)`, and `assets/site.js` has mouse event fallbacks alongside pointer events; current asset query string is `bar-art-20260621-fix15`.
+
 ## 2. Phase-One Completion Summary
 
 2026-06-12 visual redesign update: the site now uses an abstract bar-menu concept. The home page is a menu board, each destination is paired with a cocktail, and secondary pages present a drink identity badge. Friend-link information and avatars must remain unchanged unless the user explicitly asks.
@@ -82,6 +86,8 @@ Follow-up after phase-one sealing:
   - Visual bugfix: the five vertical lines on subpage headings came from sharing the homepage recipe-tick strip with `.drink-heading::before` and `.article-header::before`; keep that strip homepage-only.
   - Visual bugfix: subpage drink icons should use full glyph geometry scaled uniformly in `.drink-portrait`; do not shrink the internal glyph span dimensions directly.
   - Current subpage drink badge is intentionally larger: `.drink-portrait` font size `0.95rem`, icon frame `4.55rem`, glyph scale `0.72`.
+  - Responsive glyph bugfix: mobile/tablet breakpoints should keep `.drink-glyph > span` at `5.2rem` square and only alter `transform: scale(...)`; shrinking the internal box causes cocktail pseudo-elements to drift.
+  - Tablet Index layout bugfix: the `721px` to `900px` breakpoint should restore menu cards to card-style layout instead of inheriting the phone list-card grid.
   - Posts archive and tag-page card titles should remain visually uniform across all cards.
   - Public page particle-toggle buttons use `切换烛光微粒` with the `✦` icon.
   - Latest style strengthening added `今晚`, `酒柜`, and `夜间歌单` navigation entries while keeping the static site architecture.
@@ -98,6 +104,7 @@ Follow-up after phase-one sealing:
   - Image assets must be handled as binary files. Do not restore or copy PNG/JPG files through text-encoding paths; use binary-safe Git extraction or normal file copy.
   - Playlist detail pages should stay lightweight: no lyrics, no audio embeds, no autoplay, and no new dependency unless the user explicitly changes scope.
   - Reduced motion and mobile/coarse-pointer contexts should not create the canvas, custom cursor, or pointer animation listeners.
+  - Edge cursor compatibility: do not use `(pointer: coarse)` or `(hover: none)` as a desktop ambient-motion kill switch; use reduced motion and compact width checks, with mouse event fallbacks kept beside pointer events.
 
 ## 3. Current Code State
 
@@ -112,7 +119,7 @@ Follow-up after phase-one sealing:
   - CSS-only drink glyphs, dot fields, line grids, polygon overlays, and a menu-board home layout.
   - `assets/site.js` adds a pointer-following bar cursor and drink-name hover labels for menu items.
   - `assets/styles.css` now also includes shared Tonight, Playlist, Cellar, article-reading, mobile navigation, and reduced-motion polish.
-- Current cache-busting query string is `bar-art-20260621-fix13`; it was updated after the homepage article menu simplification to avoid stale cached CSS/JS and stale badge/avatar images.
+- Current cache-busting query string is `bar-art-20260621-fix15`; it was updated after the Edge cursor compatibility fix to avoid stale cached CSS/JS.
 - Gripe rail:
   - `assets/gripes.js` stores static `window.BAR_GRIPES` entries; it currently contains eleven entries.
   - `assets/site.js` injects the rail and handles page-size calculation and pagination.

@@ -59,6 +59,8 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - Subpage visual bugfix: do not apply the recipe-tick strip to `.drink-heading::before` or `.article-header::before`; it created five unexplained vertical lines on subpages. That decoration should remain homepage-only via `.menu-board .menu-intro::after`.
 - Subpage drink icon bugfix: `.drink-portrait .drink-glyph > span` must keep the full `5.2rem` glyph geometry and use `transform: scale(0.62)`; shrinking the internal box directly causes pseudo-element drink graphics to drift out of alignment.
 - Current subpage drink badge sizing uses `.drink-portrait` min-height `5.4rem`, font size `0.95rem`, `.drink-glyph` `4.55rem`, and full glyph geometry scaled with `transform: scale(0.72)`.
+- Mobile and tablet drink glyph responsive rules should also keep the internal `5.2rem` geometry and only change `transform: scale(...)`; do not shrink `.drink-glyph > span` dimensions inside breakpoints.
+- The tablet Index menu should use real card layout again in the `721px` to `900px` range; phone list-style menu cards should remain scoped below `720px`.
 - Posts archive and tag-page post cards should keep consistent title sizing; do not make the first visible card larger only because it is first in the list.
 - Public page particle-toggle buttons use `切换烛光微粒` with the `✦` icon.
 - 2026-06-20 style strengthening kept the static HTML/CSS/JS architecture and added only lightweight pages/styles.
@@ -74,13 +76,14 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - 2026-06-20 cursor alignment fix: `.bar-cursor` in `assets/site.js` must keep `translate(...px, ...px) translate(-50%, -50%)` so the cursor ring center follows the pointer.
 - 2026-06-20 acceptance rework confirmed the live site had the latest pre-rework homepage/reviews/about content at deployed `main` commit `2ec95306b342498f92bb8e4ac3d2e09f74310134`; local acceptance rework still requires commit/push before appearing online.
 - Reduced motion and mobile/coarse-pointer contexts should not create the canvas, custom cursor, or pointer animation listeners.
+- 2026-06-21 Edge cursor effect fix: ambient motion is now disabled by reduced motion or `max-width: 720px`, not by `(pointer: coarse)` / `(hover: none)`, because desktop Edge on touch-capable devices can match those queries even when a mouse is in use.
 - 2026-06-20 cursor reentry/scroll fix: `assets/site.js` must keep cursor placement centralized in `syncCursorPosition()` / `moveCursor()` and clear `cursor.dataset.hidden` on fresh pointer movement, so the bar cursor recovers after page leave/reentry and scroll.
 - 2026-06-20 image asset recovery: all bitmap assets in `assets/` were audited after the badge and friend avatars disappeared. Valid historical binaries were restored for `assets/bar-badge.png`, `assets/cocktail-hero.png`, `assets/hero-workspace.png`, `assets/starcried-avatar.png`, and `assets/crescentyves-avatar.jpg`. Keep image files binary-safe; avoid text/PowerShell redirection for image blobs.
 - 2026-06-20 playlist detail update: `playlist.html` cards now link to six static detail pages, each with its own restrained song list. No lyrics, audio embeds, autoplay, or new dependencies were added.
 - 2026-06-21 cursor scroll-offset fix: the custom cursor now uses fixed `left` / `top` from viewport `clientX` / `clientY`, and the `body` page-fade animation no longer uses `transform`, so scrolling should not make the cursor appear above the pointer.
 - 2026-06-21 mobile index polish: homepage mobile layout was refined only inside small-screen media queries, with compact nav pills, tighter hero spacing, reduced decoration, and denser menu-entry cards. Desktop/base homepage rules should remain unaffected.
 - 2026-06-21 homepage article menu simplification: article/category entries are grouped into one homepage Martini Flight card; `posts.html` shows `Martini · 文章`, category pages show `Gibson · 生活日志`, `Dirty Martini · 一些思绪`, and `Vesper · 种草安利`, and `about.html` now uses `Last Word · 关于我`.
-- Current cache-busting query string is `bar-art-20260621-fix13`.
+- Current cache-busting query string is `bar-art-20260621-fix15`.
 
 ## 1. Current Project Goal
 
@@ -290,7 +293,7 @@ Alternatives not chosen:
 - Introduce build-hash tooling.
 
 Current cache-busting query string:
-- As of the 2026-06-21 homepage article menu simplification, public HTML pages use `bar-art-20260621-fix13` for `assets/styles.css`, `assets/content.js`, `assets/gripes.js`, `assets/site.js`, and cache-busted shared image references.
+- As of the 2026-06-21 Edge cursor effect fix, public HTML pages use `bar-art-20260621-fix15` for `assets/styles.css`, `assets/content.js`, `assets/gripes.js`, `assets/site.js`, and cache-busted shared image references.
 
 ## 8. Current Constraints
 

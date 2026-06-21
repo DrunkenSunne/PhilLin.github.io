@@ -2541,8 +2541,10 @@ body::after {
   }
 
   .drink-glyph > span {
-    width: 4.2rem;
-    height: 4.2rem;
+    width: 5.2rem;
+    height: 5.2rem;
+    transform: scale(0.8);
+    transform-origin: center;
   }
 }
 
@@ -2667,6 +2669,8 @@ body::after {
   }
 
   .drink-glyph > span {
+    width: 5.2rem;
+    height: 5.2rem;
     transform: scale(0.88);
     transform-origin: center;
   }
@@ -2949,9 +2953,10 @@ body::after {
   }
 
   .menu-drink .drink-glyph > span {
-    width: 3rem;
-    height: 3rem;
-    transform: scale(0.72);
+    width: 5.2rem;
+    height: 5.2rem;
+    transform: scale(0.58);
+    transform-origin: center;
   }
 
   .menu-drink strong {
@@ -3105,9 +3110,10 @@ body::after {
   }
 
   .menu-drink .drink-glyph > span {
-    width: 2.75rem;
-    height: 2.75rem;
-    transform: scale(0.66);
+    width: 5.2rem;
+    height: 5.2rem;
+    transform: scale(0.52);
+    transform-origin: center;
   }
 
   .menu-drink strong {
@@ -3207,12 +3213,27 @@ body::after {
   }
 
   .menu-drink {
-    min-height: 14.75rem;
-    padding: 0.9rem;
+    min-height: 15.25rem;
+    grid-template-columns: 1fr;
+    align-content: end;
+    align-items: stretch;
+    gap: 0.35rem;
+    padding: 1rem 6.3rem 1rem 1rem;
   }
 
   .menu-drink-group {
     grid-column: 1 / -1;
+  }
+
+  .menu-drink .drink-glyph {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    grid-row: auto;
+    grid-column: auto;
+    width: 5.4rem;
+    height: 5.4rem;
+    opacity: 0.84;
   }
 
   .menu-drink-group .drink-glyph {
@@ -3233,6 +3254,8 @@ body::after {
   }
 
   .drink-glyph > span {
+    width: 5.2rem;
+    height: 5.2rem;
     transform: scale(0.82);
     transform-origin: center;
   }
@@ -3320,7 +3343,7 @@ body::after {
   }
 }
 
-@media (hover: none), (pointer: coarse) {
+@media (max-width: 720px) {
   .bar-cursor {
     display: none;
   }
