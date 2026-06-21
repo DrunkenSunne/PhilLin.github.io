@@ -2,6 +2,18 @@
 
 Last updated: 2026-06-21
 
+## 2026-06-21 Mobile Index Layout Polish
+
+User reported the mobile index page layout looked poor and requested improvement without affecting desktop.
+
+- Added mobile-only layout refinements in `assets/styles.css` under small-screen breakpoints.
+- Reworked the homepage navigation on mobile into compact pill-grid rows so it no longer feels like a cramped desktop nav.
+- Tightened the mobile home hero: smaller title rhythm, reduced decorative clutter, cleaner note/action spacing, and hidden bar-shelf tick decoration on mobile.
+- Converted the mobile menu cards into denser list-style entry cards with smaller drink glyphs, readable labels, and clamped descriptions.
+- Kept desktop/base homepage rules unchanged; changes are scoped to `max-width` media queries.
+- Updated public and draft HTML asset query strings to `bar-art-20260621-fix9`.
+- Visual verification skipped by project preference.
+
 ## 2026-06-21 Cursor Scroll Offset Fix
 
 User reported the mouse effect still appeared above the pointer after the page had moved downward.
