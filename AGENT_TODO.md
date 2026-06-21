@@ -84,6 +84,7 @@ Use this file before starting phase two or any future multi-file work. Do not re
 - [x] Split `playlist.html` cards into dedicated playlist detail pages, with each detail page containing its own song list.
 - [x] Fix mouse cursor scroll-offset drift by removing body transform movement and updating the fixed cursor with viewport `left` / `top` coordinates.
 - [x] Polish mobile `index.html` layout with mobile-only nav, hero, and menu-card refinements while leaving desktop rules untouched.
+- [x] Audit and fix page drink badge consistency: align visible English names with glyph/page identities and add a dedicated French 75 glyph.
 - [ ] If gripe count grows large, revisit scheme 3 or 4 for the gripe rail: paginated static files or JSON on-demand loading.
 - [ ] Add real photography entries to `gallery.html` and decide image folder structure, likely `assets/gallery/`.
 - [ ] Add better empty-state text for tag pages with no articles.

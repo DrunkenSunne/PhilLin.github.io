@@ -2,6 +2,19 @@
 
 Last updated: 2026-06-21
 
+## 2026-06-21 Drink Badge Consistency Fix
+
+User reported the night playlist drink mark and English name were wrong, and asked to check every page's drink mark and English label.
+
+- Audited public HTML pages for `drink-page`, `drink-portrait`, `drink-glyph`, and visible drink badge text.
+- Changed playlist index and playlist detail pages from `Playlist · ...` to `French 75 · ...`.
+- Added a dedicated `french-75-glyph` in `assets/styles.css` so French 75 uses a champagne-flute style mark instead of the generic coupe mark.
+- Updated `gallery.html` and the homepage French 75 menu tile to use `french-75-glyph`.
+- Changed `reviews.html` badge text from `Cellar · 酒柜` to `Negroni · 酒柜` to match its Negroni page/glyph identity.
+- Changed `tonight.html` badge text from `Tonight · 今晚` to `Highball · 今晚` to match its Highball page/glyph identity.
+- Updated public and draft HTML asset query strings to `bar-art-20260621-fix10`.
+- Visual verification skipped by project preference.
+
 ## 2026-06-21 Mobile Index Layout Polish
 
 User reported the mobile index page layout looked poor and requested improvement without affecting desktop.

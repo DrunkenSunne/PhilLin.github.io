@@ -24,6 +24,8 @@ Last updated: 2026-06-21
 
 2026-06-21 mobile index polish: the homepage mobile layout now has compact nav pills, tighter hero spacing, reduced mobile decoration, and denser list-style menu cards; current asset query string is `bar-art-20260621-fix9`.
 
+2026-06-21 drink badge consistency fix: playlist pages use `French 75 · ...`, French 75 now has a dedicated champagne-flute glyph, gallery/homepage French 75 entries share that glyph, reviews shows `Negroni · 酒柜`, and tonight shows `Highball · 今晚`; current asset query string is `bar-art-20260621-fix10`.
+
 ## 2. Phase-One Completion Summary
 
 2026-06-12 visual redesign update: the site now uses an abstract bar-menu concept. The home page is a menu board, each destination is paired with a cocktail, and secondary pages present a drink identity badge. Friend-link information and avatars must remain unchanged unless the user explicitly asks.
@@ -92,6 +94,7 @@ Follow-up after phase-one sealing:
   - Cursor reentry and scroll recovery depends on clearing `cursor.dataset.hidden` inside the shared pointer movement path, not only on `window.pointerenter`.
   - Do not reintroduce transform-based page movement on `body` while `.bar-cursor` is a fixed child; it can recreate scroll-offset cursor drift.
   - Homepage mobile polish is intentionally scoped to small-screen media queries; avoid changing desktop/base menu-board rules unless the user explicitly asks.
+  - Page drink badges should keep class, glyph, and visible English name aligned. French 75 uses `french-75-glyph`, not `coupe-glyph`.
   - Image assets must be handled as binary files. Do not restore or copy PNG/JPG files through text-encoding paths; use binary-safe Git extraction or normal file copy.
   - Playlist detail pages should stay lightweight: no lyrics, no audio embeds, no autoplay, and no new dependency unless the user explicitly changes scope.
   - Reduced motion and mobile/coarse-pointer contexts should not create the canvas, custom cursor, or pointer animation listeners.
@@ -109,7 +112,7 @@ Follow-up after phase-one sealing:
   - CSS-only drink glyphs, dot fields, line grids, polygon overlays, and a menu-board home layout.
   - `assets/site.js` adds a pointer-following bar cursor and drink-name hover labels for menu items.
   - `assets/styles.css` now also includes shared Tonight, Playlist, Cellar, article-reading, mobile navigation, and reduced-motion polish.
-- Current cache-busting query string is `bar-art-20260621-fix9`; it was updated after the mobile index polish to avoid stale cached CSS/JS and stale badge/avatar images.
+- Current cache-busting query string is `bar-art-20260621-fix10`; it was updated after the drink badge consistency fix to avoid stale cached CSS/JS and stale badge/avatar images.
 - Gripe rail:
   - `assets/gripes.js` stores static `window.BAR_GRIPES` entries; it currently contains eleven entries.
   - `assets/site.js` injects the rail and handles page-size calculation and pagination.

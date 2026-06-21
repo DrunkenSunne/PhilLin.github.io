@@ -1690,6 +1690,8 @@ body::after {
     radial-gradient(circle at 55% 67%, rgba(255, 241, 204, 0.12) 0 0.18rem, transparent 0.2rem);
 }
 
+.french-75-glyph > span::before,
+.french-75-glyph > span::after,
 .paloma-glyph > span::before,
 .paloma-glyph > span::after,
 .negroni-glyph > span::before,
@@ -1698,6 +1700,38 @@ body::after {
 .collins-glyph > span::after {
   position: absolute;
   content: "";
+}
+
+.french-75-glyph > span::before {
+  left: 50%;
+  top: 0.15rem;
+  width: 1.55rem;
+  height: 4.25rem;
+  border: 2px solid rgba(255, 210, 138, 0.82);
+  border-top-width: 1px;
+  border-radius: 0.85rem 0.85rem 0.35rem 0.35rem;
+  background:
+    radial-gradient(circle at 44% 18%, rgba(255, 241, 204, 0.38) 0 0.12rem, transparent 0.14rem),
+    radial-gradient(circle at 58% 33%, rgba(255, 241, 204, 0.25) 0 0.1rem, transparent 0.12rem),
+    linear-gradient(180deg, rgba(255, 241, 204, 0.12), rgba(240, 164, 58, 0.24) 48%, rgba(255, 241, 204, 0.05));
+  transform: translateX(-50%);
+}
+
+.french-75-glyph > span::after {
+  left: 50%;
+  bottom: 0.12rem;
+  width: 3.2rem;
+  height: 1.25rem;
+  border-bottom: 2px solid rgba(255, 210, 138, 0.82);
+  border-left: 2px solid rgba(255, 210, 138, 0.82);
+  transform: translateX(-50%) skewX(-18deg);
+}
+
+.french-75-glyph > span {
+  background:
+    linear-gradient(90deg, transparent 0 47%, rgba(255, 210, 138, 0.72) 47.5% 49%, transparent 49.5% 100%) 50% 4.2rem / 2.2rem 1rem no-repeat,
+    radial-gradient(circle at 39% 27%, rgba(255, 241, 204, 0.24) 0 0.12rem, transparent 0.14rem),
+    radial-gradient(circle at 58% 21%, rgba(255, 241, 204, 0.2) 0 0.1rem, transparent 0.12rem);
 }
 
 .paloma-glyph > span::before {

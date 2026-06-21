@@ -78,7 +78,8 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - 2026-06-20 playlist detail update: `playlist.html` cards now link to six static detail pages, each with its own restrained song list. No lyrics, audio embeds, autoplay, or new dependencies were added.
 - 2026-06-21 cursor scroll-offset fix: the custom cursor now uses fixed `left` / `top` from viewport `clientX` / `clientY`, and the `body` page-fade animation no longer uses `transform`, so scrolling should not make the cursor appear above the pointer.
 - 2026-06-21 mobile index polish: homepage mobile layout was refined only inside small-screen media queries, with compact nav pills, tighter hero spacing, reduced decoration, and denser menu-entry cards. Desktop/base homepage rules should remain unaffected.
-- Current cache-busting query string is `bar-art-20260621-fix9`.
+- 2026-06-21 drink badge consistency fix: playlist pages now display `French 75 · ...`, French 75 uses `french-75-glyph`, gallery and homepage French 75 entries use the same glyph, `reviews.html` displays `Negroni · 酒柜`, and `tonight.html` displays `Highball · 今晚`.
+- Current cache-busting query string is `bar-art-20260621-fix10`.
 
 ## 1. Current Project Goal
 
@@ -288,7 +289,7 @@ Alternatives not chosen:
 - Introduce build-hash tooling.
 
 Current cache-busting query string:
-- As of the 2026-06-21 mobile index polish, public HTML pages use `bar-art-20260621-fix9` for `assets/styles.css`, `assets/content.js`, `assets/gripes.js`, `assets/site.js`, and cache-busted shared image references.
+- As of the 2026-06-21 drink badge consistency fix, public HTML pages use `bar-art-20260621-fix10` for `assets/styles.css`, `assets/content.js`, `assets/gripes.js`, `assets/site.js`, and cache-busted shared image references.
 
 ## 8. Current Constraints
 
