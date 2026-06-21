@@ -59,6 +59,7 @@ Follow-up after phase-one sealing:
 - Published the eighth gripe with mood `微醺`, emoji `🍸`, and timestamp `2026-06-17 00:57:39`.
 - Published the ninth gripe with mood `无语`, emoji `😶`, and timestamp `2026-06-20 15:40:42`.
 - Published the tenth gripe with mood `无语`, emoji `😶`, and timestamp `2026-06-20 15:42:08`.
+- Published the eleventh gripe with mood `兴奋`, emoji `🤩`, and timestamp `2026-06-21 14:19:06`.
 
 - Project-level preference localized from user request: skip visual verification by default unless the user explicitly asks later or a higher-priority instruction requires it.
 - Abstract redesign follow-up:
@@ -104,7 +105,7 @@ Follow-up after phase-one sealing:
   - `assets/styles.css` now also includes shared Tonight, Playlist, Cellar, article-reading, mobile navigation, and reduced-motion polish.
 - Current cache-busting query string is `bar-art-20260620-fix7`; it was updated after the playlist detail-page styling change to avoid stale cached CSS/JS and stale badge/avatar images.
 - Gripe rail:
-  - `assets/gripes.js` stores static `window.BAR_GRIPES` entries; it currently contains ten entries.
+  - `assets/gripes.js` stores static `window.BAR_GRIPES` entries; it currently contains eleven entries.
   - `assets/site.js` injects the rail and handles page-size calculation and pagination.
   - `assets/styles.css` positions the rail on the right for desktop and makes it responsive on narrower screens.
   - Current scale strategy is scheme 2: keep gripe data separate from `assets/content.js` and render only the current page.

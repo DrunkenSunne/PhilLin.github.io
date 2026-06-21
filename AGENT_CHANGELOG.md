@@ -1,6 +1,16 @@
 # AGENT_CHANGELOG
 
-Last updated: 2026-06-20
+Last updated: 2026-06-21
+
+## 2026-06-21 Gripe Added - Productive Exam Sprint
+
+User provided a gripe text and mood `兴奋`.
+
+- Added an eleventh `window.BAR_GRIPES` entry to `assets/gripes.js`.
+- Published gripe: `期末复习伴随着ddl还是有条不紊的开始了，但其实被逼着进入一种近似心流的高效率工作状态也是一种不错的体验，喜欢待办事项被一项一项做完的感觉。`
+- Recorded mood as `兴奋`, emoji as `🤩`, and timestamp as `2026-06-21 14:19:06`.
+- Updated `AGENT_CONTEXT.md` and `AGENT_HANDOFF.md` so future recovery sees the current gripe count and latest entry.
+- Visual verification skipped by project preference.
 
 ## 2026-06-20 Playlist Detail Pages
 
