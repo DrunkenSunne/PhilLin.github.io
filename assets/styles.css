@@ -1305,7 +1305,7 @@ body::after {
 
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 0.85rem;
   padding: 1rem 0 0.85rem;
 }
@@ -1692,6 +1692,12 @@ body::after {
 
 .french-75-glyph > span::before,
 .french-75-glyph > span::after,
+.gimlet-glyph > span::before,
+.gimlet-glyph > span::after,
+.boulevardier-glyph > span::before,
+.boulevardier-glyph > span::after,
+.sazerac-glyph > span::before,
+.sazerac-glyph > span::after,
 .paloma-glyph > span::before,
 .paloma-glyph > span::after,
 .negroni-glyph > span::before,
@@ -1758,6 +1764,94 @@ body::after {
   background:
     radial-gradient(circle at 43% 44%, rgba(255, 241, 204, 0.28) 0 0.16rem, transparent 0.18rem),
     radial-gradient(circle at 55% 52%, rgba(255, 241, 204, 0.22) 0 0.12rem, transparent 0.14rem);
+}
+
+.gimlet-glyph > span::before {
+  left: 50%;
+  top: 0.55rem;
+  width: 3.65rem;
+  height: 3.15rem;
+  border: 2px solid rgba(255, 210, 138, 0.82);
+  border-radius: 0 0 1.65rem 1.65rem;
+  background:
+    radial-gradient(circle at 64% 24%, rgba(154, 155, 93, 0.52) 0 0.34rem, transparent 0.37rem),
+    linear-gradient(180deg, rgba(255, 241, 204, 0.08), rgba(154, 155, 93, 0.3));
+  transform: translateX(-50%);
+}
+
+.gimlet-glyph > span::after {
+  left: 50%;
+  bottom: 0.25rem;
+  width: 3.2rem;
+  height: 1.35rem;
+  border-bottom: 2px solid rgba(255, 210, 138, 0.82);
+  border-left: 2px solid rgba(255, 210, 138, 0.82);
+  transform: translateX(-50%) skewX(-16deg);
+}
+
+.gimlet-glyph > span {
+  background:
+    linear-gradient(90deg, transparent 0 47%, rgba(255, 210, 138, 0.72) 47.5% 49%, transparent 49.5% 100%) 50% 3.7rem / 2rem 1.05rem no-repeat,
+    linear-gradient(135deg, transparent 0 48%, rgba(154, 155, 93, 0.7) 48.2% 50%, transparent 50.2% 100%) 62% 18% / 1.5rem 1.5rem no-repeat;
+}
+
+.boulevardier-glyph > span::before {
+  left: 50%;
+  bottom: 0.55rem;
+  width: 3.75rem;
+  height: 3.1rem;
+  border: 2px solid rgba(255, 210, 138, 0.82);
+  border-radius: 0 0 0.62rem 0.62rem;
+  background:
+    radial-gradient(circle at 42% 45%, rgba(255, 241, 204, 0.23) 0 0.52rem, transparent 0.55rem),
+    linear-gradient(180deg, rgba(159, 47, 40, 0.62), rgba(93, 42, 31, 0.36));
+  transform: translateX(-50%);
+}
+
+.boulevardier-glyph > span::after {
+  right: 0.85rem;
+  top: 0.6rem;
+  width: 1.35rem;
+  height: 1.35rem;
+  border: 2px solid rgba(240, 164, 58, 0.72);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(159, 47, 40, 0.18), transparent 56%);
+}
+
+.boulevardier-glyph > span {
+  background:
+    linear-gradient(90deg, transparent 0 44%, rgba(255, 241, 204, 0.18) 44.5% 58%, transparent 58.5% 100%) 46% 58% / 1.3rem 1.3rem no-repeat,
+    radial-gradient(circle at 60% 59%, rgba(255, 241, 204, 0.16) 0 0.42rem, transparent 0.45rem);
+}
+
+.sazerac-glyph > span::before {
+  left: 50%;
+  bottom: 0.45rem;
+  width: 3.45rem;
+  height: 3.45rem;
+  border: 2px solid rgba(255, 210, 138, 0.82);
+  border-radius: 50% 50% 0.7rem 0.7rem;
+  background:
+    radial-gradient(circle at 44% 48%, rgba(255, 241, 204, 0.18) 0 0.55rem, transparent 0.58rem),
+    linear-gradient(180deg, rgba(240, 164, 58, 0.34), rgba(159, 47, 40, 0.42));
+  transform: translateX(-50%);
+}
+
+.sazerac-glyph > span::after {
+  left: 1.1rem;
+  top: 0.4rem;
+  width: 3.15rem;
+  height: 0.18rem;
+  border-radius: 999px;
+  background: rgba(255, 241, 204, 0.56);
+  box-shadow: 0 0.55rem 0 rgba(255, 210, 138, 0.3);
+  transform: rotate(-18deg);
+}
+
+.sazerac-glyph > span {
+  background:
+    radial-gradient(circle at 65% 25%, rgba(154, 155, 93, 0.72) 0 0.2rem, transparent 0.23rem),
+    radial-gradient(circle at 36% 58%, rgba(255, 241, 204, 0.18) 0 0.38rem, transparent 0.41rem);
 }
 
 .negroni-glyph > span::before {

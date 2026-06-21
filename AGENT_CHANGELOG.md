@@ -2,6 +2,19 @@
 
 Last updated: 2026-06-21
 
+## 2026-06-21 Home Menu And Drink Identity Rework
+
+User reported that the homepage menu no longer matched the expanded pages and that drink identities were duplicated, especially `Highball` being used for both `生活日志` and `今晚`.
+
+- Expanded the homepage menu board from eight entries to ten entries so it covers the public navigation pages: `文章`, `生活日志`, `一些思绪`, `种草安利`, `今晚`, `酒柜`, `夜间歌单`, `摄影作品`, `友链`, and `关于我`.
+- Kept existing identities for older entries: `Paper Plane · 文章`, `Highball · 生活日志`, `Old Fashioned · 一些思绪`, `Paloma · 种草安利`, `French 75 · 摄影作品`, `Tom Collins · 友链`, and `Martini · 关于我`.
+- Reassigned newly added sections to non-duplicated identities: `Gimlet · 今晚`, `Boulevardier · 酒柜`, and `Sazerac · 夜间歌单`.
+- Updated `tonight.html`, `reviews.html`, `playlist.html`, and the playlist detail pages to use their new page badge class, visible English name, and glyph.
+- Added CSS-only `gimlet-glyph`, `boulevardier-glyph`, and `sazerac-glyph` logo marks in `assets/styles.css`.
+- Changed the desktop homepage menu grid to five columns so the ten-entry menu forms a clean two-row board.
+- Updated public and draft HTML asset query strings to `bar-art-20260621-fix11`.
+- Visual verification skipped by project preference.
+
 ## 2026-06-21 Drink Badge Consistency Fix
 
 User reported the night playlist drink mark and English name were wrong, and asked to check every page's drink mark and English label.

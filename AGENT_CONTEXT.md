@@ -42,7 +42,7 @@ This file externalizes the verified phase-one project context. Do not treat chat
 ## 2026-06-12 Abstract Bar Menu Redesign State
 
 - The home page is now a bar-menu style board instead of the previous centered hero/card layout.
-- Each home menu item pairs a cocktail with a page: `Paper Plane · 文章`, `Highball · 生活日志`, `Old Fashioned · 一些思绪`, `Paloma · 种草安利`, `Negroni · 酒评`, `French 75 · 摄影作品`, `Tom Collins · 友链`, and `Martini · 关于我`.
+- Each top-level home menu item now pairs a unique cocktail with a public page: `Paper Plane · 文章`, `Highball · 生活日志`, `Old Fashioned · 一些思绪`, `Paloma · 种草安利`, `Gimlet · 今晚`, `Boulevardier · 酒柜`, `Sazerac · 夜间歌单`, `French 75 · 摄影作品`, `Tom Collins · 友链`, and `Martini · 关于我`.
 - Secondary pages now use a `drink-page` / `drink-heading` pattern with a drink identity badge.
 - Article pages use `Coupe · Article`.
 - `assets/styles.css` now contains the abstract menu-board visual layer, CSS-only drink glyphs, dot fields, line grids, polygon overlays, and updated card styling.
@@ -78,8 +78,8 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - 2026-06-20 playlist detail update: `playlist.html` cards now link to six static detail pages, each with its own restrained song list. No lyrics, audio embeds, autoplay, or new dependencies were added.
 - 2026-06-21 cursor scroll-offset fix: the custom cursor now uses fixed `left` / `top` from viewport `clientX` / `clientY`, and the `body` page-fade animation no longer uses `transform`, so scrolling should not make the cursor appear above the pointer.
 - 2026-06-21 mobile index polish: homepage mobile layout was refined only inside small-screen media queries, with compact nav pills, tighter hero spacing, reduced decoration, and denser menu-entry cards. Desktop/base homepage rules should remain unaffected.
-- 2026-06-21 drink badge consistency fix: playlist pages now display `French 75 · ...`, French 75 uses `french-75-glyph`, gallery and homepage French 75 entries use the same glyph, `reviews.html` displays `Negroni · 酒柜`, and `tonight.html` displays `Highball · 今晚`.
-- Current cache-busting query string is `bar-art-20260621-fix10`.
+- 2026-06-21 home menu and drink identity rework: the homepage menu now includes all ten public navigation destinations, uses a five-by-two desktop menu grid, keeps `Highball` only for `生活日志`, assigns `Gimlet · 今晚`, `Boulevardier · 酒柜`, and `Sazerac · 夜间歌单`, and adds matching `gimlet-glyph`, `boulevardier-glyph`, and `sazerac-glyph` CSS marks.
+- Current cache-busting query string is `bar-art-20260621-fix11`.
 
 ## 1. Current Project Goal
 
@@ -289,7 +289,7 @@ Alternatives not chosen:
 - Introduce build-hash tooling.
 
 Current cache-busting query string:
-- As of the 2026-06-21 drink badge consistency fix, public HTML pages use `bar-art-20260621-fix10` for `assets/styles.css`, `assets/content.js`, `assets/gripes.js`, `assets/site.js`, and cache-busted shared image references.
+- As of the 2026-06-21 home menu and drink identity rework, public HTML pages use `bar-art-20260621-fix11` for `assets/styles.css`, `assets/content.js`, `assets/gripes.js`, `assets/site.js`, and cache-busted shared image references.
 
 ## 8. Current Constraints
 
