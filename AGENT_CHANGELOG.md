@@ -13,6 +13,7 @@ User provided `C:\Users\Phil Lin\Desktop\临时用\日志.docx` and requested ta
 - Generated final static article file `article-experiment-review-double-run.html`.
 - Added one `BAR_POSTS` metadata entry with tag `生活日志`.
 - Deleted `preview-20260622.html`.
+- Refreshed HTML asset query strings to `bar-art-20260622-post2` so `index.html`, `posts.html`, and tag pages load the updated `assets/content.js`.
 - Final title: `实验和复习双开的一天`.
 - Final summary: `一段关于高压日程的生活日志：病原生物学复习、细胞实验推进、游戏之后被压力追上，也试着给接下来的超频运转找到一点续航方式。`
 

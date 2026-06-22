@@ -2,7 +2,7 @@
 
 Last updated: 2026-06-21
 
-2026-06-22 publication: user provided `C:\Users\Phil Lin\Desktop\临时用\日志.docx` with tag `生活日志`. The final article is `article-experiment-review-double-run.html`, title `实验和复习双开的一天`, publication date `2026-06-22`, and no extracted images. It has been added to `assets/content.js`; `preview-20260622.html` was deleted.
+2026-06-22 publication: user provided `C:\Users\Phil Lin\Desktop\临时用\日志.docx` with tag `生活日志`. The final article is `article-experiment-review-double-run.html`, title `实验和复习双开的一天`, publication date `2026-06-22`, and no extracted images. It has been added to `assets/content.js`; `preview-20260622.html` was deleted. HTML asset query strings were refreshed to `bar-art-20260622-post2` so index/archive/tag pages load the updated article metadata.
 
 2026-06-22 publication: user provided `C:\Users\Phil Lin\Desktop\临时用\1.docx` with tag `生活日志`. The final article is `article-good-luck-day.html`, title `祝我好运的一天`, publication date `2026-06-21`, and no extracted images. It has been added to `assets/content.js`; `preview-20260621.html` was deleted.
 
@@ -34,7 +34,7 @@ Last updated: 2026-06-21
 
 2026-06-21 Edge cursor effect fix: ambient motion now disables only for reduced motion or `max-width: 720px`, not `(pointer: coarse)` / `(hover: none)`, and `assets/site.js` has mouse event fallbacks alongside pointer events; current asset query string is `bar-art-20260621-fix15`.
 
-2026-06-21 tablet home intro fix: the homepage `menu-intro` collapses to one column across `721px` to `1179px`, with horizontal kicker/buttons, to avoid iPad-sized screens squeezing copy into narrow vertical columns; current asset query string is `bar-art-20260621-fix16`.
+2026-06-21 tablet home intro fix: the homepage `menu-intro` collapses to one column across `721px` to `1179px`, with horizontal kicker/buttons, to avoid iPad-sized screens squeezing copy into narrow vertical columns; asset query string at that time was `bar-art-20260621-fix16`.
 
 ## 2. Phase-One Completion Summary
 
@@ -126,7 +126,7 @@ Follow-up after phase-one sealing:
   - CSS-only drink glyphs, dot fields, line grids, polygon overlays, and a menu-board home layout.
   - `assets/site.js` adds a pointer-following bar cursor and drink-name hover labels for menu items.
   - `assets/styles.css` now also includes shared Tonight, Playlist, Cellar, article-reading, mobile navigation, and reduced-motion polish.
-- Current cache-busting query string is `bar-art-20260621-fix16`; it was updated after the tablet home intro collapse fix to avoid stale cached CSS.
+- Current cache-busting query string is `bar-art-20260622-post2`; it was updated after the 2026-06-22 article publishing pass to avoid stale cached article metadata.
 - Gripe rail:
   - `assets/gripes.js` stores static `window.BAR_GRIPES` entries; it currently contains eleven entries.
   - `assets/site.js` injects the rail and handles page-size calculation and pagination.
