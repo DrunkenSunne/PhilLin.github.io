@@ -2,6 +2,14 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利"];
 
 window.BAR_POSTS = [
   {
+    id: "experiment-review-double-run",
+    title: "实验和复习双开的一天",
+    tag: "生活日志",
+    publishedAt: "2026-06-22",
+    summary: "一段关于高压日程的生活日志：病原生物学复习、细胞实验推进、游戏之后被压力追上，也试着给接下来的超频运转找到一点续航方式。",
+    url: "article-experiment-review-double-run.html",
+  },
+  {
     id: "good-luck-day",
     title: "祝我好运的一天",
     tag: "生活日志",

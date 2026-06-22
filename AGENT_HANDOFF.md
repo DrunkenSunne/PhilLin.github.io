@@ -2,6 +2,8 @@
 
 Last updated: 2026-06-21
 
+2026-06-22 publication: user provided `C:\Users\Phil Lin\Desktop\临时用\日志.docx` with tag `生活日志`. The final article is `article-experiment-review-double-run.html`, title `实验和复习双开的一天`, publication date `2026-06-22`, and no extracted images. It has been added to `assets/content.js`; `preview-20260622.html` was deleted.
+
 2026-06-22 publication: user provided `C:\Users\Phil Lin\Desktop\临时用\1.docx` with tag `生活日志`. The final article is `article-good-luck-day.html`, title `祝我好运的一天`, publication date `2026-06-21`, and no extracted images. It has been added to `assets/content.js`; `preview-20260621.html` was deleted.
 
 ## 1. One-Sentence Project State

@@ -2,6 +2,20 @@
 
 Last updated: 2026-06-21
 
+## 2026-06-22 Word Article Published - Life Log 20260622
+
+User provided `C:\Users\Phil Lin\Desktop\临时用\日志.docx` and requested tag `生活日志`, leaving title, summary, and formatting decisions to Codex.
+
+- Extracted three text paragraphs from the Word document.
+- Treated the first paragraph `20260622` as the intended publication date.
+- Confirmed no embedded media files were present.
+- Generated review-only `preview-20260622.html`, then formally published after user approval.
+- Generated final static article file `article-experiment-review-double-run.html`.
+- Added one `BAR_POSTS` metadata entry with tag `生活日志`.
+- Deleted `preview-20260622.html`.
+- Final title: `实验和复习双开的一天`.
+- Final summary: `一段关于高压日程的生活日志：病原生物学复习、细胞实验推进、游戏之后被压力追上，也试着给接下来的超频运转找到一点续航方式。`
+
 ## 2026-06-22 Word Article Published - Life Log
 
 User provided `C:\Users\Phil Lin\Desktop\临时用\1.docx` and requested tag `生活日志`, leaving title, summary, and formatting decisions to Codex.
