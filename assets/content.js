@@ -2,6 +2,14 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利"];
 
 window.BAR_POSTS = [
   {
+    id: "one-side-cannot-fall",
+    title: "起码一边不能倒下",
+    tag: "生活日志",
+    publishedAt: "2026-06-23",
+    summary: "一段带着罪恶感的生活日志：复习半不邋遢，细胞实验因状态暂缓，只能先承认今天的失落，再希望往后的日子至少有一边稳住。",
+    url: "article-one-side-cannot-fall.html",
+  },
+  {
     id: "experiment-review-double-run",
     title: "实验和复习双开的一天",
     tag: "生活日志",

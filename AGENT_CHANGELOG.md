@@ -2,6 +2,20 @@
 
 Last updated: 2026-06-21
 
+## 2026-06-23 Life Log Text Published
+
+User provided a direct text life log and requested it as today's life log.
+
+- Used tag `生活日志`.
+- Used publication date `2026-06-23`, based on the current date and the user's wording.
+- Generated review-only `preview-20260623.html`, then formally published after user approval.
+- Generated final static article file `article-one-side-cannot-fall.html`.
+- Added one `BAR_POSTS` metadata entry with tag `生活日志`.
+- Deleted `preview-20260623.html`.
+- Refreshed HTML asset query strings to `bar-art-20260623-post3` so `index.html`, `posts.html`, and tag pages load the updated `assets/content.js`.
+- Final title: `起码一边不能倒下`.
+- Final summary: `一段带着罪恶感的生活日志：复习半不邋遢，细胞实验因状态暂缓，只能先承认今天的失落，再希望往后的日子至少有一边稳住。`
+
 ## 2026-06-22 Word Article Published - Life Log 20260622
 
 User provided `C:\Users\Phil Lin\Desktop\临时用\日志.docx` and requested tag `生活日志`, leaving title, summary, and formatting decisions to Codex.

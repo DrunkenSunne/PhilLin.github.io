@@ -2,6 +2,10 @@
 
 Last updated: 2026-06-21
 
+2026-06-23 publication: user provided direct text for today's life log with tag `生活日志`. The final article is `article-one-side-cannot-fall.html`, title `起码一边不能倒下`, publication date `2026-06-23`, and no images. It has been added to `assets/content.js`; `preview-20260623.html` was deleted. HTML asset query strings were refreshed to `bar-art-20260623-post3` so index/archive/tag pages load the updated article metadata.
+
+Important publishing reminder: whenever `assets/content.js` changes for a new post, refresh the HTML asset query string on public pages in the same turn. On 2026-06-22, the article index was updated but the HTML pages initially still referenced the old query string, so the homepage/archive/tag pages could appear stale from browser cache.
+
 2026-06-22 publication: user provided `C:\Users\Phil Lin\Desktop\临时用\日志.docx` with tag `生活日志`. The final article is `article-experiment-review-double-run.html`, title `实验和复习双开的一天`, publication date `2026-06-22`, and no extracted images. It has been added to `assets/content.js`; `preview-20260622.html` was deleted. HTML asset query strings were refreshed to `bar-art-20260622-post2` so index/archive/tag pages load the updated article metadata.
 
 2026-06-22 publication: user provided `C:\Users\Phil Lin\Desktop\临时用\1.docx` with tag `生活日志`. The final article is `article-good-luck-day.html`, title `祝我好运的一天`, publication date `2026-06-21`, and no extracted images. It has been added to `assets/content.js`; `preview-20260621.html` was deleted.
