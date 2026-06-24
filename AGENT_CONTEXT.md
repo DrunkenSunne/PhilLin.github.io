@@ -90,7 +90,7 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - Content boundary: gripe entries should be around 50 Chinese characters and preferably under 100; bar notes are roughly 300 to 1200 characters; complete pieces remain normal articles.
 - Hanky Panky is the Martini-family identity for 吧台札记. Its glyph should keep the canonical Martini glass geometry and only add a small herbal/bitter cue. Mobile/tablet glyph rules must keep internal `5.2rem` geometry and scale by transform, matching the existing Martini-family constraint.
 - 2026-06-24 drink glyph pass: all current public drink badges were upgraded toward A+C, meaning blueprint-style line structure plus one recognizable ingredient cue. Keep glyph artwork inside the canonical `5.2rem` internal box and continue responsive scaling by `transform` only, to avoid desktop/tablet/mobile drift.
-- Current cache-busting query string is `bar-art-20260624-glyphs`.
+- Current cache-busting query string is `bar-art-20260624-life-log`.
 
 ## 1. Current Project Goal
 
@@ -308,7 +308,7 @@ Alternatives not chosen:
 
 Current cache-busting query string:
 - As of the 2026-06-23 article publishing cache refresh, public HTML pages use `bar-art-20260623-post3` for `assets/styles.css`, `assets/content.js`, `assets/gripes.js`, `assets/site.js`, and cache-busted shared image references.
-- As of the 2026-06-24 drink glyph pass, public and draft HTML pages use `bar-art-20260624-glyphs` for shared assets.
+- As of the 2026-06-24 life-log publishing cache refresh, public and draft HTML pages use `bar-art-20260624-life-log` for shared assets.
 - Important publishing reminder: whenever `assets/content.js` changes for a new post, refresh the HTML asset query string on public pages in the same turn. On 2026-06-22, the article index was updated but the HTML pages initially still referenced the old query string, so the homepage/archive/tag pages could appear stale from browser cache.
 
 ## 8. Current Constraints

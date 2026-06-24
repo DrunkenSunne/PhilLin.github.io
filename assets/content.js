@@ -2,6 +2,14 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利"];
 
 window.BAR_POSTS = [
   {
+    id: "after-exam-still-held",
+    title: "考完以后，也没有完全散掉",
+    tag: "生活日志",
+    publishedAt: "2026-06-24",
+    summary: "一段关于考试结束后继续衔接学习与实验的生活日志：细胞与分子生物学考试收尾，病原生物学继续推进，药理学总论也终于从未开始变成已启动。",
+    url: "article-after-exam-still-held.html",
+  },
+  {
     id: "one-side-cannot-fall",
     title: "起码一边不能倒下",
     tag: "生活日志",

@@ -2,6 +2,8 @@
 
 Last updated: 2026-06-24
 
+2026-06-24 publication: user provided a schedule screenshot for a life log. The final article is `article-after-exam-still-held.html`, tag `生活日志`, title `考完以后，也没有完全散掉`, publication date `2026-06-24`, and vague experiment wording (`实验室工作` / `细胞状态确认`). It has been added to `assets/content.js`; `preview-20260624.html` was deleted. User asked to change the original endnote because it felt too corny; final endnote is restrained. HTML asset query strings were refreshed to `bar-art-20260624-life-log` so index/archive/tag pages load the updated article metadata.
+
 2026-06-24 drink glyph pass: user chose A+C for drink badges, meaning blueprint cocktail icon structure plus ingredient silhouette cues. `assets/styles.css` now upgrades all current page glyphs and retained fallback glyph classes while keeping the canonical `5.2rem` internal geometry and responsive transform scaling. Browser visual verification was attempted but blocked by local browser permissions; standalone Playwright is not installed. Current asset query string is `bar-art-20260624-glyphs`.
 
 2026-06-24 column scaffold: added Hanky Panky / 吧台札记 for medium-length fragments. The new index is `notes.html`; note metadata lives in `window.BAR_NOTES` in `assets/content.js`; individual notes should be independent `note-*.html` files copied from `_drafts/note-format-reference.html`. The top navigation was intentionally not expanded; the homepage entry is only inside the Martini Flight variant links. Content boundary: 吐槽 should stay around 50 Chinese characters and preferably under 100, 吧台札记 is roughly 300 to 1200 characters, full essays remain normal articles.

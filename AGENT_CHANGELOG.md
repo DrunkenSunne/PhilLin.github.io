@@ -2,6 +2,21 @@
 
 Last updated: 2026-06-24
 
+## 2026-06-24 Life Log Schedule Published
+
+User provided a screenshot of a 2026-06-24 schedule summary and asked Codex to write and design a life log based on it.
+
+- Generated review-only `preview-20260624.html`, then formally published after user approval.
+- Generated final static article file `article-after-exam-still-held.html`.
+- Added one `BAR_POSTS` metadata entry with tag `生活日志`.
+- Deleted `preview-20260624.html`.
+- User requested changing the preview endnote because it felt too corny; final endnote is `考完以后还能把下一件事接起来，今天就先记到这里。`
+- Final tag: `生活日志`.
+- Final title: `考完以后，也没有完全散掉`.
+- Final summary: `一段关于考试结束后继续衔接学习与实验的生活日志：细胞与分子生物学考试收尾，病原生物学继续推进，药理学总论也终于从未开始变成已启动。`
+- Kept experimental details vague as `实验室工作` and `细胞状态确认`, matching the user's privacy direction in the source.
+- Refreshed HTML asset query strings to `bar-art-20260624-life-log` so `index.html`, `posts.html`, and tag pages load the updated `assets/content.js`.
+
 ## 2026-06-24 Drink Glyph A+C Pass
 
 User chose the A+C direction for drink badges: blueprint cocktail icons plus ingredient silhouettes, with every badge covered and no desktop/tablet/mobile image drift.
