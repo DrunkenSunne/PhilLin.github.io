@@ -1,6 +1,16 @@
 # AGENT_CHANGELOG
 
-Last updated: 2026-06-21
+Last updated: 2026-06-24
+
+## 2026-06-24 Gripe Added - Fast Walking Training
+
+User provided a gripe text and asked Codex to choose the mood.
+
+- Added a twelfth `window.BAR_GRIPES` entry to `assets/gripes.js`.
+- Published gripe: `我走路快这个毛病绝对是我平常喜欢在实验室教学楼实验教学楼宿舍（甚至医院）之间卡点来回奔波+电梯没那么好使养成的。`
+- Chose mood `自嘲`, emoji `🏃‍♂️`, and timestamp `2026-06-24 14:20:16`.
+- Updated `AGENT_CONTEXT.md` and `AGENT_HANDOFF.md` so future recovery sees the current gripe count and latest entry.
+- Visual verification skipped by project preference.
 
 ## 2026-06-23 Life Log Text Published
 

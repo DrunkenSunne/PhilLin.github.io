@@ -1,6 +1,6 @@
 # AGENT_HANDOFF
 
-Last updated: 2026-06-21
+Last updated: 2026-06-24
 
 2026-06-23 publication: user provided direct text for today's life log with tag `生活日志`. The final article is `article-one-side-cannot-fall.html`, title `起码一边不能倒下`, publication date `2026-06-23`, and no images. It has been added to `assets/content.js`; `preview-20260623.html` was deleted. HTML asset query strings were refreshed to `bar-art-20260623-post3` so index/archive/tag pages load the updated article metadata.
 
@@ -80,6 +80,7 @@ Follow-up after phase-one sealing:
 - Published the ninth gripe with mood `无语`, emoji `😶`, and timestamp `2026-06-20 15:40:42`.
 - Published the tenth gripe with mood `无语`, emoji `😶`, and timestamp `2026-06-20 15:42:08`.
 - Published the eleventh gripe with mood `兴奋`, emoji `🤩`, and timestamp `2026-06-21 14:19:06`.
+- Published the twelfth gripe with mood `自嘲`, emoji `🏃‍♂️`, and timestamp `2026-06-24 14:20:16`.
 
 - Project-level preference localized from user request: skip visual verification by default unless the user explicitly asks later or a higher-priority instruction requires it.
 - Abstract redesign follow-up:
@@ -132,7 +133,7 @@ Follow-up after phase-one sealing:
   - `assets/styles.css` now also includes shared Tonight, Playlist, Cellar, article-reading, mobile navigation, and reduced-motion polish.
 - Current cache-busting query string is `bar-art-20260622-post2`; it was updated after the 2026-06-22 article publishing pass to avoid stale cached article metadata.
 - Gripe rail:
-  - `assets/gripes.js` stores static `window.BAR_GRIPES` entries; it currently contains eleven entries.
+  - `assets/gripes.js` stores static `window.BAR_GRIPES` entries; it currently contains twelve entries.
   - `assets/site.js` injects the rail and handles page-size calculation and pagination.
   - `assets/styles.css` positions the rail on the right for desktop and makes it responsive on narrower screens.
   - Current scale strategy is scheme 2: keep gripe data separate from `assets/content.js` and render only the current page.
