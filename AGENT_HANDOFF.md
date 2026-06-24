@@ -1,12 +1,14 @@
 # AGENT_HANDOFF
 
-Last updated: 2026-06-24
+Last updated: 2026-06-25
 
 2026-06-24 publication: user provided a schedule screenshot for a life log. The final article is `article-after-exam-still-held.html`, tag `生活日志`, title `考完以后，也没有完全散掉`, publication date `2026-06-24`, and vague experiment wording (`实验室工作` / `细胞状态确认`). It has been added to `assets/content.js`; `preview-20260624.html` was deleted. User asked to change the original endnote because it felt too corny; final endnote is restrained. HTML asset query strings were refreshed to `bar-art-20260624-life-log` so index/archive/tag pages load the updated article metadata.
 
 2026-06-24 drink glyph pass: user chose A+C for drink badges, meaning blueprint cocktail icon structure plus ingredient silhouette cues. `assets/styles.css` now upgrades all current page glyphs and retained fallback glyph classes while keeping the canonical `5.2rem` internal geometry and responsive transform scaling. Browser visual verification was attempted but blocked by local browser permissions; standalone Playwright is not installed. Current asset query string is `bar-art-20260624-glyphs`.
 
-2026-06-24 column scaffold: added Hanky Panky / 吧台札记 for medium-length fragments. The new index is `notes.html`; note metadata lives in `window.BAR_NOTES` in `assets/content.js`; individual notes should be independent `note-*.html` files copied from `_drafts/note-format-reference.html`. The top navigation was intentionally not expanded; the homepage entry is only inside the Martini Flight variant links. Content boundary: 吐槽 should stay around 50 Chinese characters and preferably under 100, 吧台札记 is roughly 300 to 1200 characters, full essays remain normal articles.
+2026-06-25 first bar note: user provided `C:\Users\Phil Lin\Desktop\临时用\札记.docx` and asked to delete the previous template while publishing this note. The final note is `note-lab-after-exam-restlessness.html`, title `待在实验室，也不等于没有浪费时间`, publication date `2026-06-25`, mood `自我审问`, and it is indexed in `window.BAR_NOTES`. `_drafts/note-format-reference.html` was deleted at user request. HTML asset query strings were refreshed to `bar-art-20260625-note1` so `notes.html` loads the updated note metadata.
+
+2026-06-24 column scaffold: added Hanky Panky / 吧台札记 for medium-length fragments. The new index is `notes.html`; note metadata lives in `window.BAR_NOTES` in `assets/content.js`; individual notes should be independent `note-*.html` files. The old `_drafts/note-format-reference.html` template has now been deleted, so future notes should follow existing published `note-*.html` pages instead. The top navigation was intentionally not expanded; the homepage entry is only inside the Martini Flight variant links. Content boundary: 吐槽 should stay around 50 Chinese characters and preferably under 100, 吧台札记 is roughly 300 to 1200 characters, full essays remain normal articles.
 
 2026-06-23 publication: user provided direct text for today's life log with tag `生活日志`. The final article is `article-one-side-cannot-fall.html`, title `起码一边不能倒下`, publication date `2026-06-23`, and no images. It has been added to `assets/content.js`; `preview-20260623.html` was deleted. HTML asset query strings were refreshed to `bar-art-20260623-post3` so index/archive/tag pages load the updated article metadata.
 
@@ -137,7 +139,7 @@ Follow-up after phase-one sealing:
   - CSS-only drink glyphs, dot fields, line grids, polygon overlays, and a menu-board home layout.
   - `assets/site.js` adds a pointer-following bar cursor and drink-name hover labels for menu items.
   - `assets/styles.css` now also includes shared Tonight, Playlist, Cellar, article-reading, mobile navigation, and reduced-motion polish.
-- Current cache-busting query string is `bar-art-20260624-glyphs`; it was updated after the 2026-06-24 drink glyph pass to avoid stale cached CSS/JS and metadata.
+- Current cache-busting query string is `bar-art-20260625-note1`; it was updated after the 2026-06-25 first bar-note publish to avoid stale cached CSS/JS and metadata.
 - Gripe rail:
   - `assets/gripes.js` stores static `window.BAR_GRIPES` entries; it currently contains twelve entries.
   - `assets/site.js` injects the rail and handles page-size calculation and pagination.
@@ -184,7 +186,7 @@ Before any future work, run `git status --short` and `git diff --stat`.
 - `tag-thoughts.html`: `一些思绪` tag page.
 - `tag-recommendations.html`: `种草安利` tag page.
 - `notes.html`: Hanky Panky / 吧台札记 index.
-- `_drafts/note-format-reference.html`: static template for individual note pages.
+- `note-lab-after-exam-restlessness.html`: first published bar-note page.
 - `article.html`: dynamic article fallback.
 - `article-two-bottles-writing-touch.html`: second published article, tag `一些思绪`.
 - `article-first-words-on-the-bar.html`: first published article, tag `一些思绪`.

@@ -1,6 +1,6 @@
 # AGENT_CONTEXT
 
-Last updated: 2026-06-24
+Last updated: 2026-06-25
 
 This file externalizes the verified phase-one project context. Do not treat chat history or auto summaries as authoritative. Reconfirm current state from repository files, command output, and validation results before future development.
 
@@ -86,11 +86,11 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - 2026-06-21 mobile index polish: homepage mobile layout was refined only inside small-screen media queries, with compact nav pills, tighter hero spacing, reduced decoration, and denser menu-entry cards. Desktop/base homepage rules should remain unaffected.
 - 2026-06-21 homepage article menu simplification: article/category entries are grouped into one homepage Martini Flight card; `posts.html` shows `Martini · 文章`, category pages show `Gibson · 生活日志`, `Dirty Martini · 一些思绪`, and `Vesper · 种草安利`, and `about.html` now uses `Last Word · 关于我`.
 - 2026-06-24 bar-note column added: `notes.html` is the Hanky Panky / 吧台札记 index for medium-length fragments. It is intentionally not added to the top navigation; the entry lives inside the homepage Martini Flight variants so the homepage and mobile nav do not get more crowded.
-- `assets/content.js` now defines `window.BAR_NOTES` for note metadata. Each note should still have its own static `note-*.html` page, based on `_drafts/note-format-reference.html`.
+- `assets/content.js` now defines `window.BAR_NOTES` for note metadata. Each note should still have its own static `note-*.html` page. The old `_drafts/note-format-reference.html` template was deleted on 2026-06-25 at user request; future notes should follow an existing published `note-*.html` page instead.
 - Content boundary: gripe entries should be around 50 Chinese characters and preferably under 100; bar notes are roughly 300 to 1200 characters; complete pieces remain normal articles.
 - Hanky Panky is the Martini-family identity for 吧台札记. Its glyph should keep the canonical Martini glass geometry and only add a small herbal/bitter cue. Mobile/tablet glyph rules must keep internal `5.2rem` geometry and scale by transform, matching the existing Martini-family constraint.
 - 2026-06-24 drink glyph pass: all current public drink badges were upgraded toward A+C, meaning blueprint-style line structure plus one recognizable ingredient cue. Keep glyph artwork inside the canonical `5.2rem` internal box and continue responsive scaling by `transform` only, to avoid desktop/tablet/mobile drift.
-- Current cache-busting query string is `bar-art-20260624-life-log`.
+- Current cache-busting query string is `bar-art-20260625-note1`.
 
 ## 1. Current Project Goal
 
@@ -148,8 +148,8 @@ Verified in files:
 
 - Bar notes:
   - `notes.html` renders note metadata from `window.BAR_NOTES` using `data-note-list`.
-  - `_drafts/note-format-reference.html` is the static per-note template.
-  - No public note entries exist yet at the time this column scaffold was added.
+  - The first public note entry is `note-lab-after-exam-restlessness.html`.
+  - `_drafts/note-format-reference.html` was deleted at user request; use existing `note-*.html` pages as future note references.
 
 - Article pages:
   - Two public static article pages currently exist: `article-two-bottles-writing-touch.html` and `article-first-words-on-the-bar.html`.
@@ -228,7 +228,7 @@ Static site architecture:
 - `article-two-bottles-writing-touch.html`: second published article, tag `一些思绪`.
 - `article-first-words-on-the-bar.html`: first published article, tag `一些思绪`.
 - `_drafts/article-format-reference.html`: non-public reference article template.
-- `_drafts/note-format-reference.html`: non-public reference template for individual note pages.
+- `note-lab-after-exam-restlessness.html`: first published bar-note page.
 - `reviews.html`: cocktail review placeholder page.
 - `gallery.html`: gallery placeholder page.
 - `friends.html`: StarCried friend-link page.
@@ -309,6 +309,7 @@ Alternatives not chosen:
 Current cache-busting query string:
 - As of the 2026-06-23 article publishing cache refresh, public HTML pages use `bar-art-20260623-post3` for `assets/styles.css`, `assets/content.js`, `assets/gripes.js`, `assets/site.js`, and cache-busted shared image references.
 - As of the 2026-06-24 life-log publishing cache refresh, public and draft HTML pages use `bar-art-20260624-life-log` for shared assets.
+- As of the 2026-06-25 first bar-note publishing refresh, public and draft HTML pages use `bar-art-20260625-note1` for shared assets.
 - Important publishing reminder: whenever `assets/content.js` changes for a new post, refresh the HTML asset query string on public pages in the same turn. On 2026-06-22, the article index was updated but the HTML pages initially still referenced the old query string, so the homepage/archive/tag pages could appear stale from browser cache.
 
 ## 8. Current Constraints

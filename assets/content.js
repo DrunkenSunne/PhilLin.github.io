@@ -51,7 +51,16 @@ window.BAR_POSTS = [
   },
 ];
 
-window.BAR_NOTES = [];
+window.BAR_NOTES = [
+  {
+    id: "lab-after-exam-restlessness",
+    title: "待在实验室，也不等于没有浪费时间",
+    publishedAt: "2026-06-25",
+    mood: "自我审问",
+    summary: "一条写在实验室里的札记：考试后的工作姿态、游戏带来的烦躁、形式主义式的复习，以及面对 AI 与自我思考时说不清的进退感。",
+    url: "note-lab-after-exam-restlessness.html",
+  },
+];
 
 window.BAR_REVIEWS = [
   {

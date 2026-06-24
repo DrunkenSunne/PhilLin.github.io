@@ -106,7 +106,7 @@ hexo server
 
 吧台札记用于收纳 300 到 1200 字左右的半成型想法：比吐槽长，但不要求像正式文章一样完整展开。入口在首页 Martini Flight 的变体区，不单独加入顶部导航，避免首页和移动端导航继续变挤。
 
-札记索引保存在 `assets/content.js` 的 `window.BAR_NOTES` 中，列表页是 `notes.html`。每条札记仍然应该有自己的独立 HTML 页面，建议从 `_drafts/note-format-reference.html` 复制。
+札记索引保存在 `assets/content.js` 的 `window.BAR_NOTES` 中，列表页是 `notes.html`。每条札记仍然应该有自己的独立 HTML 页面；旧的 `_drafts` 札记模板已删除，后续新增时参考现有 `note-*.html` 正式页面的结构。
 
 ```js
 {
@@ -121,9 +121,9 @@ hexo server
 
 新增札记时：
 
-1. 复制 `_drafts/note-format-reference.html`
-2. 改成新的札记文件名，例如 `note-my-bar-note.html`
-3. 修改标题、发布时间、摘要和正文
+1. 参考现有 `note-*.html` 页面，新建新的札记文件名，例如 `note-my-bar-note.html`
+2. 修改标题、发布时间、摘要和正文
+3. 保持 `drink-page drink-hanky-panky`、`hanky-panky-glyph` 和返回 `notes.html` 的链接结构
 4. 在 `assets/content.js` 的 `window.BAR_NOTES` 中新增对应条目
 5. 如果修改了 `assets/content.js`、`assets/site.js` 或 `assets/styles.css`，同步刷新 HTML 里的资源版本号
 

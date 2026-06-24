@@ -1,6 +1,20 @@
 # AGENT_CHANGELOG
 
-Last updated: 2026-06-24
+Last updated: 2026-06-25
+
+## 2026-06-25 First Bar Note Published
+
+User provided `C:\Users\Phil Lin\Desktop\临时用\札记.docx` and asked to delete the previous template while publishing this note.
+
+- Extracted three text paragraphs from the Word document.
+- Confirmed no embedded media files were present.
+- Generated final static note file `note-lab-after-exam-restlessness.html`.
+- Added one `BAR_NOTES` metadata entry in `assets/content.js`.
+- Deleted `_drafts/note-format-reference.html` at user request.
+- Final title: `待在实验室，也不等于没有浪费时间`.
+- Final mood: `自我审问`.
+- Final summary: `一条写在实验室里的札记：考试后的工作姿态、游戏带来的烦躁、形式主义式的复习，以及面对 AI 与自我思考时说不清的进退感。`
+- Refreshed HTML asset query strings to `bar-art-20260625-note1` so `notes.html` loads the updated `assets/content.js`.
 
 ## 2026-06-24 Life Log Schedule Published
 

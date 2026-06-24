@@ -1,6 +1,6 @@
 # AGENT_TODO
 
-Last updated: 2026-06-21
+Last updated: 2026-06-25
 
 Use this file before starting phase two or any future multi-file work. Do not rely on chat history as the only source of truth.
 
@@ -130,16 +130,21 @@ Use this file before starting phase two or any future multi-file work. Do not re
   - Added `notes.html` as the note index.
   - Added `window.BAR_NOTES` in `assets/content.js`.
   - Added list rendering in `assets/site.js`.
-  - Added `_drafts/note-format-reference.html` for individual note pages.
+  - Added `_drafts/note-format-reference.html` for individual note pages, then deleted it on 2026-06-25 at user request.
   - Kept the top navigation unchanged; the homepage entry is only inside Martini Flight variants.
   - Added mobile/tablet-aware styles and a Martini-family Hanky Panky glyph.
+- [x] Published the first real bar note from `C:\Users\Phil Lin\Desktop\临时用\札记.docx`:
+  - Generated final note file `note-lab-after-exam-restlessness.html`.
+  - Added one `BAR_NOTES` metadata entry.
+  - Deleted `_drafts/note-format-reference.html` at user request.
+  - Refreshed HTML asset query strings to avoid stale cached `assets/content.js`.
 - [x] Upgrade drink badges toward A+C:
   - Applied blueprint-style structure plus recognizable ingredient cues to all current public drink badge glyphs.
   - Also covered retained CSS fallback glyphs such as Highball, Paloma, Negroni, Coupe, Rocks, and Paper Plane.
   - Kept internal glyph geometry at `5.2rem` with responsive `transform: scale(...)`.
   - Refreshed asset query string to `bar-art-20260624-glyphs`.
 - [ ] If gripe count grows large, revisit scheme 3 or 4 for the gripe rail: paginated static files or JSON on-demand loading.
-- [ ] Add the first real `note-*.html` page when the user provides a bar-note text.
+- [x] Add the first real `note-*.html` page when the user provides a bar-note text.
 - [ ] Add real photography entries to `gallery.html` and decide image folder structure, likely `assets/gallery/`.
 - [ ] Add better empty-state text for tag pages with no articles.
 - [x] Add a small documentation section showing how to manually add a new static article.
