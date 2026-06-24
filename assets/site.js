@@ -312,6 +312,41 @@ function postCard(post, heading = "h2") {
   `;
 }
 
+function allNotes() {
+  const builtInNotes = window.BAR_NOTES || [];
+  return [...builtInNotes].sort(
+    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+  );
+}
+
+function noteUrl(note) {
+  return note.url || `note-${encodeURIComponent(note.id)}.html`;
+}
+
+function noteCard(note, heading = "h2") {
+  const title = escapeHtml(note.title);
+  const summary = escapeHtml(note.summary || "这条札记还没有写简介。");
+  const date = escapeHtml(note.publishedAt);
+  const mood = escapeHtml(note.mood || "吧台札记");
+  return `
+    <a class="post-card note-card" href="${noteUrl(note)}">
+      <span class="post-date">札记：${date} · ${mood}</span>
+      <${heading}>${title}</${heading}>
+      <p>${summary}</p>
+      <span class="read-more">读这条札记</span>
+    </a>
+  `;
+}
+
+function renderNoteList() {
+  document.querySelectorAll("[data-note-list]").forEach((container) => {
+    const notes = allNotes();
+    container.innerHTML = notes.length
+      ? notes.map((note) => noteCard(note, "h2")).join("")
+      : '<article class="post-card note-card"><span class="post-date">Hanky Panky · 吧台札记</span><h2>札记杯还空着</h2><p>这里以后放 300 到 1200 字左右的半成型想法：比吐槽长一点，比正式文章松一点。</p></article>';
+  });
+}
+
 function renderRecentPosts() {
   document.querySelectorAll("[data-recent-posts]").forEach((container) => {
     const posts = allPosts().slice(0, 3);
@@ -493,4 +528,5 @@ initPostFilters();
 renderTagPages();
 renderArticlePage();
 renderReviewList();
+renderNoteList();
 renderGripeRail();

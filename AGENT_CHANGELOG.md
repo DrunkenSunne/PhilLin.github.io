@@ -2,6 +2,32 @@
 
 Last updated: 2026-06-24
 
+## 2026-06-24 Drink Glyph A+C Pass
+
+User chose the A+C direction for drink badges: blueprint cocktail icons plus ingredient silhouettes, with every badge covered and no desktop/tablet/mobile image drift.
+
+- Upgraded the shared CSS drink glyph system in `assets/styles.css` so current public badges use clearer glass shapes, blueprint dots/lines, and recognizable ingredient cues.
+- Covered the current page glyphs: Martini, Gibson, Dirty Martini, Vesper, Hanky Panky, Gimlet, Boulevardier, Sazerac, French 75, Tom Collins, and Last Word.
+- Also updated retained/fallback glyph classes in CSS, including Highball, Paloma, Negroni, Coupe, Rocks, and Paper Plane, so future reuse stays stylistically aligned.
+- Kept the canonical glyph internal geometry at `5.2rem`; responsive rules continue to scale via `transform` instead of shrinking the internal box.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260624-glyphs`.
+- Verification performed: JavaScript syntax checks, local HTML link-target check, glyph-class coverage check, stale runtime cache-string search, and `git diff --check`.
+- Browser visual verification was attempted because the user explicitly called out desktop/tablet/mobile alignment, but the in-app browser connection was blocked by local permissions and standalone Playwright is not installed in this workspace.
+
+## 2026-06-24 Bar Notes Column Scaffold
+
+User wanted a medium-length fragment column: longer than the right-side 吐槽 rail but not as formal as full articles. User also asked to avoid crowding the homepage, give every note its own page, use a Martini-family drink identity/glyph, and preserve mobile/tablet compatibility.
+
+- Added `notes.html` as the Hanky Panky / 吧台札记 index page.
+- Added `window.BAR_NOTES = []` to `assets/content.js`; future notes should be metadata entries pointing to independent `note-*.html` pages.
+- Added note list rendering to `assets/site.js`, including an empty state for the new page.
+- Added `_drafts/note-format-reference.html` as the static single-note template.
+- Added the homepage entry only inside the Martini Flight variant links; the top navigation was intentionally unchanged.
+- Added `hanky-panky-glyph`, `note-rule`, `note-list`, and `note-card` styles in `assets/styles.css`, with 2-by-2 Martini variant chips on desktop/tablet and single-column chips on phone.
+- Refreshed shared asset query strings to `bar-art-20260624-notes`.
+- Updated README and AGENT state with the content boundary: gripe around 50 characters and preferably under 100, bar notes roughly 300 to 1200 characters, full articles remain in the article system.
+- Visual verification skipped by project preference.
+
 ## 2026-06-24 Gripe Added - Fast Walking Training
 
 User provided a gripe text and asked Codex to choose the mood.

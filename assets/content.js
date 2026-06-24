@@ -43,6 +43,8 @@ window.BAR_POSTS = [
   },
 ];
 
+window.BAR_NOTES = [];
+
 window.BAR_REVIEWS = [
   {
     title: "第一杯酸甜平衡还在摇壶里",

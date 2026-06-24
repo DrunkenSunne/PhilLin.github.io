@@ -115,7 +115,20 @@ Use this file before starting phase two or any future multi-file work. Do not re
 - [x] Fix tablet Index menu layout and mobile/tablet drink glyph alignment by keeping glyph internals at canonical size.
 - [x] Fix Edge/non-Chrome cursor effect by avoiding coarse-pointer desktop suppression and adding mouse event fallbacks.
 - [x] Fix tablet Index hero intro by collapsing the desktop three-column menu intro across iPad-sized widths.
+- [x] Add a Hanky Panky / 吧台札记 column scaffold:
+  - Added `notes.html` as the note index.
+  - Added `window.BAR_NOTES` in `assets/content.js`.
+  - Added list rendering in `assets/site.js`.
+  - Added `_drafts/note-format-reference.html` for individual note pages.
+  - Kept the top navigation unchanged; the homepage entry is only inside Martini Flight variants.
+  - Added mobile/tablet-aware styles and a Martini-family Hanky Panky glyph.
+- [x] Upgrade drink badges toward A+C:
+  - Applied blueprint-style structure plus recognizable ingredient cues to all current public drink badge glyphs.
+  - Also covered retained CSS fallback glyphs such as Highball, Paloma, Negroni, Coupe, Rocks, and Paper Plane.
+  - Kept internal glyph geometry at `5.2rem` with responsive `transform: scale(...)`.
+  - Refreshed asset query string to `bar-art-20260624-glyphs`.
 - [ ] If gripe count grows large, revisit scheme 3 or 4 for the gripe rail: paginated static files or JSON on-demand loading.
+- [ ] Add the first real `note-*.html` page when the user provides a bar-note text.
 - [ ] Add real photography entries to `gallery.html` and decide image folder structure, likely `assets/gallery/`.
 - [ ] Add better empty-state text for tag pages with no articles.
 - [x] Add a small documentation section showing how to manually add a new static article.
@@ -165,6 +178,7 @@ Use this file before starting phase two or any future multi-file work. Do not re
   - `撰写`
 - [ ] Search for stale cache query strings before finalizing:
   - old values such as `bar-export-20260610` or earlier.
+  - previous asset version strings such as `bar-art-20260623-post3`.
 - [ ] Skip browser visual verification by project preference unless the user explicitly asks for it later or a higher-priority instruction requires it.
 - [ ] If browser visual verification is requested or required, browser-check at least:
   - `index.html`

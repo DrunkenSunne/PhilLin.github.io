@@ -282,7 +282,8 @@ img {
 
 .gibson-glyph span::before,
 .dirty-martini-glyph span::before,
-.vesper-glyph span::before {
+.vesper-glyph span::before,
+.hanky-panky-glyph span::before {
   position: absolute;
   inset: 0.25rem 0.15rem auto;
   height: 2.5rem;
@@ -295,7 +296,8 @@ img {
 
 .gibson-glyph span::after,
 .dirty-martini-glyph span::after,
-.vesper-glyph span::after {
+.vesper-glyph span::after,
+.hanky-panky-glyph span::after {
   position: absolute;
   left: 50%;
   bottom: 0.2rem;
@@ -650,6 +652,27 @@ a:not(.brand):not(.menu-drink):not(.post-card):not(.friend-profile):hover {
 }
 
 .toolbar span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.note-rule {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem;
+  background:
+    linear-gradient(145deg, rgba(154, 155, 93, 0.08), transparent 38%),
+    rgba(13, 7, 5, 0.78);
+  box-shadow: var(--shadow);
+}
+
+.note-rule span {
   display: block;
   color: var(--muted);
   font-size: 0.92rem;
@@ -1450,7 +1473,7 @@ body::after {
 
 .menu-variants {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.45rem;
   margin-top: 0.25rem;
 }
@@ -1547,6 +1570,7 @@ body::after {
 
 .post-card,
 .toolbar,
+.note-rule,
 .guide-card,
 .aside-block,
 .feature-card,
@@ -1561,6 +1585,14 @@ body::after {
     linear-gradient(145deg, rgba(255, 241, 204, 0.055), transparent 35%),
     repeating-linear-gradient(135deg, rgba(255, 210, 138, 0.025) 0 1px, transparent 1px 12px),
     rgba(13, 7, 5, 0.78);
+}
+
+.note-list {
+  max-width: 880px;
+}
+
+.note-card {
+  border-left: 4px solid rgba(154, 155, 93, 0.72);
 }
 
 .post-card,
@@ -1803,6 +1835,14 @@ body::after {
     radial-gradient(circle at 63% 25%, rgba(240, 164, 58, 0.22) 0 0.36rem, transparent 0.39rem);
 }
 
+.hanky-panky-glyph span {
+  background:
+    radial-gradient(circle at 69% 23%, rgba(154, 155, 93, 0.9) 0 0.2rem, transparent 0.23rem),
+    linear-gradient(118deg, transparent 0 45%, rgba(154, 155, 93, 0.76) 45.4% 48%, transparent 48.4% 100%) 67% 15% / 1.35rem 1.2rem no-repeat,
+    linear-gradient(135deg, transparent 0 58%, rgba(255, 241, 204, 0.42) 58.2% 59.1%, transparent 59.3% 100%),
+    linear-gradient(180deg, transparent 0 26%, rgba(154, 155, 93, 0.14) 26.5% 39%, transparent 39.5% 100%);
+}
+
 .last-word-glyph span {
   background:
     radial-gradient(circle at 65% 26%, rgba(154, 155, 93, 0.72) 0 0.18rem, transparent 0.2rem),
@@ -2043,6 +2083,307 @@ body::after {
     radial-gradient(circle at 45% 26%, rgba(255, 241, 204, 0.28) 0 0.15rem, transparent 0.17rem),
     radial-gradient(circle at 48% 38%, rgba(255, 241, 204, 0.22) 0 0.12rem, transparent 0.14rem),
     radial-gradient(circle at 58% 31%, rgba(255, 241, 204, 0.18) 0 0.1rem, transparent 0.12rem);
+}
+
+/* A+C drink badge pass: blueprint structure plus one concrete ingredient cue. */
+.drink-glyph > span {
+  filter: drop-shadow(0 0 10px rgba(255, 210, 138, 0.16));
+  isolation: isolate;
+}
+
+.martini-glyph span,
+.gibson-glyph span,
+.dirty-martini-glyph span,
+.vesper-glyph span,
+.hanky-panky-glyph span,
+.paper-plane-glyph > span {
+  background:
+    linear-gradient(90deg, transparent 0 47%, rgba(255, 210, 138, 0.76) 47.5% 49%, transparent 49.5% 100%) 50% 3.35rem / 2.3rem 1.25rem no-repeat,
+    linear-gradient(90deg, transparent 0 30%, rgba(255, 210, 138, 0.7) 30.5% 70%, transparent 70.5% 100%) 50% 4.7rem / 3.4rem 0.18rem no-repeat,
+    radial-gradient(circle at 23% 39%, rgba(108, 169, 164, 0.28) 0 0.07rem, transparent 0.09rem),
+    radial-gradient(circle at 79% 39%, rgba(108, 169, 164, 0.28) 0 0.07rem, transparent 0.09rem);
+}
+
+.martini-glyph span::before,
+.gibson-glyph span::before,
+.dirty-martini-glyph span::before,
+.vesper-glyph span::before,
+.hanky-panky-glyph span::before,
+.paper-plane-glyph > span::before {
+  inset: 0.3rem 0.28rem auto;
+  height: 2.35rem;
+  border: 2px solid rgba(255, 210, 138, 0.84);
+  border-top-width: 1px;
+  background:
+    linear-gradient(180deg, transparent 0 44%, rgba(255, 241, 204, 0.12) 44.5% 48%, transparent 48.5% 100%),
+    linear-gradient(180deg, rgba(255, 241, 204, 0.03), rgba(240, 164, 58, 0.18));
+  clip-path: polygon(0 0, 100% 0, 58% 100%, 42% 100%);
+}
+
+.martini-glyph span::after,
+.gibson-glyph span::after,
+.dirty-martini-glyph span::after,
+.vesper-glyph span::after,
+.hanky-panky-glyph span::after,
+.paper-plane-glyph > span::after {
+  left: auto;
+  right: 0.75rem;
+  top: 0.42rem;
+  bottom: auto;
+  width: 1.65rem;
+  height: 1rem;
+  border: 0;
+  transform: rotate(-14deg);
+}
+
+.martini-glyph span::after {
+  background:
+    radial-gradient(circle at 74% 48%, rgba(154, 155, 93, 0.95) 0 0.24rem, transparent 0.27rem),
+    linear-gradient(12deg, transparent 0 47%, rgba(255, 241, 204, 0.72) 47.5% 53%, transparent 53.5% 100%);
+}
+
+.gibson-glyph span::after {
+  background:
+    radial-gradient(circle at 72% 48%, rgba(255, 241, 204, 0.9) 0 0.25rem, transparent 0.28rem),
+    radial-gradient(circle at 72% 48%, rgba(240, 164, 58, 0.38) 0 0.43rem, transparent 0.46rem),
+    linear-gradient(12deg, transparent 0 47%, rgba(255, 241, 204, 0.72) 47.5% 53%, transparent 53.5% 100%);
+}
+
+.dirty-martini-glyph span {
+  background:
+    linear-gradient(90deg, transparent 0 47%, rgba(255, 210, 138, 0.76) 47.5% 49%, transparent 49.5% 100%) 50% 3.35rem / 2.3rem 1.25rem no-repeat,
+    linear-gradient(90deg, transparent 0 30%, rgba(255, 210, 138, 0.7) 30.5% 70%, transparent 70.5% 100%) 50% 4.7rem / 3.4rem 0.18rem no-repeat,
+    radial-gradient(circle at 45% 28%, rgba(255, 241, 204, 0.2) 0 0.4rem, transparent 0.43rem),
+    linear-gradient(180deg, transparent 0 25%, rgba(255, 241, 204, 0.13) 25.5% 38%, transparent 38.5% 100%);
+}
+
+.dirty-martini-glyph span::after {
+  background:
+    radial-gradient(circle at 74% 48%, rgba(154, 155, 93, 0.95) 0 0.24rem, transparent 0.27rem),
+    radial-gradient(circle at 74% 48%, rgba(255, 241, 204, 0.18) 0 0.46rem, transparent 0.49rem),
+    linear-gradient(12deg, transparent 0 47%, rgba(255, 241, 204, 0.72) 47.5% 53%, transparent 53.5% 100%);
+}
+
+.vesper-glyph span::after {
+  background:
+    linear-gradient(28deg, transparent 0 34%, rgba(240, 164, 58, 0.88) 34.5% 51%, transparent 51.5% 100%),
+    linear-gradient(120deg, transparent 0 46%, rgba(255, 241, 204, 0.42) 46.5% 53%, transparent 53.5% 100%);
+  border-radius: 999px;
+}
+
+.hanky-panky-glyph span::after {
+  background:
+    radial-gradient(ellipse at 54% 48%, rgba(154, 155, 93, 0.82) 0 0.34rem, transparent 0.36rem),
+    linear-gradient(120deg, transparent 0 46%, rgba(255, 241, 204, 0.54) 46.5% 53%, transparent 53.5% 100%);
+  clip-path: polygon(10% 48%, 48% 4%, 94% 48%, 48% 94%);
+}
+
+.paper-plane-glyph > span::after {
+  background:
+    linear-gradient(135deg, rgba(255, 241, 204, 0.48), rgba(240, 164, 58, 0.14));
+  clip-path: polygon(0 50%, 100% 0, 70% 100%);
+}
+
+.last-word-glyph span,
+.coupe-glyph span,
+.gimlet-glyph > span {
+  background:
+    linear-gradient(90deg, transparent 0 47%, rgba(255, 210, 138, 0.76) 47.5% 49%, transparent 49.5% 100%) 50% 3.75rem / 2rem 1rem no-repeat,
+    linear-gradient(90deg, transparent 0 30%, rgba(255, 210, 138, 0.7) 30.5% 70%, transparent 70.5% 100%) 50% 4.65rem / 3.1rem 0.18rem no-repeat,
+    radial-gradient(circle at 34% 34%, rgba(108, 169, 164, 0.26) 0 0.07rem, transparent 0.09rem),
+    radial-gradient(circle at 72% 31%, rgba(108, 169, 164, 0.26) 0 0.07rem, transparent 0.09rem);
+}
+
+.last-word-glyph span::before,
+.coupe-glyph span::before,
+.gimlet-glyph > span::before {
+  left: 50%;
+  top: 0.55rem;
+  width: 3.8rem;
+  height: 2.45rem;
+  border: 2px solid rgba(255, 210, 138, 0.84);
+  border-top-width: 1px;
+  border-radius: 0 0 1.8rem 1.8rem;
+  background:
+    linear-gradient(180deg, transparent 0 48%, rgba(255, 241, 204, 0.13) 48.5% 52%, transparent 52.5% 100%),
+    linear-gradient(180deg, rgba(255, 241, 204, 0.04), rgba(154, 155, 93, 0.22));
+  transform: translateX(-50%);
+}
+
+.last-word-glyph span::after,
+.coupe-glyph span::after,
+.gimlet-glyph > span::after {
+  left: auto;
+  right: 0.55rem;
+  top: 0.45rem;
+  bottom: auto;
+  width: 1.4rem;
+  height: 1.15rem;
+  border: 0;
+  transform: rotate(-16deg);
+}
+
+.gimlet-glyph > span::after {
+  background:
+    radial-gradient(circle at 52% 50%, transparent 0 0.28rem, rgba(154, 155, 93, 0.86) 0.3rem 0.44rem, transparent 0.46rem),
+    linear-gradient(135deg, transparent 0 47%, rgba(255, 241, 204, 0.55) 47.5% 53%, transparent 53.5% 100%);
+  border-radius: 50%;
+}
+
+.last-word-glyph span::after {
+  background:
+    radial-gradient(circle at 70% 48%, rgba(159, 47, 40, 0.86) 0 0.2rem, transparent 0.23rem),
+    radial-gradient(ellipse at 38% 48%, rgba(154, 155, 93, 0.8) 0 0.28rem, transparent 0.31rem);
+}
+
+.coupe-glyph span::after {
+  background:
+    radial-gradient(circle at 30% 50%, rgba(255, 241, 204, 0.38) 0 0.12rem, transparent 0.14rem),
+    radial-gradient(circle at 58% 35%, rgba(255, 241, 204, 0.32) 0 0.1rem, transparent 0.12rem),
+    radial-gradient(circle at 72% 60%, rgba(255, 241, 204, 0.28) 0 0.09rem, transparent 0.11rem);
+}
+
+.highball-glyph span,
+.collins-glyph > span,
+.paloma-glyph > span {
+  background:
+    linear-gradient(14deg, transparent 0 47%, rgba(255, 241, 204, 0.56) 47.5% 50%, transparent 50.5% 100%) 68% 18% / 1.5rem 3.8rem no-repeat,
+    radial-gradient(circle at 44% 38%, rgba(255, 241, 204, 0.28) 0 0.16rem, transparent 0.18rem),
+    radial-gradient(circle at 57% 48%, rgba(255, 241, 204, 0.18) 0 0.13rem, transparent 0.15rem),
+    radial-gradient(circle at 48% 62%, rgba(255, 241, 204, 0.2) 0 0.12rem, transparent 0.14rem),
+    radial-gradient(circle at 31% 72%, rgba(108, 169, 164, 0.24) 0 0.07rem, transparent 0.09rem);
+}
+
+.highball-glyph span::before,
+.collins-glyph > span::before,
+.paloma-glyph > span::before {
+  left: 50%;
+  top: 0.45rem;
+  bottom: auto;
+  width: 2.45rem;
+  height: 4.25rem;
+  border: 2px solid rgba(255, 210, 138, 0.84);
+  border-top-width: 1px;
+  border-radius: 0.35rem 0.35rem 0.62rem 0.62rem;
+  background:
+    linear-gradient(180deg, transparent 0 30%, rgba(255, 241, 204, 0.12) 30.5% 34%, transparent 34.5% 100%),
+    linear-gradient(180deg, rgba(255, 241, 204, 0.04), rgba(240, 164, 58, 0.2));
+  transform: translateX(-50%);
+}
+
+.highball-glyph span::after,
+.collins-glyph > span::after,
+.paloma-glyph > span::after {
+  left: auto;
+  right: 0.72rem;
+  top: 0.52rem;
+  width: 1.35rem;
+  height: 1.35rem;
+  border: 2px solid rgba(154, 155, 93, 0.84);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, transparent 0 0.34rem, rgba(154, 155, 93, 0.48) 0.36rem 0.44rem, transparent 0.46rem);
+  transform: rotate(-14deg);
+}
+
+.paloma-glyph > span::before {
+  background:
+    linear-gradient(180deg, transparent 0 30%, rgba(255, 241, 204, 0.13) 30.5% 34%, transparent 34.5% 100%),
+    linear-gradient(180deg, rgba(159, 47, 40, 0.18), rgba(240, 164, 58, 0.34));
+}
+
+.collins-glyph > span::after {
+  right: 0.82rem;
+  border-color: rgba(240, 164, 58, 0.84);
+}
+
+.french-75-glyph > span {
+  background:
+    linear-gradient(90deg, transparent 0 47%, rgba(255, 210, 138, 0.76) 47.5% 49%, transparent 49.5% 100%) 50% 4.2rem / 2.2rem 1rem no-repeat,
+    linear-gradient(90deg, transparent 0 32%, rgba(255, 210, 138, 0.7) 32.5% 68%, transparent 68.5% 100%) 50% 4.82rem / 2.8rem 0.16rem no-repeat,
+    radial-gradient(circle at 42% 24%, rgba(255, 241, 204, 0.35) 0 0.11rem, transparent 0.13rem),
+    radial-gradient(circle at 57% 34%, rgba(255, 241, 204, 0.28) 0 0.09rem, transparent 0.11rem),
+    radial-gradient(circle at 48% 47%, rgba(255, 241, 204, 0.2) 0 0.08rem, transparent 0.1rem);
+}
+
+.french-75-glyph > span::before {
+  background:
+    linear-gradient(180deg, transparent 0 36%, rgba(255, 241, 204, 0.16) 36.5% 40%, transparent 40.5% 100%),
+    linear-gradient(180deg, rgba(255, 241, 204, 0.12), rgba(240, 164, 58, 0.24) 48%, rgba(255, 241, 204, 0.05));
+}
+
+.french-75-glyph > span::after {
+  top: 0.32rem;
+  right: 0.75rem;
+  left: auto;
+  bottom: auto;
+  width: 1.25rem;
+  height: 0.95rem;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(28deg, transparent 0 36%, rgba(240, 164, 58, 0.88) 36.5% 53%, transparent 53.5% 100%);
+  transform: rotate(-18deg);
+}
+
+.rocks-glyph span,
+.boulevardier-glyph > span,
+.sazerac-glyph > span,
+.negroni-glyph > span {
+  background:
+    linear-gradient(45deg, transparent 0 42%, rgba(255, 241, 204, 0.22) 42.5% 55%, transparent 55.5% 100%) 40% 56% / 1.12rem 1.12rem no-repeat,
+    linear-gradient(-36deg, transparent 0 41%, rgba(255, 241, 204, 0.17) 41.5% 55%, transparent 55.5% 100%) 58% 64% / 1.08rem 1.08rem no-repeat,
+    radial-gradient(circle at 29% 72%, rgba(108, 169, 164, 0.24) 0 0.07rem, transparent 0.09rem);
+}
+
+.rocks-glyph span::before,
+.boulevardier-glyph > span::before,
+.sazerac-glyph > span::before,
+.negroni-glyph > span::before {
+  left: 50%;
+  top: 1.05rem;
+  bottom: auto;
+  width: 3.55rem;
+  height: 3.15rem;
+  border: 2px solid rgba(255, 210, 138, 0.84);
+  border-top-width: 1px;
+  border-radius: 0.28rem 0.28rem 0.75rem 0.75rem;
+  background:
+    linear-gradient(180deg, transparent 0 45%, rgba(255, 241, 204, 0.11) 45.5% 49%, transparent 49.5% 100%),
+    linear-gradient(180deg, rgba(159, 47, 40, 0.42), rgba(240, 164, 58, 0.18));
+  transform: translateX(-50%);
+}
+
+.rocks-glyph span::after,
+.boulevardier-glyph > span::after,
+.sazerac-glyph > span::after,
+.negroni-glyph > span::after {
+  left: auto;
+  right: 0.7rem;
+  top: 0.58rem;
+  width: 1.45rem;
+  height: 1.1rem;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(28deg, transparent 0 36%, rgba(240, 164, 58, 0.86) 36.5% 53%, transparent 53.5% 100%);
+  transform: rotate(-18deg);
+}
+
+.sazerac-glyph > span::after {
+  left: 1.08rem;
+  right: auto;
+  top: 0.58rem;
+  width: 3rem;
+  height: 0.18rem;
+  border-radius: 999px;
+  background: rgba(255, 241, 204, 0.56);
+  box-shadow: 0 0.55rem 0 rgba(154, 155, 93, 0.3);
+  transform: rotate(-18deg);
+}
+
+.negroni-glyph > span::after {
+  background:
+    radial-gradient(circle, transparent 0 0.35rem, rgba(240, 164, 58, 0.72) 0.37rem 0.48rem, transparent 0.5rem);
+  border-radius: 50%;
 }
 
 .friend-profile {
@@ -2715,7 +3056,7 @@ body::after {
   }
 
   .menu-variants {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .menu-drink strong {
@@ -2794,6 +3135,7 @@ body::after {
 
   .split-section,
   .article-layout,
+  .note-rule,
   .guide-grid,
   .friend-grid,
   .friend-profile,
@@ -2810,6 +3152,10 @@ body::after {
 
   .article-layout {
     gap: 1.4rem;
+  }
+
+  .note-rule {
+    align-items: flex-start;
   }
 
   .article-aside {
@@ -3309,7 +3655,7 @@ body::after {
   }
 
   .menu-variants {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .menu-primary-link {

@@ -2,6 +2,10 @@
 
 Last updated: 2026-06-24
 
+2026-06-24 drink glyph pass: user chose A+C for drink badges, meaning blueprint cocktail icon structure plus ingredient silhouette cues. `assets/styles.css` now upgrades all current page glyphs and retained fallback glyph classes while keeping the canonical `5.2rem` internal geometry and responsive transform scaling. Browser visual verification was attempted but blocked by local browser permissions; standalone Playwright is not installed. Current asset query string is `bar-art-20260624-glyphs`.
+
+2026-06-24 column scaffold: added Hanky Panky / 吧台札记 for medium-length fragments. The new index is `notes.html`; note metadata lives in `window.BAR_NOTES` in `assets/content.js`; individual notes should be independent `note-*.html` files copied from `_drafts/note-format-reference.html`. The top navigation was intentionally not expanded; the homepage entry is only inside the Martini Flight variant links. Content boundary: 吐槽 should stay around 50 Chinese characters and preferably under 100, 吧台札记 is roughly 300 to 1200 characters, full essays remain normal articles.
+
 2026-06-23 publication: user provided direct text for today's life log with tag `生活日志`. The final article is `article-one-side-cannot-fall.html`, title `起码一边不能倒下`, publication date `2026-06-23`, and no images. It has been added to `assets/content.js`; `preview-20260623.html` was deleted. HTML asset query strings were refreshed to `bar-art-20260623-post3` so index/archive/tag pages load the updated article metadata.
 
 Important publishing reminder: whenever `assets/content.js` changes for a new post, refresh the HTML asset query string on public pages in the same turn. On 2026-06-22, the article index was updated but the HTML pages initially still referenced the old query string, so the homepage/archive/tag pages could appear stale from browser cache.
@@ -131,7 +135,7 @@ Follow-up after phase-one sealing:
   - CSS-only drink glyphs, dot fields, line grids, polygon overlays, and a menu-board home layout.
   - `assets/site.js` adds a pointer-following bar cursor and drink-name hover labels for menu items.
   - `assets/styles.css` now also includes shared Tonight, Playlist, Cellar, article-reading, mobile navigation, and reduced-motion polish.
-- Current cache-busting query string is `bar-art-20260622-post2`; it was updated after the 2026-06-22 article publishing pass to avoid stale cached article metadata.
+- Current cache-busting query string is `bar-art-20260624-glyphs`; it was updated after the 2026-06-24 drink glyph pass to avoid stale cached CSS/JS and metadata.
 - Gripe rail:
   - `assets/gripes.js` stores static `window.BAR_GRIPES` entries; it currently contains twelve entries.
   - `assets/site.js` injects the rail and handles page-size calculation and pagination.
@@ -177,6 +181,8 @@ Before any future work, run `git status --short` and `git diff --stat`.
 - `tag-lab.html`: `生活日志` tag page.
 - `tag-thoughts.html`: `一些思绪` tag page.
 - `tag-recommendations.html`: `种草安利` tag page.
+- `notes.html`: Hanky Panky / 吧台札记 index.
+- `_drafts/note-format-reference.html`: static template for individual note pages.
 - `article.html`: dynamic article fallback.
 - `article-two-bottles-writing-touch.html`: second published article, tag `一些思绪`.
 - `article-first-words-on-the-bar.html`: first published article, tag `一些思绪`.
@@ -188,7 +194,7 @@ Before any future work, run `git status --short` and `git diff --stat`.
 - `gallery.html`: gallery placeholder page.
 - `about.html`: about page.
   - Current contact email is `phillin.lrz0714@gmail.com`.
-- `assets/content.js`: tags, article metadata, review metadata.
+- `assets/content.js`: tags, article metadata, review metadata, and `window.BAR_NOTES` note metadata.
 - `assets/gripes.js`: static gripe data.
 - `assets/site.js`: canvas interaction and post rendering.
 - `assets/styles.css`: shared visual system.

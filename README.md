@@ -21,6 +21,7 @@
 - `tag-lab.html`：Gibson / 生活日志
 - `tag-thoughts.html`：Dirty Martini / 一些思绪
 - `tag-recommendations.html`：Vesper / 种草安利
+- `notes.html`：Hanky Panky / 吧台札记，收纳比吐槽长、但还不算完整文章的中段想法
 - `tonight.html`：Gimlet / 今晚状态，合并 Now 和 Aftertaste
 - `reviews.html`：Boulevardier / 酒柜，非专业酒评记录
 - `playlist.html`：Sazerac / 夜间歌单，不放播放器和歌词
@@ -88,7 +89,7 @@ hexo server
 
 ## 新增吐槽
 
-吐槽栏由 `assets/site.js` 自动显示在每个页面右侧，数据保存在独立的 `assets/gripes.js` 的 `window.BAR_GRIPES` 中。每条吐槽包含短句、心情、emoji 和精确到秒的发布时间。
+吐槽栏由 `assets/site.js` 自动显示在每个页面右侧，数据保存在独立的 `assets/gripes.js` 的 `window.BAR_GRIPES` 中。每条吐槽包含短句、心情、emoji 和精确到秒的发布时间。吐槽建议控制在 50 字左右，尽量不要超过 100 字。
 
 ```js
 {
@@ -100,6 +101,31 @@ hexo server
 ```
 
 这是静态 GitHub Pages 方案里的数据池，不是服务端数据库。新增更多吐槽后，右侧栏目会按页面高度自动决定每页显示条数，剩余吐槽可以通过栏目底部的分页按钮查看。吐槽数量继续增大时，可以再升级为分页静态文件或 JSON 按需加载。
+
+## 新增吧台札记
+
+吧台札记用于收纳 300 到 1200 字左右的半成型想法：比吐槽长，但不要求像正式文章一样完整展开。入口在首页 Martini Flight 的变体区，不单独加入顶部导航，避免首页和移动端导航继续变挤。
+
+札记索引保存在 `assets/content.js` 的 `window.BAR_NOTES` 中，列表页是 `notes.html`。每条札记仍然应该有自己的独立 HTML 页面，建议从 `_drafts/note-format-reference.html` 复制。
+
+```js
+{
+  id: "unique-note-id",
+  title: "札记标题",
+  publishedAt: "2026-06-24",
+  mood: "一点想法",
+  summary: "札记摘要。",
+  url: "note-my-bar-note.html",
+}
+```
+
+新增札记时：
+
+1. 复制 `_drafts/note-format-reference.html`
+2. 改成新的札记文件名，例如 `note-my-bar-note.html`
+3. 修改标题、发布时间、摘要和正文
+4. 在 `assets/content.js` 的 `window.BAR_NOTES` 中新增对应条目
+5. 如果修改了 `assets/content.js`、`assets/site.js` 或 `assets/styles.css`，同步刷新 HTML 里的资源版本号
 
 ## 新增摄影作品
 
