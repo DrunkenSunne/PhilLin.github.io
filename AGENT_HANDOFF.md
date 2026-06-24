@@ -2,6 +2,8 @@
 
 Last updated: 2026-06-25
 
+2026-06-25 note/archive integration: user clarified that 吧台札记 counts as article-system content. `assets/site.js` now merges `BAR_POSTS` and normalized `BAR_NOTES` inside `allPosts()`, so homepage recent posts, `posts.html` "全部", and the new `吧台札记` filter include notes. `notes.html` remains note-only. The first note missing from `notes.html` was investigated: data/file were present, and a simulated DOM check now confirms `note-lab-after-exam-restlessness.html` renders into `data-note-list`; stale cache was the likely prior cause. Current asset query string is `bar-art-20260625-notes-archive`.
+
 2026-06-24 publication: user provided a schedule screenshot for a life log. The final article is `article-after-exam-still-held.html`, tag `生活日志`, title `考完以后，也没有完全散掉`, publication date `2026-06-24`, and vague experiment wording (`实验室工作` / `细胞状态确认`). It has been added to `assets/content.js`; `preview-20260624.html` was deleted. User asked to change the original endnote because it felt too corny; final endnote is restrained. HTML asset query strings were refreshed to `bar-art-20260624-life-log` so index/archive/tag pages load the updated article metadata.
 
 2026-06-24 drink glyph pass: user chose A+C for drink badges, meaning blueprint cocktail icon structure plus ingredient silhouette cues. `assets/styles.css` now upgrades all current page glyphs and retained fallback glyph classes while keeping the canonical `5.2rem` internal geometry and responsive transform scaling. Browser visual verification was attempted but blocked by local browser permissions; standalone Playwright is not installed. Current asset query string is `bar-art-20260624-glyphs`.

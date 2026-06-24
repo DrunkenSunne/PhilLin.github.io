@@ -138,6 +138,12 @@ Use this file before starting phase two or any future multi-file work. Do not re
   - Added one `BAR_NOTES` metadata entry.
   - Deleted `_drafts/note-format-reference.html` at user request.
   - Refreshed HTML asset query strings to avoid stale cached `assets/content.js`.
+- [x] Integrate 吧台札记 into the article system:
+  - `allPosts()` now merges `BAR_POSTS` and normalized `BAR_NOTES`.
+  - Homepage recent posts and `posts.html` "全部" include notes.
+  - `posts.html` includes a `吧台札记` filter chip.
+  - `notes.html` remains the note-only page.
+  - Verified the first note renders into `data-note-list` under a simulated DOM.
 - [x] Upgrade drink badges toward A+C:
   - Applied blueprint-style structure plus recognizable ingredient cues to all current public drink badge glyphs.
   - Also covered retained CSS fallback glyphs such as Highball, Paloma, Negroni, Coupe, Rocks, and Paper Plane.

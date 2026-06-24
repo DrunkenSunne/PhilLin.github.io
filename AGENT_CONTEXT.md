@@ -87,10 +87,11 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - 2026-06-21 homepage article menu simplification: article/category entries are grouped into one homepage Martini Flight card; `posts.html` shows `Martini · 文章`, category pages show `Gibson · 生活日志`, `Dirty Martini · 一些思绪`, and `Vesper · 种草安利`, and `about.html` now uses `Last Word · 关于我`.
 - 2026-06-24 bar-note column added: `notes.html` is the Hanky Panky / 吧台札记 index for medium-length fragments. It is intentionally not added to the top navigation; the entry lives inside the homepage Martini Flight variants so the homepage and mobile nav do not get more crowded.
 - `assets/content.js` now defines `window.BAR_NOTES` for note metadata. Each note should still have its own static `note-*.html` page. The old `_drafts/note-format-reference.html` template was deleted on 2026-06-25 at user request; future notes should follow an existing published `note-*.html` page instead.
+- 2026-06-25 article/archive integration: 吧台札记 counts as part of the article system. `assets/site.js` merges `window.BAR_POSTS` and normalized `window.BAR_NOTES` inside `allPosts()`, so homepage recent posts, `posts.html` "全部", and the `吧台札记` archive filter include notes. `notes.html` remains a dedicated note-only page.
 - Content boundary: gripe entries should be around 50 Chinese characters and preferably under 100; bar notes are roughly 300 to 1200 characters; complete pieces remain normal articles.
 - Hanky Panky is the Martini-family identity for 吧台札记. Its glyph should keep the canonical Martini glass geometry and only add a small herbal/bitter cue. Mobile/tablet glyph rules must keep internal `5.2rem` geometry and scale by transform, matching the existing Martini-family constraint.
 - 2026-06-24 drink glyph pass: all current public drink badges were upgraded toward A+C, meaning blueprint-style line structure plus one recognizable ingredient cue. Keep glyph artwork inside the canonical `5.2rem` internal box and continue responsive scaling by `transform` only, to avoid desktop/tablet/mobile drift.
-- Current cache-busting query string is `bar-art-20260625-note1`.
+- Current cache-busting query string is `bar-art-20260625-notes-archive`.
 
 ## 1. Current Project Goal
 
@@ -214,6 +215,7 @@ Static site architecture:
   - dynamic article rendering fallback
 - `assets/content.js` is a lightweight metadata index.
 - Public article bodies should live in separate article HTML files. `assets/content.js` should point to those files via `url`. It currently has two public article entries.
+- `window.BAR_NOTES` entries are normalized into the article stream for archive/recent-post rendering while still powering `notes.html`.
 - Article images should be placed under `assets/posts/<article-id>/` when generated from Word or other rich sources.
 
 ## 6. Key Files And Modules
@@ -310,6 +312,7 @@ Current cache-busting query string:
 - As of the 2026-06-23 article publishing cache refresh, public HTML pages use `bar-art-20260623-post3` for `assets/styles.css`, `assets/content.js`, `assets/gripes.js`, `assets/site.js`, and cache-busted shared image references.
 - As of the 2026-06-24 life-log publishing cache refresh, public and draft HTML pages use `bar-art-20260624-life-log` for shared assets.
 - As of the 2026-06-25 first bar-note publishing refresh, public and draft HTML pages use `bar-art-20260625-note1` for shared assets.
+- As of the 2026-06-25 note/archive integration refresh, public and draft HTML pages use `bar-art-20260625-notes-archive` for shared assets.
 - Important publishing reminder: whenever `assets/content.js` changes for a new post, refresh the HTML asset query string on public pages in the same turn. On 2026-06-22, the article index was updated but the HTML pages initially still referenced the old query string, so the homepage/archive/tag pages could appear stale from browser cache.
 
 ## 8. Current Constraints

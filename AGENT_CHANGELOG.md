@@ -2,6 +2,21 @@
 
 Last updated: 2026-06-25
 
+## 2026-06-25 Bar Notes Integrated Into Article Archive
+
+User clarified that 吧台札记 should count as part of the article system, and noted that the first note was not showing on the note page.
+
+- Added `吧台札记` to `window.BAR_TAGS` in `assets/content.js`.
+- Added `tag: "吧台札记"` to the first `BAR_NOTES` entry.
+- Updated `assets/site.js` so `allPosts()` merges `window.BAR_POSTS` and normalized `window.BAR_NOTES`.
+- Homepage recent posts and `posts.html` "全部" now include notes by date order.
+- `posts.html` now has a `吧台札记` filter chip.
+- Kept `notes.html` as the dedicated note-only page.
+- Updated notes/archive copy and README to describe notes as an article-system tag.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260625-notes-archive`.
+- Investigated missing note display: `BAR_NOTES` data and the note file were present; simulated DOM rendering confirmed `notes.html` now produces the `note-lab-after-exam-restlessness.html` card. The likely cause of the user's prior view was stale cached `site.js` / `content.js`.
+- Visual browser verification skipped by project preference.
+
 ## 2026-06-25 First Bar Note Published
 
 User provided `C:\Users\Phil Lin\Desktop\临时用\札记.docx` and asked to delete the previous template while publishing this note.

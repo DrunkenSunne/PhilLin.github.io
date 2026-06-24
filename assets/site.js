@@ -277,9 +277,21 @@ function initAmbientMotion() {
 
 initAmbientMotion();
 
+const NOTE_TAG = "吧台札记";
+
+function normalizedNotes() {
+  const builtInNotes = window.BAR_NOTES || [];
+  return builtInNotes.map((note) => ({
+    ...note,
+    tag: note.tag || NOTE_TAG,
+    kind: "note",
+    url: noteUrl(note),
+  }));
+}
+
 function allPosts() {
   const builtInPosts = window.BAR_POSTS || [];
-  return [...builtInPosts].sort(
+  return [...builtInPosts, ...normalizedNotes()].sort(
     (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
   );
 }
@@ -302,19 +314,21 @@ function postCard(post, heading = "h2") {
   const summary = escapeHtml(post.summary || "尚未填写简介。");
   const tag = escapeHtml(post.tag);
   const date = escapeHtml(post.publishedAt);
+  const isNote = post.kind === "note" || post.tag === NOTE_TAG;
+  const metaPrefix = isNote ? "札记" : "发布时间";
+  const readMore = isNote ? "读这条札记" : "阅读全文";
   return `
-    <a class="post-card" href="${postUrl(post)}">
-      <span class="post-date">发布时间：${date} · ${tag}</span>
+    <a class="post-card${isNote ? " note-card" : ""}" href="${postUrl(post)}">
+      <span class="post-date">${metaPrefix}：${date} · ${tag}</span>
       <${heading}>${title}</${heading}>
       <p>${summary}</p>
-      <span class="read-more">阅读全文</span>
+      <span class="read-more">${readMore}</span>
     </a>
   `;
 }
 
 function allNotes() {
-  const builtInNotes = window.BAR_NOTES || [];
-  return [...builtInNotes].sort(
+  return normalizedNotes().sort(
     (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
   );
 }
@@ -327,7 +341,7 @@ function noteCard(note, heading = "h2") {
   const title = escapeHtml(note.title);
   const summary = escapeHtml(note.summary || "这条札记还没有写简介。");
   const date = escapeHtml(note.publishedAt);
-  const mood = escapeHtml(note.mood || "吧台札记");
+  const mood = escapeHtml(note.mood || NOTE_TAG);
   return `
     <a class="post-card note-card" href="${noteUrl(note)}">
       <span class="post-date">札记：${date} · ${mood}</span>
