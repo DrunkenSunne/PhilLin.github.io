@@ -157,6 +157,12 @@ Use this file before starting phase two or any future multi-file work. Do not re
   - Mapped current and fallback `.drink-glyph` classes to those assets.
   - Disabled the old pseudo-element line drawing layer.
   - Reworked the homepage lede into a designed note module with desktop/tablet/mobile rules.
+- [x] Published direct short text as a bar note:
+  - User asked Codex to choose the column and skip preview.
+  - Chosen column: `吧台札记`.
+  - Generated final note file `note-lab-day-not-over.html`.
+  - Added one `BAR_NOTES` metadata entry with tag `吧台札记`.
+  - Refreshed HTML asset query strings to avoid stale cached `assets/content.js`.
 - [x] Upgrade drink badges toward A+C:
   - Applied blueprint-style structure plus recognizable ingredient cues to all current public drink badge glyphs.
   - Also covered retained CSS fallback glyphs such as Highball, Paloma, Negroni, Coupe, Rocks, and Paper Plane.

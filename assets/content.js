@@ -53,6 +53,15 @@ window.BAR_POSTS = [
 
 window.BAR_NOTES = [
   {
+    id: "lab-day-not-over",
+    title: "只要不走，今天就还没有结束",
+    tag: "吧台札记",
+    publishedAt: "2026-06-25",
+    mood: "缓冲",
+    summary: "一条很短的夜间札记：还坐在实验室里，不是因为非做不可，只是想把今天和明天之间的那一点缓冲再留久一点。",
+    url: "note-lab-day-not-over.html",
+  },
+  {
     id: "lab-after-exam-restlessness",
     title: "待在实验室，也不等于没有浪费时间",
     tag: "吧台札记",

@@ -94,7 +94,8 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - 2026-06-25 home desktop layout fix: homepage `.hero-lede` now uses a wider balanced text box to avoid awkward Chinese line breaks in the desktop menu intro. The grouped Martini Flight card reserves right-side space for its absolute drink glyph on desktop/tablet, while the phone list-card breakpoint removes that large reserve so text does not squeeze.
 - 2026-06-25 material drink label pass: user rejected the CSS blueprint glyphs as too dry and requested material, lighting, and hand-drawn detail. `assets/styles.css` now keeps the same `.drink-glyph` class system but overlays painted-paper texture, glass highlights, liquid color layers, and per-drink garnish variables. Continue using the canonical `5.2rem` internal box and responsive transform scaling.
 - 2026-06-25 bitmap-style drink label pass: user clarified the drink labels should follow the earlier concept/bitmap direction and not resemble the original CSS glyphs. `assets/drink-labels/` now contains standalone illustrated SVG image assets for current and fallback drink classes. `assets/styles.css` maps `.drink-glyph` classes to those assets and disables the old pseudo-element line drawings. The homepage lede is now a right-side after-hours note module on desktop, a horizontal note on tablet, and a compact ticket on mobile.
-- Current cache-busting query string is `bar-art-20260625-bitmap-labels`.
+- 2026-06-25 short lab-still note published: user provided direct text beginning `还在实验室坐着。` and trusted Codex to choose the column. It was published as a bar note, `note-lab-day-not-over.html`, with title `只要不走，今天就还没有结束`, mood `缓冲`, and tag `吧台札记`.
+- Current cache-busting query string is `bar-art-20260625-lab-still`.
 
 ## 1. Current Project Goal
 
@@ -234,6 +235,7 @@ Static site architecture:
 - `article-first-words-on-the-bar.html`: first published article, tag `一些思绪`.
 - `_drafts/article-format-reference.html`: non-public reference article template.
 - `note-lab-after-exam-restlessness.html`: first published bar-note page.
+- `note-lab-day-not-over.html`: short published bar-note page about staying in the lab to delay tomorrow.
 - `reviews.html`: cocktail review placeholder page.
 - `gallery.html`: gallery placeholder page.
 - `friends.html`: StarCried friend-link page.
@@ -316,6 +318,7 @@ Current cache-busting query string:
 - As of the 2026-06-24 life-log publishing cache refresh, public and draft HTML pages use `bar-art-20260624-life-log` for shared assets.
 - As of the 2026-06-25 first bar-note publishing refresh, public and draft HTML pages use `bar-art-20260625-note1` for shared assets.
 - As of the 2026-06-25 note/archive integration refresh, public and draft HTML pages use `bar-art-20260625-notes-archive` for shared assets.
+- As of the 2026-06-25 short lab-still note refresh, public and draft HTML pages use `bar-art-20260625-lab-still` for shared assets.
 - Important publishing reminder: whenever `assets/content.js` changes for a new post, refresh the HTML asset query string on public pages in the same turn. On 2026-06-22, the article index was updated but the HTML pages initially still referenced the old query string, so the homepage/archive/tag pages could appear stale from browser cache.
 
 ## 8. Current Constraints

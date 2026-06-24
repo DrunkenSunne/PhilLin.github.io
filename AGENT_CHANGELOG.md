@@ -2,6 +2,18 @@
 
 Last updated: 2026-06-25
 
+## 2026-06-25 Short Lab-Still Bar Note Published
+
+User provided direct text beginning `还在实验室坐着。` and asked Codex to choose the column, skip preview, and publish directly.
+
+- Chose `吧台札记` because the text is a self-contained reflective fragment rather than a full article or a gripe.
+- Generated final static note file `note-lab-day-not-over.html`.
+- Added one `BAR_NOTES` metadata entry with tag `吧台札记`.
+- Final title: `只要不走，今天就还没有结束`.
+- Final mood: `缓冲`.
+- Final summary: `一条很短的夜间札记：还坐在实验室里，不是因为非做不可，只是想把今天和明天之间的那一点缓冲再留久一点。`
+- Refreshed HTML asset query strings to `bar-art-20260625-lab-still` so `notes.html`, the homepage recent list, and the article archive load the updated `assets/content.js`.
+
 ## 2026-06-25 Bitmap-Style Drink Labels And Designed Lede
 
 User clarified that drink labels should follow the earlier concept/bitmap style rather than resembling the original CSS glyph system, and that the centered homepage lede layout still felt unattractive.

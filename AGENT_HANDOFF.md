@@ -2,6 +2,8 @@
 
 Last updated: 2026-06-25
 
+2026-06-25 short lab-still note: user provided direct text beginning `还在实验室坐着。` and asked Codex to decide the column, skip preview, and publish directly. Codex chose `吧台札记` because it is a self-contained reflective fragment, not a full article or a gripe. The final note is `note-lab-day-not-over.html`, title `只要不走，今天就还没有结束`, publication date `2026-06-25`, mood `缓冲`, and it is indexed in `window.BAR_NOTES` with tag `吧台札记`. HTML asset query strings were refreshed to `bar-art-20260625-lab-still`.
+
 2026-06-25 bitmap-style drink labels and designed lede: user clarified that drink labels should follow the earlier concept/bitmap style and not resemble the original CSS glyphs. `assets/drink-labels/` now contains standalone illustrated SVG image assets for current and retained fallback drink classes; `assets/styles.css` maps `.drink-glyph` classes to those images and disables the old pseudo-element line drawings. The homepage lede is now a designed `After Hours Note` module on desktop, with separate tablet and phone rules. Current asset query string is `bar-art-20260625-bitmap-labels`.
 
 2026-06-25 material drink labels: user disliked the latest hero lede layout and asked for drink labels with material, lighting, and hand-drawn detail. `index.html` now intentionally breaks the lede into two spans after `白天把事情做完，`. `assets/styles.css` keeps the existing `.drink-glyph` system but adds painted-paper texture, glass highlights, liquid depth, shadow glow, and per-drink garnish variables while preserving the canonical `5.2rem` internal glyph box. Current asset query string is `bar-art-20260625-material-labels`.
@@ -147,7 +149,7 @@ Follow-up after phase-one sealing:
   - CSS-only drink glyphs, dot fields, line grids, polygon overlays, and a menu-board home layout.
   - `assets/site.js` adds a pointer-following bar cursor and drink-name hover labels for menu items.
   - `assets/styles.css` now also includes shared Tonight, Playlist, Cellar, article-reading, mobile navigation, and reduced-motion polish.
-- Current cache-busting query string is `bar-art-20260625-note1`; it was updated after the 2026-06-25 first bar-note publish to avoid stale cached CSS/JS and metadata.
+- Current cache-busting query string is `bar-art-20260625-lab-still`; it was updated after the 2026-06-25 short lab-still note publish to avoid stale cached CSS/JS and metadata.
 - Gripe rail:
   - `assets/gripes.js` stores static `window.BAR_GRIPES` entries; it currently contains twelve entries.
   - `assets/site.js` injects the rail and handles page-size calculation and pagination.
@@ -195,6 +197,7 @@ Before any future work, run `git status --short` and `git diff --stat`.
 - `tag-recommendations.html`: `种草安利` tag page.
 - `notes.html`: Hanky Panky / 吧台札记 index.
 - `note-lab-after-exam-restlessness.html`: first published bar-note page.
+- `note-lab-day-not-over.html`: short published bar-note page about staying in the lab to delay tomorrow.
 - `article.html`: dynamic article fallback.
 - `article-two-bottles-writing-touch.html`: second published article, tag `一些思绪`.
 - `article-first-words-on-the-bar.html`: first published article, tag `一些思绪`.
