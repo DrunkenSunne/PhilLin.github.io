@@ -2,6 +2,8 @@
 
 Last updated: 2026-06-25
 
+2026-06-25 home layout fix: user reported desktop screenshot issues in the homepage menu intro and Martini Flight card. `assets/styles.css` now gives `.hero-lede` a wider balanced text box, and the grouped Martini Flight card reserves right-side space for its absolute drink glyph on desktop/tablet while phone cards remove that large reserve. Current asset query string is `bar-art-20260625-layout-fix`.
+
 2026-06-25 note/archive integration: user clarified that 吧台札记 counts as article-system content. `assets/site.js` now merges `BAR_POSTS` and normalized `BAR_NOTES` inside `allPosts()`, so homepage recent posts, `posts.html` "全部", and the new `吧台札记` filter include notes. `notes.html` remains note-only. The first note missing from `notes.html` was investigated: data/file were present, and a simulated DOM check now confirms `note-lab-after-exam-restlessness.html` renders into `data-note-list`; stale cache was the likely prior cause. Current asset query string is `bar-art-20260625-notes-archive`.
 
 2026-06-24 publication: user provided a schedule screenshot for a life log. The final article is `article-after-exam-still-held.html`, tag `生活日志`, title `考完以后，也没有完全散掉`, publication date `2026-06-24`, and vague experiment wording (`实验室工作` / `细胞状态确认`). It has been added to `assets/content.js`; `preview-20260624.html` was deleted. User asked to change the original endnote because it felt too corny; final endnote is restrained. HTML asset query strings were refreshed to `bar-art-20260624-life-log` so index/archive/tag pages load the updated article metadata.

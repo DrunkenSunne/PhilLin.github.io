@@ -2,6 +2,16 @@
 
 Last updated: 2026-06-25
 
+## 2026-06-25 Home Layout Fix
+
+User reported two desktop homepage layout issues from screenshots: the hero lede line broke awkwardly, and the Martini Flight drink glyph overlapped the article-card paragraph.
+
+- Updated `assets/styles.css` so `.menu-intro .hero-lede` has a wider balanced text box.
+- Added right-side reserved space for the grouped Martini Flight card on desktop and tablet widths so the absolute drink glyph no longer sits on top of text.
+- Kept the phone list-card breakpoint free of the large right reserve to avoid squeezing mobile text.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260625-layout-fix`.
+- Visual browser verification remains subject to the project preference and the previously recorded browser automation limitation.
+
 ## 2026-06-25 Bar Notes Integrated Into Article Archive
 
 User clarified that 吧台札记 should count as part of the article system, and noted that the first note was not showing on the note page.

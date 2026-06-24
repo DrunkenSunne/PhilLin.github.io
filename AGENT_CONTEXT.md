@@ -91,7 +91,8 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - Content boundary: gripe entries should be around 50 Chinese characters and preferably under 100; bar notes are roughly 300 to 1200 characters; complete pieces remain normal articles.
 - Hanky Panky is the Martini-family identity for 吧台札记. Its glyph should keep the canonical Martini glass geometry and only add a small herbal/bitter cue. Mobile/tablet glyph rules must keep internal `5.2rem` geometry and scale by transform, matching the existing Martini-family constraint.
 - 2026-06-24 drink glyph pass: all current public drink badges were upgraded toward A+C, meaning blueprint-style line structure plus one recognizable ingredient cue. Keep glyph artwork inside the canonical `5.2rem` internal box and continue responsive scaling by `transform` only, to avoid desktop/tablet/mobile drift.
-- Current cache-busting query string is `bar-art-20260625-notes-archive`.
+- 2026-06-25 home desktop layout fix: homepage `.hero-lede` now uses a wider balanced text box to avoid awkward Chinese line breaks in the desktop menu intro. The grouped Martini Flight card reserves right-side space for its absolute drink glyph on desktop/tablet, while the phone list-card breakpoint removes that large reserve so text does not squeeze.
+- Current cache-busting query string is `bar-art-20260625-layout-fix`.
 
 ## 1. Current Project Goal
 

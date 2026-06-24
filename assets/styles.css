@@ -1359,8 +1359,9 @@ body::after {
 
 .menu-intro .hero-lede {
   justify-self: end;
-  max-width: 20rem;
+  max-width: min(24rem, 100%);
   text-align: right;
+  text-wrap: balance;
 }
 
 .hero-note {
@@ -1448,6 +1449,7 @@ body::after {
 
 .menu-drink-group {
   grid-column: span 2;
+  padding-right: clamp(7.25rem, 13vw, 9rem);
 }
 
 .menu-primary-link,
@@ -3053,6 +3055,7 @@ body::after {
 
   .menu-drink-group {
     grid-column: span 2;
+    padding-right: 7.4rem;
   }
 
   .menu-variants {
@@ -3330,6 +3333,7 @@ body::after {
 
   .menu-drink-group {
     grid-column: auto;
+    padding-right: 0.9rem;
   }
 
   .menu-drink-group .drink-glyph {
@@ -3637,6 +3641,7 @@ body::after {
 
   .menu-drink-group {
     grid-column: 1 / -1;
+    padding-right: 6.3rem;
   }
 
   .menu-drink .drink-glyph {
