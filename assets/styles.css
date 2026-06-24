@@ -1358,14 +1358,41 @@ body::after {
 }
 
 .menu-intro .hero-lede {
-  grid-column: 2 / 4;
-  justify-self: center;
-  max-width: min(38rem, 100%);
-  margin-block: -0.15rem 0;
+  position: relative;
+  grid-column: 3;
+  justify-self: end;
+  max-width: 21rem;
+  margin-block: 0;
+  border-left: 1px solid rgba(255, 210, 138, 0.3);
+  padding: 0.9rem 0 0.95rem 1rem;
   color: var(--cream);
-  font-size: clamp(1.18rem, 2.15vw, 1.76rem);
-  line-height: 1.48;
-  text-align: center;
+  font-size: clamp(1.02rem, 1.35vw, 1.34rem);
+  line-height: 1.52;
+  text-align: left;
+}
+
+.menu-intro .hero-lede::before {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--accent-strong);
+  content: "After Hours Note";
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.menu-intro .hero-lede::after {
+  position: absolute;
+  top: 1rem;
+  left: -0.24rem;
+  width: 0.46rem;
+  height: 0.46rem;
+  border-radius: 50%;
+  background: var(--accent-strong);
+  box-shadow: 0 2.2rem 0 rgba(154, 155, 93, 0.8), 0 4.4rem 0 rgba(159, 47, 40, 0.72);
+  content: "";
 }
 
 .hero-lede span {
@@ -2627,6 +2654,88 @@ body::after {
   --garnish-shape: polygon(0 50%, 100% 0, 72% 100%);
 }
 
+/* Bitmap-style drink labels: standalone illustrated assets replace the old CSS line drawings. */
+.drink-glyph > span {
+  background: var(--drink-label) center / contain no-repeat !important;
+  border-radius: 0;
+  box-shadow: none;
+  filter: drop-shadow(0 0.65rem 1.1rem rgba(0, 0, 0, 0.34)) drop-shadow(0 0 12px rgba(255, 210, 138, 0.16));
+}
+
+.drink-glyph > span::before,
+.drink-glyph > span::after {
+  display: none;
+  content: none;
+}
+
+.martini-glyph > span {
+  --drink-label: url("drink-labels/martini.svg");
+}
+
+.gibson-glyph > span {
+  --drink-label: url("drink-labels/gibson.svg");
+}
+
+.dirty-martini-glyph > span {
+  --drink-label: url("drink-labels/dirty-martini.svg");
+}
+
+.vesper-glyph > span {
+  --drink-label: url("drink-labels/vesper.svg");
+}
+
+.hanky-panky-glyph > span {
+  --drink-label: url("drink-labels/hanky-panky.svg");
+}
+
+.gimlet-glyph > span {
+  --drink-label: url("drink-labels/gimlet.svg");
+}
+
+.boulevardier-glyph > span {
+  --drink-label: url("drink-labels/boulevardier.svg");
+}
+
+.sazerac-glyph > span {
+  --drink-label: url("drink-labels/sazerac.svg");
+}
+
+.french-75-glyph > span {
+  --drink-label: url("drink-labels/french-75.svg");
+}
+
+.collins-glyph > span {
+  --drink-label: url("drink-labels/collins.svg");
+}
+
+.last-word-glyph > span {
+  --drink-label: url("drink-labels/last-word.svg");
+}
+
+.highball-glyph > span {
+  --drink-label: url("drink-labels/highball.svg");
+}
+
+.paloma-glyph > span {
+  --drink-label: url("drink-labels/paloma.svg");
+}
+
+.negroni-glyph > span {
+  --drink-label: url("drink-labels/negroni.svg");
+}
+
+.coupe-glyph > span {
+  --drink-label: url("drink-labels/coupe.svg");
+}
+
+.rocks-glyph > span {
+  --drink-label: url("drink-labels/rocks.svg");
+}
+
+.paper-plane-glyph > span {
+  --drink-label: url("drink-labels/paper-plane.svg");
+}
+
 .friend-profile {
   grid-template-columns: minmax(8rem, 0.48fr) minmax(0, 1.25fr);
 }
@@ -3072,6 +3181,7 @@ body::after {
   .menu-intro .hero-lede {
     grid-column: auto;
     justify-self: start;
+    max-width: min(34rem, 100%);
     text-align: left;
   }
 
@@ -3207,7 +3317,9 @@ body::after {
   .menu-intro .hero-lede {
     grid-column: auto;
     justify-self: start;
-    max-width: 32rem;
+    width: min(34rem, 100%);
+    max-width: 34rem;
+    border-left-color: rgba(255, 210, 138, 0.38);
     text-align: left;
   }
 
@@ -3494,8 +3606,19 @@ body::after {
 
   .menu-intro .hero-lede {
     max-width: 100%;
+    border: 1px solid rgba(255, 210, 138, 0.16);
+    border-left: 0;
+    border-top: 2px solid rgba(255, 210, 138, 0.34);
+    padding: 0.82rem 0.9rem 0.88rem;
+    background: rgba(255, 241, 204, 0.035);
     font-size: 1rem;
     line-height: 1.55;
+  }
+
+  .menu-intro .hero-lede::after {
+    top: -0.28rem;
+    left: 0.9rem;
+    box-shadow: 1.35rem 0 0 rgba(154, 155, 93, 0.8), 2.7rem 0 0 rgba(159, 47, 40, 0.72);
   }
 
   .hero-note {

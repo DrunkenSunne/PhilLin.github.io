@@ -2,6 +2,16 @@
 
 Last updated: 2026-06-25
 
+## 2026-06-25 Bitmap-Style Drink Labels And Designed Lede
+
+User clarified that drink labels should follow the earlier concept/bitmap style rather than resembling the original CSS glyph system, and that the centered homepage lede layout still felt unattractive.
+
+- Added standalone illustrated drink-label assets under `assets/drink-labels/` for current page glyphs and retained fallback drink classes.
+- Updated `assets/styles.css` so `.drink-glyph` classes map to those image assets and old pseudo-element line drawings are disabled.
+- Redesigned the homepage lede as a right-side `After Hours Note` module on desktop instead of centered copy.
+- Added tablet and mobile lede rules so the note becomes a horizontal module on tablet and a compact ticket on phone.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260625-bitmap-labels`.
+
 ## 2026-06-25 Material Drink Labels
 
 User rejected the latest homepage lede layout as unattractive and clarified that drink labels should have material, lighting, and hand-drawn details rather than staying as dry CSS blueprint glyphs.

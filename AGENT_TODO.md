@@ -152,6 +152,11 @@ Use this file before starting phase two or any future multi-file work. Do not re
   - Set the homepage lede as an intentional two-line sentence instead of automatic balanced wrapping.
   - Reworked drink glyphs toward material labels with painted paper, glass highlights, liquid depth, and hand-drawn garnish cues.
   - Preserved the existing `.drink-glyph` class system and canonical internal sizing for responsive stability.
+- [x] Replace CSS drink glyph look with bitmap-style illustrated assets:
+  - Added standalone illustrated assets under `assets/drink-labels/`.
+  - Mapped current and fallback `.drink-glyph` classes to those assets.
+  - Disabled the old pseudo-element line drawing layer.
+  - Reworked the homepage lede into a designed note module with desktop/tablet/mobile rules.
 - [x] Upgrade drink badges toward A+C:
   - Applied blueprint-style structure plus recognizable ingredient cues to all current public drink badge glyphs.
   - Also covered retained CSS fallback glyphs such as Highball, Paloma, Negroni, Coupe, Rocks, and Paper Plane.

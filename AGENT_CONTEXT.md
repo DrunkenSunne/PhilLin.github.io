@@ -93,7 +93,8 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - 2026-06-24 drink glyph pass: all current public drink badges were upgraded toward A+C, meaning blueprint-style line structure plus one recognizable ingredient cue. Keep glyph artwork inside the canonical `5.2rem` internal box and continue responsive scaling by `transform` only, to avoid desktop/tablet/mobile drift.
 - 2026-06-25 home desktop layout fix: homepage `.hero-lede` now uses a wider balanced text box to avoid awkward Chinese line breaks in the desktop menu intro. The grouped Martini Flight card reserves right-side space for its absolute drink glyph on desktop/tablet, while the phone list-card breakpoint removes that large reserve so text does not squeeze.
 - 2026-06-25 material drink label pass: user rejected the CSS blueprint glyphs as too dry and requested material, lighting, and hand-drawn detail. `assets/styles.css` now keeps the same `.drink-glyph` class system but overlays painted-paper texture, glass highlights, liquid color layers, and per-drink garnish variables. Continue using the canonical `5.2rem` internal box and responsive transform scaling.
-- Current cache-busting query string is `bar-art-20260625-material-labels`.
+- 2026-06-25 bitmap-style drink label pass: user clarified the drink labels should follow the earlier concept/bitmap direction and not resemble the original CSS glyphs. `assets/drink-labels/` now contains standalone illustrated SVG image assets for current and fallback drink classes. `assets/styles.css` maps `.drink-glyph` classes to those assets and disables the old pseudo-element line drawings. The homepage lede is now a right-side after-hours note module on desktop, a horizontal note on tablet, and a compact ticket on mobile.
+- Current cache-busting query string is `bar-art-20260625-bitmap-labels`.
 
 ## 1. Current Project Goal
 
