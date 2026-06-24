@@ -92,7 +92,8 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - Hanky Panky is the Martini-family identity for 吧台札记. Its glyph should keep the canonical Martini glass geometry and only add a small herbal/bitter cue. Mobile/tablet glyph rules must keep internal `5.2rem` geometry and scale by transform, matching the existing Martini-family constraint.
 - 2026-06-24 drink glyph pass: all current public drink badges were upgraded toward A+C, meaning blueprint-style line structure plus one recognizable ingredient cue. Keep glyph artwork inside the canonical `5.2rem` internal box and continue responsive scaling by `transform` only, to avoid desktop/tablet/mobile drift.
 - 2026-06-25 home desktop layout fix: homepage `.hero-lede` now uses a wider balanced text box to avoid awkward Chinese line breaks in the desktop menu intro. The grouped Martini Flight card reserves right-side space for its absolute drink glyph on desktop/tablet, while the phone list-card breakpoint removes that large reserve so text does not squeeze.
-- Current cache-busting query string is `bar-art-20260625-layout-fix`.
+- 2026-06-25 material drink label pass: user rejected the CSS blueprint glyphs as too dry and requested material, lighting, and hand-drawn detail. `assets/styles.css` now keeps the same `.drink-glyph` class system but overlays painted-paper texture, glass highlights, liquid color layers, and per-drink garnish variables. Continue using the canonical `5.2rem` internal box and responsive transform scaling.
+- Current cache-busting query string is `bar-art-20260625-material-labels`.
 
 ## 1. Current Project Goal
 

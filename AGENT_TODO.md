@@ -148,6 +148,10 @@ Use this file before starting phase two or any future multi-file work. Do not re
   - Balanced the desktop hero lede text box to avoid awkward Chinese line breaks.
   - Reserved text-safe space around the Martini Flight drink glyph on desktop/tablet.
   - Kept the phone list-card breakpoint from inheriting the large right reserve.
+- [x] Rework homepage lede and drink labels after user feedback:
+  - Set the homepage lede as an intentional two-line sentence instead of automatic balanced wrapping.
+  - Reworked drink glyphs toward material labels with painted paper, glass highlights, liquid depth, and hand-drawn garnish cues.
+  - Preserved the existing `.drink-glyph` class system and canonical internal sizing for responsive stability.
 - [x] Upgrade drink badges toward A+C:
   - Applied blueprint-style structure plus recognizable ingredient cues to all current public drink badge glyphs.
   - Also covered retained CSS fallback glyphs such as Highball, Paloma, Negroni, Coupe, Rocks, and Paper Plane.

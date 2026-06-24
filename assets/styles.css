@@ -1358,10 +1358,18 @@ body::after {
 }
 
 .menu-intro .hero-lede {
-  justify-self: end;
-  max-width: min(24rem, 100%);
-  text-align: right;
-  text-wrap: balance;
+  grid-column: 2 / 4;
+  justify-self: center;
+  max-width: min(38rem, 100%);
+  margin-block: -0.15rem 0;
+  color: var(--cream);
+  font-size: clamp(1.18rem, 2.15vw, 1.76rem);
+  line-height: 1.48;
+  text-align: center;
+}
+
+.hero-lede span {
+  display: block;
 }
 
 .hero-note {
@@ -2388,6 +2396,237 @@ body::after {
   border-radius: 50%;
 }
 
+/* Material drink labels: painted paper, glass highlights, and hand-drawn garnish cues. */
+.drink-glyph > span {
+  --label-glow: rgba(255, 210, 138, 0.28);
+  --glass-top: 0.58rem;
+  --glass-left: 0.68rem;
+  --glass-width: 3.84rem;
+  --glass-height: 2.62rem;
+  --glass-shape: polygon(3% 4%, 97% 4%, 61% 88%, 52% 100%, 42% 88%);
+  --glass-radius: 0.12rem;
+  --liquid: rgba(236, 212, 166, 0.18);
+  --liquid-deep: rgba(240, 164, 58, 0.26);
+  --stem-color: rgba(255, 210, 138, 0.74);
+  --stem-y: 3.23rem;
+  --stem-size: 2.1rem 1.18rem;
+  --base-y: 4.55rem;
+  --base-size: 3.35rem 0.24rem;
+  --garnish-bg:
+    radial-gradient(circle at 70% 52%, rgba(154, 155, 93, 0.95) 0 0.24rem, transparent 0.27rem),
+    linear-gradient(13deg, transparent 0 45%, rgba(255, 241, 204, 0.78) 45.5% 53%, transparent 53.5% 100%);
+  --garnish-shape: ellipse(50% 44% at 50% 50%);
+  --garnish-top: 0.42rem;
+  --garnish-right: 0.58rem;
+  --garnish-width: 1.65rem;
+  --garnish-height: 1.08rem;
+  --garnish-rotate: -15deg;
+  border-radius: 1.25rem;
+  background:
+    linear-gradient(90deg, transparent 0 45%, var(--stem-color) 45.5% 54%, transparent 54.5% 100%) 50% var(--stem-y) / var(--stem-size) no-repeat,
+    linear-gradient(90deg, transparent 0 18%, var(--stem-color) 18.5% 82%, transparent 82.5% 100%) 50% var(--base-y) / var(--base-size) no-repeat,
+    radial-gradient(circle at 30% 18%, rgba(255, 241, 204, 0.28) 0 0.08rem, transparent 0.105rem),
+    radial-gradient(circle at 74% 26%, rgba(255, 210, 138, 0.18) 0 0.07rem, transparent 0.095rem),
+    linear-gradient(116deg, transparent 0 32%, rgba(255, 241, 204, 0.1) 32.5% 34%, transparent 34.5% 100%),
+    linear-gradient(18deg, transparent 0 57%, rgba(159, 47, 40, 0.09) 57.5% 59%, transparent 59.5% 100%),
+    radial-gradient(circle at 58% 48%, rgba(255, 210, 138, 0.12), transparent 2.65rem),
+    rgba(22, 12, 8, 0.18);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 241, 204, 0.08),
+    inset 0 0 24px rgba(255, 210, 138, 0.04),
+    0 0 18px var(--label-glow);
+  filter: drop-shadow(0 0 13px rgba(255, 210, 138, 0.2));
+  isolation: isolate;
+}
+
+.drink-glyph > span::before {
+  left: var(--glass-left);
+  top: var(--glass-top);
+  bottom: auto;
+  width: var(--glass-width);
+  height: var(--glass-height);
+  border: 1.5px solid rgba(255, 220, 157, 0.9);
+  border-radius: var(--glass-radius);
+  background:
+    linear-gradient(112deg, rgba(255, 255, 255, 0.36) 0 9%, transparent 9.8% 31%, rgba(255, 241, 204, 0.16) 31.5% 36%, transparent 36.5% 100%),
+    linear-gradient(180deg, transparent 0 38%, rgba(255, 241, 204, 0.18) 39% 43%, transparent 44% 100%),
+    linear-gradient(180deg, rgba(255, 241, 204, 0.08), var(--liquid) 48%, var(--liquid-deep));
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 241, 204, 0.12),
+    inset 0 -0.45rem 1rem rgba(240, 164, 58, 0.12),
+    0 0 0 0.06rem rgba(39, 24, 15, 0.38),
+    0.09rem 0.08rem 0 rgba(255, 241, 204, 0.08);
+  clip-path: var(--glass-shape);
+  transform: rotate(-1.6deg);
+}
+
+.drink-glyph > span::after {
+  left: auto;
+  right: var(--garnish-right);
+  top: var(--garnish-top);
+  bottom: auto;
+  width: var(--garnish-width);
+  height: var(--garnish-height);
+  border: 0;
+  border-radius: 999px;
+  background: var(--garnish-bg);
+  box-shadow: 0 0 9px rgba(255, 241, 204, 0.16);
+  clip-path: var(--garnish-shape);
+  transform: rotate(var(--garnish-rotate));
+}
+
+.gibson-glyph span {
+  --garnish-bg:
+    radial-gradient(circle at 70% 52%, rgba(255, 241, 204, 0.95) 0 0.25rem, transparent 0.28rem),
+    radial-gradient(circle at 70% 52%, rgba(240, 164, 58, 0.34) 0 0.46rem, transparent 0.49rem),
+    linear-gradient(13deg, transparent 0 45%, rgba(255, 241, 204, 0.72) 45.5% 53%, transparent 53.5% 100%);
+}
+
+.dirty-martini-glyph span {
+  --liquid: rgba(214, 220, 166, 0.22);
+  --liquid-deep: rgba(154, 155, 93, 0.3);
+  --garnish-bg:
+    radial-gradient(circle at 70% 52%, rgba(154, 155, 93, 0.96) 0 0.25rem, transparent 0.28rem),
+    radial-gradient(circle at 70% 52%, rgba(255, 241, 204, 0.2) 0 0.48rem, transparent 0.52rem),
+    linear-gradient(13deg, transparent 0 45%, rgba(255, 241, 204, 0.72) 45.5% 53%, transparent 53.5% 100%);
+}
+
+.vesper-glyph span {
+  --liquid: rgba(236, 212, 166, 0.2);
+  --liquid-deep: rgba(108, 169, 164, 0.2);
+  --garnish-bg: linear-gradient(26deg, transparent 0 26%, rgba(240, 164, 58, 0.92) 27% 55%, rgba(255, 241, 204, 0.42) 56% 64%, transparent 65% 100%);
+  --garnish-shape: polygon(8% 62%, 96% 4%, 72% 92%, 38% 80%);
+}
+
+.hanky-panky-glyph span {
+  --liquid: rgba(154, 155, 93, 0.16);
+  --liquid-deep: rgba(159, 47, 40, 0.2);
+  --garnish-bg:
+    radial-gradient(ellipse at 54% 50%, rgba(154, 155, 93, 0.94) 0 0.34rem, transparent 0.37rem),
+    linear-gradient(120deg, transparent 0 44%, rgba(255, 241, 204, 0.58) 45% 53%, transparent 54% 100%);
+  --garnish-shape: polygon(10% 48%, 48% 4%, 94% 48%, 48% 94%);
+}
+
+.last-word-glyph span,
+.coupe-glyph span,
+.gimlet-glyph > span {
+  --glass-top: 0.64rem;
+  --glass-left: 0.7rem;
+  --glass-width: 3.8rem;
+  --glass-height: 2.42rem;
+  --glass-shape: inset(0 0 0 0 round 0 0 1.75rem 1.75rem);
+  --glass-radius: 0 0 1.8rem 1.8rem;
+  --stem-y: 3.48rem;
+  --base-y: 4.55rem;
+}
+
+.gimlet-glyph > span {
+  --liquid: rgba(154, 155, 93, 0.2);
+  --liquid-deep: rgba(108, 169, 164, 0.18);
+  --garnish-bg:
+    radial-gradient(circle at 50% 50%, transparent 0 0.28rem, rgba(154, 155, 93, 0.92) 0.3rem 0.45rem, transparent 0.48rem),
+    linear-gradient(135deg, transparent 0 46%, rgba(255, 241, 204, 0.62) 47% 54%, transparent 55% 100%);
+}
+
+.last-word-glyph span {
+  --liquid: rgba(154, 155, 93, 0.24);
+  --liquid-deep: rgba(240, 164, 58, 0.18);
+  --garnish-bg:
+    radial-gradient(circle at 72% 50%, rgba(159, 47, 40, 0.95) 0 0.2rem, transparent 0.23rem),
+    radial-gradient(ellipse at 38% 50%, rgba(154, 155, 93, 0.88) 0 0.3rem, transparent 0.33rem);
+}
+
+.highball-glyph span,
+.collins-glyph > span,
+.paloma-glyph > span {
+  --glass-top: 0.44rem;
+  --glass-left: 1.34rem;
+  --glass-width: 2.54rem;
+  --glass-height: 4.18rem;
+  --glass-shape: inset(0 0 0 0 round 0.34rem 0.34rem 0.65rem 0.65rem);
+  --glass-radius: 0.34rem 0.34rem 0.65rem 0.65rem;
+  --stem-color: transparent;
+  --liquid: rgba(240, 164, 58, 0.12);
+  --liquid-deep: rgba(240, 164, 58, 0.3);
+  --garnish-bg:
+    radial-gradient(circle, transparent 0 0.34rem, rgba(154, 155, 93, 0.88) 0.36rem 0.47rem, transparent 0.5rem),
+    linear-gradient(110deg, transparent 0 45%, rgba(255, 241, 204, 0.62) 46% 52%, transparent 53% 100%);
+  --garnish-top: 0.52rem;
+  --garnish-right: 0.64rem;
+  --garnish-width: 1.45rem;
+  --garnish-height: 1.45rem;
+}
+
+.collins-glyph > span {
+  --liquid: rgba(236, 212, 166, 0.12);
+  --liquid-deep: rgba(240, 164, 58, 0.22);
+  --garnish-bg:
+    radial-gradient(circle, transparent 0 0.34rem, rgba(240, 164, 58, 0.9) 0.36rem 0.47rem, transparent 0.5rem),
+    linear-gradient(110deg, transparent 0 45%, rgba(255, 241, 204, 0.62) 46% 52%, transparent 53% 100%);
+}
+
+.paloma-glyph > span {
+  --liquid: rgba(159, 47, 40, 0.18);
+  --liquid-deep: rgba(240, 164, 58, 0.34);
+}
+
+.french-75-glyph > span {
+  --glass-top: 0.42rem;
+  --glass-left: 1.54rem;
+  --glass-width: 2.1rem;
+  --glass-height: 4.26rem;
+  --glass-shape: polygon(14% 0, 86% 0, 72% 88%, 58% 100%, 42% 100%, 28% 88%);
+  --glass-radius: 1rem 1rem 0.35rem 0.35rem;
+  --stem-y: 4.1rem;
+  --base-y: 4.78rem;
+  --base-size: 2.75rem 0.18rem;
+  --liquid: rgba(255, 241, 204, 0.16);
+  --liquid-deep: rgba(240, 164, 58, 0.24);
+  --garnish-bg: linear-gradient(26deg, transparent 0 28%, rgba(240, 164, 58, 0.92) 29% 56%, rgba(255, 241, 204, 0.42) 57% 64%, transparent 65% 100%);
+}
+
+.rocks-glyph span,
+.boulevardier-glyph > span,
+.sazerac-glyph > span,
+.negroni-glyph > span {
+  --glass-top: 1.02rem;
+  --glass-left: 0.82rem;
+  --glass-width: 3.55rem;
+  --glass-height: 3.18rem;
+  --glass-shape: inset(0 0 0 0 round 0.28rem 0.28rem 0.75rem 0.75rem);
+  --glass-radius: 0.28rem 0.28rem 0.75rem 0.75rem;
+  --stem-color: transparent;
+  --liquid: rgba(159, 47, 40, 0.34);
+  --liquid-deep: rgba(240, 164, 58, 0.2);
+  --garnish-bg: linear-gradient(26deg, transparent 0 28%, rgba(240, 164, 58, 0.92) 29% 56%, rgba(255, 241, 204, 0.42) 57% 64%, transparent 65% 100%);
+}
+
+.sazerac-glyph > span {
+  --liquid: rgba(240, 164, 58, 0.16);
+  --liquid-deep: rgba(159, 47, 40, 0.24);
+  --garnish-bg:
+    linear-gradient(90deg, rgba(255, 241, 204, 0.72), rgba(255, 210, 138, 0.36)),
+    radial-gradient(circle at 78% 46%, rgba(154, 155, 93, 0.52) 0 0.22rem, transparent 0.25rem);
+  --garnish-shape: inset(42% 0 42% 0 round 999px);
+  --garnish-right: 1.02rem;
+  --garnish-width: 3rem;
+  --garnish-height: 1.1rem;
+  --garnish-rotate: -17deg;
+}
+
+.negroni-glyph > span {
+  --liquid: rgba(159, 47, 40, 0.38);
+  --liquid-deep: rgba(240, 164, 58, 0.26);
+  --garnish-bg: radial-gradient(circle, transparent 0 0.36rem, rgba(240, 164, 58, 0.9) 0.38rem 0.52rem, transparent 0.55rem);
+}
+
+.paper-plane-glyph > span {
+  --liquid: rgba(236, 212, 166, 0.18);
+  --liquid-deep: rgba(240, 164, 58, 0.16);
+  --garnish-bg: linear-gradient(135deg, rgba(255, 241, 204, 0.64), rgba(240, 164, 58, 0.2));
+  --garnish-shape: polygon(0 50%, 100% 0, 72% 100%);
+}
+
 .friend-profile {
   grid-template-columns: minmax(8rem, 0.48fr) minmax(0, 1.25fr);
 }
@@ -2831,6 +3070,7 @@ body::after {
   }
 
   .menu-intro .hero-lede {
+    grid-column: auto;
     justify-self: start;
     text-align: left;
   }
@@ -2965,6 +3205,7 @@ body::after {
   }
 
   .menu-intro .hero-lede {
+    grid-column: auto;
     justify-self: start;
     max-width: 32rem;
     text-align: left;

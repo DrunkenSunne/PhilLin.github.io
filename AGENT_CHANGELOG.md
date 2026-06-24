@@ -2,6 +2,17 @@
 
 Last updated: 2026-06-25
 
+## 2026-06-25 Material Drink Labels
+
+User rejected the latest homepage lede layout as unattractive and clarified that drink labels should have material, lighting, and hand-drawn details rather than staying as dry CSS blueprint glyphs.
+
+- Changed the homepage hero lede markup so the sentence uses an intentional two-line break after `白天把事情做完，`.
+- Updated `.menu-intro .hero-lede` so desktop uses a centered two-line text block; tablet/mobile reset to single-column placement.
+- Reworked the drink glyph layer in `assets/styles.css` into material-style labels: painted paper texture, glass highlight, liquid depth, shadow glow, and per-drink garnish variables.
+- Kept the existing `.drink-glyph` class names and canonical `5.2rem` internal box so desktop/tablet/mobile scaling rules remain stable.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260625-material-labels`.
+- Used the image generation skill instructions for this decision, but implemented as repo-native CSS/SVG-like layers to avoid fragile transparent bitmap cropping for glass/liquid assets.
+
 ## 2026-06-25 Home Layout Fix
 
 User reported two desktop homepage layout issues from screenshots: the hero lede line broke awkwardly, and the Martini Flight drink glyph overlapped the article-card paragraph.

@@ -2,6 +2,8 @@
 
 Last updated: 2026-06-25
 
+2026-06-25 material drink labels: user disliked the latest hero lede layout and asked for drink labels with material, lighting, and hand-drawn detail. `index.html` now intentionally breaks the lede into two spans after `白天把事情做完，`. `assets/styles.css` keeps the existing `.drink-glyph` system but adds painted-paper texture, glass highlights, liquid depth, shadow glow, and per-drink garnish variables while preserving the canonical `5.2rem` internal glyph box. Current asset query string is `bar-art-20260625-material-labels`.
+
 2026-06-25 home layout fix: user reported desktop screenshot issues in the homepage menu intro and Martini Flight card. `assets/styles.css` now gives `.hero-lede` a wider balanced text box, and the grouped Martini Flight card reserves right-side space for its absolute drink glyph on desktop/tablet while phone cards remove that large reserve. Current asset query string is `bar-art-20260625-layout-fix`.
 
 2026-06-25 note/archive integration: user clarified that 吧台札记 counts as article-system content. `assets/site.js` now merges `BAR_POSTS` and normalized `BAR_NOTES` inside `allPosts()`, so homepage recent posts, `posts.html` "全部", and the new `吧台札记` filter include notes. `notes.html` remains note-only. The first note missing from `notes.html` was investigated: data/file were present, and a simulated DOM check now confirms `note-lab-after-exam-restlessness.html` renders into `data-note-list`; stale cache was the likely prior cause. Current asset query string is `bar-art-20260625-notes-archive`.
