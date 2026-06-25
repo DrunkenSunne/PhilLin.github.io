@@ -1,6 +1,8 @@
 # AGENT_HANDOFF
 
-Last updated: 2026-06-25
+Last updated: 2026-06-26
+
+2026-06-26 Word article: user provided `C:\Users\Phil Lin\Desktop\临时用\新建 Microsoft Word 文档.docx` with tag `一些思绪`. Codex generated `preview-20260626.html`, then user said `发`. The final article is `article-not-yet-return.html`, title `不如归去，但还不能归去`, publication date `2026-06-26`, summary `一篇写在实验室深夜的长文：从不想回宿舍的迟疑出发，绕到陶渊明与王羲之，写归去的羡慕、责任的牵引，以及暂时还不能真正放下的自己。`, and it is indexed in `window.BAR_POSTS`. The preview file was deleted. The Word document contained no embedded media files. HTML asset query strings were refreshed to `bar-art-20260626-return`.
 
 2026-06-25 short lab-still note: user provided direct text beginning `还在实验室坐着。` and asked Codex to decide the column, skip preview, and publish directly. Codex chose `吧台札记` because it is a self-contained reflective fragment, not a full article or a gripe. The final note is `note-lab-day-not-over.html`, title `只要不走，今天就还没有结束`, publication date `2026-06-25`, mood `缓冲`, and it is indexed in `window.BAR_NOTES` with tag `吧台札记`. HTML asset query strings were refreshed to `bar-art-20260625-lab-still`.
 
@@ -149,7 +151,7 @@ Follow-up after phase-one sealing:
   - CSS-only drink glyphs, dot fields, line grids, polygon overlays, and a menu-board home layout.
   - `assets/site.js` adds a pointer-following bar cursor and drink-name hover labels for menu items.
   - `assets/styles.css` now also includes shared Tonight, Playlist, Cellar, article-reading, mobile navigation, and reduced-motion polish.
-- Current cache-busting query string is `bar-art-20260625-lab-still`; it was updated after the 2026-06-25 short lab-still note publish to avoid stale cached CSS/JS and metadata.
+- Current cache-busting query string is `bar-art-20260626-return`; it was updated after the 2026-06-26 Word article publish to avoid stale cached CSS/JS and metadata.
 - Gripe rail:
   - `assets/gripes.js` stores static `window.BAR_GRIPES` entries; it currently contains twelve entries.
   - `assets/site.js` injects the rail and handles page-size calculation and pagination.
@@ -166,7 +168,7 @@ Follow-up after phase-one sealing:
 - Article architecture:
   - Home/archive/tag pages read summary metadata from `assets/content.js`.
   - Real article bodies should live in separate HTML files, for example `article-my-post.html`.
-  - There are currently two public article entries: `article-two-bottles-writing-touch.html` and `article-first-words-on-the-bar.html`.
+  - Public article entries include `article-not-yet-return.html`, `article-two-bottles-writing-touch.html`, and `article-first-words-on-the-bar.html`.
   - Future article images should go under `assets/posts/<article-id>/`.
 - `article.html` remains as a dynamic compatibility fallback, but static article HTML files are the recommended primary path.
 
@@ -201,6 +203,7 @@ Before any future work, run `git status --short` and `git diff --stat`.
 - `article.html`: dynamic article fallback.
 - `article-two-bottles-writing-touch.html`: second published article, tag `一些思绪`.
 - `article-first-words-on-the-bar.html`: first published article, tag `一些思绪`.
+- `article-not-yet-return.html`: 2026-06-26 published article, tag `一些思绪`.
 - `_drafts/article-format-reference.html`: retained non-public format/reference draft.
 - `friends.html`: friend links, currently StarCried and CrescentYves.
 - `reviews.html`: Cellar / 酒柜 page, rendered from `window.BAR_REVIEWS`.

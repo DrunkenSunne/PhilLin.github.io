@@ -1,6 +1,20 @@
 # AGENT_CHANGELOG
 
-Last updated: 2026-06-25
+Last updated: 2026-06-26
+
+## 2026-06-26 Word Article Published - Not Yet Return
+
+User provided `C:\Users\Phil Lin\Desktop\临时用\新建 Microsoft Word 文档.docx` with tag `一些思绪` and left the remaining publication elements to Codex.
+
+- Generated review-only `preview-20260626.html`, then formally published after user said `发`.
+- Generated final static article file `article-not-yet-return.html`.
+- Added one `BAR_POSTS` metadata entry with tag `一些思绪`.
+- Deleted `preview-20260626.html`.
+- Final title: `不如归去，但还不能归去`.
+- Final summary: `一篇写在实验室深夜的长文：从不想回宿舍的迟疑出发，绕到陶渊明与王羲之，写归去的羡慕、责任的牵引，以及暂时还不能真正放下的自己。`
+- Publication date: `2026-06-26`.
+- Confirmed the Word document had no embedded media files.
+- Refreshed HTML asset query strings to `bar-art-20260626-return` so the homepage, article archive, and `一些思绪` tag page load the updated `assets/content.js`.
 
 ## 2026-06-25 Short Lab-Still Bar Note Published
 

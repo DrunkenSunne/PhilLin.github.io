@@ -2,6 +2,14 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利", "吧台札记
 
 window.BAR_POSTS = [
   {
+    id: "not-yet-return",
+    title: "不如归去，但还不能归去",
+    tag: "一些思绪",
+    publishedAt: "2026-06-26",
+    summary: "一篇写在实验室深夜的长文：从不想回宿舍的迟疑出发，绕到陶渊明与王羲之，写归去的羡慕、责任的牵引，以及暂时还不能真正放下的自己。",
+    url: "article-not-yet-return.html",
+  },
+  {
     id: "after-exam-still-held",
     title: "考完以后，也没有完全散掉",
     tag: "生活日志",

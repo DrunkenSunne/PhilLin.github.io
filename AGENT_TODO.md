@@ -1,6 +1,6 @@
 # AGENT_TODO
 
-Last updated: 2026-06-25
+Last updated: 2026-06-26
 
 Use this file before starting phase two or any future multi-file work. Do not rely on chat history as the only source of truth.
 
@@ -44,6 +44,17 @@ Use this file before starting phase two or any future multi-file work. Do not re
 
 ## 3. Phase-Two Candidate Tasks
 
+- [x] Published 2026-06-26 Word article from `C:\Users\Phil Lin\Desktop\临时用\新建 Microsoft Word 文档.docx`:
+  - Generated review-only `preview-20260626.html`.
+  - User approved publication with `发`.
+  - Generated final article file `article-not-yet-return.html`.
+  - Deleted `preview-20260626.html`.
+  - Added one metadata object to `assets/content.js`.
+  - User supplied tag `一些思绪`.
+  - Final title is `不如归去，但还不能归去`.
+  - Publication date is `2026-06-26`, based on the current date.
+  - No embedded media files were found in the Word document.
+  - Refreshed HTML asset query strings to avoid stale cached `assets/content.js`.
 - [x] Published 2026-06-24 life log from schedule screenshot:
   - Generated final article file `article-after-exam-still-held.html`.
   - Deleted review-only `preview-20260624.html`.

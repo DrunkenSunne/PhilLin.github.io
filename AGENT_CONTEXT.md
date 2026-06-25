@@ -1,8 +1,20 @@
 # AGENT_CONTEXT
 
-Last updated: 2026-06-25
+Last updated: 2026-06-26
 
 This file externalizes the verified phase-one project context. Do not treat chat history or auto summaries as authoritative. Reconfirm current state from repository files, command output, and validation results before future development.
+
+## 2026-06-26 Word Article Published
+
+- User provided `C:\Users\Phil Lin\Desktop\临时用\新建 Microsoft Word 文档.docx` with tag `一些思绪`.
+- Codex generated `preview-20260626.html` first, then user said `发`.
+- Final static article file is `article-not-yet-return.html`.
+- Final title is `不如归去，但还不能归去`.
+- Publication date is `2026-06-26`.
+- The article is indexed in `window.BAR_POSTS` and should appear on the homepage recent posts, `posts.html`, and `tag-thoughts.html`.
+- `preview-20260626.html` was deleted after publication.
+- The Word document contained no embedded media files.
+- Current cache-busting query string is `bar-art-20260626-return`.
 
 ## 2026-06-11 Project-Level Agent Preferences
 
@@ -95,7 +107,7 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - 2026-06-25 material drink label pass: user rejected the CSS blueprint glyphs as too dry and requested material, lighting, and hand-drawn detail. `assets/styles.css` now keeps the same `.drink-glyph` class system but overlays painted-paper texture, glass highlights, liquid color layers, and per-drink garnish variables. Continue using the canonical `5.2rem` internal box and responsive transform scaling.
 - 2026-06-25 bitmap-style drink label pass: user clarified the drink labels should follow the earlier concept/bitmap direction and not resemble the original CSS glyphs. `assets/drink-labels/` now contains standalone illustrated SVG image assets for current and fallback drink classes. `assets/styles.css` maps `.drink-glyph` classes to those assets and disables the old pseudo-element line drawings. The homepage lede is now a right-side after-hours note module on desktop, a horizontal note on tablet, and a compact ticket on mobile.
 - 2026-06-25 short lab-still note published: user provided direct text beginning `还在实验室坐着。` and trusted Codex to choose the column. It was published as a bar note, `note-lab-day-not-over.html`, with title `只要不走，今天就还没有结束`, mood `缓冲`, and tag `吧台札记`.
-- Current cache-busting query string is `bar-art-20260625-lab-still`.
+- Current cache-busting query string is `bar-art-20260626-return`.
 
 ## 1. Current Project Goal
 
@@ -139,7 +151,7 @@ Verified in files:
 
 - `assets/content.js`
   - `window.BAR_TAGS` has exactly `["生活日志", "一些思绪", "种草安利"]`.
-  - `window.BAR_POSTS` contains two public article entries: `article-two-bottles-writing-touch.html` and `article-first-words-on-the-bar.html`.
+  - `window.BAR_POSTS` contains public article entries including `article-not-yet-return.html`, `article-two-bottles-writing-touch.html`, and `article-first-words-on-the-bar.html`.
   - `window.BAR_REVIEWS` contains placeholder review metadata.
 
 - `posts.html`
@@ -157,7 +169,7 @@ Verified in files:
   - `_drafts/note-format-reference.html` was deleted at user request; use existing `note-*.html` pages as future note references.
 
 - Article pages:
-  - Two public static article pages currently exist: `article-two-bottles-writing-touch.html` and `article-first-words-on-the-bar.html`.
+  - Public static article pages currently include `article-not-yet-return.html`, `article-two-bottles-writing-touch.html`, and `article-first-words-on-the-bar.html`.
   - `article.html` is a dynamic fallback/detail renderer for posts that include inline `content` in `content.js`; current recommended pattern is separate static article HTML files, so this dynamic page is retained for compatibility but is not the primary authoring path.
   - `_drafts/article-format-reference.html` is retained as a format/reference draft and is not linked from public page lists.
 
@@ -233,6 +245,7 @@ Static site architecture:
 - `article.html`: dynamic article fallback for metadata-driven inline content.
 - `article-two-bottles-writing-touch.html`: second published article, tag `一些思绪`.
 - `article-first-words-on-the-bar.html`: first published article, tag `一些思绪`.
+- `article-not-yet-return.html`: 2026-06-26 published article, tag `一些思绪`.
 - `_drafts/article-format-reference.html`: non-public reference article template.
 - `note-lab-after-exam-restlessness.html`: first published bar-note page.
 - `note-lab-day-not-over.html`: short published bar-note page about staying in the lab to delay tomorrow.
@@ -319,6 +332,7 @@ Current cache-busting query string:
 - As of the 2026-06-25 first bar-note publishing refresh, public and draft HTML pages use `bar-art-20260625-note1` for shared assets.
 - As of the 2026-06-25 note/archive integration refresh, public and draft HTML pages use `bar-art-20260625-notes-archive` for shared assets.
 - As of the 2026-06-25 short lab-still note refresh, public and draft HTML pages use `bar-art-20260625-lab-still` for shared assets.
+- As of the 2026-06-26 Word article publish, public and draft HTML pages use `bar-art-20260626-return` for shared assets.
 - Important publishing reminder: whenever `assets/content.js` changes for a new post, refresh the HTML asset query string on public pages in the same turn. On 2026-06-22, the article index was updated but the HTML pages initially still referenced the old query string, so the homepage/archive/tag pages could appear stale from browser cache.
 
 ## 8. Current Constraints
