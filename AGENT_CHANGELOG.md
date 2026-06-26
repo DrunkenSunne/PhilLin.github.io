@@ -2,6 +2,32 @@
 
 Last updated: 2026-06-26
 
+## 2026-06-26 Word Article Published - Better In The Wind
+
+User provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260626.docx`, requested tag `一些思绪`, and left remaining publication choices to Codex.
+
+- Generated review-only `preview-20260626.html`.
+- User rejected earlier title drafts; final title is `在风里慢慢好一点`.
+- Generated final static article file `article-better-in-the-wind.html` after user said `发吧`.
+- Added one `BAR_POSTS` metadata entry with tag `一些思绪`.
+- Removed the preview file by renaming it into the final article file.
+- Final summary: `一篇写在考试后夜晚的小广场上的随笔：从被游戏和烦躁困住的下午出走，在风、蛙鸣、乌龙茶和黄色月亮里，重新找到一种更安静的解压方式。`
+- Publication date: `2026-06-26`.
+- Confirmed the Word document had no embedded media files.
+- User also asked to publish a gripe. Added one `BAR_GRIPES` entry with mood `无语`, emoji `😶`, and timestamp `2026-06-26 23:24:04`.
+- Refreshed HTML asset query strings to `bar-art-20260626-wind-gripes` so the homepage, article archive, `一些思绪` tag page, and gripe rail load the updated data.
+
+## 2026-06-26 Preview Text Cleanup
+
+User noticed preview-only wording in a generated page and asked whether older posts also had it.
+
+- Searched all current `article-*.html`, `note-*.html`, and `preview-*.html` files for `Preview`, `预览`, `预览说明`, and `确认后发布`.
+- Found leftover preview UI only in the already published `article-not-yet-return.html`.
+- Removed the preview-only eyebrow, preview explanation block, preview tag, and confirmation sidebar wording from `article-not-yet-return.html`.
+- Rechecked the same search terms afterward; no matching preview-only wording remained in current article, note, or preview HTML files.
+- Ran `node --check assets/site.js`, `node --check assets/content.js`, and `node --check assets/gripes.js`; all passed.
+- Visual verification was skipped by project preference.
+
 ## 2026-06-26 Word Article Published - Not Yet Return
 
 User provided `C:\Users\Phil Lin\Desktop\临时用\新建 Microsoft Word 文档.docx` with tag `一些思绪` and left the remaining publication elements to Codex.

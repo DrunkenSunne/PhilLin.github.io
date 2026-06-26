@@ -44,6 +44,21 @@ Use this file before starting phase two or any future multi-file work. Do not re
 
 ## 3. Phase-Two Candidate Tasks
 
+- [x] Published 2026-06-26 Word article from `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260626.docx`:
+  - Generated review-only `preview-20260626.html`.
+  - User rejected earlier title drafts and final title is `在风里慢慢好一点`.
+  - User approved publication with `发吧`.
+  - Generated final article file `article-better-in-the-wind.html`.
+  - Added one metadata object to `assets/content.js`.
+  - User supplied tag `一些思绪`.
+  - Publication date is `2026-06-26`, based on the current date.
+  - No embedded media files were found in the Word document.
+  - Refreshed HTML asset query strings to avoid stale cached `assets/content.js` and `assets/gripes.js`.
+- [x] Published 2026-06-26 gripe:
+  - Text: `养细胞最忌讳顺手的事和顺便看一眼，莫名其妙就需要我处理然后两个小时消失了。`
+  - Chosen mood: `无语`.
+  - Emoji: `😶`.
+  - Timestamp: `2026-06-26 23:24:04`.
 - [x] Published 2026-06-26 Word article from `C:\Users\Phil Lin\Desktop\临时用\新建 Microsoft Word 文档.docx`:
   - Generated review-only `preview-20260626.html`.
   - User approved publication with `发`.

@@ -2,6 +2,14 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利", "吧台札记
 
 window.BAR_POSTS = [
   {
+    id: "better-in-the-wind",
+    title: "在风里慢慢好一点",
+    tag: "一些思绪",
+    publishedAt: "2026-06-26",
+    summary: "一篇写在考试后夜晚的小广场上的随笔：从被游戏和烦躁困住的下午出走，在风、蛙鸣、乌龙茶和黄色月亮里，重新找到一种更安静的解压方式。",
+    url: "article-better-in-the-wind.html",
+  },
+  {
     id: "not-yet-return",
     title: "不如归去，但还不能归去",
     tag: "一些思绪",

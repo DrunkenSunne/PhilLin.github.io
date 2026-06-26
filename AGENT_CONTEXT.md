@@ -4,7 +4,22 @@ Last updated: 2026-06-26
 
 This file externalizes the verified phase-one project context. Do not treat chat history or auto summaries as authoritative. Reconfirm current state from repository files, command output, and validation results before future development.
 
-## 2026-06-26 Word Article Published
+## 2026-06-26 Word Article Published - Better In The Wind
+
+- User provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260626.docx` with tag `一些思绪`.
+- Codex generated `preview-20260626.html` first, then user approved publication with `发吧`.
+- Final static article file is `article-better-in-the-wind.html`.
+- Final title is `在风里慢慢好一点`.
+- Publication date is `2026-06-26`.
+- The article is indexed in `window.BAR_POSTS` and should appear on the homepage recent posts, `posts.html`, and `tag-thoughts.html`.
+- `preview-20260626.html` was renamed into the final article file during publication.
+- The Word document contained no embedded media files.
+- User also asked to publish a gripe: `养细胞最忌讳顺手的事和顺便看一眼，莫名其妙就需要我处理然后两个小时消失了。`
+- Codex chose mood `无语`, emoji `😶`, timestamp `2026-06-26 23:24:04`.
+- `assets/gripes.js` now contains thirteen gripe entries.
+- Current cache-busting query string is `bar-art-20260626-wind-gripes`.
+
+## 2026-06-26 Word Article Published - Not Yet Return
 
 - User provided `C:\Users\Phil Lin\Desktop\临时用\新建 Microsoft Word 文档.docx` with tag `一些思绪`.
 - Codex generated `preview-20260626.html` first, then user said `发`.
@@ -14,6 +29,7 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - The article is indexed in `window.BAR_POSTS` and should appear on the homepage recent posts, `posts.html`, and `tag-thoughts.html`.
 - `preview-20260626.html` was deleted after publication.
 - The Word document contained no embedded media files.
+- Later on 2026-06-26, `article-not-yet-return.html` was cleaned to remove leftover preview-only UI text such as `Preview`, `预览说明`, `预览`, and `确认后发布`.
 - Current cache-busting query string is `bar-art-20260626-return`.
 
 ## 2026-06-11 Project-Level Agent Preferences
