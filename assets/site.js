@@ -505,7 +505,7 @@ function renderReviewList(filter = "all") {
     const reviews = (window.BAR_REVIEWS || []).filter((review) => reviewMatches(review, filter));
     container.innerHTML = reviews.length
       ? reviews.map((review, index) => reviewCard(review, index)).join("")
-      : '<article class="cellar-card review-card"><span class="post-date">Cellar Map</span><h2>这一格还空着</h2><p>没有符合筛选的去处。换一个标签，或者等下一次夜里回来再补。</p></article>';
+      : '<article class="cellar-card review-card"><span class="post-date">Place Map</span><h2>这一格还空着</h2><p>没有符合筛选的去处。换一个标签，或者等下次回来再补。</p></article>';
   });
 }
 

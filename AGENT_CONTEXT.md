@@ -6,10 +6,11 @@ This file externalizes the verified phase-one project context. Do not treat chat
 
 ## 2026-06-27 Quiet Cellar Map Pass
 
+- Follow-up: user clarified `reviews.html` is for places they like to go, not necessarily night places. Visible name is now `私藏`, framing is `Place Map` / 私人去处地图, and the Boulevardier drink name plus drink label/glyph should remain unchanged.
 - User requested a site-wide subtraction pass without rebuilding from scratch: darker, more mature private-bar tone; fewer grid/particle/template decorations; clearer page metaphors.
-- Main navigation is now exactly `首页 / 文章 / 今晚 / 酒柜 / 歌单 / 摄影 / 关于`.
+- Main navigation is now exactly `首页 / 文章 / 今晚 / 私藏 / 歌单 / 摄影 / 关于`.
 - `friends.html` remains accessible but is removed from the main navigation; it is linked from footers and the About page.
-- Current asset query string is `bar-art-20260627-cellar-map`.
+- Current asset query string is `bar-art-20260627-places`.
 - `reviews.html` is no longer cocktail-only placeholder content. It is now a private night-place map for bars, restaurants, cafes, late-night food, and other places.
 - `window.BAR_REVIEWS` now uses structured visit-review fields: name, type, area, date, total score, tags, subratings, one-line conclusion, notes, recommended scenes, good-for, and not-for lists.
 - `assets/site.js` renders the new review card structure and lightweight filters for all, 酒吧, 餐厅, 咖啡, 夜宵, 适合独处, and 适合聊天.

@@ -46,13 +46,13 @@ Use this file before starting phase two or any future multi-file work. Do not re
 
 - [x] 2026-06-27 quiet cellar-map redesign pass:
   - Kept the static HTML/CSS/JS architecture and avoided a rebuild.
-  - Changed main navigation to exactly `首页 / 文章 / 今晚 / 酒柜 / 歌单 / 摄影 / 关于`.
+  - Changed main navigation to exactly `首页 / 文章 / 今晚 / 私藏 / 歌单 / 摄影 / 关于`.
   - Removed `友链` from the main navigation while keeping `friends.html` reachable through footer/About links.
   - Kept the homepage `Fruit Fly` lyric unchanged as an epigraph and did not restore the removed homepage shelf decoration.
   - Reframed `酒柜` as a private night-place map instead of cocktail-only notes.
   - Added structured visit-review fields and lightweight filters for `全部`, `酒吧`, `餐厅`, `咖啡`, `夜宵`, `适合独处`, and `适合聊天`.
   - Added a darker old-brass visual override layer, quieter decoration/motion, page-metaphor styling, and receipt-like gripe rail styling.
-  - Current asset query string is `bar-art-20260627-cellar-map`.
+  - Current asset query string is `bar-art-20260627-places`.
   - Final verification still needs the project-level Git diff/status and JS syntax checks before reporting completion.
 
 - [x] Replace homepage shelf decoration with Fruit Fly lyric plate:
