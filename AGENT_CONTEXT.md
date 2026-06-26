@@ -1,8 +1,21 @@
 # AGENT_CONTEXT
 
-Last updated: 2026-06-26
+Last updated: 2026-06-27
 
 This file externalizes the verified phase-one project context. Do not treat chat history or auto summaries as authoritative. Reconfirm current state from repository files, command output, and validation results before future development.
+
+## 2026-06-27 Quiet Cellar Map Pass
+
+- User requested a site-wide subtraction pass without rebuilding from scratch: darker, more mature private-bar tone; fewer grid/particle/template decorations; clearer page metaphors.
+- Main navigation is now exactly `首页 / 文章 / 今晚 / 酒柜 / 歌单 / 摄影 / 关于`.
+- `friends.html` remains accessible but is removed from the main navigation; it is linked from footers and the About page.
+- Current asset query string is `bar-art-20260627-cellar-map`.
+- `reviews.html` is no longer cocktail-only placeholder content. It is now a private night-place map for bars, restaurants, cafes, late-night food, and other places.
+- `window.BAR_REVIEWS` now uses structured visit-review fields: name, type, area, date, total score, tags, subratings, one-line conclusion, notes, recommended scenes, good-for, and not-for lists.
+- `assets/site.js` renders the new review card structure and lightweight filters for all, 酒吧, 餐厅, 咖啡, 夜宵, 适合独处, and 适合聊天.
+- `assets/styles.css` has a quiet cellar override layer: darker old-brass palette, lower grid/canvas emphasis, more restrained hover movement, paper/note/mixtape/contact-sheet metaphors for secondary pages, receipt-like gripe rail, and responsive review-card rules.
+- Homepage `Fruit Fly` lyric plate remains unchanged and keeps the original lyric; the prior dot/line/decorative shelf remains removed.
+- Visual verification was skipped by project preference; residual risk is exact mobile/tablet visual balance, especially review-card wrapping and homepage lyric typography.
 
 ## 2026-06-26 Homepage Fruit Fly Lyric Plate
 

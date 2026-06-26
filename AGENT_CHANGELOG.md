@@ -1,6 +1,23 @@
 # AGENT_CHANGELOG
 
-Last updated: 2026-06-26
+Last updated: 2026-06-27
+
+## 2026-06-27 Quiet Cellar Map Redesign Pass
+
+User provided a broader site-direction request for subtraction, darker mature private-bar atmosphere, clearer page metaphors, reduced template-like decoration, and a major `酒柜` rework. User also clarified that the homepage `Fruit Fly` lyric should remain unchanged and that the old homepage dot/line decoration should be removed or replaced.
+
+- Kept the existing static HTML/CSS/JS architecture and did not introduce new dependencies.
+- Updated public and draft page asset query strings to `bar-art-20260627-cellar-map`.
+- Changed the main navigation across HTML pages to exactly `首页 / 文章 / 今晚 / 酒柜 / 歌单 / 摄影 / 关于`.
+- Removed `友链` from the main navigation while preserving `friends.html`; added footer links and an About-page guide-card entry.
+- Rewrote `reviews.html` copy and controls around `Cellar Map` / 私人夜间地图.
+- Replaced cocktail-only `BAR_REVIEWS` placeholder fields with structured visit-review data for night places.
+- Updated `assets/site.js` so review cards render total score, tags, subratings, one-line conclusion, notes, recommended scenes, suitable scenes, and unsuitable scenes.
+- Added lightweight review filters for all, 酒吧, 餐厅, 咖啡, 夜宵, 适合独处, and 适合聊天.
+- Added a final `assets/styles.css` override layer for darker old-brass palette, lower grid/canvas emphasis, restrained hover motion, page-specific note/mixtape/contact-sheet metaphors, responsive review cards, and receipt-like gripe rail styling.
+- Kept the homepage `I flutter in circle never landing on nothing` lyric unchanged with the `Fruit Fly` source label.
+- Visual verification skipped by project preference.
+- Rollback: restore the previous HTML nav/cache references from git, restore old `reviews.html`, revert `BAR_REVIEWS` and review rendering in `assets/content.js` / `assets/site.js`, and remove the final 2026-06-27 override block from `assets/styles.css`.
 
 ## 2026-06-26 Homepage Fruit Fly Lyric Plate
 

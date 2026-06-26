@@ -430,32 +430,96 @@ function renderArticlePage() {
   tagRow.innerHTML = `<span>${escapeHtml(post.tag)}</span>`;
 }
 
-function renderReviewList() {
+function reviewArray(items = []) {
+  return Array.isArray(items) ? items : [];
+}
+
+function reviewMatches(review, filter) {
+  if (!filter || filter === "all") return true;
+  const tags = reviewArray(review.tags);
+  return review.type === filter || tags.includes(filter) || reviewArray(review.goodFor).includes(filter);
+}
+
+function ratingLabel(key) {
+  return {
+    atmosphere: "氛围",
+    foodDrink: "出品",
+    value: "性价比",
+    solo: "独处",
+    revisit: "再去",
+  }[key] || key;
+}
+
+function scoreBar(key, value = 0) {
+  const score = Math.max(0, Math.min(10, Number(value) || 0));
+  return `
+    <div class="review-rating">
+      <span>${ratingLabel(key)}</span>
+      <div class="review-meter" aria-hidden="true"><i style="width: ${score * 10}%"></i></div>
+      <strong>${score.toFixed(score % 1 ? 1 : 0)}</strong>
+    </div>
+  `;
+}
+
+function chipList(items = []) {
+  return reviewArray(items).map((item) => `<span>${escapeHtml(item)}</span>`).join("");
+}
+
+function reviewCard(review, index) {
+  const ratings = review.ratings || {};
+  const ratingKeys = ["atmosphere", "foodDrink", "value", "solo", "revisit"];
+  const name = escapeHtml(review.name || review.title || "未命名去处");
+  const type = escapeHtml(review.type || "去处");
+  const area = escapeHtml(review.area || "地点待补");
+  const date = escapeHtml(review.date || "日期待补");
+  const score = Number(review.score || 0);
+  return `
+    <article class="cellar-card review-card${index === 0 ? " featured" : ""}">
+      <div class="review-stamp" aria-label="总评分 ${score.toFixed(1)} 分">
+        <span>${score.toFixed(1)}</span>
+        <small>/ 10</small>
+      </div>
+      <div class="cellar-card-main">
+        <span class="post-date">${type} · ${area} · ${date}</span>
+        <h2>${name}</h2>
+        <p class="review-oneline">${escapeHtml(review.oneLine || "今晚先记到这里。")}</p>
+        <p>${escapeHtml(review.notes || "")}</p>
+        <div class="review-tags">${chipList(review.tags)}</div>
+      </div>
+      <div class="review-scorecard">
+        <div class="review-ratings">
+          ${ratingKeys.map((key) => scoreBar(key, ratings[key])).join("")}
+        </div>
+        <dl class="review-scene">
+          <div><dt>适合</dt><dd>${chipList(review.goodFor)}</dd></div>
+          <div><dt>推荐</dt><dd>${chipList(review.recommended)}</dd></div>
+          <div><dt>不适合</dt><dd>${chipList(review.notFor)}</dd></div>
+        </dl>
+      </div>
+    </article>
+  `;
+}
+
+function renderReviewList(filter = "all") {
   document.querySelectorAll("[data-review-list]").forEach((container) => {
-    const reviews = window.BAR_REVIEWS || [];
+    const reviews = (window.BAR_REVIEWS || []).filter((review) => reviewMatches(review, filter));
     container.innerHTML = reviews.length
-      ? reviews.map((review, index) => `
-        <article class="cellar-card${index === 0 ? " featured" : ""}">
-          <div class="cellar-card-main">
-            <span class="post-date">${escapeHtml(review.cocktail)} · ${escapeHtml(review.status || "记录中")}</span>
-            <h2>${escapeHtml(review.title)}</h2>
-            <p>${escapeHtml(review.summary || "")}</p>
-          </div>
-          <dl class="cellar-fields">
-            <div><dt>类型</dt><dd>${escapeHtml(review.type || "待补充")}</dd></div>
-            <div><dt>场景</dt><dd>${escapeHtml(review.scene || "待补充")}</dd></div>
-            <div><dt>渠道</dt><dd>${escapeHtml(review.channel || "待补充")}</dd></div>
-            <div><dt>风味</dt><dd>${escapeHtml(review.flavor || "待补充")}</dd></div>
-            <div><dt>醉意</dt><dd>${escapeHtml(review.tipsy || "待补充")}</dd></div>
-            <div><dt>当晚情绪</dt><dd>${escapeHtml(review.mood || "待补充")}</dd></div>
-            <div><dt>是否会再喝</dt><dd>${escapeHtml(review.revisit || "待补充")}</dd></div>
-          </dl>
-        </article>
-      `).join("")
-      : '<article class="cellar-card"><span class="post-date">Cellar</span><h2>酒柜还在整理</h2><p>新的记录会放在这里。</p></article>';
+      ? reviews.map((review, index) => reviewCard(review, index)).join("")
+      : '<article class="cellar-card review-card"><span class="post-date">Cellar Map</span><h2>这一格还空着</h2><p>没有符合筛选的去处。换一个标签，或者等下一次夜里回来再补。</p></article>';
   });
 }
 
+function initReviewFilters() {
+  const filters = document.querySelector("[data-review-filters]");
+  if (!filters) return;
+  filters.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-review-filter]");
+    if (!button) return;
+    filters.querySelectorAll("[data-review-filter]").forEach((item) => item.classList.remove("is-active"));
+    button.classList.add("is-active");
+    renderReviewList(button.dataset.reviewFilter);
+  });
+}
 function allGripes() {
   const gripes = window.BAR_GRIPES || [];
   return [...gripes].sort(
@@ -542,5 +606,6 @@ initPostFilters();
 renderTagPages();
 renderArticlePage();
 renderReviewList();
+initReviewFilters();
 renderNoteList();
 renderGripeRail();
