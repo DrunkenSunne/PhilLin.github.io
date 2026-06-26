@@ -2,6 +2,17 @@
 
 Last updated: 2026-06-26
 
+## 2026-06-26 Mobile Drink Label Layout Fix
+
+User clarified that tablet was mostly okay and the main issue was phone-size drink labels looking too small and awkward.
+
+- Updated `assets/styles.css` phone rules so homepage menu cards use a stable left drink-label column and right text column.
+- Enlarged phone labels from the previous tiny right-side presentation while preserving the canonical internal `5.2rem` glyph geometry and scaling only with `transform`.
+- Kept the tablet `721px` and wider card rules unchanged.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260626-mobile-labels`.
+- Visual verification skipped by project preference.
+- Rollback: revert the `assets/styles.css` mobile rules and replace `bar-art-20260626-mobile-labels` with `bar-art-20260626-wind-gripes` in HTML asset references.
+
 ## 2026-06-26 Word Article Published - Better In The Wind
 
 User provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260626.docx`, requested tag `一些思绪`, and left remaining publication choices to Codex.

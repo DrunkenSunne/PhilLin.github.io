@@ -4,6 +4,16 @@ Last updated: 2026-06-26
 
 This file externalizes the verified phase-one project context. Do not treat chat history or auto summaries as authoritative. Reconfirm current state from repository files, command output, and validation results before future development.
 
+## 2026-06-26 Mobile Drink Label Layout Fix
+
+- User clarified the tablet layout is mostly acceptable and the main issue is phone-size drink labels.
+- `assets/styles.css` now makes phone homepage menu cards use a left drink-label column and right text column instead of a tiny right-side label.
+- Phone menu drink labels were enlarged while preserving the canonical internal `5.2rem` glyph geometry and changing only `transform: scale(...)`.
+- Below `480px`, labels remain larger than before and the text column keeps a stable width to reduce awkward squeezing.
+- Tablet `721px` and wider card rules were intentionally left unchanged except for inheriting no phone-specific shrinkage.
+- Public and draft HTML asset query strings were refreshed to `bar-art-20260626-mobile-labels`.
+- Visual verification was skipped by project preference; residual risk is small-screen visual fine-tuning because no browser screenshot was taken.
+
 ## 2026-06-26 Word Article Published - Better In The Wind
 
 - User provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260626.docx` with tag `一些思绪`.
@@ -17,7 +27,7 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - User also asked to publish a gripe: `养细胞最忌讳顺手的事和顺便看一眼，莫名其妙就需要我处理然后两个小时消失了。`
 - Codex chose mood `无语`, emoji `😶`, timestamp `2026-06-26 23:24:04`.
 - `assets/gripes.js` now contains thirteen gripe entries.
-- Current cache-busting query string is `bar-art-20260626-wind-gripes`.
+- Current cache-busting query string is `bar-art-20260626-mobile-labels`.
 
 ## 2026-06-26 Word Article Published - Not Yet Return
 
@@ -30,7 +40,7 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - `preview-20260626.html` was deleted after publication.
 - The Word document contained no embedded media files.
 - Later on 2026-06-26, `article-not-yet-return.html` was cleaned to remove leftover preview-only UI text such as `Preview`, `预览说明`, `预览`, and `确认后发布`.
-- Current cache-busting query string is `bar-art-20260626-return`.
+- Current cache-busting query string is `bar-art-20260626-mobile-labels`.
 
 ## 2026-06-11 Project-Level Agent Preferences
 
@@ -123,7 +133,7 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - 2026-06-25 material drink label pass: user rejected the CSS blueprint glyphs as too dry and requested material, lighting, and hand-drawn detail. `assets/styles.css` now keeps the same `.drink-glyph` class system but overlays painted-paper texture, glass highlights, liquid color layers, and per-drink garnish variables. Continue using the canonical `5.2rem` internal box and responsive transform scaling.
 - 2026-06-25 bitmap-style drink label pass: user clarified the drink labels should follow the earlier concept/bitmap direction and not resemble the original CSS glyphs. `assets/drink-labels/` now contains standalone illustrated SVG image assets for current and fallback drink classes. `assets/styles.css` maps `.drink-glyph` classes to those assets and disables the old pseudo-element line drawings. The homepage lede is now a right-side after-hours note module on desktop, a horizontal note on tablet, and a compact ticket on mobile.
 - 2026-06-25 short lab-still note published: user provided direct text beginning `还在实验室坐着。` and trusted Codex to choose the column. It was published as a bar note, `note-lab-day-not-over.html`, with title `只要不走，今天就还没有结束`, mood `缓冲`, and tag `吧台札记`.
-- Current cache-busting query string is `bar-art-20260626-return`.
+- Current cache-busting query string is `bar-art-20260626-mobile-labels`.
 
 ## 1. Current Project Goal
 

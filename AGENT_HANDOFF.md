@@ -2,6 +2,8 @@
 
 Last updated: 2026-06-26
 
+2026-06-26 mobile drink label layout fix: user clarified tablet is mostly acceptable and phone is the main issue. `assets/styles.css` now makes phone homepage menu cards use a stable left drink-label column and right text column, with larger labels while preserving the canonical internal `5.2rem` glyph geometry and changing only `transform: scale(...)`. Tablet `721px` and wider rules were intentionally left unchanged. Public and draft HTML asset query strings were refreshed to `bar-art-20260626-mobile-labels`. Visual verification was skipped by project preference.
+
 2026-06-26 Word article and gripe: user provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260626.docx` with tag `一些思绪`. Codex generated `preview-20260626.html`; user disliked earlier titles and final title is `在风里慢慢好一点`. User then said `发吧`. Final article is `article-better-in-the-wind.html`, publication date `2026-06-26`, summary `一篇写在考试后夜晚的小广场上的随笔：从被游戏和烦躁困住的下午出走，在风、蛙鸣、乌龙茶和黄色月亮里，重新找到一种更安静的解压方式。`, and it is indexed in `window.BAR_POSTS`. The Word document contained no embedded media files. User also asked to publish the gripe `养细胞最忌讳顺手的事和顺便看一眼，莫名其妙就需要我处理然后两个小时消失了。`; Codex chose mood `无语`, emoji `😶`, timestamp `2026-06-26 23:24:04`. HTML asset query strings were refreshed to `bar-art-20260626-wind-gripes`.
 
 2026-06-26 preview cleanup: user noticed preview-only wording and asked whether prior published pages also had it. Codex searched current `article-*.html`, `note-*.html`, and `preview-*.html` files for `Preview`, `预览`, `预览说明`, and `确认后发布`. Only `article-not-yet-return.html` had leftover preview UI, and it was cleaned. After cleanup, the same search returned no matches. JS syntax checks for `assets/site.js`, `assets/content.js`, and `assets/gripes.js` passed. Visual verification was skipped by project preference.
@@ -155,7 +157,7 @@ Follow-up after phase-one sealing:
   - CSS-only drink glyphs, dot fields, line grids, polygon overlays, and a menu-board home layout.
   - `assets/site.js` adds a pointer-following bar cursor and drink-name hover labels for menu items.
   - `assets/styles.css` now also includes shared Tonight, Playlist, Cellar, article-reading, mobile navigation, and reduced-motion polish.
-- Current cache-busting query string is `bar-art-20260626-return`; it was updated after the 2026-06-26 Word article publish to avoid stale cached CSS/JS and metadata.
+- Current cache-busting query string is `bar-art-20260626-mobile-labels`; it was updated after the 2026-06-26 mobile drink label fix to avoid stale cached CSS/JS and metadata.
 - Gripe rail:
   - `assets/gripes.js` stores static `window.BAR_GRIPES` entries; it currently contains twelve entries.
   - `assets/site.js` injects the rail and handles page-size calculation and pagination.

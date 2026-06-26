@@ -44,6 +44,13 @@ Use this file before starting phase two or any future multi-file work. Do not re
 
 ## 3. Phase-Two Candidate Tasks
 
+- [x] Fix phone-size homepage drink label layout:
+  - User clarified tablet is mostly acceptable and phone is the main issue.
+  - Enlarged phone menu drink labels and moved them into a stable left column.
+  - Preserved canonical `5.2rem` internal glyph geometry; responsive changes use `transform: scale(...)`.
+  - Refreshed public and draft HTML asset query strings to `bar-art-20260626-mobile-labels`.
+  - Visual verification skipped by project preference.
+
 - [x] Published 2026-06-26 Word article from `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260626.docx`:
   - Generated review-only `preview-20260626.html`.
   - User rejected earlier title drafts and final title is `在风里慢慢好一点`.

@@ -3688,16 +3688,16 @@ body::after {
 
   .menu-drink {
     min-height: auto;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 0.18rem 0.75rem;
+    grid-template-columns: 4.8rem minmax(0, 1fr);
+    gap: 0.22rem 0.82rem;
     align-content: center;
     align-items: center;
-    padding: 0.85rem 0.9rem;
+    padding: 0.82rem 0.88rem;
   }
 
   .menu-drink-group {
     grid-column: auto;
-    padding-right: 0.9rem;
+    padding-right: 0.88rem;
   }
 
   .menu-drink-group .drink-glyph {
@@ -3711,7 +3711,7 @@ body::after {
   .menu-variants {
     grid-column: 1 / -1;
     grid-template-columns: 1fr;
-    margin-top: 0.45rem;
+    margin-top: 0.52rem;
   }
 
   .menu-drink::before,
@@ -3723,22 +3723,23 @@ body::after {
     position: relative;
     top: auto;
     right: auto;
-    grid-row: 1 / 4;
-    grid-column: 2;
-    width: 3.4rem;
-    height: 3.4rem;
-    opacity: 0.82;
+    grid-row: 1 / 5;
+    grid-column: 1;
+    width: 4.8rem;
+    height: 4.8rem;
+    opacity: 0.9;
   }
 
   .menu-drink .drink-glyph > span {
     width: 5.2rem;
     height: 5.2rem;
-    transform: scale(0.58);
+    transform: scale(0.78);
     transform-origin: center;
   }
 
   .menu-drink strong {
-    font-size: 1.25rem;
+    font-size: 1.22rem;
+    line-height: 1.1;
   }
 
   .menu-drink p {
@@ -3746,13 +3747,13 @@ body::after {
     overflow: hidden;
     color: rgba(203, 185, 158, 0.88);
     font-size: 0.88rem;
-    line-height: 1.45;
+    line-height: 1.42;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
   }
 
   .drink-name {
-    font-size: 0.68rem;
+    font-size: 0.7rem;
   }
 
   .split-section {
@@ -3879,23 +3880,25 @@ body::after {
   }
 
   .menu-drink {
-    padding: 0.78rem 0.82rem;
+    grid-template-columns: 4.35rem minmax(0, 1fr);
+    gap: 0.18rem 0.72rem;
+    padding: 0.75rem 0.78rem;
   }
 
   .menu-drink .drink-glyph {
-    width: 3rem;
-    height: 3rem;
+    width: 4.35rem;
+    height: 4.35rem;
   }
 
   .menu-drink .drink-glyph > span {
     width: 5.2rem;
     height: 5.2rem;
-    transform: scale(0.52);
+    transform: scale(0.7);
     transform-origin: center;
   }
 
   .menu-drink strong {
-    font-size: 1.12rem;
+    font-size: 1.08rem;
   }
 
   .menu-drink p {
