@@ -2,6 +2,19 @@
 
 Last updated: 2026-06-26
 
+## 2026-06-26 Homepage Fruit Fly Lyric Plate
+
+User chose option A for `I flutter in circle never landing on nothing`, asked to keep the original lyric unchanged, add the song name plus a record cue, remove the shown homepage dot/line/decorative shelf, and preserve mobile/tablet lyric layout.
+
+- Replaced the homepage `bar-shelf` markup in `index.html` with a `lyric-plate`.
+- Added the unchanged lyric, a `Fruit Fly` source label, and a CSS record icon.
+- Removed the lyric from the footer identity sentence so `酒鬼医学生，非专业调酒，偶尔认真写字。` stays separate.
+- Removed old `bar-shelf` CSS and disabled the old menu-intro tick strip.
+- Added responsive lyric plate styles for desktop, tablet, and phone widths.
+- Refreshed only the homepage stylesheet query string to `bar-art-20260626-fruitfly-quote`.
+- Visual verification skipped by project preference.
+- Rollback: restore the previous `bar-shelf` block in `index.html`, restore the removed `bar-shelf` CSS/menu-intro tick styles from git, and change the homepage stylesheet query string back to `bar-art-20260626-mobile-labels`.
+
 ## 2026-06-26 Mobile Drink Label Layout Fix
 
 User clarified that tablet was mostly okay and the main issue was phone-size drink labels looking too small and awkward.

@@ -44,6 +44,12 @@ Use this file before starting phase two or any future multi-file work. Do not re
 
 ## 3. Phase-Two Candidate Tasks
 
+- [x] Replace homepage shelf decoration with Fruit Fly lyric plate:
+  - Kept `I flutter in circle never landing on nothing` unchanged as an epigraph.
+  - Removed the old homepage bar-shelf dot/line/glass decoration from `index.html`.
+  - Added `Fruit Fly` source label plus CSS record icon beside the lyric.
+  - Removed the lyric from the footer identity line.
+  - Added desktop/tablet/mobile lyric plate styles and refreshed only the homepage stylesheet query string.
 - [x] Fix phone-size homepage drink label layout:
   - User clarified tablet is mostly acceptable and phone is the main issue.
   - Enlarged phone menu drink labels and moved them into a stable left column.
