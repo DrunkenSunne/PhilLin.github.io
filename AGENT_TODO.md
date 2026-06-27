@@ -44,6 +44,16 @@ Use this file before starting phase two or any future multi-file work. Do not re
 
 ## 3. Phase-Two Candidate Tasks
 
+- [x] Published 2026-06-27 bar note from `D:\Download\暴晒一小时的柠檬茶.docx`:
+  - Generated review-only `preview-20260627.html`.
+  - User approved publication with `发`.
+  - Generated final note file `note-sunlit-lemon-tea.html`.
+  - Added one metadata object to `assets/content.js`.
+  - Final title is `暴晒一小时的柠檬茶`.
+  - Final mood is `晒蔫`.
+  - Publication date is `2026-06-27`, based on the current date.
+  - No embedded media files were found in the Word document.
+  - Refreshed HTML asset query strings to avoid stale cached `assets/content.js`.
 - [x] 2026-06-27 quiet cellar-map redesign pass:
   - Kept the static HTML/CSS/JS architecture and avoided a rebuild.
   - Changed main navigation to exactly `首页 / 文章 / 今晚 / 私藏 / 歌单 / 摄影 / 关于`.

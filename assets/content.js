@@ -69,6 +69,15 @@ window.BAR_POSTS = [
 
 window.BAR_NOTES = [
   {
+    id: "sunlit-lemon-tea",
+    title: "暴晒一小时的柠檬茶",
+    tag: "吧台札记",
+    publishedAt: "2026-06-27",
+    mood: "晒蔫",
+    summary: "一条被实验打断的下午札记：睡眠不足、复习计划、实验步骤和一杯在夏日骄阳下晒了一个小时的柠檬茶，拼成一种很日常的荒诞。",
+    url: "note-sunlit-lemon-tea.html",
+  },
+  {
     id: "lab-day-not-over",
     title: "只要不走，今天就还没有结束",
     tag: "吧台札记",

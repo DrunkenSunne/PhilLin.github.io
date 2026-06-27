@@ -2,6 +2,22 @@
 
 Last updated: 2026-06-27
 
+## 2026-06-27 Bar Note Published - Sunlit Lemon Tea
+
+User provided `D:\Download\暴晒一小时的柠檬茶.docx` and asked to upload it as a bar note, leaving missing site fields to Codex.
+
+- Extracted the Word document text and confirmed no embedded media files were present.
+- Generated review-only `preview-20260627.html`, then formally published after user said `发`.
+- Generated final static note file `note-sunlit-lemon-tea.html`.
+- Added one `BAR_NOTES` metadata entry with tag `吧台札记`.
+- Deleted the preview file by renaming it into the final note file.
+- Final title: `暴晒一小时的柠檬茶`.
+- Final mood: `晒蔫`.
+- Final summary: `一条被实验打断的下午札记：睡眠不足、复习计划、实验步骤和一杯在夏日骄阳下晒了一个小时的柠檬茶，拼成一种很日常的荒诞。`
+- Publication date: `2026-06-27`.
+- Refreshed HTML asset query strings to `bar-art-20260627-lemon-tea` so `notes.html`, the homepage recent list, and the article archive load the updated metadata.
+- Visual verification was skipped by project preference.
+
 ## 2026-06-27 Private Places Naming Follow-up
 
 User clarified that the places in `reviews.html` are not necessarily visited at night; they are places the user likes to go. User asked to update related titles and copy while keeping the drink label artwork and drink name unchanged.

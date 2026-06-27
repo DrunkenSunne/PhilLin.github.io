@@ -18,6 +18,19 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - Homepage `Fruit Fly` lyric plate remains unchanged and keeps the original lyric; the prior dot/line/decorative shelf remains removed.
 - Visual verification was skipped by project preference; residual risk is exact mobile/tablet visual balance, especially review-card wrapping and homepage lyric typography.
 
+## 2026-06-27 Bar Note Published - Sunlit Lemon Tea
+
+- User provided `D:\Download\暴晒一小时的柠檬茶.docx` and specified it should be a `吧台札记`.
+- Codex generated `preview-20260627.html` first, then user approved publication with `发`.
+- Final static note file is `note-sunlit-lemon-tea.html`.
+- Final title is `暴晒一小时的柠檬茶`.
+- Publication date is `2026-06-27`.
+- Mood is `晒蔫`.
+- Summary is `一条被实验打断的下午札记：睡眠不足、复习计划、实验步骤和一杯在夏日骄阳下晒了一个小时的柠檬茶，拼成一种很日常的荒诞。`
+- The note is indexed in `window.BAR_NOTES` and should appear on the homepage recent posts, `posts.html`, and `notes.html`.
+- The Word document contained no embedded media files.
+- Current asset query string is `bar-art-20260627-lemon-tea`.
+
 ## 2026-06-26 Homepage Fruit Fly Lyric Plate
 
 - User chose option A for `I flutter in circle never landing on nothing`: keep the original line unchanged as a lower-priority homepage epigraph, not as an identity sentence.
