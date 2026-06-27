@@ -2,6 +2,16 @@
 
 Last updated: 2026-06-27
 
+## 2026-06-27 Gripe Added - Sleep Schedule Privacy
+
+User provided a gripe text without an explicit mood.
+
+- Added a fourteenth `window.BAR_GRIPES` entry to `assets/gripes.js`.
+- Published gripe: `我得想个办法把我熬夜相关内容屏蔽一下家里人（`
+- Chose mood `心虚`, emoji `🙈`, and timestamp `2026-06-27 18:29:25`.
+- Updated `AGENT_CONTEXT.md` and `AGENT_HANDOFF.md` so future recovery sees the current gripe count and latest entries.
+- Visual verification skipped by project preference.
+
 ## 2026-06-27 Bar Note Published - Sunlit Lemon Tea
 
 User provided `D:\Download\暴晒一小时的柠檬茶.docx` and asked to upload it as a bar note, leaving missing site fields to Codex.

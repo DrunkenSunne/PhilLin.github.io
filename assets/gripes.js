@@ -77,4 +77,10 @@ window.BAR_GRIPES = [
     emoji: "😶",
     publishedAt: "2026-06-26 23:24:04",
   },
+  {
+    text: "我得想个办法把我熬夜相关内容屏蔽一下家里人（",
+    mood: "心虚",
+    emoji: "🙈",
+    publishedAt: "2026-06-27 18:29:25",
+  },
 ];
