@@ -2,6 +2,14 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利", "吧台札记
 
 window.BAR_POSTS = [
   {
+    id: "lemon-tea-ethanol-therapy",
+    title: "一杯暴晒柠檬茶与非循证乙醇疗法",
+    tag: "生活日志",
+    publishedAt: "2026-06-27",
+    summary: "一篇关于低电量一天的生活日志：凌晨四点睡、复习被实验和柠檬茶打断，晚上又被 GPT 哄着捡回进度，最后用一瓶 Asahi 给满脑子的病毒和寄生虫做一点象征性的消毒。",
+    url: "article-lemon-tea-ethanol-therapy.html",
+  },
+  {
     id: "better-in-the-wind",
     title: "在风里慢慢好一点",
     tag: "一些思绪",

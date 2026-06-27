@@ -2,6 +2,22 @@
 
 Last updated: 2026-06-27
 
+## 2026-06-27 Word Life Log Published - Lemon Tea And Ethanol Therapy
+
+User provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260627.docx`, asked whether it was `生活日志` or `一些思绪`, and then approved publication after changing the title.
+
+- Extracted the Word document text and confirmed no embedded media files were present.
+- Chose `生活日志` because the piece is structured around a concrete day timeline.
+- Generated review-only `preview-20260627.html`, then formally published after the user said to change the title and publish.
+- Generated final static article file `article-lemon-tea-ethanol-therapy.html`.
+- Added one `BAR_POSTS` metadata entry with tag `生活日志`.
+- Removed the preview file by renaming it into the final article file.
+- Final title: `一杯暴晒柠檬茶与非循证乙醇疗法`.
+- Final summary: `一篇关于低电量一天的生活日志：凌晨四点睡、复习被实验和柠檬茶打断，晚上又被 GPT 哄着捡回进度，最后用一瓶 Asahi 给满脑子的病毒和寄生虫做一点象征性的消毒。`
+- Publication date: `2026-06-27`.
+- Refreshed HTML asset query strings to `bar-art-20260627-ethanol` so the homepage, article archive, and `生活日志` tag page load the updated metadata.
+- Visual verification was skipped by project preference.
+
 ## 2026-06-27 Gripe Added - Sleep Schedule Privacy
 
 User provided a gripe text without an explicit mood.

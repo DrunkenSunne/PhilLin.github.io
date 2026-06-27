@@ -44,6 +44,15 @@ Use this file before starting phase two or any future multi-file work. Do not re
 
 ## 3. Phase-Two Candidate Tasks
 
+- [x] Published 2026-06-27 Word life log from `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260627.docx`:
+  - Generated review-only `preview-20260627.html`.
+  - Chose `生活日志` rather than `一些思绪` because the piece is mainly a concrete day record.
+  - User changed the final title to `一杯暴晒柠檬茶与非循证乙醇疗法` and approved publication.
+  - Generated final article file `article-lemon-tea-ethanol-therapy.html`.
+  - Added one metadata object to `assets/content.js`.
+  - Publication date is `2026-06-27`, based on the current date.
+  - No embedded media files were found in the Word document.
+  - Refreshed HTML asset query strings to `bar-art-20260627-ethanol`.
 - [x] Published 2026-06-27 bar note from `D:\Download\暴晒一小时的柠檬茶.docx`:
   - Generated review-only `preview-20260627.html`.
   - User approved publication with `发`.

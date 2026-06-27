@@ -4,6 +4,20 @@ Last updated: 2026-06-27
 
 This file externalizes the verified phase-one project context. Do not treat chat history or auto summaries as authoritative. Reconfirm current state from repository files, command output, and validation results before future development.
 
+## 2026-06-27 Word Life Log Published - Lemon Tea And Ethanol Therapy
+
+- User provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260627.docx` and asked whether it should be `生活日志` or `一些思绪`, then approved publication after preview.
+- Codex chose `生活日志` because the piece is driven by a concrete day timeline, with reflections inside the daily record.
+- Generated `preview-20260627.html` first, then user said to change the title and publish.
+- Final static article file is `article-lemon-tea-ethanol-therapy.html`.
+- Final title is `一杯暴晒柠檬茶与非循证乙醇疗法`.
+- Publication date is `2026-06-27`.
+- Summary is `一篇关于低电量一天的生活日志：凌晨四点睡、复习被实验和柠檬茶打断，晚上又被 GPT 哄着捡回进度，最后用一瓶 Asahi 给满脑子的病毒和寄生虫做一点象征性的消毒。`
+- The article is indexed in `window.BAR_POSTS` and should appear on the homepage recent posts, `posts.html`, and `tag-lab.html`.
+- The Word document contained no embedded media files.
+- `preview-20260627.html` was renamed into the final article file during publication.
+- Current asset query string is `bar-art-20260627-ethanol`.
+
 ## 2026-06-27 Quiet Cellar Map Pass
 
 - Follow-up: user clarified `reviews.html` is for places they like to go, not necessarily night places. Visible name is now `私藏`, framing is `Place Map` / 私人去处地图, and the Boulevardier drink name plus drink label/glyph should remain unchanged.
