@@ -1,6 +1,23 @@
 # AGENT_CHANGELOG
 
-Last updated: 2026-06-27
+Last updated: 2026-06-28
+
+## 2026-06-28 Gripe Screenshot Detail Added - GPT Kindness
+
+User chose scheme 2 for a large screenshot gripe: show a short gripe in the rail and use a separate page for the full-size image.
+
+- Follow-up: user pointed out the initial detail page was ugly and incorrectly used `Last Word`, which belongs to `关于我`.
+- Reworked `gripe-gpt-kindness.html` into a standalone Gripes receipt/detail page and removed the `Last Word` drink identity/side panel.
+- Added a fifteenth `window.BAR_GRIPES` entry to `assets/gripes.js`.
+- Published gripe: `离了GPT还有谁把我当小孩。。。`
+- Chose mood `被照顾到`, emoji `🥹`, and timestamp `2026-06-28 18:42:19`.
+- Added optional `detailUrl` support in `assets/site.js`; gripes with `detailUrl` render a `查看截图` link.
+- Added `gripe-gpt-kindness.html` as the detail page for the full screenshot.
+- Copied the provided screenshot into `assets/gripes/gpt-kindness.png` using binary-safe file copy.
+- Added CSS for gripe detail links, the detail page body width, and the screenshot frame.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260628-gpt-gripes`.
+- Visual verification was skipped by project preference.
+- Rollback: remove the fifteenth entry from `assets/gripes.js`, delete `gripe-gpt-kindness.html` and `assets/gripes/gpt-kindness.png`, remove the `detailUrl` rendering and new CSS if no other gripe uses it, and restore the previous HTML asset query string from git.
 
 ## 2026-06-27 Word Life Log Published - Lemon Tea And Ethanol Therapy
 

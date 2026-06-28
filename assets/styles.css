@@ -969,6 +969,25 @@ pre code {
   font-size: 0.78rem;
 }
 
+.gripe-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.45rem;
+}
+
+.gripe-detail-link {
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.gripe-detail-link:hover {
+  text-decoration: underline;
+}
+
 .gripe-pager {
   justify-content: space-between;
   gap: 0.55rem;
@@ -4512,6 +4531,120 @@ body::after {
 .gripe-item time {
   font-family: "Courier New", monospace;
   font-size: 0.68rem;
+}
+
+.gripe-detail-link {
+  color: rgba(231, 190, 124, 0.95);
+  font-family: "Courier New", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0;
+}
+
+.gripe-detail-page {
+  padding-right: 0;
+}
+
+.gripe-detail-shell {
+  width: min(1120px, calc(100% - 2rem));
+  margin: clamp(2rem, 6vw, 4.5rem) auto;
+}
+
+.gripe-ticket {
+  position: relative;
+  padding: clamp(1rem, 3vw, 1.75rem);
+  border: 1px solid rgba(184, 137, 71, 0.28);
+  border-radius: 6px;
+  background:
+    linear-gradient(180deg, rgba(237, 221, 185, 0.08), rgba(20, 13, 9, 0.24)),
+    rgba(16, 11, 8, 0.9);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+}
+
+.gripe-ticket::before,
+.gripe-ticket::after {
+  position: absolute;
+  right: 1.2rem;
+  left: 1.2rem;
+  height: 1px;
+  background: repeating-linear-gradient(90deg, rgba(184, 137, 71, 0.5) 0 0.5rem, transparent 0.5rem 0.9rem);
+  content: "";
+}
+
+.gripe-ticket::before {
+  top: 0.7rem;
+}
+
+.gripe-ticket::after {
+  bottom: 0.7rem;
+}
+
+.gripe-detail-header {
+  display: grid;
+  gap: 0.75rem;
+  border-bottom: 1px dashed rgba(184, 137, 71, 0.22);
+  padding-bottom: 1rem;
+}
+
+.gripe-detail-header h1 {
+  max-width: 15em;
+  margin: 0;
+  color: #f5dfbc;
+  font-size: clamp(1.85rem, 5vw, 4.4rem);
+  line-height: 1.04;
+}
+
+.gripe-detail-stamps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.gripe-detail-stamps span,
+.gripe-detail-stamps time {
+  border: 1px solid rgba(184, 137, 71, 0.26);
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+  color: rgba(245, 223, 188, 0.82);
+  font-family: "Courier New", monospace;
+  font-size: 0.78rem;
+}
+
+.gripe-detail-lede {
+  max-width: 34rem;
+  margin: 1rem 0 1.1rem;
+  color: #ead7b0;
+  font-size: clamp(1rem, 2vw, 1.16rem);
+  line-height: 1.8;
+}
+
+.gripe-screenshot-frame {
+  margin: 0;
+  padding: clamp(0.45rem, 1.5vw, 0.85rem);
+  border: 1px solid rgba(184, 137, 71, 0.24);
+  border-radius: 4px;
+  background: #030303;
+  box-shadow: 0 20px 46px rgba(0, 0, 0, 0.4);
+}
+
+.gripe-screenshot-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  background: #000;
+}
+
+.gripe-screenshot-frame figcaption {
+  margin: 0.7rem 0 0.15rem;
+  color: rgba(245, 223, 188, 0.62);
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+.gripe-detail-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
 }
 
 .footer-link {

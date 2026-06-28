@@ -1,6 +1,6 @@
 # AGENT_TODO
 
-Last updated: 2026-06-27
+Last updated: 2026-06-28
 
 Use this file before starting phase two or any future multi-file work. Do not rely on chat history as the only source of truth.
 
@@ -44,6 +44,15 @@ Use this file before starting phase two or any future multi-file work. Do not re
 
 ## 3. Phase-Two Candidate Tasks
 
+- [x] Added 2026-06-28 screenshot-backed gripe detail page:
+  - User chose scheme 2: short right-side gripe plus separate full-size screenshot page.
+  - Follow-up correction removed the mistaken `Last Word` identity and restyled the detail page as a standalone Gripes receipt/detail page.
+  - Added fifteenth `BAR_GRIPES` entry with mood `被照顾到`, emoji `🥹`, timestamp `2026-06-28 18:42:19`, and `detailUrl`.
+  - Generated `gripe-gpt-kindness.html`.
+  - Copied screenshot to `assets/gripes/gpt-kindness.png`.
+  - Updated `assets/site.js` and `assets/styles.css` for optional gripe detail links and screenshot display.
+  - Refreshed HTML asset query strings to `bar-art-20260628-gpt-gripes`.
+  - Visual verification skipped by project preference.
 - [x] Published 2026-06-27 Word life log from `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260627.docx`:
   - Generated review-only `preview-20260627.html`.
   - Chose `生活日志` rather than `一些思绪` because the piece is mainly a concrete day record.

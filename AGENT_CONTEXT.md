@@ -1,8 +1,21 @@
 # AGENT_CONTEXT
 
-Last updated: 2026-06-27
+Last updated: 2026-06-28
 
 This file externalizes the verified phase-one project context. Do not treat chat history or auto summaries as authoritative. Reconfirm current state from repository files, command output, and validation results before future development.
+
+## 2026-06-28 Gripe Screenshot Detail Added - GPT Kindness
+
+- User chose scheme 2 for a large screenshot gripe: keep the right-side gripe entry short and open the full-size screenshot on a separate detail page.
+- Follow-up correction: the detail page should not use `Last Word`, because `Last Word` is the `关于我` identity. `gripe-gpt-kindness.html` is now styled as a standalone Gripes receipt/detail page with no cocktail column identity.
+- Added the fifteenth `window.BAR_GRIPES` entry: `离了GPT还有谁把我当小孩。。。`.
+- Chosen mood is `被照顾到`, emoji `🥹`, timestamp `2026-06-28 18:42:19`.
+- The entry uses `detailUrl: "gripe-gpt-kindness.html"`, and `assets/site.js` renders a `查看截图` link only for gripes that include `detailUrl`.
+- Copied the provided screenshot to `assets/gripes/gpt-kindness.png` using binary-safe file copy.
+- Added `gripe-gpt-kindness.html` as the full-size screenshot detail page.
+- Added CSS for gripe detail links and the screenshot detail frame.
+- Public and draft HTML asset query strings were refreshed to `bar-art-20260628-gpt-gripes`.
+- Visual verification was skipped by project preference; residual risk is exact screenshot scaling and detail-page visual balance on real mobile/tablet screens.
 
 ## 2026-06-27 Word Life Log Published - Lemon Tea And Ethanol Therapy
 
@@ -111,7 +124,7 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - The site now has a right-side `吐槽` rail rendered by `assets/site.js` on pages that load `assets/content.js`.
 - Static gripe entries are stored in `window.BAR_GRIPES` inside `assets/gripes.js`; this is the GitHub Pages-compatible data pool, not a server database.
 - Each gripe entry contains `text`, `mood`, `emoji`, and `publishedAt` with second-level precision.
-- `assets/gripes.js` currently contains fourteen gripe entries.
+- `assets/gripes.js` currently contains fifteen gripe entries.
 - The first gripe is published with mood `烦恼`, emoji `😫`, and timestamp `2026-06-11 12:40:15`.
 - The second gripe is published with mood `无语`, emoji `😶`, and timestamp `2026-06-12 12:29:58`.
 - The third gripe is published with mood `迷幻`, emoji `😵‍💫`, and timestamp `2026-06-13 23:05:56`.
@@ -126,6 +139,8 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - The twelfth gripe is published with mood `自嘲`, emoji `🏃‍♂️`, and timestamp `2026-06-24 14:20:16`.
 - The thirteenth gripe is published with mood `无语`, emoji `😶`, and timestamp `2026-06-26 23:24:04`.
 - The fourteenth gripe is published with mood `心虚`, emoji `🙈`, and timestamp `2026-06-27 18:29:25`.
+- The fifteenth gripe is published with mood `被照顾到`, emoji `🥹`, timestamp `2026-06-28 18:42:19`, and detail page `gripe-gpt-kindness.html`.
+- Gripe entries may include optional `detailUrl`; `assets/site.js` renders a small detail link only when this field is present.
 - The rail calculates a per-page display count from page height and uses previous/next pagination for additional gripes.
 - Desktop layout reserves right-side space for the rail; narrow screens show it as a normal responsive block.
 - Scheme 2 is the active implementation: gripe data is split out of `assets/content.js` into `assets/gripes.js`, while the DOM still renders only the current visible page of gripes.
@@ -413,6 +428,7 @@ Current cache-busting query string:
 - As of the 2026-06-25 note/archive integration refresh, public and draft HTML pages use `bar-art-20260625-notes-archive` for shared assets.
 - As of the 2026-06-25 short lab-still note refresh, public and draft HTML pages use `bar-art-20260625-lab-still` for shared assets.
 - As of the 2026-06-26 Word article publish, public and draft HTML pages use `bar-art-20260626-return` for shared assets.
+- As of the 2026-06-28 screenshot-backed gripe detail refresh, public and draft HTML pages use `bar-art-20260628-gpt-gripes` for shared assets.
 - Important publishing reminder: whenever `assets/content.js` changes for a new post, refresh the HTML asset query string on public pages in the same turn. On 2026-06-22, the article index was updated but the HTML pages initially still referenced the old query string, so the homepage/archive/tag pages could appear stale from browser cache.
 
 ## 8. Current Constraints

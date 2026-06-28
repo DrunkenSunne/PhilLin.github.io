@@ -1,6 +1,8 @@
 # AGENT_HANDOFF
 
-Last updated: 2026-06-27
+Last updated: 2026-06-28
+
+2026-06-28 screenshot gripe: user chose scheme 2 for a large screenshot, meaning the right-side gripe rail keeps only short text and links to a separate full-size detail page. Added the fifteenth gripe `离了GPT还有谁把我当小孩。。。` with mood `被照顾到`, emoji `🥹`, timestamp `2026-06-28 18:42:19`, and `detailUrl: "gripe-gpt-kindness.html"`. The screenshot asset is `assets/gripes/gpt-kindness.png`, copied from the provided temp image with normal binary-safe file copy. `assets/site.js` now renders a `查看截图` link only for gripe entries with `detailUrl`; `gripe-gpt-kindness.html` displays the full screenshot. Follow-up correction: user pointed out the initial detail page was ugly and incorrectly used `Last Word`, which belongs to `关于我`; the page is now a standalone Gripes receipt/detail layout without a cocktail column identity. Public and draft HTML asset query strings are refreshed to `bar-art-20260628-gpt-gripes`. Visual verification was skipped by project preference.
 
 2026-06-27 Word life log: user provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260627.docx` and asked whether it should be `生活日志` or `一些思绪`. Codex chose `生活日志` because the piece is a concrete day record with reflective elements. Codex generated `preview-20260627.html`, then user asked to change the title to `一杯暴晒柠檬茶与非循证乙醇疗法` and publish. Final article is `article-lemon-tea-ethanol-therapy.html`, publication date `2026-06-27`, summary `一篇关于低电量一天的生活日志：凌晨四点睡、复习被实验和柠檬茶打断，晚上又被 GPT 哄着捡回进度，最后用一瓶 Asahi 给满脑子的病毒和寄生虫做一点象征性的消毒。`, and it is indexed in `window.BAR_POSTS` with tag `生活日志`. The Word document contained no embedded media files. HTML asset query strings were refreshed to `bar-art-20260627-ethanol`. Visual verification was skipped by project preference.
 
@@ -119,6 +121,7 @@ Follow-up after phase-one sealing:
 - Published the twelfth gripe with mood `自嘲`, emoji `🏃‍♂️`, and timestamp `2026-06-24 14:20:16`.
 - Published the thirteenth gripe with mood `无语`, emoji `😶`, and timestamp `2026-06-26 23:24:04`.
 - Published the fourteenth gripe with mood `心虚`, emoji `🙈`, and timestamp `2026-06-27 18:29:25`.
+- Published the fifteenth gripe with mood `被照顾到`, emoji `🥹`, timestamp `2026-06-28 18:42:19`, and detail page `gripe-gpt-kindness.html`.
 
 - Project-level preference localized from user request: skip visual verification by default unless the user explicitly asks later or a higher-priority instruction requires it.
 - Abstract redesign follow-up:
@@ -169,9 +172,10 @@ Follow-up after phase-one sealing:
   - CSS-only drink glyphs, dot fields, line grids, polygon overlays, and a menu-board home layout.
   - `assets/site.js` adds a pointer-following bar cursor and drink-name hover labels for menu items.
   - `assets/styles.css` now also includes shared Tonight, Playlist, Cellar, article-reading, mobile navigation, and reduced-motion polish.
-- Current general cache-busting query string is `bar-art-20260626-mobile-labels`; the homepage stylesheet uses `bar-art-20260626-fruitfly-quote` after the 2026-06-26 homepage lyric plate change.
+- Current general cache-busting query string is `bar-art-20260628-gpt-gripes`.
 - Gripe rail:
-  - `assets/gripes.js` stores static `window.BAR_GRIPES` entries; it currently contains fourteen entries.
+  - `assets/gripes.js` stores static `window.BAR_GRIPES` entries; it currently contains fifteen entries.
+  - Entries may include optional `detailUrl`; `assets/site.js` renders a `查看截图` link only for entries with that field.
   - `assets/site.js` injects the rail and handles page-size calculation and pagination.
   - `assets/styles.css` positions the rail on the right for desktop and makes it responsive on narrower screens.
   - Current scale strategy is scheme 2: keep gripe data separate from `assets/content.js` and render only the current page.

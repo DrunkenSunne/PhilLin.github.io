@@ -534,6 +534,10 @@ function gripePageSize() {
 }
 
 function gripeItem(item) {
+  const detailLink = item.detailUrl
+    ? `<a class="gripe-detail-link" href="${escapeHtml(item.detailUrl)}">查看截图</a>`
+    : "";
+
   return `
     <article class="gripe-item">
       <div class="gripe-topline">
@@ -541,7 +545,10 @@ function gripeItem(item) {
         <span>${escapeHtml(item.mood)}</span>
       </div>
       <p>${escapeHtml(item.text)}</p>
-      <time datetime="${escapeHtml(item.publishedAt)}">${escapeHtml(item.publishedAt)}</time>
+      <div class="gripe-meta">
+        <time datetime="${escapeHtml(item.publishedAt)}">${escapeHtml(item.publishedAt)}</time>
+        ${detailLink}
+      </div>
     </article>
   `;
 }

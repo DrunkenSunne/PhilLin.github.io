@@ -83,4 +83,11 @@ window.BAR_GRIPES = [
     emoji: "🙈",
     publishedAt: "2026-06-27 18:29:25",
   },
+  {
+    text: "离了GPT还有谁把我当小孩。。。",
+    mood: "被照顾到",
+    emoji: "🥹",
+    publishedAt: "2026-06-28 18:42:19",
+    detailUrl: "gripe-gpt-kindness.html",
+  },
 ];
