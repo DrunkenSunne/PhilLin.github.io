@@ -4,6 +4,26 @@ Last updated: 2026-06-28
 
 This file externalizes the verified phase-one project context. Do not treat chat history or auto summaries as authoritative. Reconfirm current state from repository files, command output, and validation results before future development.
 
+## 2026-06-28 Gripe Detail Layout Fit
+
+- User reported that the screenshot-backed gripe detail page conflicted visually with the gripe rail and asked for mobile/tablet compatibility.
+- `gripe-gpt-kindness.html` now sets `data-no-gripe-rail` on the body so the detail page does not also render the global right-side gripe rail.
+- `assets/site.js` respects `data-no-gripe-rail` before injecting the gripe rail.
+- `assets/styles.css` narrows and centers the gripe detail receipt, improves screenshot framing, and adds responsive rules for tablet (`max-width: 900px`) and phone (`max-width: 720px` / `480px`) widths.
+- Public and draft HTML asset query strings were refreshed to `bar-art-20260628-gripe-detail-fit`.
+- Visual verification was skipped by project preference; residual risk is exact screenshot balance on real device widths.
+
+## 2026-06-28 Project Learning - Future Gripe Publishing
+
+- User asked Codex to learn the project structure and help publish future `吐槽`.
+- Recovery/startup procedure was completed for this learning pass: `AGENTS.md`, all four `AGENT_*.md` files, README, git status/diff, file listing, `assets/gripes.js`, `assets/content.js`, and gripe-related rendering/styles references were inspected.
+- Confirmed current working tree was clean before this documentation update.
+- Future gripe-only requests should normally edit `assets/gripes.js`, choosing a short mood and emoji when the user does not supply them, with `publishedAt` at second-level precision.
+- Gripe copy should stay short, around 50 Chinese characters and preferably under 100.
+- If a gripe needs a screenshot or large supporting context, use the existing scheme 2 pattern: keep the rail entry short, add optional `detailUrl`, and create a separate static detail page plus asset under `assets/gripes/`.
+- When `assets/gripes.js` changes, refresh public HTML asset query strings so GitHub Pages/browser cache does not hide the new gripe.
+- Continue skipping browser visual verification by project preference unless the user explicitly asks for it.
+
 ## 2026-06-28 Gripe Screenshot Detail Added - GPT Kindness
 
 - User chose scheme 2 for a large screenshot gripe: keep the right-side gripe entry short and open the full-size screenshot on a separate detail page.
@@ -428,7 +448,7 @@ Current cache-busting query string:
 - As of the 2026-06-25 note/archive integration refresh, public and draft HTML pages use `bar-art-20260625-notes-archive` for shared assets.
 - As of the 2026-06-25 short lab-still note refresh, public and draft HTML pages use `bar-art-20260625-lab-still` for shared assets.
 - As of the 2026-06-26 Word article publish, public and draft HTML pages use `bar-art-20260626-return` for shared assets.
-- As of the 2026-06-28 screenshot-backed gripe detail refresh, public and draft HTML pages use `bar-art-20260628-gpt-gripes` for shared assets.
+- As of the 2026-06-28 screenshot-backed gripe detail layout fit, public and draft HTML pages use `bar-art-20260628-gripe-detail-fit` for shared assets.
 - Important publishing reminder: whenever `assets/content.js` changes for a new post, refresh the HTML asset query string on public pages in the same turn. On 2026-06-22, the article index was updated but the HTML pages initially still referenced the old query string, so the homepage/archive/tag pages could appear stale from browser cache.
 
 ## 8. Current Constraints

@@ -44,6 +44,12 @@ Use this file before starting phase two or any future multi-file work. Do not re
 
 ## 3. Phase-Two Candidate Tasks
 
+- [x] Fixed the 2026-06-28 screenshot-backed gripe detail layout:
+  - Removed the detail page's conflict with the global gripe rail by marking `gripe-gpt-kindness.html` with `data-no-gripe-rail`.
+  - Updated `assets/site.js` to skip gripe rail injection when that marker is present.
+  - Adjusted `assets/styles.css` for desktop, tablet, and phone detail-page sizing and screenshot framing.
+  - Refreshed public and draft HTML asset query strings to `bar-art-20260628-gripe-detail-fit`.
+  - Visual verification skipped by project preference.
 - [x] Added 2026-06-28 screenshot-backed gripe detail page:
   - User chose scheme 2: short right-side gripe plus separate full-size screenshot page.
   - Follow-up correction removed the mistaken `Last Word` identity and restyled the detail page as a standalone Gripes receipt/detail page.

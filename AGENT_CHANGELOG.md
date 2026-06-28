@@ -2,6 +2,29 @@
 
 Last updated: 2026-06-28
 
+## 2026-06-28 Gripe Detail Layout Fit
+
+User reported that the gripe screenshot detail view conflicted with the gripe itself and asked to account for mobile and tablet layouts.
+
+- Added `data-no-gripe-rail` to `gripe-gpt-kindness.html` so the global gripe rail does not appear on this detail page.
+- Updated `assets/site.js` so `renderGripeRail()` exits when the body has `data-no-gripe-rail`.
+- Updated `assets/styles.css` for the detail page: narrower centered shell, stronger standalone receipt framing, constrained screenshot width, and tablet/phone breakpoints for title, padding, stamps, and screenshot margins.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260628-gripe-detail-fit`.
+- Ran `node --check assets/site.js`, `node --check assets/content.js`, `node --check assets/gripes.js`, `git diff --check`, `git status --short`, and `git diff --stat`.
+- Visual verification was skipped by project preference.
+- Rollback: remove `data-no-gripe-rail` from `gripe-gpt-kindness.html`, remove the early return in `assets/site.js`, revert the gripe-detail CSS changes, and restore the previous asset query string from git.
+
+## 2026-06-28 Project Learning - Future Gripe Publishing
+
+User asked Codex to learn the project structure and help publish future `吐槽`.
+
+- Completed the project startup/recovery read before any edits: `AGENTS.md`, `AGENT_CONTEXT.md`, `AGENT_TODO.md`, `AGENT_CHANGELOG.md`, `AGENT_HANDOFF.md`, README, git status, and git diff.
+- Inspected current file structure and the gripe publishing path: `assets/gripes.js`, `assets/site.js` gripe rendering references, `assets/styles.css` gripe styles, and `assets/content.js` for surrounding site architecture.
+- Confirmed the working tree was clean before this documentation-only update.
+- Recorded future gripe workflow in `AGENT_CONTEXT.md` and `AGENT_HANDOFF.md`.
+- No runtime site files were changed.
+- Rollback: remove this changelog entry and the matching "Project Learning - Future Gripe Publishing" notes from `AGENT_CONTEXT.md` and `AGENT_HANDOFF.md`.
+
 ## 2026-06-28 Gripe Screenshot Detail Added - GPT Kindness
 
 User chose scheme 2 for a large screenshot gripe: show a short gripe in the rail and use a separate page for the full-size image.

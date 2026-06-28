@@ -554,6 +554,7 @@ function gripeItem(item) {
 }
 
 function renderGripeRail() {
+  if (document.body.hasAttribute("data-no-gripe-rail")) return;
   const gripes = allGripes();
   if (!gripes.length || document.querySelector("[data-gripe-rail]")) return;
 

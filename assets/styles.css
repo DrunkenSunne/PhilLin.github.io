@@ -4545,17 +4545,19 @@ body::after {
 }
 
 .gripe-detail-shell {
-  width: min(1120px, calc(100% - 2rem));
-  margin: clamp(2rem, 6vw, 4.5rem) auto;
+  width: min(980px, calc(100% - clamp(2rem, 7vw, 6rem)));
+  margin: clamp(1.6rem, 5vw, 4.2rem) auto clamp(2.2rem, 6vw, 5rem);
 }
 
 .gripe-ticket {
   position: relative;
-  padding: clamp(1rem, 3vw, 1.75rem);
+  overflow: hidden;
+  padding: clamp(1.05rem, 3vw, 2.1rem);
   border: 1px solid rgba(184, 137, 71, 0.28);
   border-radius: 6px;
   background:
-    linear-gradient(180deg, rgba(237, 221, 185, 0.08), rgba(20, 13, 9, 0.24)),
+    radial-gradient(circle at 84% 8%, rgba(184, 137, 71, 0.12), transparent 28rem),
+    linear-gradient(180deg, rgba(237, 221, 185, 0.07), rgba(20, 13, 9, 0.24)),
     rgba(16, 11, 8, 0.9);
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
 }
@@ -4581,16 +4583,17 @@ body::after {
 .gripe-detail-header {
   display: grid;
   gap: 0.75rem;
+  max-width: 760px;
   border-bottom: 1px dashed rgba(184, 137, 71, 0.22);
   padding-bottom: 1rem;
 }
 
 .gripe-detail-header h1 {
-  max-width: 15em;
+  max-width: 12em;
   margin: 0;
   color: #f5dfbc;
-  font-size: clamp(1.85rem, 5vw, 4.4rem);
-  line-height: 1.04;
+  font-size: clamp(2rem, 6.6vw, 4.8rem);
+  line-height: 1.02;
 }
 
 .gripe-detail-stamps {
@@ -4610,20 +4613,25 @@ body::after {
 }
 
 .gripe-detail-lede {
-  max-width: 34rem;
-  margin: 1rem 0 1.1rem;
+  max-width: 42rem;
+  margin: 1.05rem 0 1.25rem;
   color: #ead7b0;
   font-size: clamp(1rem, 2vw, 1.16rem);
   line-height: 1.8;
 }
 
 .gripe-screenshot-frame {
-  margin: 0;
-  padding: clamp(0.45rem, 1.5vw, 0.85rem);
+  margin: 0 auto;
+  max-width: 900px;
+  padding: clamp(0.42rem, 1.25vw, 0.8rem);
   border: 1px solid rgba(184, 137, 71, 0.24);
   border-radius: 4px;
-  background: #030303;
-  box-shadow: 0 20px 46px rgba(0, 0, 0, 0.4);
+  background:
+    linear-gradient(180deg, rgba(237, 221, 185, 0.04), rgba(0, 0, 0, 0)),
+    #030303;
+  box-shadow:
+    0 20px 46px rgba(0, 0, 0, 0.4),
+    inset 0 0 0 1px rgba(245, 223, 188, 0.035);
 }
 
 .gripe-screenshot-frame img {
@@ -4652,6 +4660,26 @@ body::after {
 }
 
 @media (max-width: 900px) {
+  .gripe-detail-shell {
+    width: min(760px, calc(100% - 2rem));
+    margin-top: 1.5rem;
+  }
+
+  .gripe-ticket {
+    padding: clamp(0.95rem, 3vw, 1.45rem);
+  }
+
+  .gripe-ticket::before,
+  .gripe-ticket::after {
+    right: 0.85rem;
+    left: 0.85rem;
+  }
+
+  .gripe-detail-header h1 {
+    max-width: 11em;
+    font-size: clamp(2rem, 9vw, 3.5rem);
+  }
+
   .cellar-list,
   .review-card.featured {
     grid-template-columns: 1fr;
@@ -4701,6 +4729,44 @@ body::after {
   .gripe-rail {
     margin-top: 1.3rem;
   }
+
+  .gripe-detail-page .site-header {
+    gap: 0.8rem;
+  }
+
+  .gripe-detail-shell {
+    width: min(100% - 1rem, 640px);
+    margin-top: 1rem;
+  }
+
+  .gripe-detail-header {
+    gap: 0.6rem;
+    padding-bottom: 0.85rem;
+  }
+
+  .gripe-detail-header h1 {
+    font-size: clamp(1.9rem, 12vw, 3rem);
+  }
+
+  .gripe-detail-stamps {
+    gap: 0.4rem;
+  }
+
+  .gripe-detail-stamps span,
+  .gripe-detail-stamps time {
+    max-width: 100%;
+    font-size: 0.72rem;
+  }
+
+  .gripe-detail-lede {
+    margin: 0.8rem 0 0.95rem;
+  }
+
+  .gripe-screenshot-frame {
+    margin-right: -0.45rem;
+    margin-left: -0.45rem;
+    padding: 0.35rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -4711,6 +4777,30 @@ body::after {
   .review-tags span,
   .review-scene dd span {
     font-size: 0.74rem;
+  }
+
+  .gripe-detail-shell {
+    width: min(100% - 0.75rem, 420px);
+  }
+
+  .gripe-ticket {
+    padding: 0.85rem;
+  }
+
+  .gripe-ticket::before {
+    top: 0.48rem;
+  }
+
+  .gripe-ticket::after {
+    bottom: 0.48rem;
+  }
+
+  .gripe-detail-header h1 {
+    font-size: clamp(1.75rem, 13vw, 2.6rem);
+  }
+
+  .gripe-detail-actions {
+    justify-content: flex-start;
   }
 }
 
