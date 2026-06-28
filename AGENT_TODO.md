@@ -44,6 +44,14 @@ Use this file before starting phase two or any future multi-file work. Do not re
 
 ## 3. Phase-Two Candidate Tasks
 
+- [x] Rebalanced article detail reading layout on 2026-06-28:
+  - Hid the global gripe rail on pages containing `.article-layout`.
+  - Removed the desktop body right-padding reservation for article detail pages.
+  - Widened the desktop article body column and narrowed the article-info sidebar.
+  - Made tablet article sidebars compact two-column blocks below the article.
+  - Made phone article sidebars compact single-column blocks with horizontally wrapping tags.
+  - Refreshed HTML asset query strings to `bar-art-20260628-reading-balance`.
+  - Visual verification skipped by project preference.
 - [x] Unified article/detail page format on 2026-06-28:
   - Kept opening summaries as `article-deck`.
   - Standardized right sidebars to `文章标签`, short `文章信息`, and one `返回文章归档` button.

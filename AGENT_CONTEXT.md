@@ -4,6 +4,16 @@ Last updated: 2026-06-28
 
 This file externalizes the verified phase-one project context. Do not treat chat history or auto summaries as authoritative. Reconfirm current state from repository files, command output, and validation results before future development.
 
+## 2026-06-28 Article Reading Balance Layout
+
+- User reported that on article detail pages the global gripe rail plus article tag/info sidebar made the page feel split in half, leaving the actual article body too narrow on desktop.
+- `assets/styles.css` now treats article detail pages as reading-first pages: pages containing `.article-layout` no longer display the global `.gripe-rail`, and desktop `body` no longer reserves the global gripe-rail right padding for those pages.
+- Article detail desktop layout now uses a wider article column and a narrower article-info sidebar.
+- Tablet article pages keep the article info below the body in a compact two-column sidebar block.
+- Phone article pages keep article info below the body in a compact single column, with article tags allowed to wrap horizontally instead of stacking as full-width items.
+- Current asset query string is `bar-art-20260628-reading-balance`.
+- Visual verification was skipped by project preference; residual risk is exact desktop/tablet/mobile visual balance until the user inspects local pages.
+
 ## 2026-06-28 Article Detail Format Standard
 
 - User decided the unified article/detail format after auditing inconsistent cup-bottom notes and duplicate return buttons.
