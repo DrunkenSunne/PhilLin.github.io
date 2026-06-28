@@ -410,15 +410,21 @@ function renderArticlePage() {
   const title = page.querySelector("[data-article-title]");
   const tag = page.querySelector("[data-article-tag]");
   const meta = page.querySelector("[data-article-meta]");
+  const summary = page.querySelector("[data-article-summary]");
   const content = page.querySelector("[data-article-content]");
   const tagRow = page.querySelector("[data-article-tag-row]");
+  const info = page.querySelector("[data-article-info]");
+  const endnote = page.querySelector("[data-article-endnote]");
 
   if (!post) {
     title.textContent = "文章没有找到";
     tag.textContent = "Not Found";
     meta.textContent = "发布时间：未知";
+    if (summary) summary.textContent = "";
     content.innerHTML = "<p>这篇文章还没有写入 assets/content.js，或者对应的文章 id 已经变更。</p>";
     tagRow.innerHTML = "<span>未知</span>";
+    if (info) info.textContent = "没有匹配到文章信息。";
+    if (endnote) endnote.textContent = "杯底注释：没有找到这一杯，就先回到归档。";
     return;
   }
 
@@ -426,8 +432,11 @@ function renderArticlePage() {
   title.textContent = post.title;
   tag.textContent = post.tag;
   meta.textContent = `发布时间：${post.publishedAt} · 标签：${post.tag}`;
-  content.innerHTML = post.content || `<p>${escapeHtml(post.summary || "")}</p>`;
+  if (summary) summary.textContent = post.summary || "";
+  content.innerHTML = post.content || "";
   tagRow.innerHTML = `<span>${escapeHtml(post.tag)}</span>`;
+  if (info) info.textContent = `一篇归入「${post.tag}」的文章，发布于 ${post.publishedAt}。`;
+  if (endnote) endnote.textContent = `杯底注释：${post.aftertaste || "这篇文章先留在这里，余味慢慢往后走。"}`;
 }
 
 function reviewArray(items = []) {

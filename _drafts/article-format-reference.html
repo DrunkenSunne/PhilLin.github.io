@@ -1,10 +1,18 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>用 GitHub Pages 和 Hexo 搭建自己的博客 | Phil Lin的Bar</title>
-    <link rel="stylesheet" href="../assets/styles.css?v=bar-art-20260628-gripe-detail-fit">
+    <link rel="stylesheet" href="../assets/styles.css?v=bar-art-20260628-low-framerate">
+    <style>
+      .article-deck {
+        max-width: 44rem;
+        color: var(--muted);
+        font-size: 1rem;
+        line-height: 1.9;
+      }
+    </style>
   </head>
   <body>
     <header class="site-header">
@@ -31,6 +39,7 @@
           <p class="eyebrow">建站笔记</p>
           <h1>用 GitHub Pages 和 Hexo 搭建自己的博客</h1>
           <p class="article-meta">发布时间：2026-06-10 · 约 5 分钟阅读</p>
+          <p class="article-deck">这是一篇文章模板参考：开头保留摘要，右栏保留标签、简短文章信息和返回文章归档，杯底只保留一句余味。</p>
         </header>
 
         <p>这篇示例文章按照参考资料的思路，保留了最关键的建站路径：先准备本地环境，再用 Hexo 生成博客，最后把静态文件部署到 GitHub Pages。</p>
@@ -66,6 +75,10 @@ hexo deploy</code></pre>
 
         <h2>5. 下一步</h2>
         <p>完成上线后，可以继续配置主题、头像、社交链接、评论系统、统计工具和自定义域名。先让写作流程稳定下来，再慢慢打磨视觉效果，会更容易坚持。</p>
+
+        <footer class="article-endnote">
+          <p>杯底注释：模板也要有余味，免得以后又把格式写散。</p>
+        </footer>
       </article>
 
       <aside class="article-aside">
@@ -78,8 +91,9 @@ hexo deploy</code></pre>
           </div>
         </div>
         <div class="aside-block">
-          <h2>推荐操作</h2>
-          <a class="button primary full" href="../about.html">查看关于我</a>
+          <h2>文章信息</h2>
+          <p>这是一份非公开文章格式参考，用来提醒未来发文时保持摘要、侧栏和杯底统一。</p>
+          <a class="button primary full" href="../posts.html">返回文章归档</a>
         </div>
       </aside>
     </main>
@@ -90,8 +104,8 @@ hexo deploy</code></pre>
       <span class="footer-link"><a href="friends.html">友链</a></span>
     </footer>
 
-    <script src="../assets/content.js?v=bar-art-20260628-gripe-detail-fit"></script>
-    <script src="../assets/gripes.js?v=bar-art-20260628-gripe-detail-fit"></script>
-    <script src="../assets/site.js?v=bar-art-20260628-gripe-detail-fit"></script>
+    <script src="../assets/content.js?v=bar-art-20260628-low-framerate"></script>
+    <script src="../assets/gripes.js?v=bar-art-20260628-low-framerate"></script>
+    <script src="../assets/site.js?v=bar-art-20260628-low-framerate"></script>
   </body>
 </html>

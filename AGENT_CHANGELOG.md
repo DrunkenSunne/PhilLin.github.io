@@ -2,6 +2,35 @@
 
 Last updated: 2026-06-28
 
+## 2026-06-28 Article Detail Format Standardized
+
+User decided the final format after asking whether duplicate return buttons and repeated summary/info/cup-bottom copy were a problem.
+
+- Kept opening summaries on article and bar-note detail pages and standardized them to the `article-deck` presentation.
+- Standardized right sidebars to `文章标签`, a short `文章信息` paragraph, and one primary return button labeled `返回文章归档`.
+- Treated `生活日志`, `一些思绪`, `种草安利`, and `吧台札记` as article-system content for this format.
+- Added missing `杯底注释：...` footers to current article pages and bar-note pages that did not have one.
+- Removed return buttons from cup-bottom footers so the cup-bottom contains only one aftertaste sentence.
+- Updated `article.html` compatibility fallback to show summary, right-side article info, `返回文章归档`, and a single cup-bottom note.
+- Recorded the rule in `AGENT_CONTEXT.md`, `AGENT_TODO.md`, and `AGENT_HANDOFF.md` so future article publishing follows the same structure.
+- Visual verification was skipped by project preference.
+- Rollback: revert the changed `article-*.html`, `note-*.html`, `article.html`, and `assets/site.js` files from git, then remove this changelog entry and the matching format-standard notes from the AGENT files.
+
+## 2026-06-28 Word Life Log Published - Low Framerate Review Day
+
+User provided `D:\Download\低帧率复习日.docx` and said it was probably `生活日志`.
+
+- Extracted the Word document text and confirmed no embedded media files were present.
+- Published it as a normal `生活日志` article because it is a complete day-record piece about a concrete review day.
+- Generated final static article file `article-low-framerate-review-day.html`.
+- Added one `BAR_POSTS` metadata entry with tag `生活日志`.
+- Final title: `低帧率复习日`.
+- Final summary: `一篇关于复习日低速运行的生活日志：起晚、等咖啡、去图书馆复习病原生物学，中途处理细胞、洗澡洗衣服，最后承认今天不是空的，也不是漂亮的。`
+- Publication date: `2026-06-28`.
+- Refreshed HTML asset query strings to `bar-art-20260628-low-framerate` so the homepage, article archive, and `生活日志` tag page load the updated metadata.
+- Visual verification was skipped by project preference.
+- Rollback: delete `article-low-framerate-review-day.html`, remove the `low-framerate-review-day` entry from `assets/content.js`, restore the previous HTML asset query string from git, and remove this changelog/context entry if reverting the publication.
+
 ## 2026-06-28 Gripe Detail Layout Fit
 
 User reported that the gripe screenshot detail view conflicted with the gripe itself and asked to account for mobile and tablet layouts.

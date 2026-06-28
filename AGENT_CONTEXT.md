@@ -4,6 +4,30 @@ Last updated: 2026-06-28
 
 This file externalizes the verified phase-one project context. Do not treat chat history or auto summaries as authoritative. Reconfirm current state from repository files, command output, and validation results before future development.
 
+## 2026-06-28 Article Detail Format Standard
+
+- User decided the unified article/detail format after auditing inconsistent cup-bottom notes and duplicate return buttons.
+- Opening summaries must be kept and use the `article-deck` style.
+- The right sidebar for article-system pages must keep `文章标签`, a short `文章信息` paragraph, and one primary button labeled exactly `返回文章归档`.
+- `生活日志`, `一些思绪`, `种草安利`, and `吧台札记` all count as article-system pages for this rule.
+- Every static `article-*.html` page and every `note-*.html` page must include a footer named exactly `杯底注释：...`.
+- The cup-bottom note should be an aftertaste sentence, not a restatement of the opening summary.
+- The cup-bottom footer must not contain return buttons; return actions belong in the right sidebar.
+- `article.html` is still only a compatibility fallback, but its visible format should also follow this sidebar/summary/cup-bottom rule when possible.
+
+## 2026-06-28 Word Life Log Published - Low Framerate Review Day
+
+- User provided `D:\Download\低帧率复习日.docx` and said it was probably `生活日志`.
+- Codex published it directly as a normal article, not a bar note, because it is a complete day-record piece about a concrete review day.
+- Final static article file is `article-low-framerate-review-day.html`.
+- Final title is `低帧率复习日`.
+- Publication date is `2026-06-28`, based on the current date.
+- Summary is `一篇关于复习日低速运行的生活日志：起晚、等咖啡、去图书馆复习病原生物学，中途处理细胞、洗澡洗衣服，最后承认今天不是空的，也不是漂亮的。`
+- The article is indexed in `window.BAR_POSTS` and should appear on the homepage recent posts, `posts.html`, and `tag-lab.html`.
+- The Word document contained no embedded media files.
+- Current asset query string is `bar-art-20260628-low-framerate`.
+- Visual verification was skipped by project preference.
+
 ## 2026-06-28 Gripe Detail Layout Fit
 
 - User reported that the screenshot-backed gripe detail page conflicted visually with the gripe rail and asked for mobile/tablet compatibility.

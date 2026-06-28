@@ -44,6 +44,22 @@ Use this file before starting phase two or any future multi-file work. Do not re
 
 ## 3. Phase-Two Candidate Tasks
 
+- [x] Unified article/detail page format on 2026-06-28:
+  - Kept opening summaries as `article-deck`.
+  - Standardized right sidebars to `文章标签`, short `文章信息`, and one `返回文章归档` button.
+  - Added or normalized `杯底注释：...` for all current static article pages and bar-note pages.
+  - Removed cup-bottom return buttons from article endnotes.
+  - Included `吧台札记`, `生活日志`, `一些思绪`, and `种草安利` in the same article-system format rule.
+  - Updated `article.html` compatibility fallback to follow the same visible pattern.
+- [x] Published 2026-06-28 Word life log from `D:\Download\低帧率复习日.docx`:
+  - User said it was probably `生活日志`.
+  - Generated final article file `article-low-framerate-review-day.html`.
+  - Added one metadata object to `assets/content.js`.
+  - Final title is `低帧率复习日`.
+  - Publication date is `2026-06-28`, based on the current date.
+  - No embedded media files were found in the Word document.
+  - Refreshed public and draft HTML asset query strings to `bar-art-20260628-low-framerate`.
+  - Visual verification skipped by project preference.
 - [x] Fixed the 2026-06-28 screenshot-backed gripe detail layout:
   - Removed the detail page's conflict with the global gripe rail by marking `gripe-gpt-kindness.html` with `data-no-gripe-rail`.
   - Updated `assets/site.js` to skip gripe rail injection when that marker is present.

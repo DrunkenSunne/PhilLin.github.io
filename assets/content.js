@@ -2,6 +2,14 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利", "吧台札记
 
 window.BAR_POSTS = [
   {
+    id: "low-framerate-review-day",
+    title: "低帧率复习日",
+    tag: "生活日志",
+    publishedAt: "2026-06-28",
+    summary: "一篇关于复习日低速运行的生活日志：起晚、等咖啡、去图书馆复习病原生物学，中途处理细胞、洗澡洗衣服，最后承认今天不是空的，也不是漂亮的。",
+    url: "article-low-framerate-review-day.html",
+  },
+  {
     id: "lemon-tea-ethanol-therapy",
     title: "一杯暴晒柠檬茶与非循证乙醇疗法",
     tag: "生活日志",
