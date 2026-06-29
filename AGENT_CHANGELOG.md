@@ -1,6 +1,17 @@
 # AGENT_CHANGELOG
 
-Last updated: 2026-06-28
+Last updated: 2026-06-29
+
+## 2026-06-29 Mobile Article Tag Wrap Fix
+
+User reported that mobile article detail page tags wrapped strangely.
+
+- Updated `assets/styles.css` so `.article-aside .tag-row` has article-specific left alignment and horizontal wrapping.
+- Made article-side tag pills non-shrinking inline-flex items with `white-space: nowrap`, so short Chinese tags stay as compact pills instead of breaking awkwardly.
+- Reasserted row wrapping inside the phone breakpoint, overriding the global mobile `.tag-row` column behavior only for article sidebars.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260629-mobile-tags`.
+- Visual verification was skipped by project preference.
+- Rollback: revert the `.article-aside .tag-row` CSS additions, replace `bar-art-20260629-mobile-tags` with the previous asset query string from git, and remove this changelog/context/todo/handoff entry.
 
 ## 2026-06-28 Article Reading Balance Layout
 

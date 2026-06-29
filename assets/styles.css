@@ -873,6 +873,21 @@ pre code {
   font-size: 0.92rem;
 }
 
+.article-aside .tag-row {
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.45rem;
+}
+
+.article-aside .tag-row span {
+  display: inline-flex;
+  flex: 0 0 auto;
+  max-width: 100%;
+  align-items: center;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
 .article-layout .aside-block {
   padding: 1rem;
 }
@@ -3833,10 +3848,13 @@ body::after {
   .article-aside .tag-row {
     align-items: flex-start;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 0.42rem;
   }
 
   .article-aside .tag-row span {
+    width: auto;
     padding: 0.28rem 0.56rem;
     font-size: 0.78rem;
   }

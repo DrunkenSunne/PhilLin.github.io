@@ -1,8 +1,16 @@
 # AGENT_CONTEXT
 
-Last updated: 2026-06-28
+Last updated: 2026-06-29
 
 This file externalizes the verified phase-one project context. Do not treat chat history or auto summaries as authoritative. Reconfirm current state from repository files, command output, and validation results before future development.
+
+## 2026-06-29 Mobile Article Tag Wrap Fix
+
+- User reported that mobile article detail tags wrapped strangely.
+- `assets/styles.css` now gives article-side `.tag-row` elements article-specific rules: left alignment, horizontal wrapping, non-shrinking pill spans, and phone-specific row wrapping.
+- This is scoped to `.article-aside .tag-row` so archive/filter `.tag-row` controls keep their existing mobile full-width button behavior.
+- Public and draft HTML asset query strings were refreshed to `bar-art-20260629-mobile-tags`.
+- Visual verification was skipped by project preference; residual risk is exact mobile tag spacing on real devices.
 
 ## 2026-06-28 Article Reading Balance Layout
 

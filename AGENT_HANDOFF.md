@@ -1,6 +1,8 @@
 # AGENT_HANDOFF
 
-Last updated: 2026-06-28
+Last updated: 2026-06-29
+
+2026-06-29 mobile article tag wrap fix: user reported that mobile article detail tags wrapped strangely. `assets/styles.css` now scopes horizontal wrapping and non-shrinking pill behavior to `.article-aside .tag-row`, so article detail tags stay as compact pill tags and wrap naturally on phones without changing archive/filter tag rows. Public and draft HTML asset query strings now use `bar-art-20260629-mobile-tags`. Visual verification was skipped by project preference; residual risk is exact mobile tag spacing on real devices.
 
 2026-06-28 article reading balance layout: user reported that on article detail pages the global gripe rail and article tag/info sidebar occupied too much space, leaving the body only half-width on desktop, and clarified tablet/phone should be fixed too if affected. `assets/styles.css` now hides the global `.gripe-rail` on pages containing `.article-layout`, removes the desktop `body` right-padding reservation for article detail pages, widens the desktop article body, narrows the article info sidebar, keeps tablet article info below the article in compact two-column blocks, and keeps phone article info compact with horizontally wrapping tags. Current asset query string is `bar-art-20260628-reading-balance`. Visual verification was skipped by project preference.
 
@@ -182,7 +184,7 @@ Follow-up after phase-one sealing:
   - CSS-only drink glyphs, dot fields, line grids, polygon overlays, and a menu-board home layout.
   - `assets/site.js` adds a pointer-following bar cursor and drink-name hover labels for menu items.
   - `assets/styles.css` now also includes shared Tonight, Playlist, Cellar, article-reading, mobile navigation, and reduced-motion polish.
-- Current general cache-busting query string is `bar-art-20260628-gripe-detail-fit`.
+- Current general cache-busting query string is `bar-art-20260629-mobile-tags`.
 - Gripe rail:
   - `assets/gripes.js` stores static `window.BAR_GRIPES` entries; it currently contains fifteen entries.
   - Entries may include optional `detailUrl`; `assets/site.js` renders a `查看截图` link only for entries with that field.

@@ -1,6 +1,6 @@
 # AGENT_TODO
 
-Last updated: 2026-06-28
+Last updated: 2026-06-29
 
 Use this file before starting phase two or any future multi-file work. Do not rely on chat history as the only source of truth.
 
@@ -44,6 +44,12 @@ Use this file before starting phase two or any future multi-file work. Do not re
 
 ## 3. Phase-Two Candidate Tasks
 
+- [x] Fixed phone article detail tag wrapping on 2026-06-29:
+  - Scoped tag wrapping fixes to `.article-aside .tag-row`.
+  - Kept article tags as horizontal pill tags that wrap naturally on narrow screens.
+  - Avoided changing archive/filter tag rows.
+  - Refreshed HTML asset query strings to `bar-art-20260629-mobile-tags`.
+  - Visual verification skipped by project preference.
 - [x] Rebalanced article detail reading layout on 2026-06-28:
   - Hid the global gripe rail on pages containing `.article-layout`.
   - Removed the desktop body right-padding reservation for article detail pages.
