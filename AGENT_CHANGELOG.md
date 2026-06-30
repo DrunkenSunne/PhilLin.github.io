@@ -1,6 +1,22 @@
 # AGENT_CHANGELOG
 
-Last updated: 2026-06-29
+Last updated: 2026-06-30
+
+## 2026-06-30 Word Bar Note Published - Eleven Floor Elevator
+
+User provided `D:\Download\1.docx` and asked Codex to publish it, filling in missing elements.
+
+- Extracted the Word document text and confirmed no embedded media files were present.
+- Published it as `吧台札记` because the piece explicitly says it is not a summary or life log, but "一张夹在下午里的小票".
+- Generated final static note file `note-eleven-floor-elevator.html`.
+- Added one `BAR_NOTES` metadata entry with tag `吧台札记`.
+- Final title: `十一楼的医学生与一楼的电梯`.
+- Final mood: `小事救场`.
+- Final summary: `一张夹在下午里的吧台札记：考后睡不好、雨天堵车、取样和实验、复习没底、正式立项的大创，以及一部刚好停在一楼的电梯，在一堆烂糟糟里留下几个能抓一下的小点。`
+- Publication date: `2026-06-30`.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260630-eleven-floor-elevator` so the homepage, article archive, and note index load the updated metadata.
+- Visual verification was skipped by project preference.
+- Rollback: delete `note-eleven-floor-elevator.html`, remove the `eleven-floor-elevator` entry from `assets/content.js`, restore the previous HTML asset query string from git, and remove this changelog/context/todo/handoff entry if reverting the publication.
 
 ## 2026-06-29 Mobile Article Tag Wrap Fix
 

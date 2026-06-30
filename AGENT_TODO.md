@@ -1,6 +1,6 @@
 # AGENT_TODO
 
-Last updated: 2026-06-29
+Last updated: 2026-06-30
 
 Use this file before starting phase two or any future multi-file work. Do not rely on chat history as the only source of truth.
 
@@ -44,6 +44,17 @@ Use this file before starting phase two or any future multi-file work. Do not re
 
 ## 3. Phase-Two Candidate Tasks
 
+- [x] Published 2026-06-30 Word bar note from `D:\Download\1.docx`:
+  - User asked Codex to publish the document and fill in missing elements.
+  - Chose `吧台札记` because the piece calls itself a small ticket held inside the afternoon rather than a full life-log summary.
+  - Generated final note file `note-eleven-floor-elevator.html`.
+  - Added one `BAR_NOTES` metadata entry with tag `吧台札记`.
+  - Final title is `十一楼的医学生与一楼的电梯`.
+  - Final mood is `小事救场`.
+  - Publication date is `2026-06-30`, based on the current date.
+  - No embedded media files were found in the Word document.
+  - Refreshed HTML asset query strings to `bar-art-20260630-eleven-floor-elevator`.
+  - Visual verification skipped by project preference.
 - [x] Fixed phone article detail tag wrapping on 2026-06-29:
   - Scoped tag wrapping fixes to `.article-aside .tag-row`.
   - Kept article tags as horizontal pill tags that wrap naturally on narrow screens.

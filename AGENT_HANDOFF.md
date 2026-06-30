@@ -1,6 +1,8 @@
 # AGENT_HANDOFF
 
-Last updated: 2026-06-29
+Last updated: 2026-06-30
+
+2026-06-30 Word bar note: user provided `D:\Download\1.docx` and asked Codex to publish it while filling in missing elements. Codex published it directly as `吧台札记` because the piece frames itself as "一张夹在下午里的小票" rather than a full life-log summary. Final note is `note-eleven-floor-elevator.html`, title `十一楼的医学生与一楼的电梯`, publication date `2026-06-30`, mood `小事救场`, summary `一张夹在下午里的吧台札记：考后睡不好、雨天堵车、取样和实验、复习没底、正式立项的大创，以及一部刚好停在一楼的电梯，在一堆烂糟糟里留下几个能抓一下的小点。`, and it is indexed in `window.BAR_NOTES`. The Word document contained no embedded media files. Public and draft HTML asset query strings were refreshed to `bar-art-20260630-eleven-floor-elevator`. Visual verification was skipped by project preference.
 
 2026-06-29 mobile article tag wrap fix: user reported that mobile article detail tags wrapped strangely. `assets/styles.css` now scopes horizontal wrapping and non-shrinking pill behavior to `.article-aside .tag-row`, so article detail tags stay as compact pill tags and wrap naturally on phones without changing archive/filter tag rows. Public and draft HTML asset query strings now use `bar-art-20260629-mobile-tags`. Visual verification was skipped by project preference; residual risk is exact mobile tag spacing on real devices.
 

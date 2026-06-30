@@ -85,6 +85,15 @@ window.BAR_POSTS = [
 
 window.BAR_NOTES = [
   {
+    id: "eleven-floor-elevator",
+    title: "十一楼的医学生与一楼的电梯",
+    tag: "吧台札记",
+    publishedAt: "2026-06-30",
+    mood: "小事救场",
+    summary: "一张夹在下午里的吧台札记：考后睡不好、雨天堵车、取样和实验、复习没底、正式立项的大创，以及一部刚好停在一楼的电梯，在一堆烂糟糟里留下几个能抓一下的小点。",
+    url: "note-eleven-floor-elevator.html",
+  },
+  {
     id: "sunlit-lemon-tea",
     title: "暴晒一小时的柠檬茶",
     tag: "吧台札记",

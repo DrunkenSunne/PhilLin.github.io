@@ -1,8 +1,22 @@
 # AGENT_CONTEXT
 
-Last updated: 2026-06-29
+Last updated: 2026-06-30
 
 This file externalizes the verified phase-one project context. Do not treat chat history or auto summaries as authoritative. Reconfirm current state from repository files, command output, and validation results before future development.
+
+## 2026-06-30 Word Bar Note Published - Eleven Floor Elevator
+
+- User provided `D:\Download\1.docx` and asked Codex to publish it, filling in missing publication elements.
+- Codex published it directly as a `吧台札记` because the piece explicitly frames itself as "一张夹在下午里的小票" rather than a full life-log summary.
+- Final static note file is `note-eleven-floor-elevator.html`.
+- Final title is `十一楼的医学生与一楼的电梯`.
+- Publication date is `2026-06-30`, based on the current date.
+- Mood is `小事救场`.
+- Summary is `一张夹在下午里的吧台札记：考后睡不好、雨天堵车、取样和实验、复习没底、正式立项的大创，以及一部刚好停在一楼的电梯，在一堆烂糟糟里留下几个能抓一下的小点。`
+- The note is indexed in `window.BAR_NOTES` and should appear on the homepage recent posts, `posts.html`, and `notes.html`.
+- The Word document contained no embedded media files.
+- Current asset query string is `bar-art-20260630-eleven-floor-elevator`.
+- Visual verification was skipped by project preference.
 
 ## 2026-06-29 Mobile Article Tag Wrap Fix
 
