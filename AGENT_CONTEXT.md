@@ -1,8 +1,33 @@
 # AGENT_CONTEXT
 
-Last updated: 2026-06-30
+Last updated: 2026-07-01
 
 This file externalizes the verified phase-one project context. Do not treat chat history or auto summaries as authoritative. Reconfirm current state from repository files, command output, and validation results before future development.
+
+## 2026-06-30 Word Publishing Wizard Encoding Fix
+
+- User reported the Word publishing wizard failed during preview for `C:\Users\Phil Lin\Desktop\临时用\260630.docx`.
+- Direct extraction confirmed the document could be read, so the issue was isolated to console/wizard robustness rather than the Word file itself.
+- `tools/publish_docx.ps1` and `tools/publish_docx_wizard.ps1` now force UTF-8 console/Python output so preview JSON with Chinese text does not fail or display as mojibake in typical Windows PowerShell runs.
+- `tools/publish_docx_wizard.ps1` now builds built-in Chinese category names from Unicode codepoints instead of storing them as raw script literals, preventing Windows PowerShell 5.1 from passing tags like `鐢熸椿鏃ュ織`.
+- `tools/publish_docx.py` now avoids copying embedded media during `--dry-run`; preview computes planned media paths without writing files.
+- Verification confirmed Chinese publishing-helper output rendered correctly without creating site files.
+- Visual verification was skipped by project preference because this was a tooling fix and publication task.
+
+
+## 2026-06-30 Word Life Log Published - Barely Caught Up
+
+- User provided `C:\Users\Phil Lin\Desktop\临时用\260630.docx`, clarified it is a `生活日志`, and left the title to Codex.
+- Published it as a normal article because it is a complete day-record piece about the day after an exam: rain, commuting, sampling, experiments, pharmacology review, project approval, cell work, and the feeling of only just keeping up.
+- Generated final static article file `article-barely-caught-up.html`.
+- Added one `BAR_POSTS` metadata entry with tag `生活日志`.
+- Final title is `堪堪赶上，也是赶上`.
+- Publication date is `2026-06-30`, based on the document filename and content.
+- Summary is `一篇关于雨天赶路、取样实验、药理复习、大创立项和夜里收细胞的生活日志：很多事情都不是没有进展，只是人在考试前一天一直追着安排跑，最后只能承认，堪堪赶上也是赶上。`
+- The Word document contained no embedded media files.
+- Current asset query string is `bar-art-20260630-barely-caught-up`.
+- Visual verification was skipped by project preference.
+
 
 ## 2026-06-30 Word Publishing Automation Added
 
@@ -15,6 +40,7 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - Added a minimal `.gitignore` for Python cache files generated while checking the publishing helper.
 - The script reduces repeated token-heavy publishing work by moving boilerplate HTML generation, metadata insertion, cache refresh, and agent-state logging into a deterministic local command.
 - Visual verification was skipped by project preference; this was a tooling/documentation change, not a visually inspected page change.
+
 
 ## 2026-06-30 Word Bar Note Published - Eleven Floor Elevator
 

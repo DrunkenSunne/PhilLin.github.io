@@ -2,6 +2,14 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利", "吧台札记
 
 window.BAR_POSTS = [
   {
+    id: "barely-caught-up",
+    title: "堪堪赶上，也是赶上",
+    tag: "生活日志",
+    publishedAt: "2026-06-30",
+    summary: "一篇关于雨天赶路、取样实验、药理复习、大创立项和夜里收细胞的生活日志：很多事情都不是没有进展，只是人在考试前一天一直追着安排跑，最后只能承认，堪堪赶上也是赶上。",
+    url: "article-barely-caught-up.html",
+  },
+  {
     id: "low-framerate-review-day",
     title: "低帧率复习日",
     tag: "生活日志",

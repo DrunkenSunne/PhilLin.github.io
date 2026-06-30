@@ -1,6 +1,34 @@
 # AGENT_CHANGELOG
 
-Last updated: 2026-06-30
+Last updated: 2026-07-01
+
+## 2026-06-30 Word Life Log Published - Barely Caught Up
+
+User provided `C:\Users\Phil Lin\Desktop\临时用\260630.docx`, clarified it is a `生活日志`, and left the title to Codex.
+
+- Extracted the Word document text and confirmed no embedded media files were present.
+- Published it as a normal `生活日志` article because it is a complete day-record piece about the day after an exam.
+- Generated final static file `article-barely-caught-up.html`.
+- Added metadata id `barely-caught-up` to `assets/content.js`.
+- Final title: `堪堪赶上，也是赶上`.
+- Final summary: `一篇关于雨天赶路、取样实验、药理复习、大创立项和夜里收细胞的生活日志：很多事情都不是没有进展，只是人在考试前一天一直追着安排跑，最后只能承认，堪堪赶上也是赶上。`
+- Publication date: `2026-06-30`.
+- Refreshed HTML asset query strings to `bar-art-20260630-barely-caught-up`.
+- Visual verification was skipped by project preference.
+- Rollback: delete `article-barely-caught-up.html`, remove the `barely-caught-up` entry from `assets/content.js`, restore the previous HTML asset query string from git, and remove this changelog/context/todo/handoff entry if reverting the publication.
+
+## 2026-06-30 Word Publishing Wizard Encoding Fix
+
+User reported that the interactive Word publishing wizard failed at preview for `C:\Users\Phil Lin\Desktop\临时用\260630.docx`.
+
+- Confirmed the Word file exists and that direct dry-run extraction succeeds.
+- Fixed `tools/publish_docx.ps1` to set `PYTHONIOENCODING=utf-8` plus UTF-8 PowerShell output.
+- Fixed `tools/publish_docx_wizard.ps1` to use UTF-8 console/output encoding.
+- Fixed `tools/publish_docx_wizard.ps1` built-in category tags to be generated from Unicode codepoints so Windows PowerShell does not pass mojibake like `鐢熸椿鏃ュ織`.
+- Fixed `tools/publish_docx.py` so `--dry-run` computes planned media paths without copying embedded media or creating post image folders.
+- Verified the publishing helper prints Chinese output correctly without creating site files.
+- Visual verification was skipped by project preference because this was a tooling fix and publication task.
+- Rollback: remove the UTF-8 encoding lines from both PowerShell scripts and revert `planned_media_paths` / dry-run media handling in `tools/publish_docx.py`.
 
 ## 2026-06-30 Word Publishing Automation Added
 

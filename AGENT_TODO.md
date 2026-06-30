@@ -1,6 +1,6 @@
 # AGENT_TODO
 
-Last updated: 2026-06-30
+Last updated: 2026-07-01
 
 Use this file before starting phase two or any future multi-file work. Do not rely on chat history as the only source of truth.
 
@@ -44,6 +44,20 @@ Use this file before starting phase two or any future multi-file work. Do not re
 
 ## 3. Phase-Two Candidate Tasks
 
+- [x] Published 2026-06-30 Word life log from `C:\Users\Phil Lin\Desktop\临时用\260630.docx`:
+  - Generated `article-barely-caught-up.html` with `tools/publish_docx.py`.
+  - Added metadata id `barely-caught-up` to `assets/content.js`.
+  - Tag is `生活日志`.
+  - Final title is `堪堪赶上，也是赶上`.
+  - No embedded media files were found in the Word document.
+  - Refreshed HTML asset query strings to `bar-art-20260630-barely-caught-up`.
+  - Visual verification skipped by project preference.
+- [x] Fixed Word publishing wizard preview robustness on 2026-06-30:
+  - Forced UTF-8 output in `tools/publish_docx.ps1` and `tools/publish_docx_wizard.ps1`.
+  - Changed built-in category tags in `tools/publish_docx_wizard.ps1` to Unicode-codepoint construction so PowerShell does not mojibake them.
+  - Changed `tools/publish_docx.py --dry-run` so preview does not copy embedded media.
+  - Verified Chinese publishing-helper output without creating site files.
+  - Visual verification skipped by project preference.
 - [x] Added reusable Word publishing automation on 2026-06-30:
   - Added `tools/publish_docx.py` for dependency-free `.docx` extraction and static page generation.
   - Added `tools/publish_docx.ps1` so PowerShell users can run the helper without remembering the Python path.
