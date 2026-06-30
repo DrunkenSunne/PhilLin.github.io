@@ -2,6 +2,24 @@
 
 Last updated: 2026-06-30
 
+## 2026-06-30 Word Publishing Automation Added
+
+User reported that repeated document publishing consumes too many chat tokens and asked for an automated way to save context.
+
+- Added `tools/publish_docx.py`, a dependency-free Python helper that reads `.docx` text and embedded images directly from the Word zip/XML structure.
+- Added `tools/publish_docx.ps1`, a PowerShell wrapper that finds system Python, `py -3`, or Codex bundled Python.
+- Added `tools/publish_docx_wizard.ps1`, an interactive terminal wizard that lets the user drag a `.docx` into the terminal, choose note/article, fill optional metadata, preview, and confirm publishing.
+- Added root `publish-word.bat` as a double-click launcher for the wizard, so the user does not need to find the Codex terminal.
+- The helper can publish either a bar note or normal article:
+  - `--kind note` generates `note-*.html` and writes `window.BAR_NOTES`.
+  - `--kind article` generates `article-*.html` and writes `window.BAR_POSTS`.
+- The helper supports manual overrides for title, summary, slug, tag, mood, date, article info, and endnote, plus `--dry-run`, `--force`, `--no-cache-refresh`, and `--no-agent-log`.
+- The helper extracts embedded media to `assets/posts/<id>/`, refreshes shared HTML asset query strings, and can append publication records to `AGENT_CONTEXT.md`, `AGENT_TODO.md`, `AGENT_CHANGELOG.md`, and `AGENT_HANDOFF.md`.
+- Updated `README.md` with copyable PowerShell examples and the recommended verification commands.
+- Added a minimal `.gitignore` to ignore Python cache files such as `__pycache__/` and `*.pyc`.
+- Visual verification was skipped by project preference because this change adds tooling and documentation rather than a new visual page.
+- Rollback: delete `publish-word.bat`, `tools/publish_docx.py`, `tools/publish_docx.ps1`, and `tools/publish_docx_wizard.ps1`, remove the new README automation section and `.gitignore` if it is not otherwise needed, and remove this changelog/context/todo/handoff entry.
+
 ## 2026-06-30 Word Bar Note Published - Eleven Floor Elevator
 
 User provided `D:\Download\1.docx` and asked Codex to publish it, filling in missing elements.

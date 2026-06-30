@@ -4,6 +4,18 @@ Last updated: 2026-06-30
 
 This file externalizes the verified phase-one project context. Do not treat chat history or auto summaries as authoritative. Reconfirm current state from repository files, command output, and validation results before future development.
 
+## 2026-06-30 Word Publishing Automation Added
+
+- Added `tools/publish_docx.py` as a dependency-free Word publishing helper for this static GitHub Pages site.
+- Added `tools/publish_docx.ps1` as a PowerShell wrapper that tries system Python, `py -3`, and the bundled Codex Python runtime.
+- Added `tools/publish_docx_wizard.ps1` as an interactive terminal wizard for non-technical use: drag in a `.docx`, choose note/article, optionally fill title/summary/slug/date, preview, then confirm publishing.
+- Added root `publish-word.bat` so the user can double-click a file instead of finding a terminal manually.
+- The helper reads `.docx` text and embedded images directly, generates either `note-*.html` or `article-*.html`, extracts images to `assets/posts/<id>/`, inserts metadata into `assets/content.js`, refreshes HTML asset query strings, and can append publication notes to the four `AGENT_*.md` files.
+- `README.md` now documents the normal command, common flags, dry-run mode, and recommended post-run checks.
+- Added a minimal `.gitignore` for Python cache files generated while checking the publishing helper.
+- The script reduces repeated token-heavy publishing work by moving boilerplate HTML generation, metadata insertion, cache refresh, and agent-state logging into a deterministic local command.
+- Visual verification was skipped by project preference; this was a tooling/documentation change, not a visually inspected page change.
+
 ## 2026-06-30 Word Bar Note Published - Eleven Floor Elevator
 
 - User provided `D:\Download\1.docx` and asked Codex to publish it, filling in missing publication elements.
