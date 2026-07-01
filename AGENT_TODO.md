@@ -44,6 +44,13 @@ Use this file before starting phase two or any future multi-file work. Do not re
 
 ## 3. Phase-Two Candidate Tasks
 
+- [x] Removed Word publishing tooling on 2026-07-01:
+  - Deleted `tools/publish_docx.py`, `tools/publish_docx.ps1`, `tools/publish_docx_wizard.ps1`, and `publish-word.bat`.
+  - Deleted generated/tooling residue: `tools/__pycache__/`, `.publish-diagnosis-002723/`, and the Python-only `.gitignore`.
+  - Removed README instructions for Word automation and Hexo installation/deployment examples.
+  - Kept the static website files, existing published articles/notes, shared assets, and metadata.
+  - Visual verification skipped by project preference.
+
 - [x] Published 2026-06-30 Word life log from `C:\Users\Phil Lin\Desktop\临时用\260630.docx`:
   - Generated `article-barely-caught-up.html` with `tools/publish_docx.py`.
   - Added metadata id `barely-caught-up` to `assets/content.js`.

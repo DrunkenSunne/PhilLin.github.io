@@ -2,6 +2,17 @@
 
 Last updated: 2026-07-01
 
+## 2026-07-01 Word Publishing Tooling Removed
+
+User asked Codex to inspect the whole website folder and remove the Word publishing software plus all related test software, keeping only the website.
+
+- Deleted `tools/publish_docx.py`, `tools/publish_docx.ps1`, `tools/publish_docx_wizard.ps1`, and root `publish-word.bat`.
+- Deleted generated/tooling residue: `tools/__pycache__/`, `.publish-diagnosis-002723/`, and the Python-only `.gitignore`.
+- Removed README sections that documented Word publishing automation and Hexo installation/deployment examples.
+- Kept static website pages, published article/note HTML files, shared assets, `assets/content.js`, `assets/site.js`, `assets/styles.css`, and `assets/gripes.js`.
+- Visual verification was skipped by project preference because this was a filesystem/tooling cleanup.
+- Rollback: restore the deleted tooling files and `.gitignore` from git if the Word publishing workflow is needed again, then restore the removed README sections from git.
+
 ## 2026-06-30 Word Life Log Published - Barely Caught Up
 
 User provided `C:\Users\Phil Lin\Desktop\临时用\260630.docx`, clarified it is a `生活日志`, and left the title to Codex.

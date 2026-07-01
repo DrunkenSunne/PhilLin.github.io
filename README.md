@@ -71,18 +71,6 @@
 - 右侧栏保留 `article-aside`，放文章标签和“回到文章归档”按钮
 - 如果文章有图片，放到 `assets/posts/<文章id>/`，不要把大图或 base64 放进 `assets/content.js`
 
-Hexo 方式：
-
-```bash
-npm install -g hexo-cli
-hexo init my-blog
-cd my-blog
-npm install
-hexo new "文章标题"
-hexo server
-```
-
-文章会出现在 `source/_posts`，用 Markdown 编辑即可。
 
 ## 新增酒柜记录
 
@@ -133,65 +121,6 @@ hexo server
 
 在 `gallery.html` 的 `gallery-grid` 中复制一个 `photo-tile` 模块，修改标题和状态即可。如果要展示真实照片，把模块内容改成图片和文字说明，并把图片放入 `assets` 文件夹。
 
-## 从 Word 转文章
-
-如果提供 Word 文档，可以把 Word 里的文字和图片转换成一篇独立文章 HTML：图片放入 `assets/posts/文章名/`，正文写入 `article-文章名.html`，再在 `assets/content.js` 中新增一条摘要索引。
-
-### 自动发布 Word 文档
-
-仓库内有自动化脚本 `tools/publish_docx.py`。PowerShell 下建议用包装脚本：
-
-```powershell
-.\tools\publish_docx.ps1 "D:\Download\1.docx" --kind note
-```
-
-更省心的方式是运行交互式向导：
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\tools\publish_docx_wizard.ps1
-```
-
-如果不想找终端，直接双击仓库根目录里的 `publish-word.bat`，它会自动打开同一个向导。
-
-向导会一步一步问：
-
-1. 把 Word 文件从文件夹拖进终端窗口，然后按回车。
-2. 选择 `1` 吧台札记，或 `2` 正式文章。
-3. 如果是正式文章，选择分类；如果是札记，填写或跳过心情词。
-4. 标题、摘要、英文文件名、发布日期都可以直接回车跳过。
-5. 先预览，确认没有问题后再输入 `y` 正式发布。
-
-常用参数：
-
-- `--kind note`：发布为吧台札记，生成 `note-*.html`，写入 `window.BAR_NOTES`
-- `--kind article`：发布为正式文章，生成 `article-*.html`，写入 `window.BAR_POSTS`
-- `--tag "生活日志"` / `--tag "一些思绪"` / `--tag "种草安利"` / `--tag "吧台札记"`：手动指定分类
-- `--title "标题"`：不用 Word 第一段当标题时使用
-- `--summary "摘要"`：手动指定首页和归档摘要
-- `--slug "short-english-slug"`：手动指定文件名和 metadata id
-- `--mood "小事救场"`：给吧台札记指定心情
-- `--dry-run`：只预览将要生成的文件名和索引，不写文件
-- `--no-agent-log`：只改网站文件，不自动写 `AGENT_*.md`
-
-默认会自动完成：
-
-1. 读取 Word 正文，首段作为标题。
-2. 提取 Word 内图片到 `assets/posts/<id>/`。
-3. 生成独立 HTML 页面。
-4. 在 `assets/content.js` 插入索引。
-5. 刷新 HTML 里的资源版本号，避免缓存。
-6. 追加 `AGENT_CONTEXT.md`、`AGENT_TODO.md`、`AGENT_CHANGELOG.md`、`AGENT_HANDOFF.md` 的发布记录。
-
-发布后仍建议运行：
-
-```powershell
-node --check assets/content.js
-node --check assets/site.js
-node --check assets/gripes.js
-git status --short
-git diff --stat
-```
-
 ## 部署到 GitHub Pages
 
 1. 创建 GitHub 仓库 `Phillin-lrz.github.io`
@@ -201,25 +130,3 @@ git diff --stat
 5. 等待部署完成后访问 `https://phillin-lrz.github.io/`
 
 用户名变更后，请确认仓库名和远程地址都使用 `Phillin-lrz.github.io`，这样 GitHub Pages 才会作为个人主页发布。
-
-如果使用 Hexo，可安装部署插件：
-
-```bash
-npm install hexo-deployer-git --save
-```
-
-在 Hexo 的 `_config.yml` 中配置：
-
-```yaml
-deploy:
-  type: git
-  repo: https://github.com/Phillin-lrz/Phillin-lrz.github.io.git
-  branch: main
-```
-
-然后执行：
-
-```bash
-hexo clean
-hexo deploy
-```

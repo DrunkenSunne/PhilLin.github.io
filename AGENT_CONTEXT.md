@@ -4,6 +4,15 @@ Last updated: 2026-07-01
 
 This file externalizes the verified phase-one project context. Do not treat chat history or auto summaries as authoritative. Reconfirm current state from repository files, command output, and validation results before future development.
 
+## 2026-07-01 Word Publishing Tooling Removed
+
+- User asked to inspect the whole website folder and remove the Word publishing software plus related test/diagnosis software, keeping only the website.
+- Removed the Word publishing helper files: `tools/publish_docx.py`, `tools/publish_docx.ps1`, `tools/publish_docx_wizard.ps1`, and root `publish-word.bat`.
+- Removed generated/tooling residue: `tools/__pycache__/`, `.publish-diagnosis-002723/`, and the Python-only `.gitignore`.
+- `README.md` no longer documents the Word publishing automation or Hexo install/deploy examples; future maintenance should use direct static HTML/CSS/JS file edits.
+- The static website content files, article/note pages, shared assets, and metadata files were intentionally kept.
+- Visual verification was skipped by project preference because this was a filesystem/tooling cleanup, not a visual layout change.
+
 ## 2026-06-30 Word Publishing Wizard Encoding Fix
 
 - User reported the Word publishing wizard failed during preview for `C:\Users\Phil Lin\Desktop\临时用\260630.docx`.
