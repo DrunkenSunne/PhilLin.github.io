@@ -2,6 +2,8 @@
 
 Last updated: 2026-07-01
 
+2026-07-02 gripe: user provided `预防医学给人一种一拳打在棉花上但是整个人被棉花闷死的感觉。`. Added the sixteenth gripe to `assets/gripes.js` with mood `窒息`, emoji `🫠`, and timestamp `2026-07-02 12:58:54`. Public and draft HTML asset query strings were refreshed to `bar-art-20260702-preventive-medicine-gripe`. Visual verification was skipped by project preference.
+
 2026-07-01 cleanup: user asked to inspect the whole website folder and remove the Word publishing software plus related test/diagnosis software, keeping only the website. Removed `tools/publish_docx.py`, `tools/publish_docx.ps1`, `tools/publish_docx_wizard.ps1`, root `publish-word.bat`, `tools/__pycache__/`, `.publish-diagnosis-002723/`, and the Python-only `.gitignore`. README no longer documents Word automation or Hexo install/deploy examples. Static website pages, published articles/notes, shared assets, and metadata were kept. Visual verification was skipped by project preference.
 
 2026-06-30 Word life log: user provided `C:\Users\Phil Lin\Desktop\临时用\260630.docx`, clarified it is a `生活日志`, and left the title to Codex. Final article is `article-barely-caught-up.html`, title `堪堪赶上，也是赶上`, publication date `2026-06-30`, summary `一篇关于雨天赶路、取样实验、药理复习、大创立项和夜里收细胞的生活日志：很多事情都不是没有进展，只是人在考试前一天一直追着安排跑，最后只能承认，堪堪赶上也是赶上。`, metadata id `barely-caught-up`, and asset query string `bar-art-20260630-barely-caught-up`. The Word document contained no embedded media files. Visual verification was skipped by project preference.
@@ -144,6 +146,7 @@ Follow-up after phase-one sealing:
 - Published the thirteenth gripe with mood `无语`, emoji `😶`, and timestamp `2026-06-26 23:24:04`.
 - Published the fourteenth gripe with mood `心虚`, emoji `🙈`, and timestamp `2026-06-27 18:29:25`.
 - Published the fifteenth gripe with mood `被照顾到`, emoji `🥹`, timestamp `2026-06-28 18:42:19`, and detail page `gripe-gpt-kindness.html`.
+- Published the sixteenth gripe with mood `窒息`, emoji `🫠`, and timestamp `2026-07-02 12:58:54`.
 
 - Project-level preference localized from user request: skip visual verification by default unless the user explicitly asks later or a higher-priority instruction requires it.
 - Abstract redesign follow-up:
@@ -194,9 +197,9 @@ Follow-up after phase-one sealing:
   - CSS-only drink glyphs, dot fields, line grids, polygon overlays, and a menu-board home layout.
   - `assets/site.js` adds a pointer-following bar cursor and drink-name hover labels for menu items.
   - `assets/styles.css` now also includes shared Tonight, Playlist, Cellar, article-reading, mobile navigation, and reduced-motion polish.
-- Current general cache-busting query string is `bar-art-20260629-mobile-tags`.
+- Current general cache-busting query string is `bar-art-20260702-preventive-medicine-gripe`.
 - Gripe rail:
-  - `assets/gripes.js` stores static `window.BAR_GRIPES` entries; it currently contains fifteen entries.
+  - `assets/gripes.js` stores static `window.BAR_GRIPES` entries; it currently contains sixteen entries.
   - Entries may include optional `detailUrl`; `assets/site.js` renders a `查看截图` link only for entries with that field.
   - `assets/site.js` injects the rail and handles page-size calculation and pagination.
   - `assets/styles.css` positions the rail on the right for desktop and makes it responsive on narrower screens.

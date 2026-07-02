@@ -44,6 +44,14 @@ Use this file before starting phase two or any future multi-file work. Do not re
 
 ## 3. Phase-Two Candidate Tasks
 
+- [x] Published 2026-07-02 gripe:
+  - Text: `预防医学给人一种一拳打在棉花上但是整个人被棉花闷死的感觉。`
+  - Chosen mood: `窒息`.
+  - Emoji: `🫠`.
+  - Timestamp: `2026-07-02 12:58:54`.
+  - Refreshed public and draft HTML asset query strings to `bar-art-20260702-preventive-medicine-gripe`.
+  - Visual verification skipped by project preference.
+
 - [x] Removed Word publishing tooling on 2026-07-01:
   - Deleted `tools/publish_docx.py`, `tools/publish_docx.ps1`, `tools/publish_docx_wizard.ps1`, and `publish-word.bat`.
   - Deleted generated/tooling residue: `tools/__pycache__/`, `.publish-diagnosis-002723/`, and the Python-only `.gitignore`.

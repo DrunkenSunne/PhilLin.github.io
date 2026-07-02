@@ -90,4 +90,10 @@ window.BAR_GRIPES = [
     publishedAt: "2026-06-28 18:42:19",
     detailUrl: "gripe-gpt-kindness.html",
   },
+  {
+    text: "预防医学给人一种一拳打在棉花上但是整个人被棉花闷死的感觉。",
+    mood: "窒息",
+    emoji: "🫠",
+    publishedAt: "2026-07-02 12:58:54",
+  },
 ];

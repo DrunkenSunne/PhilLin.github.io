@@ -2,6 +2,18 @@
 
 Last updated: 2026-07-01
 
+## 2026-07-02 Gripe Added - Preventive Medicine Cotton
+
+User provided a short gripe and asked implicitly through the established workflow to publish it.
+
+- Added a sixteenth `window.BAR_GRIPES` entry to `assets/gripes.js`.
+- Published gripe: `预防医学给人一种一拳打在棉花上但是整个人被棉花闷死的感觉。`
+- Chose mood `窒息`, emoji `🫠`, and timestamp `2026-07-02 12:58:54`.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260702-preventive-medicine-gripe` so the gripe rail loads the updated data.
+- Updated `AGENT_CONTEXT.md`, `AGENT_TODO.md`, and `AGENT_HANDOFF.md` so future recovery sees the current gripe count and latest entry.
+- Visual verification was skipped by project preference.
+- Rollback: remove the sixteenth entry from `assets/gripes.js`, restore the previous HTML asset query string from git, and remove this changelog/context/todo/handoff entry if reverting the publication.
+
 ## 2026-07-01 Word Publishing Tooling Removed
 
 User asked Codex to inspect the whole website folder and remove the Word publishing software plus all related test software, keeping only the website.

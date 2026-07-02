@@ -4,6 +4,14 @@ Last updated: 2026-07-01
 
 This file externalizes the verified phase-one project context. Do not treat chat history or auto summaries as authoritative. Reconfirm current state from repository files, command output, and validation results before future development.
 
+## 2026-07-02 Gripe Added - Preventive Medicine Cotton
+
+- User provided a short gripe: `预防医学给人一种一拳打在棉花上但是整个人被棉花闷死的感觉。`
+- Added the sixteenth `window.BAR_GRIPES` entry to `assets/gripes.js`.
+- Chosen mood is `窒息`, emoji `🫠`, timestamp `2026-07-02 12:58:54`.
+- Public and draft HTML asset query strings were refreshed to `bar-art-20260702-preventive-medicine-gripe`.
+- Visual verification was skipped by project preference; this was a data/cache update, not a layout change.
+
 ## 2026-07-01 Word Publishing Tooling Removed
 
 - User asked to inspect the whole website folder and remove the Word publishing software plus related test/diagnosis software, keeping only the website.
@@ -247,7 +255,7 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - The site now has a right-side `吐槽` rail rendered by `assets/site.js` on pages that load `assets/content.js`.
 - Static gripe entries are stored in `window.BAR_GRIPES` inside `assets/gripes.js`; this is the GitHub Pages-compatible data pool, not a server database.
 - Each gripe entry contains `text`, `mood`, `emoji`, and `publishedAt` with second-level precision.
-- `assets/gripes.js` currently contains fifteen gripe entries.
+- `assets/gripes.js` currently contains sixteen gripe entries.
 - The first gripe is published with mood `烦恼`, emoji `😫`, and timestamp `2026-06-11 12:40:15`.
 - The second gripe is published with mood `无语`, emoji `😶`, and timestamp `2026-06-12 12:29:58`.
 - The third gripe is published with mood `迷幻`, emoji `😵‍💫`, and timestamp `2026-06-13 23:05:56`.
@@ -263,6 +271,7 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - The thirteenth gripe is published with mood `无语`, emoji `😶`, and timestamp `2026-06-26 23:24:04`.
 - The fourteenth gripe is published with mood `心虚`, emoji `🙈`, and timestamp `2026-06-27 18:29:25`.
 - The fifteenth gripe is published with mood `被照顾到`, emoji `🥹`, timestamp `2026-06-28 18:42:19`, and detail page `gripe-gpt-kindness.html`.
+- The sixteenth gripe is published with mood `窒息`, emoji `🫠`, and timestamp `2026-07-02 12:58:54`.
 - Gripe entries may include optional `detailUrl`; `assets/site.js` renders a small detail link only when this field is present.
 - The rail calculates a per-page display count from page height and uses previous/next pagination for additional gripes.
 - Desktop layout reserves right-side space for the rail; narrow screens show it as a normal responsive block.
