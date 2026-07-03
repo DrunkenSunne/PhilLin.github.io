@@ -44,6 +44,14 @@ Use this file before starting phase two or any future multi-file work. Do not re
 
 ## 3. Phase-Two Candidate Tasks
 
+- [x] Added place cards and visit pages for 2026-07-03 制冰铺 Making Gelato, Q太郎, and ZOOMINN:
+  - 制冰铺 Making Gelato is a `甜品店`, with visit score 9.3 and flavors `茉莉花茶`, `红心芭乐`, `豆腐花`.
+  - Q太郎 is a `餐厅`, with dishes `奶油明太子乌冬面` and `盐烤烧鸟`; visit score is 9.0.
+  - ZOOMINN is a `酒吧`, with drinks `杨桃撞墙`, `岩X菲仕`, `Whisky Sour`, `Pina Colada`, and `荔枝+带气泡私人订制`; visit score is 9.2.
+  - Added stable place archive pages plus independent visit/article pages for all three places.
+  - Updated `assets/site.js` so place cards calculate total score from scored visits and show `待评分` when no score exists yet.
+  - Visual verification skipped by project preference; residual risk is exact chip wrapping without browser inspection.
+
 - [x] Added explicit GitHub Pages deployment workflow after dynamic Pages deploys failed/stuck:
   - Added `.github/workflows/pages.yml` with `push` and `workflow_dispatch` triggers.
   - The workflow builds a clean `_site` artifact with repository-only files excluded.

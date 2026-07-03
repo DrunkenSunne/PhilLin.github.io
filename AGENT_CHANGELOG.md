@@ -2,6 +2,30 @@
 
 Last updated: 2026-07-03
 
+## 2026-07-03 Place Cards Batch - Making Gelato, Q Taro, ZOOMINN
+
+User provided three Word documents and clarified the place types: 制冰铺 Making Gelato is a dessert shop, Q太郎 is a restaurant, and ZOOMINN is a bar.
+
+- Extracted the document text from all three `.docx` files.
+- Added final visit/article pages:
+  - `article-making-gelato-20260703.html`
+  - `article-q-taro-20260703.html`
+  - `article-zoominn-20260703.html`
+- Added stable place archive pages:
+  - `place-making-gelato.html`
+  - `place-q-taro.html`
+  - `place-zoominn.html`
+- Added all three visits to `BAR_POSTS` and all three place cards to `BAR_PLACES` in `assets/content.js`.
+- 制冰铺 Making Gelato is scored 9.3 and lists `茉莉花茶`, `红心芭乐`, and `豆腐花`.
+- Q太郎 lists `奶油明太子乌冬面` and `盐烤烧鸟`; visit score is 9.0.
+- ZOOMINN is recorded as a bar and lists this visit's drinks: `杨桃撞墙`, `岩X菲仕`, `Whisky Sour`, `Pina Colada`, and `荔枝+带气泡私人订制`; visit score is 9.2.
+- Updated Sober Company-Ash from 8.2 to 9.0 in the data and place page to honor the user's prior score correction.
+- Updated `assets/site.js` so place cards calculate total score from scored visits and display `待评分` when no visit score exists.
+- Added a small CSS state for unscored place stamps.
+- Refreshed key HTML asset query strings to `bar-art-20260703-place-batch`.
+- Visual verification was skipped by project preference.
+- Rollback: delete the six new `article-*` / `place-*` files, remove the three new `BAR_POSTS` entries and three new `BAR_PLACES` entries, revert the score helper changes in `assets/site.js`, remove `.review-stamp.is-unscored` from `assets/styles.css`, restore Sober Company-Ash score values if desired, restore the previous asset query string from git, and remove this changelog/context/todo/handoff entry.
+
 ## 2026-07-03 Pages Deployment Recovery Workflow
 
 User reported GitHub Pages deploy failures at `actions/deploy-pages@v5`, then queued dynamic `pages-build-deployment` runs that could not be cancelled, run, or re-run from the GitHub UI.

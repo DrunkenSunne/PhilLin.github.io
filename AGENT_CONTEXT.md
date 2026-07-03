@@ -4,6 +4,18 @@ Last updated: 2026-07-03
 
 This file externalizes the verified phase-one project context. Do not treat chat history or auto summaries as authoritative. Reconfirm current state from repository files, command output, and validation results before future development.
 
+## 2026-07-03 Place Cards Batch - Making Gelato, Q Taro, ZOOMINN
+
+- User provided three Word documents and clarified place types: 制冰铺 Making Gelato is a dessert shop, Q太郎 is a restaurant, and ZOOMINN is a bar.
+- Added three stable place archive pages: `place-making-gelato.html`, `place-q-taro.html`, and `place-zoominn.html`.
+- Added three independent visit/article pages: `article-making-gelato-20260703.html`, `article-q-taro-20260703.html`, and `article-zoominn-20260703.html`.
+- Added the three places and visits to `assets/content.js` under `BAR_POSTS` and `BAR_PLACES`.
+- 制冰铺 Making Gelato is scored 9.3 for this visit; Sober Company-Ash was updated to 9.0 per the user's prior score correction.
+- Q太郎 is scored 9.0 for this visit, and ZOOMINN is scored 9.2 for this visit.
+- ZOOMINN is a bar, so its visit records list the drinks consumed: `杨桃撞墙`, `岩X菲仕`, `Whisky Sour`, `Pina Colada`, and `荔枝+带气泡私人订制`.
+- `assets/site.js` now calculates place-card scores from scored visits and displays an unscored stamp when a place has no scored visits yet.
+- Visual verification was skipped by project preference; residual risk is exact wrapping of the new long drink and dish chips on narrow screens.
+
 ## 2026-07-03 Pages Deployment Recovery
 
 - GitHub's dynamic `pages-build-deployment` workflow repeatedly reached `actions/deploy-pages@v5` and then failed with `Deployment failed, try again later`; later dynamic runs became stuck in `Queued`, and the user could not cancel, run, or re-run them from the GitHub UI.

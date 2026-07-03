@@ -480,12 +480,42 @@ function drinkList(drinks = []) {
   return `<span class="visit-drinks">${items.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}</span>`;
 }
 
+function visitItems(visit) {
+  return visit.drinks || visit.items || visit.dishes || [];
+}
+
 function placeVisits(place) {
   return reviewArray(place.visits).sort((a, b) => {
     const dateDiff = new Date(b.date || b.visitAt || 0).getTime() - new Date(a.date || a.visitAt || 0).getTime();
     if (dateDiff) return dateDiff;
     return Number(b.no || 0) - Number(a.no || 0);
   });
+}
+
+function placeScore(place) {
+  const scores = placeVisits(place).map((visit) => Number(visit.score)).filter(Number.isFinite);
+  if (scores.length) {
+    return scores.reduce((total, score) => total + score, 0) / scores.length;
+  }
+  const fallback = Number(place.overallScore || place.score);
+  return Number.isFinite(fallback) && fallback > 0 ? fallback : null;
+}
+
+function scoreStamp(score) {
+  if (score === null) {
+    return `
+      <div class="review-stamp is-unscored" aria-label="待评分">
+        <span>--</span>
+        <small>待评分</small>
+      </div>
+    `;
+  }
+  return `
+    <div class="review-stamp" aria-label="总评分 ${score.toFixed(1)} 分">
+      <span>${score.toFixed(1)}</span>
+      <small>/ 10</small>
+    </div>
+  `;
 }
 
 function visitTimeline(place) {
@@ -499,7 +529,7 @@ function visitTimeline(place) {
           <span>#${String(visit.no || 1).padStart(2, "0")}</span>
           <strong>${escapeHtml(visit.label || visit.title || "一次到访")}</strong>
           <small>${escapeHtml(visit.date || "")}${visit.score ? ` · ${Number(visit.score).toFixed(1)}` : ""}</small>
-          ${drinkList(visit.drinks)}
+          ${drinkList(visitItems(visit))}
         </a>
       `).join("")}
     </div>
@@ -514,17 +544,14 @@ function reviewCard(review, index) {
   const area = escapeHtml(review.area || "地点待补");
   const visits = placeVisits(review);
   const date = escapeHtml(review.latestVisitAt || review.date || visits[0]?.date || "日期待补");
-  const score = Number(review.overallScore || review.score || 0);
+  const score = placeScore(review);
   const url = review.url ? escapeHtml(review.url) : "";
   const visitCount = Number(review.visitCount || visits.length || 0);
   const visitMeta = visitCount ? ` · ${visitCount} 次记录` : "";
   const readMore = url ? `<a class="read-more" href="${url}">打开店铺档案</a>` : "";
   return `
     <article class="cellar-card review-card${index === 0 ? " featured" : ""}">
-      <div class="review-stamp" aria-label="总评分 ${score.toFixed(1)} 分">
-        <span>${score.toFixed(1)}</span>
-        <small>/ 10</small>
-      </div>
+      ${scoreStamp(score)}
       <div class="cellar-card-main">
         <span class="post-date">${type} · ${area} · 最近 ${date}${visitMeta}</span>
         <h2>${name}</h2>

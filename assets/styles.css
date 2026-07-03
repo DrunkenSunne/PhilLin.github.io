@@ -4459,6 +4459,11 @@ body::after {
   line-height: 1;
 }
 
+.review-stamp.is-unscored {
+  border-style: dashed;
+  color: var(--muted);
+}
+
 .review-card h2 {
   max-width: calc(100% - 4.6rem);
 }
