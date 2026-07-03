@@ -1,6 +1,24 @@
 # AGENT_CHANGELOG
 
-Last updated: 2026-07-01
+Last updated: 2026-07-03
+
+## 2026-07-03 Private-Place Repeat-Visit Structure - DEMO
+
+User chose the A+D design: a stable place archive plus receipt-like independent visit records, so each repeat visit remains separate while still reading as the same place.
+
+- Added `place-demo.html` as the first stable place archive page.
+- Added `article-demo-hambagu.html` as `DEMO #01`.
+- Added `window.BAR_PLACES` to `assets/content.js`, with `DEMO` as a long-term place record.
+- Added a `BAR_POSTS` entry for `demo-hambagu`, including `placeId`, `visitId`, `visitNo`, `visitAt`, `visitLabel`, and `visitScore`.
+- Added one fallback `BAR_REVIEWS` card for `DEMO`, pointing to `place-demo.html`.
+- Updated `assets/site.js` so `reviews.html` renders from `BAR_PLACES` when present, shows visit receipt timelines on place cards, and links place cards to place archive pages.
+- Removed the `适合独处` and `适合聊天` filter chips from `reviews.html`.
+- Updated `article-demo-hambagu.html` so the sidebar identifies the article as `DEMO #01` and links back to `place-demo.html`.
+- Added place archive and visit-receipt styles to `assets/styles.css`.
+- Added a `Communication rule` section to `AGENTS.md`.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260703-place-visits`.
+- Visual verification was skipped by project preference.
+- Rollback: delete `place-demo.html` and `article-demo-hambagu.html`, remove `BAR_PLACES`, the `demo-hambagu` post, and the fallback `DEMO` review from `assets/content.js`, revert the review rendering additions in `assets/site.js`, remove the place/visit CSS additions, restore the two filter-chip buttons in `reviews.html` if desired, remove the new `AGENTS.md` communication rule section if reverting that instruction, restore the previous asset query string from git, and remove this changelog/context/todo/handoff entry.
 
 ## 2026-07-02 Gripe Added - Preventive Medicine Cotton
 
@@ -9,7 +27,7 @@ User provided a short gripe and asked implicitly through the established workflo
 - Added a sixteenth `window.BAR_GRIPES` entry to `assets/gripes.js`.
 - Published gripe: `预防医学给人一种一拳打在棉花上但是整个人被棉花闷死的感觉。`
 - Chose mood `窒息`, emoji `🫠`, and timestamp `2026-07-02 12:58:54`.
-- Refreshed public and draft HTML asset query strings to `bar-art-20260702-preventive-medicine-gripe` so the gripe rail loads the updated data.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260703-place-visits` so the gripe rail loads the updated data.
 - Updated `AGENT_CONTEXT.md`, `AGENT_TODO.md`, and `AGENT_HANDOFF.md` so future recovery sees the current gripe count and latest entry.
 - Visual verification was skipped by project preference.
 - Rollback: remove the sixteenth entry from `assets/gripes.js`, restore the previous HTML asset query string from git, and remove this changelog/context/todo/handoff entry if reverting the publication.
@@ -245,7 +263,7 @@ User provided a broader site-direction request for subtraction, darker mature pr
 - Rewrote `reviews.html` copy and controls around `Cellar Map` / 私人夜间地图.
 - Replaced cocktail-only `BAR_REVIEWS` placeholder fields with structured visit-review data for night places.
 - Updated `assets/site.js` so review cards render total score, tags, subratings, one-line conclusion, notes, recommended scenes, suitable scenes, and unsuitable scenes.
-- Added lightweight review filters for all, 酒吧, 餐厅, 咖啡, 夜宵, 适合独处, and 适合聊天.
+- Added lightweight review filters for all, 酒吧, 餐厅, 咖啡, and 小店.
 - Added a final `assets/styles.css` override layer for darker old-brass palette, lower grid/canvas emphasis, restrained hover motion, page-specific note/mixtape/contact-sheet metaphors, responsive review cards, and receipt-like gripe rail styling.
 - Kept the homepage `I flutter in circle never landing on nothing` lyric unchanged with the `Fruit Fly` source label.
 - Follow-up: updated the homepage `酒柜` card copy so it points to bars, restaurants, cafes, and night places instead of cocktail-only tasting notes.

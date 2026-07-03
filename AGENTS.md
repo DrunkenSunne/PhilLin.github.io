@@ -8,6 +8,10 @@ Use this file as the primary Codex project-level instruction entry. Keep busines
 
 This project uses repository-level state files to prevent loss of important information during long Codex sessions, automatic context compaction, summarization, or truncated conversation history.
 
+### Communication rule
+
+Codex must not send optional commentary. Only send user-facing messages when they are necessary for clarification, blocker reporting, or final completion.
+
 Before starting any non-trivial work in this project, Codex must first read:
 
 - `AGENT_CONTEXT.md`

@@ -474,14 +474,44 @@ function chipList(items = []) {
   return reviewArray(items).map((item) => `<span>${escapeHtml(item)}</span>`).join("");
 }
 
+function placeVisits(place) {
+  return reviewArray(place.visits).sort((a, b) => {
+    const dateDiff = new Date(b.date || b.visitAt || 0).getTime() - new Date(a.date || a.visitAt || 0).getTime();
+    if (dateDiff) return dateDiff;
+    return Number(b.no || 0) - Number(a.no || 0);
+  });
+}
+
+function visitTimeline(place) {
+  const visits = placeVisits(place).slice(0, 4);
+  if (!visits.length) return "";
+  return `
+    <div class="visit-timeline" aria-label="${escapeHtml(place.name || "去处")} 到访记录">
+      <span class="mini-label">Visit Receipts</span>
+      ${visits.map((visit) => `
+        <a class="visit-mini" href="${escapeHtml(visit.url || "#")}">
+          <span>#${String(visit.no || 1).padStart(2, "0")}</span>
+          <strong>${escapeHtml(visit.label || visit.title || "一次到访")}</strong>
+          <small>${escapeHtml(visit.date || "")}${visit.score ? ` · ${Number(visit.score).toFixed(1)}` : ""}</small>
+        </a>
+      `).join("")}
+    </div>
+  `;
+}
+
 function reviewCard(review, index) {
   const ratings = review.ratings || {};
   const ratingKeys = ["atmosphere", "foodDrink", "value", "solo", "revisit"];
   const name = escapeHtml(review.name || review.title || "未命名去处");
   const type = escapeHtml(review.type || "去处");
   const area = escapeHtml(review.area || "地点待补");
-  const date = escapeHtml(review.date || "日期待补");
-  const score = Number(review.score || 0);
+  const visits = placeVisits(review);
+  const date = escapeHtml(review.latestVisitAt || review.date || visits[0]?.date || "日期待补");
+  const score = Number(review.overallScore || review.score || 0);
+  const url = review.url ? escapeHtml(review.url) : "";
+  const visitCount = Number(review.visitCount || visits.length || 0);
+  const visitMeta = visitCount ? ` · ${visitCount} 次记录` : "";
+  const readMore = url ? `<a class="read-more" href="${url}">打开店铺档案</a>` : "";
   return `
     <article class="cellar-card review-card${index === 0 ? " featured" : ""}">
       <div class="review-stamp" aria-label="总评分 ${score.toFixed(1)} 分">
@@ -489,11 +519,13 @@ function reviewCard(review, index) {
         <small>/ 10</small>
       </div>
       <div class="cellar-card-main">
-        <span class="post-date">${type} · ${area} · ${date}</span>
+        <span class="post-date">${type} · ${area} · 最近 ${date}${visitMeta}</span>
         <h2>${name}</h2>
         <p class="review-oneline">${escapeHtml(review.oneLine || "今晚先记到这里。")}</p>
         <p>${escapeHtml(review.notes || "")}</p>
         <div class="review-tags">${chipList(review.tags)}</div>
+        ${visitTimeline(review)}
+        ${readMore}
       </div>
       <div class="review-scorecard">
         <div class="review-ratings">
@@ -511,7 +543,7 @@ function reviewCard(review, index) {
 
 function renderReviewList(filter = "all") {
   document.querySelectorAll("[data-review-list]").forEach((container) => {
-    const reviews = (window.BAR_REVIEWS || []).filter((review) => reviewMatches(review, filter));
+    const reviews = (window.BAR_PLACES || window.BAR_REVIEWS || []).filter((review) => reviewMatches(review, filter));
     container.innerHTML = reviews.length
       ? reviews.map((review, index) => reviewCard(review, index)).join("")
       : '<article class="cellar-card review-card"><span class="post-date">Place Map</span><h2>这一格还空着</h2><p>没有符合筛选的去处。换一个标签，或者等下次回来再补。</p></article>';

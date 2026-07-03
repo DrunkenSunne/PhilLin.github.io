@@ -1,15 +1,31 @@
 # AGENT_CONTEXT
 
-Last updated: 2026-07-01
+Last updated: 2026-07-03
 
 This file externalizes the verified phase-one project context. Do not treat chat history or auto summaries as authoritative. Reconfirm current state from repository files, command output, and validation results before future development.
+
+## 2026-07-03 Private-Place Repeat-Visit Structure - DEMO
+
+- User chose the A+D structure for `私藏`: each place gets a stable place archive, and each visit gets its own independent article/receipt so repeat visits do not overwrite or blend together.
+- Added `place-demo.html` as the first place archive page for `DEMO`.
+- Added `article-demo-hambagu.html` as `DEMO #01`.
+- Added `window.BAR_PLACES` to `assets/content.js`; `DEMO` is now a long-term place record with `overallScore`, `latestVisitAt`, `visitCount`, and a `visits` timeline.
+- Added one `BAR_POSTS` metadata entry for `demo-hambagu`, with visit metadata: `placeId`, `visitId`, `visitNo`, `visitAt`, `visitLabel`, and `visitScore`.
+- Added one fallback `BAR_REVIEWS` card for `DEMO`, now pointing to `place-demo.html`.
+- Updated `assets/site.js` so `reviews.html` renders from `BAR_PLACES` when present, shows visit receipts on cards, and links place cards to the place archive instead of directly to a single article.
+- Updated `article-demo-hambagu.html` sidebar so it is clearly `DEMO #01` and links back to `place-demo.html`.
+- Removed the `适合独处` and `适合聊天` filter chips from `reviews.html` / `私藏`.
+- Added shared CSS for place archive pages and visit-receipt timelines in `assets/styles.css`.
+- Added a project-level communication rule to `AGENTS.md`: Codex must not send optional commentary, and should only send user-facing messages when necessary for clarification, blocker reporting, or final completion.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260703-place-visits`.
+- Visual verification was skipped by project preference; residual visual risk is exact place-card and receipt wrapping on real viewports.
 
 ## 2026-07-02 Gripe Added - Preventive Medicine Cotton
 
 - User provided a short gripe: `预防医学给人一种一拳打在棉花上但是整个人被棉花闷死的感觉。`
 - Added the sixteenth `window.BAR_GRIPES` entry to `assets/gripes.js`.
 - Chosen mood is `窒息`, emoji `🫠`, timestamp `2026-07-02 12:58:54`.
-- Public and draft HTML asset query strings were refreshed to `bar-art-20260702-preventive-medicine-gripe`.
+- Public and draft HTML asset query strings were refreshed to `bar-art-20260703-place-visits`.
 - Visual verification was skipped by project preference; this was a data/cache update, not a layout change.
 
 ## 2026-07-01 Word Publishing Tooling Removed
@@ -171,7 +187,7 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - Current asset query string is `bar-art-20260627-places`.
 - `reviews.html` is no longer cocktail-only placeholder content. It is now a private night-place map for bars, restaurants, cafes, late-night food, and other places.
 - `window.BAR_REVIEWS` now uses structured visit-review fields: name, type, area, date, total score, tags, subratings, one-line conclusion, notes, recommended scenes, good-for, and not-for lists.
-- `assets/site.js` renders the new review card structure and lightweight filters for all, 酒吧, 餐厅, 咖啡, 夜宵, 适合独处, and 适合聊天.
+- `assets/site.js` renders the new review card structure and lightweight filters for all, 酒吧, 餐厅, 咖啡, and 小店.
 - `assets/styles.css` has a quiet cellar override layer: darker old-brass palette, lower grid/canvas emphasis, more restrained hover movement, paper/note/mixtape/contact-sheet metaphors for secondary pages, receipt-like gripe rail, and responsive review-card rules.
 - Homepage `Fruit Fly` lyric plate remains unchanged and keeps the original lyric; the prior dot/line/decorative shelf remains removed.
 - Visual verification was skipped by project preference; residual risk is exact mobile/tablet visual balance, especially review-card wrapping and homepage lyric typography.

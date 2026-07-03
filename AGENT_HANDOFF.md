@@ -1,8 +1,10 @@
 # AGENT_HANDOFF
 
-Last updated: 2026-07-01
+Last updated: 2026-07-03
 
-2026-07-02 gripe: user provided `预防医学给人一种一拳打在棉花上但是整个人被棉花闷死的感觉。`. Added the sixteenth gripe to `assets/gripes.js` with mood `窒息`, emoji `🫠`, and timestamp `2026-07-02 12:58:54`. Public and draft HTML asset query strings were refreshed to `bar-art-20260702-preventive-medicine-gripe`. Visual verification was skipped by project preference.
+2026-07-03 private-place repeat-visit structure: user chose A+D, meaning stable place archive pages plus receipt-like independent visit records. `place-demo.html` is now the stable archive for `DEMO`; `article-demo-hambagu.html` is `DEMO #01`. `assets/content.js` now has `window.BAR_PLACES`, with `DEMO` carrying long-term place metadata, `overallScore`, `latestVisitAt`, `visitCount`, and a `visits` list. The `demo-hambagu` post has `placeId: "demo"`, `visitId: "demo-20260703-lunch"`, `visitNo: 1`, `visitAt: "2026-07-03"`, `visitLabel: "中午版"`, and `visitScore: 8.7`. `assets/site.js` renders `reviews.html` from `BAR_PLACES` when present, adds a small visit-receipt timeline to place cards, and links the `DEMO` card to `place-demo.html` instead of directly to the article. `article-demo-hambagu.html` sidebar marks the article as `DEMO #01` and links back to `place-demo.html`. `reviews.html` no longer shows the `适合独处` or `适合聊天` filter chips. `AGENTS.md` now says Codex must not send optional commentary. `assets/styles.css` has place archive and receipt timeline styles. Current asset query string is `bar-art-20260703-place-visits`. Visual verification was skipped by project preference; residual risk is exact place-card/timeline wrapping on real devices.
+
+2026-07-02 gripe: user provided `预防医学给人一种一拳打在棉花上但是整个人被棉花闷死的感觉。`. Added the sixteenth gripe to `assets/gripes.js` with mood `窒息`, emoji `🫠`, and timestamp `2026-07-02 12:58:54`. Public and draft HTML asset query strings were refreshed to `bar-art-20260703-place-visits`. Visual verification was skipped by project preference.
 
 2026-07-01 cleanup: user asked to inspect the whole website folder and remove the Word publishing software plus related test/diagnosis software, keeping only the website. Removed `tools/publish_docx.py`, `tools/publish_docx.ps1`, `tools/publish_docx_wizard.ps1`, root `publish-word.bat`, `tools/__pycache__/`, `.publish-diagnosis-002723/`, and the Python-only `.gitignore`. README no longer documents Word automation or Hexo install/deploy examples. Static website pages, published articles/notes, shared assets, and metadata were kept. Visual verification was skipped by project preference.
 
@@ -197,7 +199,7 @@ Follow-up after phase-one sealing:
   - CSS-only drink glyphs, dot fields, line grids, polygon overlays, and a menu-board home layout.
   - `assets/site.js` adds a pointer-following bar cursor and drink-name hover labels for menu items.
   - `assets/styles.css` now also includes shared Tonight, Playlist, Cellar, article-reading, mobile navigation, and reduced-motion polish.
-- Current general cache-busting query string is `bar-art-20260702-preventive-medicine-gripe`.
+- Current general cache-busting query string is `bar-art-20260703-place-visits`.
 - Gripe rail:
   - `assets/gripes.js` stores static `window.BAR_GRIPES` entries; it currently contains sixteen entries.
   - Entries may include optional `detailUrl`; `assets/site.js` renders a `查看截图` link only for entries with that field.

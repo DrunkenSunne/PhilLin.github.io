@@ -1,6 +1,6 @@
 # AGENT_TODO
 
-Last updated: 2026-07-01
+Last updated: 2026-07-03
 
 Use this file before starting phase two or any future multi-file work. Do not rely on chat history as the only source of truth.
 
@@ -44,12 +44,25 @@ Use this file before starting phase two or any future multi-file work. Do not re
 
 ## 3. Phase-Two Candidate Tasks
 
+- [x] Implemented A+D private-place repeat-visit structure for `DEMO`:
+  - Added `place-demo.html` as a stable place archive page.
+  - Added `article-demo-hambagu.html` as `DEMO #01`.
+  - Added `window.BAR_PLACES` to `assets/content.js` for long-term place records.
+  - Added `demo-hambagu` to `BAR_POSTS` with visit metadata, so the article is clearly `DEMO` visit `#01`.
+  - Added one fallback `BAR_REVIEWS` card for `DEMO`, pointing to `place-demo.html`.
+  - Updated `assets/site.js` so `reviews.html` renders place cards from `BAR_PLACES`, links cards to place archives, and shows a small visit-receipt timeline.
+  - Removed the `适合独处` and `适合聊天` category filter chips from `reviews.html` / `私藏`.
+  - Added place archive and receipt styles to `assets/styles.css`.
+  - Added the `AGENTS.md` communication rule that Codex must not send optional commentary except when necessary for clarification, blocker reporting, or final completion.
+  - Refreshed HTML asset query strings to `bar-art-20260703-place-visits`.
+  - Visual verification skipped by project preference; residual risk is exact card/timeline wrapping without browser inspection.
+
 - [x] Published 2026-07-02 gripe:
   - Text: `预防医学给人一种一拳打在棉花上但是整个人被棉花闷死的感觉。`
   - Chosen mood: `窒息`.
   - Emoji: `🫠`.
   - Timestamp: `2026-07-02 12:58:54`.
-  - Refreshed public and draft HTML asset query strings to `bar-art-20260702-preventive-medicine-gripe`.
+  - Refreshed public and draft HTML asset query strings to `bar-art-20260703-place-visits`.
   - Visual verification skipped by project preference.
 
 - [x] Removed Word publishing tooling on 2026-07-01:
@@ -163,7 +176,7 @@ Use this file before starting phase two or any future multi-file work. Do not re
   - Removed `友链` from the main navigation while keeping `friends.html` reachable through footer/About links.
   - Kept the homepage `Fruit Fly` lyric unchanged as an epigraph and did not restore the removed homepage shelf decoration.
   - Reframed `酒柜` as a private night-place map instead of cocktail-only notes.
-  - Added structured visit-review fields and lightweight filters for `全部`, `酒吧`, `餐厅`, `咖啡`, `夜宵`, `适合独处`, and `适合聊天`.
+  - Added structured visit-review fields and lightweight filters for `全部`, `酒吧`, `餐厅`, `咖啡`, and `小店`.
   - Added a darker old-brass visual override layer, quieter decoration/motion, page-metaphor styling, and receipt-like gripe rail styling.
   - Current asset query string is `bar-art-20260627-places`.
   - Final verification still needs the project-level Git diff/status and JS syntax checks before reporting completion.

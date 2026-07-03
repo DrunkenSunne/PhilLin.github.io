@@ -4552,6 +4552,144 @@ body::after {
   margin: 0;
 }
 
+.visit-timeline {
+  display: grid;
+  gap: 0.45rem;
+  margin-top: 1rem;
+  border-top: 1px dashed rgba(184, 137, 71, 0.18);
+  padding-top: 0.85rem;
+}
+
+.visit-mini,
+.visit-receipt {
+  border: 1px dashed rgba(184, 137, 71, 0.24);
+  border-radius: 6px;
+  background:
+    linear-gradient(180deg, rgba(234, 215, 181, 0.045), rgba(10, 6, 4, 0.04)),
+    rgba(12, 7, 5, 0.28);
+}
+
+.visit-mini {
+  display: grid;
+  grid-template-columns: 2.7rem minmax(0, 1fr) auto;
+  gap: 0.55rem;
+  align-items: center;
+  padding: 0.52rem 0.6rem;
+  color: #d8bf92;
+  font-size: 0.78rem;
+}
+
+.visit-mini span,
+.visit-no {
+  color: var(--accent-strong);
+  font-family: "Courier New", monospace;
+  font-weight: 900;
+}
+
+.visit-mini strong,
+.visit-mini small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.visit-mini small {
+  color: var(--muted);
+}
+
+.place-heading {
+  max-width: 860px;
+}
+
+.place-file {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(17rem, 0.8fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.place-summary-card,
+.place-ledger,
+.visit-receipt {
+  position: relative;
+  border: 1px solid rgba(184, 137, 71, 0.2);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  background:
+    radial-gradient(circle at 92% 10%, rgba(184, 137, 71, 0.1), transparent 9rem),
+    linear-gradient(135deg, rgba(234, 215, 181, 0.055), rgba(10, 6, 4, 0.05)),
+    rgba(18, 11, 8, 0.86);
+  box-shadow: var(--shadow);
+}
+
+.place-summary-card h2,
+.place-ledger h2 {
+  font-size: clamp(1.45rem, 3vw, 2rem);
+}
+
+.place-summary-card .review-stamp {
+  top: 1.2rem;
+  right: 1.2rem;
+}
+
+.place-ledger dl {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+}
+
+.place-ledger div {
+  border-bottom: 1px dashed rgba(184, 137, 71, 0.16);
+  padding-bottom: 0.55rem;
+}
+
+.place-ledger dt {
+  color: var(--accent-strong);
+  font-size: 0.74rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.place-ledger dd {
+  margin: 0.1rem 0 0;
+  color: #e6c891;
+}
+
+.place-visits {
+  display: grid;
+  gap: 1rem;
+  padding-bottom: 4rem;
+}
+
+.section-heading h2 {
+  margin-bottom: 0;
+}
+
+.visit-receipt {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr);
+  gap: 1rem;
+  transition: transform 260ms ease, border-color 260ms ease, box-shadow 260ms ease;
+}
+
+.visit-receipt:hover {
+  transform: translateY(-2px);
+  border-color: rgba(184, 137, 71, 0.42);
+  box-shadow:
+    0 18px 54px rgba(0, 0, 0, 0.48),
+    0 0 24px rgba(184, 137, 71, 0.08);
+}
+
+.visit-no {
+  display: grid;
+  width: 3.2rem;
+  height: 3.2rem;
+  place-items: center;
+  border: 1px solid rgba(184, 137, 71, 0.36);
+  border-radius: 50%;
+  background: rgba(12, 7, 5, 0.54);
+}
+
 .gripe-rail {
   border-color: rgba(184, 137, 71, 0.22);
   border-radius: 6px;
