@@ -2,6 +2,23 @@
 
 Last updated: 2026-07-03
 
+## 2026-07-03 Bar Review Published - Sober Company-Ash
+
+User provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260703-Ash.docx` and asked to upload the Sober Company-Ash review. User emphasized that this is a bar and that each bar visit should list the drinks consumed.
+
+- Extracted the Word document text and confirmed no embedded media files were present.
+- Published the review as a `种草安利` article because it is a full bar/place review.
+- Generated final static article file `article-sober-company-ash-20260703.html`.
+- Generated stable place archive file `place-sober-company-ash.html`.
+- Added metadata id `sober-company-ash-20260703` to `assets/content.js`.
+- Added Sober Company-Ash to `window.BAR_PLACES` with type `酒吧`, area `复兴公园 / INS 新乐园`, visit count, ratings, long-term place notes, and a visit receipt.
+- Recorded the 2026-07-03 drinks in `BAR_POSTS`, `BAR_PLACES.visits`, the article body/sidebar, and the place receipt: `KOKUTO DE LEQUIO x Dark Roasted Blend`, `Farmer's Spritz`, and `Mango Daiquiri`.
+- Updated `assets/site.js` so place visit receipts can render drink chips when a visit has `drinks`.
+- Updated `assets/styles.css` with shared drink-list and drink-pill styles.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260703-ash-bar`.
+- Visual verification was skipped by project preference.
+- Rollback: delete `article-sober-company-ash-20260703.html` and `place-sober-company-ash.html`, remove the `sober-company-ash-20260703` post and Sober Company-Ash place/review entries from `assets/content.js`, remove the drink receipt rendering additions from `assets/site.js` if unused, remove the drink-list CSS if unused, restore the previous asset query string from git, and remove this changelog/context/todo/handoff entry.
+
 ## 2026-07-03 Private-Place Repeat-Visit Structure - DEMO
 
 User chose the A+D design: a stable place archive plus receipt-like independent visit records, so each repeat visit remains separate while still reading as the same place.
@@ -16,7 +33,7 @@ User chose the A+D design: a stable place archive plus receipt-like independent 
 - Updated `article-demo-hambagu.html` so the sidebar identifies the article as `DEMO #01` and links back to `place-demo.html`.
 - Added place archive and visit-receipt styles to `assets/styles.css`.
 - Added a `Communication rule` section to `AGENTS.md`.
-- Refreshed public and draft HTML asset query strings to `bar-art-20260703-place-visits`.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260703-ash-bar`.
 - Visual verification was skipped by project preference.
 - Rollback: delete `place-demo.html` and `article-demo-hambagu.html`, remove `BAR_PLACES`, the `demo-hambagu` post, and the fallback `DEMO` review from `assets/content.js`, revert the review rendering additions in `assets/site.js`, remove the place/visit CSS additions, restore the two filter-chip buttons in `reviews.html` if desired, remove the new `AGENTS.md` communication rule section if reverting that instruction, restore the previous asset query string from git, and remove this changelog/context/todo/handoff entry.
 
@@ -27,7 +44,7 @@ User provided a short gripe and asked implicitly through the established workflo
 - Added a sixteenth `window.BAR_GRIPES` entry to `assets/gripes.js`.
 - Published gripe: `预防医学给人一种一拳打在棉花上但是整个人被棉花闷死的感觉。`
 - Chose mood `窒息`, emoji `🫠`, and timestamp `2026-07-02 12:58:54`.
-- Refreshed public and draft HTML asset query strings to `bar-art-20260703-place-visits` so the gripe rail loads the updated data.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260703-ash-bar` so the gripe rail loads the updated data.
 - Updated `AGENT_CONTEXT.md`, `AGENT_TODO.md`, and `AGENT_HANDOFF.md` so future recovery sees the current gripe count and latest entry.
 - Visual verification was skipped by project preference.
 - Rollback: remove the sixteenth entry from `assets/gripes.js`, restore the previous HTML asset query string from git, and remove this changelog/context/todo/handoff entry if reverting the publication.

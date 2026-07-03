@@ -2,6 +2,21 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利", "吧台札记
 
 window.BAR_POSTS = [
   {
+    id: "sober-company-ash-20260703",
+    title: "Sober Company-Ash：咖啡、鸡尾酒和一个下午的三杯酒",
+    tag: "种草安利",
+    publishedAt: "2026-07-03",
+    placeId: "sober-company-ash",
+    visitId: "sober-company-ash-20260703-afternoon",
+    visitNo: 1,
+    visitAt: "2026-07-03",
+    visitLabel: "下午初访",
+    visitScore: 8.2,
+    drinks: ["KOKUTO DE LEQUIO x Dark Roasted Blend", "Farmer's Spritz", "Mango Daiquiri"],
+    summary: "一篇关于 Sober Company 一楼 Ash 的酒吧测评：从黑糖与深烘浓缩的厚重开场，到猕猴桃、西芹、罗勒和 prosecco 的清爽，再到一杯像清爽版椰林飘香的 Mango Daiquiri。",
+    url: "article-sober-company-ash-20260703.html",
+  },
+  {
     id: "demo-hambagu",
     title: "DEMO（中午版）：Hambagu",
     tag: "种草安利",
@@ -146,6 +161,43 @@ window.BAR_NOTES = [
 
 window.BAR_PLACES = [
   {
+    id: "sober-company-ash",
+    name: "Sober Company-Ash",
+    type: "酒吧",
+    area: "复兴公园 / INS 新乐园",
+    firstVisitedAt: "2026-07-03",
+    latestVisitAt: "2026-07-03",
+    visitCount: 1,
+    overallScore: 8.2,
+    url: "place-sober-company-ash.html",
+    tags: ["酒吧", "咖啡鸡尾酒", "Espresso Martini", "下午小酌"],
+    ratings: {
+      atmosphere: 8,
+      foodDrink: 8.3,
+      value: 7.8,
+      solo: 8.4,
+      revisit: 8.2,
+    },
+    oneLine: "从 Kissa 改成 Ash 之后，一楼更像咖啡和鸡尾酒之间的全天候入口，轻松、清爽，也和楼上的 Sakaba、里面的 tipsy 分得更开。",
+    notes: "这张卡是 Sober Company-Ash 的长期档案；每次到访会单独写成 visit receipt，并把当次喝到的酒列出来，避免不同日期的测评混在一起。",
+    recommended: ["Farmer's Spritz", "KOKUTO DE LEQUIO x Dark Roasted Blend", "工作日下班后小酌"],
+    goodFor: ["下午喝咖啡或咖啡鸡尾酒", "想要轻松但不太吵的酒吧体验", "想避开经典酒单、试试 Ash 概念的人"],
+    notFor: ["需要插座久坐工作", "只想喝强烈酒感", "期待非常复杂或攻击性的风味"],
+    visits: [
+      {
+        id: "sober-company-ash-20260703-afternoon",
+        no: 1,
+        title: "Sober Company-Ash：咖啡、鸡尾酒和一个下午的三杯酒",
+        label: "下午初访",
+        date: "2026-07-03",
+        score: 8.2,
+        url: "article-sober-company-ash-20260703.html",
+        drinks: ["KOKUTO DE LEQUIO x Dark Roasted Blend", "Farmer's Spritz", "Mango Daiquiri"],
+        summary: "第一张到访小票：黑糖深烘浓缩、Farmer's Spritz、Mango Daiquiri，顺手记录 Ash 从咖啡店到酒吧之间的新定位。",
+      },
+    ],
+  },
+  {
     id: "demo",
     name: "DEMO",
     type: "餐厅",
@@ -184,6 +236,27 @@ window.BAR_PLACES = [
 ];
 
 window.BAR_REVIEWS = [
+  {
+    name: "Sober Company-Ash",
+    type: "酒吧",
+    area: "复兴公园 / INS 新乐园",
+    date: "2026-07",
+    score: 8.2,
+    url: "place-sober-company-ash.html",
+    tags: ["酒吧", "咖啡鸡尾酒", "Espresso Martini", "下午小酌"],
+    ratings: {
+      atmosphere: 8,
+      foodDrink: 8.3,
+      value: 7.8,
+      solo: 8.4,
+      revisit: 8.2,
+    },
+    oneLine: "从 Kissa 改成 Ash 之后，一楼更像咖啡和鸡尾酒之间的全天候入口，轻松、清爽，也和楼上的 Sakaba、里面的 tipsy 分得更开。",
+    notes: "这张卡是 Sober Company-Ash 的长期档案；每次到访会单独写成 visit receipt，并把当次喝到的酒列出来，避免不同日期的测评混在一起。",
+    recommended: ["Farmer's Spritz", "KOKUTO DE LEQUIO x Dark Roasted Blend", "工作日下班后小酌"],
+    goodFor: ["下午喝咖啡或咖啡鸡尾酒", "想要轻松但不太吵的酒吧体验", "想避开经典酒单、试试 Ash 概念的人"],
+    notFor: ["需要插座久坐工作", "只想喝强烈酒感", "期待非常复杂或攻击性的风味"],
+  },
   {
     name: "DEMO",
     type: "餐厅",

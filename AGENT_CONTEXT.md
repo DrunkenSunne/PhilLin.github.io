@@ -4,6 +4,20 @@ Last updated: 2026-07-03
 
 This file externalizes the verified phase-one project context. Do not treat chat history or auto summaries as authoritative. Reconfirm current state from repository files, command output, and validation results before future development.
 
+## 2026-07-03 Bar Review Published - Sober Company-Ash
+
+- User provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260703-Ash.docx` and asked to publish it as a Sober Company-Ash review.
+- Published it as a `种草安利` article because it is a full bar/place review.
+- Added `article-sober-company-ash-20260703.html` as Sober Company-Ash visit `#01`.
+- Added `place-sober-company-ash.html` as the stable place archive for Sober Company-Ash.
+- Added Sober Company-Ash to `window.BAR_PLACES` with type `酒吧`, area `复兴公园 / INS 新乐园`, long-term ratings, and a visit timeline.
+- Added metadata id `sober-company-ash-20260703` to `window.BAR_POSTS`, with `placeId`, `visitId`, `visitNo`, `visitAt`, `visitLabel`, `visitScore`, and the drinks consumed during this visit.
+- Today's drinks were recorded in the article, the article sidebar, the place archive receipt, and the data model: `KOKUTO DE LEQUIO x Dark Roasted Blend`, `Farmer's Spritz`, and `Mango Daiquiri`.
+- Updated `assets/site.js` so visit receipts can render a drink list when visit data includes `drinks`.
+- Added shared drink-list chip styles in `assets/styles.css`.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260703-ash-bar`.
+- Visual verification was skipped by project preference; residual visual risk is exact wrapping of long English drink names on narrow screens.
+
 ## 2026-07-03 Private-Place Repeat-Visit Structure - DEMO
 
 - User chose the A+D structure for `私藏`: each place gets a stable place archive, and each visit gets its own independent article/receipt so repeat visits do not overwrite or blend together.
@@ -17,7 +31,7 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - Removed the `适合独处` and `适合聊天` filter chips from `reviews.html` / `私藏`.
 - Added shared CSS for place archive pages and visit-receipt timelines in `assets/styles.css`.
 - Added a project-level communication rule to `AGENTS.md`: Codex must not send optional commentary, and should only send user-facing messages when necessary for clarification, blocker reporting, or final completion.
-- Refreshed public and draft HTML asset query strings to `bar-art-20260703-place-visits`.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260703-ash-bar`.
 - Visual verification was skipped by project preference; residual visual risk is exact place-card and receipt wrapping on real viewports.
 
 ## 2026-07-02 Gripe Added - Preventive Medicine Cotton
@@ -25,7 +39,7 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - User provided a short gripe: `预防医学给人一种一拳打在棉花上但是整个人被棉花闷死的感觉。`
 - Added the sixteenth `window.BAR_GRIPES` entry to `assets/gripes.js`.
 - Chosen mood is `窒息`, emoji `🫠`, timestamp `2026-07-02 12:58:54`.
-- Public and draft HTML asset query strings were refreshed to `bar-art-20260703-place-visits`.
+- Public and draft HTML asset query strings were refreshed to `bar-art-20260703-ash-bar`.
 - Visual verification was skipped by project preference; this was a data/cache update, not a layout change.
 
 ## 2026-07-01 Word Publishing Tooling Removed

@@ -474,6 +474,12 @@ function chipList(items = []) {
   return reviewArray(items).map((item) => `<span>${escapeHtml(item)}</span>`).join("");
 }
 
+function drinkList(drinks = []) {
+  const items = reviewArray(drinks);
+  if (!items.length) return "";
+  return `<span class="visit-drinks">${items.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}</span>`;
+}
+
 function placeVisits(place) {
   return reviewArray(place.visits).sort((a, b) => {
     const dateDiff = new Date(b.date || b.visitAt || 0).getTime() - new Date(a.date || a.visitAt || 0).getTime();
@@ -493,6 +499,7 @@ function visitTimeline(place) {
           <span>#${String(visit.no || 1).padStart(2, "0")}</span>
           <strong>${escapeHtml(visit.label || visit.title || "一次到访")}</strong>
           <small>${escapeHtml(visit.date || "")}${visit.score ? ` · ${Number(visit.score).toFixed(1)}` : ""}</small>
+          ${drinkList(visit.drinks)}
         </a>
       `).join("")}
     </div>

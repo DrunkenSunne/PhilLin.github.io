@@ -4597,6 +4597,35 @@ body::after {
   color: var(--muted);
 }
 
+.visit-drinks {
+  grid-column: 2 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.visit-drinks span,
+.drink-pill {
+  display: inline-flex;
+  max-width: 100%;
+  align-items: center;
+  border: 1px solid rgba(184, 137, 71, 0.2);
+  border-radius: 999px;
+  padding: 0.16rem 0.48rem;
+  background: rgba(184, 137, 71, 0.08);
+  color: #e6c891;
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
+.drink-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+
 .place-heading {
   max-width: 860px;
 }

@@ -44,6 +44,17 @@ Use this file before starting phase two or any future multi-file work. Do not re
 
 ## 3. Phase-Two Candidate Tasks
 
+- [x] Published 2026-07-03 Sober Company-Ash bar review:
+  - Extracted text from `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260703-Ash.docx`.
+  - Added `article-sober-company-ash-20260703.html` as Sober Company-Ash visit `#01`.
+  - Added `place-sober-company-ash.html` as the stable place archive.
+  - Added `sober-company-ash-20260703` to `BAR_POSTS` with repeat-visit metadata.
+  - Added Sober Company-Ash to `BAR_PLACES` as type `酒吧`.
+  - Recorded the visit drinks in both the data model and visible pages: `KOKUTO DE LEQUIO x Dark Roasted Blend`, `Farmer's Spritz`, and `Mango Daiquiri`.
+  - Updated visit receipt rendering and drink-chip CSS so future bar visits can list the consumed drinks in an orderly way.
+  - Refreshed HTML asset query strings to `bar-art-20260703-ash-bar`.
+  - Visual verification skipped by project preference; residual risk is exact long-drink-name wrapping without browser inspection.
+
 - [x] Implemented A+D private-place repeat-visit structure for `DEMO`:
   - Added `place-demo.html` as a stable place archive page.
   - Added `article-demo-hambagu.html` as `DEMO #01`.
@@ -54,7 +65,7 @@ Use this file before starting phase two or any future multi-file work. Do not re
   - Removed the `适合独处` and `适合聊天` category filter chips from `reviews.html` / `私藏`.
   - Added place archive and receipt styles to `assets/styles.css`.
   - Added the `AGENTS.md` communication rule that Codex must not send optional commentary except when necessary for clarification, blocker reporting, or final completion.
-  - Refreshed HTML asset query strings to `bar-art-20260703-place-visits`.
+  - Refreshed HTML asset query strings to `bar-art-20260703-ash-bar`.
   - Visual verification skipped by project preference; residual risk is exact card/timeline wrapping without browser inspection.
 
 - [x] Published 2026-07-02 gripe:
@@ -62,7 +73,7 @@ Use this file before starting phase two or any future multi-file work. Do not re
   - Chosen mood: `窒息`.
   - Emoji: `🫠`.
   - Timestamp: `2026-07-02 12:58:54`.
-  - Refreshed public and draft HTML asset query strings to `bar-art-20260703-place-visits`.
+  - Refreshed public and draft HTML asset query strings to `bar-art-20260703-ash-bar`.
   - Visual verification skipped by project preference.
 
 - [x] Removed Word publishing tooling on 2026-07-01:
