@@ -2,6 +2,50 @@
 
 Last updated: 2026-07-03
 
+## 2026-07-03 Place Score Adjustment
+
+User asked to change 制冰铺 Making Gelato to `9.3` and Sober Company-Ash to `9.0`.
+
+- Updated `assets/content.js` scores for the two current first visits and place totals.
+- Updated fallback review scores for the two places.
+- Updated `place-making-gelato.html` and `place-sober-company-ash.html` fallback score text.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260703-score-adjust`.
+- Visual verification was skipped by project preference.
+- Rollback: restore the two scores to their previous values (`8.4` and `8.2`), restore the previous asset query string from git, and remove this changelog/context/todo/handoff entry.
+
+## 2026-07-03 Place Score Automation
+
+User asked to list all place scores and make future visit scores automatically update both the visit score and the total place score.
+
+- Updated `assets/site.js` so `visit.score` values are the source of truth for rendered place totals.
+- Place total score is now calculated as the average of scored visits when visit scores exist.
+- Renderer falls back to `overallScore` / `score` only when there are no scored visits.
+- Added a place score board renderer for `reviews.html`.
+- Added per-place score ledgers and per-visit score rows to review cards.
+- Added dynamic score hooks for place archive pages via `data-place-score-stamp` and `data-place-score-panel`.
+- Updated `place-demo.html`, `place-sober-company-ash.html`, and `place-making-gelato.html` to use those score hooks.
+- Added score-board and score-ledger CSS in `assets/styles.css`.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260703-score-adjust`.
+- Visual verification was skipped by project preference.
+- Rollback: remove the score helper/rendering functions from `assets/site.js`, remove the `Score Ledger` section from `reviews.html`, remove `data-place-score-*` hooks from place pages, remove the score CSS from `assets/styles.css`, restore the previous asset query string from git, and remove this changelog/context/todo/handoff entry.
+
+## 2026-07-03 Place Review Published - 制冰铺 Making Gelato
+
+User provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260703-制冰铺 Making Gelato.docx` and asked to publish it.
+
+- Extracted the Word document text and confirmed no embedded media files were present.
+- Published the review as a `种草安利` article because it is a short place/gelato recommendation.
+- Generated final static article file `article-making-gelato-20260703.html`.
+- Generated stable place archive file `place-making-gelato.html`.
+- Added metadata id `making-gelato-20260703` to `assets/content.js`.
+- Added 制冰铺 Making Gelato to `window.BAR_PLACES` with type `小店`, visit count, ratings, long-term place notes, and a visit receipt.
+- Recorded the 2026-07-03 flavors in `BAR_POSTS`, `BAR_PLACES.visits`, the article body/sidebar, and the place receipt: `茉莉花茶`, `红心芭乐`, and `豆腐花`.
+- Updated `assets/site.js` so place visit receipts can render taste chips when a visit has `tastes`.
+- Updated `assets/styles.css` with shared taste-list and taste-pill styles.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260703-score-adjust`.
+- Visual verification was skipped by project preference.
+- Rollback: delete `article-making-gelato-20260703.html` and `place-making-gelato.html`, remove the `making-gelato-20260703` post and 制冰铺 Making Gelato place/review entries from `assets/content.js`, remove the taste receipt rendering additions from `assets/site.js` if unused, remove the taste-list CSS if unused, restore the previous asset query string from git, and remove this changelog/context/todo/handoff entry.
+
 ## 2026-07-03 Bar Review Published - Sober Company-Ash
 
 User provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260703-Ash.docx` and asked to upload the Sober Company-Ash review. User emphasized that this is a bar and that each bar visit should list the drinks consumed.
@@ -15,7 +59,7 @@ User provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\2026070
 - Recorded the 2026-07-03 drinks in `BAR_POSTS`, `BAR_PLACES.visits`, the article body/sidebar, and the place receipt: `KOKUTO DE LEQUIO x Dark Roasted Blend`, `Farmer's Spritz`, and `Mango Daiquiri`.
 - Updated `assets/site.js` so place visit receipts can render drink chips when a visit has `drinks`.
 - Updated `assets/styles.css` with shared drink-list and drink-pill styles.
-- Refreshed public and draft HTML asset query strings to `bar-art-20260703-ash-bar`.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260703-score-adjust`.
 - Visual verification was skipped by project preference.
 - Rollback: delete `article-sober-company-ash-20260703.html` and `place-sober-company-ash.html`, remove the `sober-company-ash-20260703` post and Sober Company-Ash place/review entries from `assets/content.js`, remove the drink receipt rendering additions from `assets/site.js` if unused, remove the drink-list CSS if unused, restore the previous asset query string from git, and remove this changelog/context/todo/handoff entry.
 
@@ -33,7 +77,7 @@ User chose the A+D design: a stable place archive plus receipt-like independent 
 - Updated `article-demo-hambagu.html` so the sidebar identifies the article as `DEMO #01` and links back to `place-demo.html`.
 - Added place archive and visit-receipt styles to `assets/styles.css`.
 - Added a `Communication rule` section to `AGENTS.md`.
-- Refreshed public and draft HTML asset query strings to `bar-art-20260703-ash-bar`.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260703-score-adjust`.
 - Visual verification was skipped by project preference.
 - Rollback: delete `place-demo.html` and `article-demo-hambagu.html`, remove `BAR_PLACES`, the `demo-hambagu` post, and the fallback `DEMO` review from `assets/content.js`, revert the review rendering additions in `assets/site.js`, remove the place/visit CSS additions, restore the two filter-chip buttons in `reviews.html` if desired, remove the new `AGENTS.md` communication rule section if reverting that instruction, restore the previous asset query string from git, and remove this changelog/context/todo/handoff entry.
 
@@ -44,7 +88,7 @@ User provided a short gripe and asked implicitly through the established workflo
 - Added a sixteenth `window.BAR_GRIPES` entry to `assets/gripes.js`.
 - Published gripe: `预防医学给人一种一拳打在棉花上但是整个人被棉花闷死的感觉。`
 - Chose mood `窒息`, emoji `🫠`, and timestamp `2026-07-02 12:58:54`.
-- Refreshed public and draft HTML asset query strings to `bar-art-20260703-ash-bar` so the gripe rail loads the updated data.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260703-score-adjust` so the gripe rail loads the updated data.
 - Updated `AGENT_CONTEXT.md`, `AGENT_TODO.md`, and `AGENT_HANDOFF.md` so future recovery sees the current gripe count and latest entry.
 - Visual verification was skipped by project preference.
 - Rollback: remove the sixteenth entry from `assets/gripes.js`, restore the previous HTML asset query string from git, and remove this changelog/context/todo/handoff entry if reverting the publication.

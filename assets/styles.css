@@ -4560,6 +4560,100 @@ body::after {
   padding-top: 0.85rem;
 }
 
+.scoreboard-section {
+  display: grid;
+  gap: 0.8rem;
+  margin: 1.2rem 0 1.4rem;
+}
+
+.place-scoreboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 0.7rem;
+}
+
+.place-score-card,
+.place-score-panel {
+  border: 1px dashed rgba(184, 137, 71, 0.26);
+  border-radius: 6px;
+  background:
+    linear-gradient(180deg, rgba(234, 215, 181, 0.045), rgba(10, 6, 4, 0.04)),
+    rgba(12, 7, 5, 0.3);
+}
+
+.place-score-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.2rem 0.7rem;
+  align-items: center;
+  padding: 0.75rem 0.85rem;
+  color: #e6c891;
+}
+
+.place-score-card span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.place-score-card strong,
+.place-score-panel strong {
+  color: var(--accent-strong);
+  font-family: "Courier New", monospace;
+  font-size: 1.35rem;
+}
+
+.place-score-card small,
+.place-score-panel small {
+  grid-column: 1 / -1;
+  color: var(--muted);
+}
+
+.place-score-panel {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 0.9rem;
+  padding: 0.8rem;
+}
+
+.place-score-panel > div:first-child {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.1rem 0.6rem;
+  align-items: end;
+}
+
+.place-score-panel .mini-label,
+.place-score-panel small {
+  grid-column: 1 / -1;
+}
+
+.place-score-rows {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.place-score-rows a {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.6rem;
+  align-items: center;
+  border-top: 1px dashed rgba(184, 137, 71, 0.14);
+  padding-top: 0.35rem;
+  color: #d8bf92;
+  font-size: 0.8rem;
+}
+
+.place-score-rows span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.place-score-rows strong {
+  font-size: 0.95rem;
+}
+
 .visit-mini,
 .visit-receipt {
   border: 1px dashed rgba(184, 137, 71, 0.24);
@@ -4606,7 +4700,8 @@ body::after {
 }
 
 .visit-drinks span,
-.drink-pill {
+.drink-pill,
+.taste-pill {
   display: inline-flex;
   max-width: 100%;
   align-items: center;
@@ -4619,7 +4714,8 @@ body::after {
   line-height: 1.35;
 }
 
-.drink-list {
+.drink-list,
+.taste-list {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
