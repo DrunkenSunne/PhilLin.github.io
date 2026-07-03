@@ -44,33 +44,6 @@ Use this file before starting phase two or any future multi-file work. Do not re
 
 ## 3. Phase-Two Candidate Tasks
 
-- [x] Adjusted first-visit place scores on 2026-07-03:
-  - 制冰铺 Making Gelato is now `9.3`.
-  - Sober Company-Ash is now `9.0`.
-  - Updated `assets/content.js`, the two place archive fallback score displays, and the HTML asset query string `bar-art-20260703-score-adjust`.
-  - Visual verification skipped by project preference because this was a score/data update.
-
-- [x] Implemented automatic place score ledger:
-  - `assets/site.js` now calculates each place's total score from the average of scored visits.
-  - If a place has no scored visits, the renderer falls back to `overallScore` / `score`.
-  - `reviews.html` now includes a `Score Ledger` / `店铺分数` section listing all place scores from `BAR_PLACES`.
-  - Review cards now show a score ledger and per-visit score rows.
-  - Place archive pages for `DEMO`, Sober Company-Ash, and 制冰铺 Making Gelato now include score automation hooks.
-  - Future visit-score workflow: add/update `visit.score`; rendered total score updates automatically.
-  - Refreshed HTML asset query strings to `bar-art-20260703-score-adjust`.
-  - Visual verification skipped by project preference; residual risk is exact score-board wrapping without browser inspection.
-
-- [x] Published 2026-07-03 制冰铺 Making Gelato place review:
-  - Extracted text from `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260703-制冰铺 Making Gelato.docx`.
-  - Added `article-making-gelato-20260703.html` as 制冰铺 Making Gelato visit `#01`.
-  - Added `place-making-gelato.html` as the stable place archive.
-  - Added `making-gelato-20260703` to `BAR_POSTS` with repeat-visit metadata.
-  - Added 制冰铺 Making Gelato to `BAR_PLACES` as type `小店`.
-  - Recorded the visit flavors in both the data model and visible pages: `茉莉花茶`, `红心芭乐`, and `豆腐花`.
-  - Updated visit receipt rendering and taste-chip CSS so future non-bar visits can list eaten flavors in an orderly way.
-  - Refreshed HTML asset query strings to `bar-art-20260703-score-adjust`.
-  - Visual verification skipped by project preference; residual risk is exact chip wrapping without browser inspection.
-
 - [x] Published 2026-07-03 Sober Company-Ash bar review:
   - Extracted text from `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260703-Ash.docx`.
   - Added `article-sober-company-ash-20260703.html` as Sober Company-Ash visit `#01`.
@@ -79,7 +52,7 @@ Use this file before starting phase two or any future multi-file work. Do not re
   - Added Sober Company-Ash to `BAR_PLACES` as type `酒吧`.
   - Recorded the visit drinks in both the data model and visible pages: `KOKUTO DE LEQUIO x Dark Roasted Blend`, `Farmer's Spritz`, and `Mango Daiquiri`.
   - Updated visit receipt rendering and drink-chip CSS so future bar visits can list the consumed drinks in an orderly way.
-  - Refreshed HTML asset query strings to `bar-art-20260703-score-adjust`.
+  - Refreshed HTML asset query strings to `bar-art-20260703-ash-bar`.
   - Visual verification skipped by project preference; residual risk is exact long-drink-name wrapping without browser inspection.
 
 - [x] Implemented A+D private-place repeat-visit structure for `DEMO`:
@@ -92,7 +65,7 @@ Use this file before starting phase two or any future multi-file work. Do not re
   - Removed the `适合独处` and `适合聊天` category filter chips from `reviews.html` / `私藏`.
   - Added place archive and receipt styles to `assets/styles.css`.
   - Added the `AGENTS.md` communication rule that Codex must not send optional commentary except when necessary for clarification, blocker reporting, or final completion.
-  - Refreshed HTML asset query strings to `bar-art-20260703-score-adjust`.
+  - Refreshed HTML asset query strings to `bar-art-20260703-ash-bar`.
   - Visual verification skipped by project preference; residual risk is exact card/timeline wrapping without browser inspection.
 
 - [x] Published 2026-07-02 gripe:
@@ -100,7 +73,7 @@ Use this file before starting phase two or any future multi-file work. Do not re
   - Chosen mood: `窒息`.
   - Emoji: `🫠`.
   - Timestamp: `2026-07-02 12:58:54`.
-  - Refreshed public and draft HTML asset query strings to `bar-art-20260703-score-adjust`.
+  - Refreshed public and draft HTML asset query strings to `bar-art-20260703-ash-bar`.
   - Visual verification skipped by project preference.
 
 - [x] Removed Word publishing tooling on 2026-07-01:

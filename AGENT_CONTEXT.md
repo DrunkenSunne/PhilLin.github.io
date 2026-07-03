@@ -4,41 +4,6 @@ Last updated: 2026-07-03
 
 This file externalizes the verified phase-one project context. Do not treat chat history or auto summaries as authoritative. Reconfirm current state from repository files, command output, and validation results before future development.
 
-## 2026-07-03 Place Score Adjustment
-
-- User updated the first visit scores: 制冰铺 Making Gelato is now `9.3`, and Sober Company-Ash is now `9.0`.
-- Updated `assets/content.js` `visitScore`, `BAR_PLACES.overallScore`, `BAR_PLACES.visits[].score`, and fallback `BAR_REVIEWS.score` for those two places.
-- Updated the static fallback score text in `place-making-gelato.html` and `place-sober-company-ash.html`.
-- Refreshed public and draft HTML asset query strings to `bar-art-20260703-score-adjust`.
-- Visual verification was skipped by project preference; this was a score/data update.
-
-## 2026-07-03 Place Score Automation
-
-- User requested that all place scores be listed, and that future visit scores update both the visit score and the total place score automatically.
-- `assets/site.js` now treats each visit's `score` as the source of truth when present.
-- Place total score is automatically calculated as the average of scored visits; if no visit scores exist, it falls back to `overallScore` / `score`.
-- `reviews.html` now has a `Score Ledger` / `店铺分数` section rendered from `window.BAR_PLACES`.
-- Review cards now show a per-place score ledger and per-visit score rows.
-- Place archive pages can use `data-place-score-stamp` and `data-place-score-panel` so the visible total and visit rows are filled from shared data.
-- Current place archive pages for `DEMO`, Sober Company-Ash, and 制冰铺 Making Gelato have score automation hooks.
-- Future workflow: when user gives an at-visit score, add/update `visit.score`; no manual total-score recalculation should be needed for rendered pages.
-- Refreshed public and draft HTML asset query strings to `bar-art-20260703-score-adjust`.
-- Visual verification was skipped by project preference; residual risk is exact score-board wrapping on narrow screens.
-
-## 2026-07-03 Place Review Published - 制冰铺 Making Gelato
-
-- User provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260703-制冰铺 Making Gelato.docx` and asked to publish it.
-- Published it as a `种草安利` article because it is a short place/gelato recommendation.
-- Added `article-making-gelato-20260703.html` as 制冰铺 Making Gelato visit `#01`.
-- Added `place-making-gelato.html` as the stable place archive for 制冰铺 Making Gelato.
-- Added 制冰铺 Making Gelato to `window.BAR_PLACES` with type `小店`, long-term ratings, and a visit timeline.
-- Added metadata id `making-gelato-20260703` to `window.BAR_POSTS`, with `placeId`, `visitId`, `visitNo`, `visitAt`, `visitLabel`, `visitScore`, and the flavors eaten during this visit.
-- Today's flavors were recorded in the article, the article sidebar, the place archive receipt, and the data model: `茉莉花茶`, `红心芭乐`, and `豆腐花`.
-- Updated visit receipt rendering so non-bar visits can also render `tastes` when present.
-- Added shared taste-list chip styles in `assets/styles.css`.
-- Refreshed public and draft HTML asset query strings to `bar-art-20260703-score-adjust`.
-- Visual verification was skipped by project preference; residual visual risk is exact chip wrapping on narrow screens.
-
 ## 2026-07-03 Bar Review Published - Sober Company-Ash
 
 - User provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260703-Ash.docx` and asked to publish it as a Sober Company-Ash review.
@@ -50,7 +15,7 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - Today's drinks were recorded in the article, the article sidebar, the place archive receipt, and the data model: `KOKUTO DE LEQUIO x Dark Roasted Blend`, `Farmer's Spritz`, and `Mango Daiquiri`.
 - Updated `assets/site.js` so visit receipts can render a drink list when visit data includes `drinks`.
 - Added shared drink-list chip styles in `assets/styles.css`.
-- Refreshed public and draft HTML asset query strings to `bar-art-20260703-score-adjust`.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260703-ash-bar`.
 - Visual verification was skipped by project preference; residual visual risk is exact wrapping of long English drink names on narrow screens.
 
 ## 2026-07-03 Private-Place Repeat-Visit Structure - DEMO
@@ -66,7 +31,7 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - Removed the `适合独处` and `适合聊天` filter chips from `reviews.html` / `私藏`.
 - Added shared CSS for place archive pages and visit-receipt timelines in `assets/styles.css`.
 - Added a project-level communication rule to `AGENTS.md`: Codex must not send optional commentary, and should only send user-facing messages when necessary for clarification, blocker reporting, or final completion.
-- Refreshed public and draft HTML asset query strings to `bar-art-20260703-score-adjust`.
+- Refreshed public and draft HTML asset query strings to `bar-art-20260703-ash-bar`.
 - Visual verification was skipped by project preference; residual visual risk is exact place-card and receipt wrapping on real viewports.
 
 ## 2026-07-02 Gripe Added - Preventive Medicine Cotton
@@ -74,7 +39,7 @@ This file externalizes the verified phase-one project context. Do not treat chat
 - User provided a short gripe: `预防医学给人一种一拳打在棉花上但是整个人被棉花闷死的感觉。`
 - Added the sixteenth `window.BAR_GRIPES` entry to `assets/gripes.js`.
 - Chosen mood is `窒息`, emoji `🫠`, timestamp `2026-07-02 12:58:54`.
-- Public and draft HTML asset query strings were refreshed to `bar-art-20260703-score-adjust`.
+- Public and draft HTML asset query strings were refreshed to `bar-art-20260703-ash-bar`.
 - Visual verification was skipped by project preference; this was a data/cache update, not a layout change.
 
 ## 2026-07-01 Word Publishing Tooling Removed

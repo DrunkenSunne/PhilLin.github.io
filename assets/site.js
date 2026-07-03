@@ -488,55 +488,6 @@ function placeVisits(place) {
   });
 }
 
-function visitScores(place) {
-  return placeVisits(place)
-    .map((visit) => Number(visit.score))
-    .filter((score) => Number.isFinite(score) && score > 0);
-}
-
-function placeScore(place) {
-  const scores = visitScores(place);
-  if (scores.length) {
-    return scores.reduce((total, score) => total + score, 0) / scores.length;
-  }
-  return Number(place.overallScore || place.score || 0);
-}
-
-function formatScore(score) {
-  return (Number(score) || 0).toFixed(1);
-}
-
-function visitScoreRows(place) {
-  const visits = placeVisits(place);
-  if (!visits.length) return "";
-  return `
-    <div class="place-score-rows">
-      ${visits.map((visit) => `
-        <a href="${escapeHtml(visit.url || "#")}">
-          <span>#${String(visit.no || 1).padStart(2, "0")} · ${escapeHtml(visit.label || visit.title || "一次到访")}</span>
-          <strong>${visit.score ? formatScore(visit.score) : "待补"}</strong>
-        </a>
-      `).join("")}
-    </div>
-  `;
-}
-
-function placeScorePanel(place) {
-  const visits = placeVisits(place);
-  const scores = visitScores(place);
-  const countLabel = visits.length ? `${scores.length}/${visits.length} 次已评分` : "暂无到访";
-  return `
-    <div class="place-score-panel">
-      <div>
-        <span class="mini-label">Score Ledger</span>
-        <strong>${formatScore(placeScore(place))}</strong>
-        <small>/ 10 · ${countLabel}</small>
-      </div>
-      ${visitScoreRows(place)}
-    </div>
-  `;
-}
-
 function visitTimeline(place) {
   const visits = placeVisits(place).slice(0, 4);
   if (!visits.length) return "";
@@ -548,7 +499,7 @@ function visitTimeline(place) {
           <span>#${String(visit.no || 1).padStart(2, "0")}</span>
           <strong>${escapeHtml(visit.label || visit.title || "一次到访")}</strong>
           <small>${escapeHtml(visit.date || "")}${visit.score ? ` · ${Number(visit.score).toFixed(1)}` : ""}</small>
-          ${drinkList(visit.drinks || visit.tastes)}
+          ${drinkList(visit.drinks)}
         </a>
       `).join("")}
     </div>
@@ -563,9 +514,9 @@ function reviewCard(review, index) {
   const area = escapeHtml(review.area || "地点待补");
   const visits = placeVisits(review);
   const date = escapeHtml(review.latestVisitAt || review.date || visits[0]?.date || "日期待补");
-  const score = placeScore(review);
+  const score = Number(review.overallScore || review.score || 0);
   const url = review.url ? escapeHtml(review.url) : "";
-  const visitCount = Number(visits.length || review.visitCount || 0);
+  const visitCount = Number(review.visitCount || visits.length || 0);
   const visitMeta = visitCount ? ` · ${visitCount} 次记录` : "";
   const readMore = url ? `<a class="read-more" href="${url}">打开店铺档案</a>` : "";
   return `
@@ -580,7 +531,6 @@ function reviewCard(review, index) {
         <p class="review-oneline">${escapeHtml(review.oneLine || "今晚先记到这里。")}</p>
         <p>${escapeHtml(review.notes || "")}</p>
         <div class="review-tags">${chipList(review.tags)}</div>
-        ${placeScorePanel(review)}
         ${visitTimeline(review)}
         ${readMore}
       </div>
@@ -604,38 +554,6 @@ function renderReviewList(filter = "all") {
     container.innerHTML = reviews.length
       ? reviews.map((review, index) => reviewCard(review, index)).join("")
       : '<article class="cellar-card review-card"><span class="post-date">Place Map</span><h2>这一格还空着</h2><p>没有符合筛选的去处。换一个标签，或者等下次回来再补。</p></article>';
-  });
-}
-
-function renderPlaceScoreboard() {
-  const places = window.BAR_PLACES || window.BAR_REVIEWS || [];
-  document.querySelectorAll("[data-place-scoreboard]").forEach((container) => {
-    const scoredPlaces = places
-      .map((place) => ({ place, score: placeScore(place), visits: placeVisits(place) }))
-      .sort((a, b) => b.score - a.score);
-    container.innerHTML = scoredPlaces.length
-      ? scoredPlaces.map(({ place, score, visits }) => `
-        <a class="place-score-card" href="${escapeHtml(place.url || "#")}">
-          <span>${escapeHtml(place.name || place.title || "未命名去处")}</span>
-          <strong>${formatScore(score)}</strong>
-          <small>${escapeHtml(place.type || "去处")} · ${visits.length || Number(place.visitCount || 0)} 次记录</small>
-        </a>
-      `).join("")
-      : "";
-  });
-
-  document.querySelectorAll("[data-place-score-panel]").forEach((container) => {
-    const place = places.find((item) => item.id === container.dataset.placeScorePanel);
-    if (place) container.innerHTML = placeScorePanel(place);
-  });
-
-  document.querySelectorAll("[data-place-score-stamp]").forEach((stamp) => {
-    const place = places.find((item) => item.id === stamp.dataset.placeScoreStamp);
-    if (!place) return;
-    const score = formatScore(placeScore(place));
-    const value = stamp.querySelector("span");
-    if (value) value.textContent = score;
-    stamp.setAttribute("aria-label", `总评分 ${score} 分`);
   });
 }
 
@@ -743,7 +661,6 @@ renderRecentPosts();
 initPostFilters();
 renderTagPages();
 renderArticlePage();
-renderPlaceScoreboard();
 renderReviewList();
 initReviewFilters();
 renderNoteList();
