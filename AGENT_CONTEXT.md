@@ -4,6 +4,15 @@ Last updated: 2026-07-03
 
 This file externalizes the verified phase-one project context. Do not treat chat history or auto summaries as authoritative. Reconfirm current state from repository files, command output, and validation results before future development.
 
+## 2026-07-03 Pages Deployment Recovery
+
+- GitHub's dynamic `pages-build-deployment` workflow repeatedly reached `actions/deploy-pages@v5` and then failed with `Deployment failed, try again later`; later dynamic runs became stuck in `Queued`, and the user could not cancel, run, or re-run them from the GitHub UI.
+- Added an explicit repository workflow at `.github/workflows/pages.yml` with both `push` and `workflow_dispatch` triggers so deployment no longer depends only on GitHub's implicit dynamic Pages workflow.
+- The workflow prepares a clean `_site` artifact with `rsync`, excluding repository-only files such as `.git`, `.github`, `_drafts`, README, and AGENT state files, then uploads that artifact and deploys it with `actions/deploy-pages@v5`.
+- Added root `.nojekyll`; the workflow also creates `_site/.nojekyll` before upload.
+- Recovery intent: a new push to `main` should trigger this explicit workflow even when old dynamic Pages runs cannot be manually re-run.
+- Visual verification was skipped by project preference; deployment status still must be checked in GitHub Actions after push.
+
 ## 2026-07-03 Bar Review Published - Sober Company-Ash
 
 - User provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260703-Ash.docx` and asked to publish it as a Sober Company-Ash review.

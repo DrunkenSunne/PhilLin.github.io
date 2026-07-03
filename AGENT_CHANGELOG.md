@@ -2,6 +2,19 @@
 
 Last updated: 2026-07-03
 
+## 2026-07-03 Pages Deployment Recovery Workflow
+
+User reported GitHub Pages deploy failures at `actions/deploy-pages@v5`, then queued dynamic `pages-build-deployment` runs that could not be cancelled, run, or re-run from the GitHub UI.
+
+- Added `.github/workflows/pages.yml` as an explicit Pages deployment workflow.
+- The workflow runs on `push` to `main` and supports `workflow_dispatch`.
+- It creates a clean `_site` folder using `rsync`, excluding `.git`, `.github`, `_site`, `_drafts`, README, and AGENT state files before upload.
+- It uploads `_site` with `actions/upload-pages-artifact@v3` and deploys with `actions/deploy-pages@v5`.
+- Added root `.nojekyll`; the workflow also touches `_site/.nojekyll`.
+- Recovery intent: pushing this commit should create a new explicit workflow run, bypassing reliance on the stuck implicit dynamic Pages run.
+- Visual verification was skipped by project preference.
+- Rollback: delete `.github/workflows/pages.yml` and `.nojekyll`, then restore GitHub Pages to the prior implicit/dynamic deployment behavior if desired.
+
 ## 2026-07-03 Bar Review Published - Sober Company-Ash
 
 User provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260703-Ash.docx` and asked to upload the Sober Company-Ash review. User emphasized that this is a bar and that each bar visit should list the drinks consumed.

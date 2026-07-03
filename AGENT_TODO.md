@@ -44,6 +44,13 @@ Use this file before starting phase two or any future multi-file work. Do not re
 
 ## 3. Phase-Two Candidate Tasks
 
+- [x] Added explicit GitHub Pages deployment workflow after dynamic Pages deploys failed/stuck:
+  - Added `.github/workflows/pages.yml` with `push` and `workflow_dispatch` triggers.
+  - The workflow builds a clean `_site` artifact with repository-only files excluded.
+  - Added `.nojekyll` at the repo root and in the uploaded artifact.
+  - Purpose: allow a new push to `main` to trigger deployment when old dynamic Pages runs cannot be cancelled, run, or re-run from the UI.
+  - Visual verification skipped by project preference; deployment still needs Actions confirmation after push.
+
 - [x] Published 2026-07-03 Sober Company-Ash bar review:
   - Extracted text from `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260703-Ash.docx`.
   - Added `article-sober-company-ash-20260703.html` as Sober Company-Ash visit `#01`.
