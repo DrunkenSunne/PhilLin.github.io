@@ -1,8 +1,28 @@
 # AGENT_CHANGELOG
 
-Last updated: 2026-07-04
+Last updated: 2026-07-05
 
 This file now stores only recent, high-value change records. Older detailed history was moved to `AGENT_CHANGELOG_ARCHIVE.md` on 2026-07-04 to reduce default Codex token usage.
+
+## 2026-07-05 Article Published - So Tired
+
+User provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260705.docx`, specified the tag `一些思绪`, and chose the final title `好累。`.
+
+- Extracted the Word document text and confirmed no embedded media files were present.
+- Published it as a normal `一些思绪` article.
+- Generated final static article file `article-so-tired.html`.
+- Added metadata id `so-tired` to `assets/content.js`.
+- Final title: `好累。`.
+- Publication date: `2026-07-05`.
+- Refreshed HTML asset query strings to `bar-art-20260705-so-tired`.
+- Visual verification was skipped by project preference.
+
+Rollback:
+
+- Delete `article-so-tired.html`.
+- Remove the `so-tired` entry from `assets/content.js`.
+- Restore the previous HTML asset query string from git.
+- Remove this changelog entry if reverting the publication.
 
 ## 2026-07-04 Bar Note Published - About Past
 

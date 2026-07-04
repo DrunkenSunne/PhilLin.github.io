@@ -1,6 +1,8 @@
 # AGENT_HANDOFF
 
-Last updated: 2026-07-04
+Last updated: 2026-07-05
+
+2026-07-05 article: user provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260705.docx`, specified `一些思绪`, and chose title `好累。`. Published it as `article-so-tired.html`, metadata id `so-tired`, publication date `2026-07-05`, with no embedded media files. HTML asset query strings were refreshed to `bar-art-20260705-so-tired`. Visual verification was skipped by project preference.
 
 2026-07-04 bar note: user provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\About Past-20260704.docx` and asked to upload the note. Published it as `note-about-past.html` with title `About Past`, tag `吧台札记`, mood `回望`, publication date `2026-07-04`, and metadata id `about-past` in `assets/content.js`. The Word document contained no embedded media files. Public and draft HTML asset query strings were refreshed to `bar-art-20260704-about-past`. Visual verification was skipped by project preference.
 

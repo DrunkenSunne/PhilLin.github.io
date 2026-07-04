@@ -2,6 +2,14 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利", "吧台札记
 
 window.BAR_POSTS = [
   {
+    id: "so-tired",
+    title: "好累。",
+    tag: "一些思绪",
+    publishedAt: "2026-07-05",
+    summary: "一篇关于人际关系、学习科研和持续透支的近况记录：很多事不是不知道怎么处理，而是已经没有力气处理；短暂的酒、gelato 和写字能让现实小声一点，但真正的问题仍然在那里。",
+    url: "article-so-tired.html",
+  },
+  {
     id: "zoominn-20260703",
     title: "ZOOMINN：老地方、五杯酒和一碗面",
     tag: "种草安利",
