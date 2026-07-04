@@ -168,6 +168,15 @@ window.BAR_POSTS = [
 
 window.BAR_NOTES = [
   {
+    id: "about-past",
+    title: "About Past",
+    tag: "吧台札记",
+    publishedAt: "2026-07-04",
+    mood: "回望",
+    summary: "一则写在车上的吧台札记：从“带着现在的记忆回到过去”的幻想，慢慢转到对遗憾、胆怯和继续往前的承认。",
+    url: "note-about-past.html",
+  },
+  {
     id: "eleven-floor-elevator",
     title: "十一楼的医学生与一楼的电梯",
     tag: "吧台札记",

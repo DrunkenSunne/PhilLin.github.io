@@ -1,8 +1,19 @@
 # AGENT_TODO
 
-Last updated: 2026-07-03
+Last updated: 2026-07-04
 
-Use this file before starting phase two or any future multi-file work. Do not rely on chat history as the only source of truth.
+Use this file after `AGENT_BRIEF.md` and `AGENT_HANDOFF.md` during normal low-token startup. Do not rely on chat history as the only source of truth.
+
+## 0. Token-Efficient State Rules
+
+- [x] Added `AGENT_BRIEF.md` as the default short startup file.
+- [x] Moved older detailed changelog history to `AGENT_CHANGELOG_ARCHIVE.md`.
+- [x] Recreated `AGENT_CHANGELOG.md` as a compact recent changelog.
+- [x] Updated `AGENTS.md` so Codex reads `AGENT_BRIEF.md`, `AGENT_HANDOFF.md`, and `AGENT_TODO.md` by default.
+- [x] Added operation-specific routing files `AGENT_OP_*.md`.
+- [x] Added the rule that `AGENT_CONTEXT.md`, `AGENT_CHANGELOG.md`, and `AGENT_CHANGELOG_ARCHIVE.md` require user confirmation before reading.
+- [ ] For ordinary small tasks, avoid reading `AGENT_CONTEXT.md`, `AGENT_CHANGELOG.md`, and `AGENT_CHANGELOG_ARCHIVE.md`.
+- [ ] Keep `AGENT_BRIEF.md` short; do not let it become another full changelog.
 
 ## 1. Phase One Completed
 
@@ -401,11 +412,14 @@ Use this file before starting phase two or any future multi-file work. Do not re
 ## 6. Validation Steps That Must Not Be Skipped
 
 - [ ] Before future development, read:
-  - `AGENT_CONTEXT.md`
-  - `AGENT_TODO.md`
-  - `AGENT_CHANGELOG.md`
+  - `AGENT_BRIEF.md`
   - `AGENT_HANDOFF.md`
-  - `README.md`
+  - `AGENT_TODO.md`
+  - the matching `AGENT_OP_*.md` file
+  - `AGENT_CONTEXT.md` only after user confirmation
+  - `AGENT_CHANGELOG.md` only after user confirmation
+  - `AGENT_CHANGELOG_ARCHIVE.md` only after user confirmation
+  - `README.md` only when relevant
 - [ ] Attempt `git status --short`; record if unavailable.
 - [ ] Attempt `git diff --stat`; record if unavailable.
 - [ ] Run JavaScript syntax checks:
@@ -439,12 +453,15 @@ Use this file before starting phase two or any future multi-file work. Do not re
 
 ## 7. Recommended First Step Next Time
 
-1. Read `AGENT_HANDOFF.md`.
-2. Read this file and `AGENT_CONTEXT.md`.
-3. Run or attempt:
+1. Read `AGENT_BRIEF.md`.
+2. Read `AGENT_HANDOFF.md`.
+3. Read this file.
+4. Run or attempt:
    - `git status --short`
    - `git diff --stat`
    - `node --check assets/site.js`
    - `node --check assets/content.js`
    - `node --check assets/gripes.js`
-4. Ask the user to confirm the exact phase-two objective before changing code.
+5. Read the matching `AGENT_OP_*.md` file.
+6. Ask the user before reading any deeper state file.
+7. Ask the user to confirm the exact phase-two objective before changing code when the next objective is unclear.

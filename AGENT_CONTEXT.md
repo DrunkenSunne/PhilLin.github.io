@@ -1,8 +1,18 @@
 # AGENT_CONTEXT
 
-Last updated: 2026-07-03
+Last updated: 2026-07-04
 
 This file externalizes the verified phase-one project context. Do not treat chat history or auto summaries as authoritative. Reconfirm current state from repository files, command output, and validation results before future development.
+
+## 2026-07-04 Token-Efficient State File Rules
+
+- Added `AGENT_BRIEF.md` as the lightweight default startup entry.
+- Moved the former full `AGENT_CHANGELOG.md` to `AGENT_CHANGELOG_ARCHIVE.md`.
+- Recreated `AGENT_CHANGELOG.md` as a compact recent changelog.
+- Updated `AGENTS.md` so normal startup reads `AGENT_BRIEF.md`, `AGENT_HANDOFF.md`, and `AGENT_TODO.md` first.
+- Added operation-specific routing files named `AGENT_OP_*.md`; after brief/handoff/todo, Codex reads only the matching operation file(s) and target source files.
+- `AGENT_CONTEXT.md`, `AGENT_CHANGELOG.md`, and `AGENT_CHANGELOG_ARCHIVE.md` are now user-confirmed deeper reads rather than mandatory for every small task.
+- Rollback: move `AGENT_CHANGELOG_ARCHIVE.md` back to `AGENT_CHANGELOG.md`, delete `AGENT_BRIEF.md`, and restore the previous `AGENTS.md` startup procedure.
 
 ## 2026-07-03 Place Cards Batch - Making Gelato, Q Taro, ZOOMINN
 

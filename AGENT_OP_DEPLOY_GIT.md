@@ -1,0 +1,56 @@
+# AGENT_OP_DEPLOY_GIT
+
+Use this operation file for Git, GitHub Pages, and deployment work.
+
+## Covers
+
+- Git status, diff, staging, commits, pushes.
+- GitHub Pages deployment checks.
+- GitHub Actions workflow issues.
+- `.github/workflows/pages.yml`.
+- `.nojekyll`.
+- Online site not reflecting local files.
+
+## Default Read Set
+
+Read only:
+
+- `AGENT_BRIEF.md`
+- `AGENT_HANDOFF.md`
+- `AGENT_TODO.md`
+- this file
+- Git status and diff output
+- deployment files directly involved in the task
+
+Do not default-read `AGENT_CONTEXT.md`, `AGENT_CHANGELOG.md`, or `AGENT_CHANGELOG_ARCHIVE.md`.
+
+## Deep Read Gate
+
+Before reading any deeper state file, ask the user for confirmation and name the exact file plus reason.
+
+Allowed only when:
+
+- A previous deployment incident must be compared.
+- The user asks why the workflow exists.
+- A rollback of deployment files is requested.
+- Current deployment state conflicts with brief/handoff/todo.
+
+`AGENT_CHANGELOG_ARCHIVE.md` is only allowed for user-confirmed old deployment incident research.
+
+## Common Target Files
+
+- `.github/workflows/pages.yml`
+- `.nojekyll`
+- root static site files when deployment freshness depends on asset query strings
+
+## Verification
+
+- Use `git status --short`, `git diff --stat`, and `git diff -- .`.
+- Inspect workflow YAML when changed.
+- Do not claim remote deployment success unless the relevant remote check was actually inspected.
+- Skip visual browser verification unless the user asks.
+
+## State Logging
+
+At the end of the whole operation, write one concise entry to `AGENT_CHANGELOG.md` for workflow, commit, push, or deployment changes.
+Update `AGENT_HANDOFF.md` when a deployment follow-up remains.

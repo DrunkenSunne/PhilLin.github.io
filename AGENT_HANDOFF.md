@@ -1,6 +1,12 @@
 # AGENT_HANDOFF
 
-Last updated: 2026-07-03
+Last updated: 2026-07-04
+
+2026-07-04 bar note: user provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\About Past-20260704.docx` and asked to upload the note. Published it as `note-about-past.html` with title `About Past`, tag `吧台札记`, mood `回望`, publication date `2026-07-04`, and metadata id `about-past` in `assets/content.js`. The Word document contained no embedded media files. Public and draft HTML asset query strings were refreshed to `bar-art-20260704-about-past`. Visual verification was skipped by project preference.
+
+2026-07-04 operation-file routing: user clarified that each operation type should have its own `.md`, and that deeper state files must not be read by default. Added seven operation files: `AGENT_OP_CONTENT_PUBLISH.md`, `AGENT_OP_PLACES.md`, `AGENT_OP_PAGE_VISUAL.md`, `AGENT_OP_FRONTEND_LOGIC.md`, `AGENT_OP_DEPLOY_GIT.md`, `AGENT_OP_PROJECT_STATE.md`, and `AGENT_OP_RECOVERY_AUDIT.md`. Normal flow is now brief/handoff/todo, git status/diff, matching operation file, target source files, execution, verification, and one final changelog entry. Reading `AGENT_CONTEXT.md`, `AGENT_CHANGELOG.md`, or `AGENT_CHANGELOG_ARCHIVE.md` requires user confirmation with the exact file and reason.
+
+2026-07-04 token recovery slimming: user asked why Codex token use had grown compared with about two weeks earlier, then approved the recommended lower-token plan. Added `AGENT_BRIEF.md` as the default short startup entry. Moved the former full `AGENT_CHANGELOG.md` to `AGENT_CHANGELOG_ARCHIVE.md` and recreated `AGENT_CHANGELOG.md` as a compact recent changelog. `AGENTS.md` now says normal startup should read `AGENT_BRIEF.md`, `AGENT_HANDOFF.md`, and `AGENT_TODO.md` first, then read `AGENT_CONTEXT.md`, `AGENT_CHANGELOG.md`, or `AGENT_CHANGELOG_ARCHIVE.md` only when the task requires deeper context or rollback history. This change is meant to preserve safety while avoiding repeated full-history reads.
 
 2026-07-03 place-card batch: user provided `20260703-制冰铺 Making Gelato.docx`, `Q太郎-20260703.docx`, and `ZOOMINN-20260703.docx`, clarifying that 制冰铺 Making Gelato is a `甜品店`, Q太郎 is a `餐厅`, and ZOOMINN is a `酒吧`. Added `article-making-gelato-20260703.html`, `place-making-gelato.html`, `article-q-taro-20260703.html`, `place-q-taro.html`, `article-zoominn-20260703.html`, and `place-zoominn.html`. Added all three to `assets/content.js` under `BAR_POSTS` and `BAR_PLACES`. 制冰铺 has visit score 9.3 and flavors `茉莉花茶`, `红心芭乐`, `豆腐花`. Q太郎 lists `奶油明太子乌冬面` and `盐烤烧鸟`, with visit score 9.0. ZOOMINN is a bar and its visit lists drinks `杨桃撞墙`, `岩X菲仕`, `Whisky Sour`, `Pina Colada`, and `荔枝+带气泡私人订制`, with visit score 9.2. `assets/site.js` now computes place-card total score from scored visits and shows `待评分` if a place has no scored visit yet. Sober Company-Ash score was updated to 9.0 in data and `place-sober-company-ash.html` per the user's prior correction. Current relevant asset query string is `bar-art-20260703-place-batch`. Visual verification was skipped by project preference.
 
@@ -243,9 +249,12 @@ Before any future work, run `git status --short` and `git diff --stat`.
 
 ## 5. Important File Index
 
-- `AGENT_CONTEXT.md`: full phase-one context, decisions, constraints, risks.
+- `AGENT_BRIEF.md`: lightweight default startup state and task-based read rules.
+- `AGENT_OP_*.md`: operation-specific routing files; read the matching one after brief/handoff/todo.
+- `AGENT_CONTEXT.md`: full phase-one context, decisions, constraints, risks; read when structure or older decisions matter.
 - `AGENT_TODO.md`: actionable completed/pending/phase-two tasks and validation checklist.
-- `AGENT_CHANGELOG.md`: file-by-file change log with verification limits and rollback notes.
+- `AGENT_CHANGELOG.md`: compact recent change log with rollback notes.
+- `AGENT_CHANGELOG_ARCHIVE.md`: older detailed change history; read only for old regressions, audits, or older rollback.
 - `README.md`: human-facing maintenance notes.
 - `index.html`: home page.
 - `posts.html`: article archive and tag filter UI.
@@ -301,14 +310,13 @@ Likely phase-two entry if user confirms Word conversion:
 
 Read these before editing code:
 
-1. `AGENT_HANDOFF.md`
-2. `AGENT_CONTEXT.md`
+1. `AGENT_BRIEF.md`
+2. `AGENT_HANDOFF.md`
 3. `AGENT_TODO.md`
-4. `AGENT_CHANGELOG.md`
-5. `README.md`
-6. `assets/content.js`
-7. `assets/site.js`
-8. `assets/styles.css`
+4. the matching `AGENT_OP_*.md` file
+5. target source files for the operation
+6. `AGENT_CONTEXT.md`, `AGENT_CHANGELOG.md`, or `AGENT_CHANGELOG_ARCHIVE.md` only after user confirmation
+7. `README.md` when human-facing maintenance docs are relevant
 
 ## 9. Forbidden Immediate Actions In New Conversation
 
@@ -319,21 +327,24 @@ Read these before editing code:
 - Do not delete unused image assets without approval.
 - Do not install dependencies or migrate frameworks without approval.
 - Do not claim git diff/status/browser verification unless actually run successfully.
-- Do not make broad refactors before reading the four AGENT files.
+- Do not make broad refactors before reading `AGENT_BRIEF.md`, `AGENT_HANDOFF.md`, `AGENT_TODO.md`, and the matching operation file.
+- Do not read `AGENT_CONTEXT.md`, `AGENT_CHANGELOG.md`, or `AGENT_CHANGELOG_ARCHIVE.md` without user confirmation.
 
 ## 10. Recovery Steps
 
-1. Read the four AGENT files.
+1. Read `AGENT_BRIEF.md`, `AGENT_HANDOFF.md`, and `AGENT_TODO.md`.
 2. Attempt:
    - `git status --short`
    - `git diff --stat`
    - `git diff -- .`
-3. If Git is unavailable, record that limitation in the next report.
-4. Run:
+3. Read the matching `AGENT_OP_*.md` file.
+4. Ask the user before reading `AGENT_CONTEXT.md`, `AGENT_CHANGELOG.md`, or `AGENT_CHANGELOG_ARCHIVE.md`.
+5. If Git is unavailable, record that limitation in the next report.
+6. Run relevant JavaScript checks when JS files are involved:
    - `node --check assets/site.js`
    - `node --check assets/content.js`
    - `node --check assets/gripes.js`
-5. Search for writer feature leftovers:
+7. Search for writer feature leftovers when touching navigation, publishing flow, or old editor-related areas:
    - `write.html`
    - `editor.html`
    - `write-link`
@@ -341,10 +352,10 @@ Read these before editing code:
    - `data-editor`
    - `WRITER`
    - `撰写`
-6. Skip browser visual verification by project preference unless the user explicitly asks later or a higher-priority instruction requires it. If requested or required, browser-check local pages:
+8. Skip browser visual verification by project preference unless the user explicitly asks later or a higher-priority instruction requires it. If requested or required, browser-check local pages:
    - `index.html`
    - `posts.html`
    - one tag page
    - one public article page after a new article is added
    - `friends.html`
-7. Ask the user what phase two should do.
+9. Ask the user what phase two should do when the next objective is unclear.
