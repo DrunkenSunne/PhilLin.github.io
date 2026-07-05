@@ -2,6 +2,14 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利", "吧台札记
 
 window.BAR_POSTS = [
   {
+    id: "cat-20260705",
+    title: "猫",
+    tag: "一些思绪",
+    publishedAt: "2026-07-05",
+    summary: "一篇以猫为喻的虚构札记：关于靠近、警觉、等待、错过，以及有些回应来得太晚以后，就再也不能把它带回家的遗憾。",
+    url: "article-cat-20260705.html",
+  },
+  {
     id: "so-tired",
     title: "好累。",
     tag: "一些思绪",

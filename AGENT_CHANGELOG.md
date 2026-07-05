@@ -4,6 +4,26 @@ Last updated: 2026-07-05
 
 This file now stores only recent, high-value change records. Older detailed history was moved to `AGENT_CHANGELOG_ARCHIVE.md` on 2026-07-04 to reduce default Codex token usage.
 
+## 2026-07-05 Article Published - Cat
+
+User provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\猫-20260705.docx` and asked to upload it as `一些思绪`.
+
+- Extracted the Word document text and confirmed no embedded media files were present.
+- Published it as a normal `一些思绪` article.
+- Generated final static article file `article-cat-20260705.html`.
+- Added metadata id `cat-20260705` to `assets/content.js`.
+- Final title: `猫`.
+- Publication date: `2026-07-05`.
+- Refreshed HTML asset query strings to `bar-art-20260705-cat`.
+- Visual verification was skipped by project preference.
+
+Rollback:
+
+- Delete `article-cat-20260705.html`.
+- Remove the `cat-20260705` entry from `assets/content.js`.
+- Restore the previous HTML asset query string from git.
+- Remove this changelog entry if reverting the publication.
+
 ## 2026-07-05 Article Published - So Tired
 
 User provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260705.docx`, specified the tag `一些思绪`, and chose the final title `好累。`.
