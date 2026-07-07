@@ -1,8 +1,28 @@
 # AGENT_CHANGELOG
 
-Last updated: 2026-07-05
+Last updated: 2026-07-07
 
 This file now stores only recent, high-value change records. Older detailed history was moved to `AGENT_CHANGELOG_ARCHIVE.md` on 2026-07-04 to reduce default Codex token usage.
+
+## 2026-07-07 Article Published - Did Not Overthread Today
+
+User provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260707.docx` and asked to upload it as `一些思绪`.
+
+- Extracted the Word document text and confirmed no embedded media files were present.
+- Published it as a normal `一些思绪` article.
+- Generated final static article file `article-did-not-overthread-today.html`.
+- Added metadata id `did-not-overthread-today` to `assets/content.js`.
+- Final title: `今天没有继续犯病`.
+- Publication date: `2026-07-07`.
+- Refreshed HTML asset query strings to `bar-art-20260707-overthread`.
+- Visual verification was skipped by project preference.
+
+Rollback:
+
+- Delete `article-did-not-overthread-today.html`.
+- Remove the `did-not-overthread-today` entry from `assets/content.js`.
+- Restore the previous HTML asset query string from git.
+- Remove this changelog entry if reverting the publication.
 
 ## 2026-07-05 Article Published - Cat
 

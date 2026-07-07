@@ -2,6 +2,14 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利", "吧台札记
 
 window.BAR_POSTS = [
   {
+    id: "did-not-overthread-today",
+    title: "今天没有继续犯病",
+    tag: "一些思绪",
+    publishedAt: "2026-07-07",
+    summary: "一篇写实验日多线程冲动的思绪：本来只是处理培养基、复苏细胞和养细胞，却差点把两个 WB 也塞进等待时间里；最后把裂解液冻起来，承认等待时间也可以只是等待时间。",
+    url: "article-did-not-overthread-today.html",
+  },
+  {
     id: "cat-20260705",
     title: "猫",
     tag: "一些思绪",
