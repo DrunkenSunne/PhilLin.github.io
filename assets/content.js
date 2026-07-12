@@ -2,6 +2,22 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利", "吧台札记
 
 window.BAR_POSTS = [
   {
+    id: "fruit-fly-20260713",
+    title: "《Fruit Fly》：一首冷静到最后突然决堤的歌",
+    tag: "种草安利",
+    publishedAt: "2026-07-13",
+    summary: "一篇关于窦靖童《Fruit Fly》的种草安利：它从冷冷的悬浮感开始，把被压住的情绪一点点推到后半段的撕开与宣泄里。",
+    url: "article-fruit-fly-20260713.html",
+  },
+  {
+    id: "about-fruit-fly",
+    title: "About Fruit Fly",
+    tag: "一些思绪",
+    publishedAt: "2026-07-13",
+    summary: "一篇关于《Fruit Fly》、微信名和网站注脚的思绪：从好听的前奏，到压力下延迟爆发的情绪，再到那种一直盘旋、始终找不到精神落点的自我描述。",
+    url: "article-about-fruit-fly.html",
+  },
+  {
     id: "did-not-overthread-today",
     title: "今天没有继续犯病",
     tag: "一些思绪",

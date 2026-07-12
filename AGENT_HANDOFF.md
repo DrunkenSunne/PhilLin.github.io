@@ -1,6 +1,10 @@
 # AGENT_HANDOFF
 
-Last updated: 2026-07-07
+Last updated: 2026-07-13
+
+2026-07-13 article: user provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\Fruit Fly-20260713.docx` and asked to upload it as `种草安利`. Published it as `article-fruit-fly-20260713.html`, title `《Fruit Fly》：一首冷静到最后突然决堤的歌`, metadata id `fruit-fly-20260713`, publication date `2026-07-13`, with no embedded media files. HTML asset query strings were refreshed to `bar-art-20260713-fruit-fly-rec`. Visual verification was skipped by project preference.
+
+2026-07-13 article: user provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\About Fruit Fly-10160713.docx` and asked to upload it as `一些思绪`. Published it as `article-about-fruit-fly.html`, title `About Fruit Fly`, metadata id `about-fruit-fly`, publication date `2026-07-13`, with no embedded media files. HTML asset query strings were refreshed to `bar-art-20260713-fruit-fly`. Visual verification was skipped by project preference.
 
 2026-07-07 article: user provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\20260707.docx` and asked to upload it as `一些思绪`. Published it as `article-did-not-overthread-today.html`, title `今天没有继续犯病`, metadata id `did-not-overthread-today`, publication date `2026-07-07`, with no embedded media files. HTML asset query strings were refreshed to `bar-art-20260707-overthread`. Visual verification was skipped by project preference.
 

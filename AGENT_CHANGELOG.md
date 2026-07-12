@@ -1,8 +1,48 @@
 # AGENT_CHANGELOG
 
-Last updated: 2026-07-07
+Last updated: 2026-07-13
 
 This file now stores only recent, high-value change records. Older detailed history was moved to `AGENT_CHANGELOG_ARCHIVE.md` on 2026-07-04 to reduce default Codex token usage.
+
+## 2026-07-13 Article Published - Fruit Fly Recommendation
+
+User provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\Fruit Fly-20260713.docx` and asked to upload it as `种草安利`.
+
+- Extracted the Word document text and confirmed no embedded media files were present.
+- Published it as a normal `种草安利` article.
+- Generated final static article file `article-fruit-fly-20260713.html`.
+- Added metadata id `fruit-fly-20260713` to `assets/content.js`.
+- Final title: `《Fruit Fly》：一首冷静到最后突然决堤的歌`.
+- Publication date: `2026-07-13`.
+- Refreshed HTML asset query strings to `bar-art-20260713-fruit-fly-rec`.
+- Visual verification was skipped by project preference.
+
+Rollback:
+
+- Delete `article-fruit-fly-20260713.html`.
+- Remove the `fruit-fly-20260713` entry from `assets/content.js`.
+- Restore the previous HTML asset query string from git.
+- Remove this changelog entry if reverting the publication.
+
+## 2026-07-13 Article Published - About Fruit Fly
+
+User provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\About Fruit Fly-10160713.docx` and asked to upload it as `一些思绪`.
+
+- Extracted the Word document text and confirmed no embedded media files were present.
+- Published it as a normal `一些思绪` article.
+- Generated final static article file `article-about-fruit-fly.html`.
+- Added metadata id `about-fruit-fly` to `assets/content.js`.
+- Final title: `About Fruit Fly`.
+- Publication date: `2026-07-13`.
+- Refreshed HTML asset query strings to `bar-art-20260713-fruit-fly`.
+- Visual verification was skipped by project preference.
+
+Rollback:
+
+- Delete `article-about-fruit-fly.html`.
+- Remove the `about-fruit-fly` entry from `assets/content.js`.
+- Restore the previous HTML asset query string from git.
+- Remove this changelog entry if reverting the publication.
 
 ## 2026-07-07 Article Published - Did Not Overthread Today
 
