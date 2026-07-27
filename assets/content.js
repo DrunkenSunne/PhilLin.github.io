@@ -2,6 +2,21 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利", "吧台札记
 
 window.BAR_POSTS = [
   {
+    id: "jiujiu-time-cafe-20260727",
+    title: "九玖时光咖啡：海沧适合工作的二楼",
+    tag: "种草安利",
+    publishedAt: "2026-07-27",
+    placeId: "jiujiu-time-cafe",
+    visitId: "jiujiu-time-cafe-20260727-work",
+    visitNo: 1,
+    visitAt: "2026-07-27",
+    visitLabel: "海沧工作位",
+    visitScore: 9.0,
+    drinks: ["气泡水", "咖啡", "康普茶"],
+    summary: "厦门海沧一家适合工作的咖啡店：饮品不赖，二楼安静，鱼缸水流是舒服的白噪音；插座不算顺手，但整体很推荐。",
+    url: "article-jiujiu-time-cafe-20260727.html",
+  },
+  {
     id: "fruit-fly-20260713",
     title: "《Fruit Fly》：一首冷静到最后突然决堤的歌",
     tag: "种草安利",
@@ -255,6 +270,43 @@ window.BAR_NOTES = [
 ];
 
 window.BAR_PLACES = [
+  {
+    id: "jiujiu-time-cafe",
+    name: "九玖时光咖啡",
+    type: "咖啡店",
+    area: "厦门海沧",
+    firstVisitedAt: "2026-07-27",
+    latestVisitAt: "2026-07-27",
+    visitCount: 1,
+    overallScore: 9.0,
+    url: "place-jiujiu-time-cafe.html",
+    tags: ["咖啡店", "海沧", "适合工作", "康普茶", "二楼安静"],
+    ratings: {
+      atmosphere: 9.2,
+      foodDrink: 8.8,
+      value: 8.8,
+      solo: 9.2,
+      revisit: 9,
+    },
+    oneLine: "厦门海沧一家适合工作的咖啡店：饮品不赖，二楼安静，鱼缸水流像白噪音，空调、气味和老板都让人舒服。",
+    notes: "这张卡是九玖时光咖啡的长期档案。第一次记录重点是工作友好度：二楼安静、环境舒服，但插座位置不算顺手，下次适合自带三排插座。",
+    recommended: ["康普茶", "气泡水", "咖啡", "二楼工作位"],
+    goodFor: ["在海沧找地方写东西或办公", "想喝点不贵且稳定的饮品", "需要安静和白噪音"],
+    notFor: ["极度依赖就近插座", "不想骑车绕路", "想要完全标准化的连锁咖啡体验"],
+    visits: [
+      {
+        id: "jiujiu-time-cafe-20260727-work",
+        no: 1,
+        title: "九玖时光咖啡：海沧适合工作的二楼",
+        label: "海沧工作位",
+        date: "2026-07-27",
+        score: 9.0,
+        url: "article-jiujiu-time-cafe-20260727.html",
+        drinks: ["气泡水", "咖啡", "康普茶"],
+        summary: "小红书搜到的海沧工作咖啡店，名字有点网红感，但饮品、二楼环境、鱼缸白噪音和老板都让人舒服。插座是小扣分点。",
+      },
+    ],
+  },
   {
     id: "zoominn",
     name: "ZOOMINN",

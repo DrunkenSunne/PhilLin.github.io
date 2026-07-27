@@ -23,6 +23,7 @@ This is the lightweight startup file for Codex work in this repository. Read thi
 - Default to low-token recovery: read this file, `AGENT_HANDOFF.md`, and `AGENT_TODO.md` first.
 - Then choose the matching operation file:
   - `AGENT_OP_CONTENT_PUBLISH.md`
+  - `AGENT_OP_PLAYLISTS.md`
   - `AGENT_OP_PLACES.md`
   - `AGENT_OP_PAGE_VISUAL.md`
   - `AGENT_OP_FRONTEND_LOGIC.md`
@@ -38,9 +39,11 @@ This is the lightweight startup file for Codex work in this repository. Read thi
 
 ## Current State To Remember
 
-- Current general asset query string is around the 2026-07-03 place/private-bar work; verify current files before changing cache strings.
+- Current general asset query string is `bar-art-20260727-gallery-playlists`; verify current files before changing cache strings.
 - `BAR_PLACES` exists and powers the `reviews.html` / private-place map flow.
 - Sober Company-Ash, Making Gelato, Q Taro, ZOOMINN, and DEMO have place/visit structures.
+- `gallery.html` now renders 38 location-group photos from `assets/gallery.js`, with optimized images under `assets/gallery/<place-slug>/` and generated `gallery-*.html` detail pages for each retained photo.
+- `playlist.html` must remain a playlist index page; currently only `playlist-writing.html` is kept as a playlist detail page.
 - The explicit GitHub Pages workflow exists at `.github/workflows/pages.yml`, with `.nojekyll` at the root.
 - Word publishing tooling was removed on 2026-07-01; future publishing is direct static file editing unless the user asks to restore tooling.
 - `AGENT_CHANGELOG_ARCHIVE.md` contains the full pre-2026-07-04 historical changelog.

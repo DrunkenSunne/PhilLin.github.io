@@ -595,6 +595,74 @@ function initReviewFilters() {
     renderReviewList(button.dataset.reviewFilter);
   });
 }
+
+function allGalleryGroups() {
+  return window.BAR_GALLERY_GROUPS || [];
+}
+
+function galleryMatches(group, filter) {
+  if (!filter || filter === "all") return true;
+  return group.type === filter || reviewArray(group.tags).includes(filter);
+}
+
+function galleryPhotoCard(photo, group, index) {
+  const title = escapeHtml(group.title);
+  const photoTitle = escapeHtml(photo.title || group.title);
+  const caption = escapeHtml(photo.caption || group.note || "");
+  const layout = photo.layout ? ` ${escapeHtml(photo.layout)}` : "";
+  const url = escapeHtml(photo.detailUrl || photo.src);
+  return `
+    <a class="photo-tile${layout}" href="${url}">
+      <img src="${escapeHtml(photo.src)}" alt="${photoTitle}" loading="lazy">
+      <figcaption>
+        <span>${escapeHtml(group.type)} / ${String(index + 1).padStart(2, "0")}</span>
+        <strong>${photoTitle}</strong>
+        <small>${caption}</small>
+      </figcaption>
+    </a>
+  `;
+}
+
+function galleryGroupSection(group) {
+  const tags = chipList(group.tags);
+  return `
+    <article class="gallery-section" id="gallery-${escapeHtml(group.id)}">
+      <header class="gallery-section-header">
+        <div>
+          <span class="post-date">${escapeHtml(group.type)} · ${group.photos.length} photos</span>
+          <h2>${escapeHtml(group.title)}</h2>
+          <p>${escapeHtml(group.note || "")}</p>
+        </div>
+        <div class="review-tags">${tags}</div>
+      </header>
+      <div class="gallery-grid">
+        ${group.photos.map((photo, index) => galleryPhotoCard(photo, group, index)).join("")}
+      </div>
+    </article>
+  `;
+}
+
+function renderGalleryList(filter = "all") {
+  document.querySelectorAll("[data-gallery-list]").forEach((container) => {
+    const groups = allGalleryGroups().filter((group) => galleryMatches(group, filter));
+    container.innerHTML = groups.length
+      ? groups.map(galleryGroupSection).join("")
+      : '<article class="gallery-section"><header class="gallery-section-header"><div><span class="post-date">Gallery</span><h2>这一类还没有照片</h2><p>以后补进来时会自动出现在这里。</p></div></header></article>';
+  });
+}
+
+function initGalleryFilters() {
+  const filters = document.querySelector(".gallery-toolbar");
+  if (!filters) return;
+  filters.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-gallery-filter]");
+    if (!button) return;
+    filters.querySelectorAll("[data-gallery-filter]").forEach((item) => item.classList.remove("is-active"));
+    button.classList.add("is-active");
+    renderGalleryList(button.dataset.galleryFilter);
+  });
+}
+
 function allGripes() {
   const gripes = window.BAR_GRIPES || [];
   return [...gripes].sort(
@@ -690,5 +758,7 @@ renderTagPages();
 renderArticlePage();
 renderReviewList();
 initReviewFilters();
+renderGalleryList();
+initGalleryFilters();
 renderNoteList();
 renderGripeRail();

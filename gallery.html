@@ -4,12 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>摄影作品 | Phil Lin的Bar</title>
-    <meta name="description" content="Phil Lin的Bar 的摄影作品画廊。">
-    <link rel="stylesheet" href="assets/styles.css?v=bar-art-20260713-fruit-fly-rec">
+    <meta name="description" content="Phil Lin的Bar 的摄影作品画廊，按地点和场景整理。">
+    <link rel="stylesheet" href="assets/styles.css?v=bar-art-20260727-gallery-playlists">
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="index.html"><img class="brand-mark brand-badge" src="assets/bar-badge.png?v=bar-art-20260713-fruit-fly-rec" alt=""><span>Phil Lin的Bar</span></a>
+      <a class="brand" href="index.html" aria-label="回到首页">
+        <img class="brand-mark brand-badge" src="assets/bar-badge.png?v=bar-art-20260727-gallery-playlists" alt="">
+        <span>Phil Lin的Bar</span>
+      </a>
       <nav class="nav-links" aria-label="主导航">
         <a href="index.html">首页</a>
         <a href="posts.html">文章</a>
@@ -23,48 +26,38 @@
     </header>
 
     <main class="page drink-page drink-french-75">
-      <section class="page-heading drink-heading">
+      <section class="page-heading drink-heading gallery-heading">
         <div class="drink-portrait">
           <span class="drink-glyph french-75-glyph"><span></span></span>
           <span>French 75 · 摄影作品</span>
         </div>
         <p class="eyebrow">Gallery</p>
         <h1>摄影作品</h1>
-        <p>这里会陈列照片、光线和一些未命名的瞬间。目前作品仍在亟待创作。</p>
+        <p>一些杯壁、桌面、低光和临时起意的地点记录。先按地点收拢，未来照片多起来也能继续往下长。</p>
       </section>
 
-      <section class="gallery-grid" aria-label="摄影作品画廊">
-        <article class="photo-tile tall">
-          <span>亟待创作</span>
-          <strong>烛光与杯壁</strong>
-        </article>
-        <article class="photo-tile">
-          <span>亟待创作</span>
-          <strong>吧台一角</strong>
-        </article>
-        <article class="photo-tile wide">
-          <span>亟待创作</span>
-          <strong>夜色里的城市</strong>
-        </article>
-        <article class="photo-tile">
-          <span>亟待创作</span>
-          <strong>半杯 Martini</strong>
-        </article>
-        <article class="photo-tile">
-          <span>亟待创作</span>
-          <strong>暗处的反光</strong>
-        </article>
+      <section class="gallery-toolbar" aria-label="摄影分类">
+        <button class="chip is-active" type="button" data-gallery-filter="all">全部</button>
+        <button class="chip" type="button" data-gallery-filter="酒吧">酒吧</button>
+        <button class="chip" type="button" data-gallery-filter="旅途">旅途</button>
+        <button class="chip" type="button" data-gallery-filter="餐酒">餐酒</button>
+        <button class="chip" type="button" data-gallery-filter="餐厅">餐厅</button>
+        <button class="chip" type="button" data-gallery-filter="聚餐">聚餐</button>
+        <button class="chip" type="button" data-gallery-filter="杯子">杯子</button>
       </section>
+
+      <section class="gallery-stack" data-gallery-list aria-label="摄影作品画廊"></section>
     </main>
 
     <footer class="site-footer">
       <span>© 2026 Phil Lin的Bar</span>
-      <span>Gallery under construction</span>
+      <span>Gallery / Location notes</span>
       <span class="footer-link"><a href="friends.html">友链</a></span>
     </footer>
 
-    <script src="assets/content.js?v=bar-art-20260713-fruit-fly-rec"></script>
-    <script src="assets/gripes.js?v=bar-art-20260713-fruit-fly-rec"></script>
-    <script src="assets/site.js?v=bar-art-20260713-fruit-fly-rec"></script>
+    <script src="assets/content.js?v=bar-art-20260727-gallery-playlists"></script>
+    <script src="assets/gripes.js?v=bar-art-20260727-gallery-playlists"></script>
+    <script src="assets/gallery.js?v=bar-art-20260727-gallery-playlists"></script>
+    <script src="assets/site.js?v=bar-art-20260727-gallery-playlists"></script>
   </body>
 </html>

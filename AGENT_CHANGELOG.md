@@ -1,8 +1,79 @@
 # AGENT_CHANGELOG
 
-Last updated: 2026-07-13
+Last updated: 2026-07-27
 
 This file now stores only recent, high-value change records. Older detailed history was moved to `AGENT_CHANGELOG_ARCHIVE.md` on 2026-07-04 to reduce default Codex token usage.
+
+## 2026-07-27 Gallery Published and Playlist Structure Corrected
+
+User provided `C:\Users\Phil Lin\Desktop\临时用\gallery updated.docx` and asked to upload the photos, grouping them by marked places where useful. User also clarified the playlist page should not be a single playlist detail: it should list playlist titles/simple descriptions, with separate detail pages.
+
+- Extracted 39 embedded photos from the Word document.
+- Optimized the photos as JPEG files under `assets/gallery/<place-slug>/`.
+- Added `assets/gallery.js` with eight groups: `Bar 233`, `起飞`, `ZOOMINN`, `Sober Company（二代）`, `Pony Up`, `Bar Blanc`, `某意大利餐厅`, and `出去吃饭的合照`.
+- Rebuilt `gallery.html` from a placeholder into a filterable location-group gallery using `data-gallery-list`.
+- Added gallery rendering/filter logic to `assets/site.js`.
+- Added responsive gallery layout styles to `assets/styles.css`.
+- Created `playlist-writing.html` for the new `写作` playlist.
+- Rebuilt `playlist.html` as a playlist index page with a simple description and link to the `写作` detail page.
+- Follow-up correction: the old six playlist detail pages remain deleted.
+- Follow-up correction: the former `宿舍 1108` gallery group was reclassified as outing meal/group photos.
+- Follow-up correction: `ZOOMINN` photos 02/03/04, `Bar 233` photo 01, and `Bar Blanc` photo 02 were rotation-corrected; `Bar Blanc` photo 05 was deleted, leaving 38 retained gallery photos.
+- Added one generated `gallery-*.html` detail page for each retained photo, with the full image, caption text, original-image link, previous/next navigation, and gallery return link.
+- Added per-photo titles/captions/detail URLs to `assets/gallery.js`, and made gallery cards link to their detail pages.
+- Updated homepage playlist/gallery copy so it no longer implies only one playlist or an empty gallery.
+- Refreshed HTML asset query strings to `bar-art-20260727-gallery-playlists`.
+- Verified with `node --check assets/site.js`, `node --check assets/content.js`, `node --check assets/gripes.js`, and `node --check assets/gallery.js`.
+- Visual browser verification was skipped by project preference.
+
+Rollback:
+
+- Delete `assets/gallery.js` and the `assets/gallery/` folder.
+- Restore the prior `gallery.html`, `playlist.html`, `index.html`, `assets/site.js`, and `assets/styles.css` from git.
+- Delete `playlist-writing.html` if reverting the new `写作` detail page, and restore the old six playlist detail pages only if the user asks for that older state.
+- Restore the previous HTML asset query string from git.
+- Remove this changelog entry if reverting the gallery/playlist correction.
+
+## 2026-07-27 Place Published - 九玖时光咖啡
+
+User provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\九玖时光咖啡-20260727.docx` and asked to upload it as `私藏`.
+
+- Extracted the Word document text and confirmed no embedded media files were present.
+- Added `九玖时光咖啡` as a new `咖啡店` place in `BAR_PLACES`.
+- Generated stable place archive `place-jiujiu-time-cafe.html`.
+- Generated visit/article page `article-jiujiu-time-cafe-20260727.html`.
+- Added metadata id `jiujiu-time-cafe-20260727` to `assets/content.js`.
+- Visit score and overall score: `9.0`.
+- Recorded drinks/items: `气泡水`, `咖啡`, and `康普茶`.
+- Refreshed HTML asset query strings to `bar-art-20260727-jiujiu-cafe`.
+- Visual verification was skipped by project preference.
+
+Rollback:
+
+- Delete `place-jiujiu-time-cafe.html`.
+- Delete `article-jiujiu-time-cafe-20260727.html`.
+- Remove the `jiujiu-time-cafe` place and `jiujiu-time-cafe-20260727` post entries from `assets/content.js`.
+- Restore the previous HTML asset query string from git.
+- Remove this changelog entry if reverting the publication.
+
+## 2026-07-27 Playlist Replaced - Writing
+
+User asked to delete all existing playlists and add one new playlist named `写作`, based on a screenshot of 12 tracks.
+
+- Replaced `playlist.html` with the new `写作` playlist page.
+- Removed old playlist detail pages: `playlist-after-ddl.html`, `playlist-chungking.html`, `playlist-drinking.html`, `playlist-faye-fable.html`, `playlist-faye-restless.html`, and `playlist-only-lovers.html`.
+- Updated homepage playlist copy so it points to the single `写作` playlist.
+- Added `AGENT_OP_PLAYLISTS.md` and listed it in `AGENTS.md` / `AGENT_BRIEF.md` as the operation file for playlist maintenance.
+- Refreshed HTML asset query strings to `bar-art-20260727-writing-playlist`; later 2026-07-27 place publication refreshed them again to `bar-art-20260727-jiujiu-cafe`.
+- Visual verification was skipped by project preference.
+
+Rollback:
+
+- Restore deleted `playlist-*.html` files from git.
+- Restore the previous `playlist.html` and homepage playlist copy from git.
+- Remove `AGENT_OP_PLAYLISTS.md` and its routing entries from `AGENTS.md` / `AGENT_BRIEF.md` if reverting the operation-file addition.
+- Restore the previous HTML asset query string from git.
+- Remove this changelog entry if reverting the playlist replacement.
 
 ## 2026-07-13 Article Published - Fruit Fly Recommendation
 

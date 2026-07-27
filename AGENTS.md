@@ -23,6 +23,7 @@ Codex must treat these files as the durable project memory. Chat history alone i
 After reading the low-token state entry, Codex must choose the matching operation file(s) and read only those operation files before task-specific source files:
 
 - `AGENT_OP_CONTENT_PUBLISH.md`
+- `AGENT_OP_PLAYLISTS.md`
 - `AGENT_OP_PLACES.md`
 - `AGENT_OP_PAGE_VISUAL.md`
 - `AGENT_OP_FRONTEND_LOGIC.md`

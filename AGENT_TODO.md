@@ -384,7 +384,10 @@ Use this file after `AGENT_BRIEF.md` and `AGENT_HANDOFF.md` during normal low-to
   - Refreshed asset query string to `bar-art-20260624-glyphs`.
 - [ ] If gripe count grows large, revisit scheme 3 or 4 for the gripe rail: paginated static files or JSON on-demand loading.
 - [x] Add the first real `note-*.html` page when the user provides a bar-note text.
-- [ ] Add real photography entries to `gallery.html` and decide image folder structure, likely `assets/gallery/`.
+- [x] Add real photography entries to `gallery.html` and decide image folder structure:
+  - 2026-07-27 gallery upload uses optimized JPEGs under `assets/gallery/<place-slug>/`.
+  - `assets/gallery.js` stores location groups and photo paths.
+  - `gallery.html` renders grouped/filterable photos from `data-gallery-list`.
 - [ ] Add better empty-state text for tag pages with no articles.
 - [x] Add a small documentation section showing how to manually add a new static article.
 - [ ] Reassess whether `article.html` dynamic fallback is still needed after static article generation is stable.
