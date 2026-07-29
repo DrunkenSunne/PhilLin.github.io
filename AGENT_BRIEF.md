@@ -39,7 +39,7 @@ This is the lightweight startup file for Codex work in this repository. Read thi
 
 ## Current State To Remember
 
-- Current general asset query string is `bar-art-20260729-background-frame`; verify current files before changing cache strings.
+- Current general asset query string is `bar-art-20260729-clean-background`; verify current files before changing cache strings.
 - `BAR_PLACES` exists and powers the `reviews.html` / private-place map flow.
 - Sober Company-Ash, Making Gelato, Q Taro, ZOOMINN, and DEMO have place/visit structures.
 - `gallery.html` now renders 38 location-group photos from `assets/gallery.js`, with optimized images under `assets/gallery/<place-slug>/` and generated `gallery-*.html` detail pages for each retained photo.

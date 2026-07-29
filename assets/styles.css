@@ -4377,6 +4377,19 @@ body::after {
   pointer-events: none;
 }
 
+/* Keep page-level artwork on the canvas without framing the canvas itself. */
+.drink-page::before {
+  display: none;
+  content: none;
+}
+
+.drink-portrait {
+  border: 0;
+  padding-left: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
 #particleCanvas {
   opacity: 0.22;
 }
