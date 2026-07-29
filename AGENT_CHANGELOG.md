@@ -1,6 +1,6 @@
 # AGENT_CHANGELOG
 
-Last updated: 2026-07-27
+Last updated: 2026-07-29
 
 This file now stores only recent, high-value change records. Older detailed history was moved to `AGENT_CHANGELOG_ARCHIVE.md` on 2026-07-04 to reduce default Codex token usage.
 
@@ -240,3 +240,5 @@ Rollback:
 - Delete the seven `AGENT_OP_*.md` files.
 - Remove operation-file routing and the deep-read confirmation rule from `AGENTS.md`, `AGENT_BRIEF.md`, `AGENT_TODO.md`, `AGENT_HANDOFF.md`, and `AGENT_CONTEXT.md`.
 - Remove this changelog entry.
+
+2026-07-29 article: Published `7.29日程` from `7.29日程.docx` as `article-july-29-schedule.html`, preserving the user's original schedule wording and presenting the 40 items as morning/afternoon/evening schedule cards. Follow-up added two embedded dinner photos under the `18:00 晚饭` section from the DOCX. Updated `assets/content.js`, `assets/styles.css`, asset query strings, `AGENT_BRIEF.md`, and `AGENT_HANDOFF.md`. Visual verification skipped by project preference.

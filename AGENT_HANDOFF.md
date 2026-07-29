@@ -1,6 +1,8 @@
 # AGENT_HANDOFF
 
-Last updated: 2026-07-27
+Last updated: 2026-07-29
+
+2026-07-29 article: user provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\7.29日程.docx` and asked to upload the schedule while preserving the original wording. Published it as `article-july-29-schedule.html`, title `7.29日程`, tag `生活日志`, metadata id `july-29-schedule`, publication date `2026-07-29`. The body uses schedule-card sections for `上午` / `下午` / `晚上`, with each original schedule line split only visually into a time stamp and the unchanged event text. Follow-up: the DOCX contained two embedded dinner photos; copied them to `assets/posts/july-29-schedule/dinner-01.jpeg` and `dinner-02.jpeg`, then placed them under the `18:00 晚饭` section as a two-photo strip. Added scoped schedule article styles in `assets/styles.css`, added metadata to `assets/content.js`, and refreshed HTML asset query strings to `bar-art-20260729-schedule`. Visual verification was skipped by project preference.
 
 2026-07-27 gallery caption refinement: user felt the first generated captions were not accurate enough and contained some invented details. Re-inspected the local gallery images via a contact sheet, then rewrote `assets/gallery.js` captions/titles and regenerated all 38 `gallery-*.html` detail pages. Current caption rule: describe only visible facts plus a restrained private-note mood; avoid guessing drink names, venue-specific facts, relationships, or off-camera events unless supplied by the user. Visual verification was skipped by project preference.
 

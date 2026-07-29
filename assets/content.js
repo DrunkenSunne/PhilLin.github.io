@@ -2,6 +2,14 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利", "吧台札记
 
 window.BAR_POSTS = [
   {
+    id: "july-29-schedule",
+    title: "7.29日程",
+    tag: "生活日志",
+    publishedAt: "2026-07-29",
+    summary: "一份从反复关闹钟、和身体谈判，到健身房、午觉、游泳馆、论文、科目一和偷酒喝的日程记录：很好笑，也很真实。",
+    url: "article-july-29-schedule.html",
+  },
+  {
     id: "jiujiu-time-cafe-20260727",
     title: "九玖时光咖啡：海沧适合工作的二楼",
     tag: "种草安利",

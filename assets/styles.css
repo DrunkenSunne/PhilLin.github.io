@@ -858,6 +858,110 @@ pre code {
   font-size: 0.98rem;
 }
 
+.schedule-article .article-deck {
+  max-width: 45rem;
+}
+
+.schedule-board {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1.4rem;
+}
+
+.schedule-section {
+  border: 1px solid rgba(255, 210, 138, 0.18);
+  border-radius: 8px;
+  padding: clamp(1rem, 2vw, 1.25rem);
+  background:
+    linear-gradient(135deg, rgba(255, 241, 204, 0.045), rgba(255, 241, 204, 0.015)),
+    rgba(9, 10, 10, 0.28);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.18);
+}
+
+.schedule-section h2 {
+  margin: 0 0 0.9rem;
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.schedule-list {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: schedule-item calc(var(--schedule-start, 1) - 1);
+}
+
+.schedule-list[start="16"] {
+  --schedule-start: 16;
+}
+
+.schedule-list[start="30"] {
+  --schedule-start: 30;
+}
+
+.schedule-list li {
+  counter-increment: schedule-item;
+  display: grid;
+  grid-template-columns: minmax(5.4rem, auto) minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: baseline;
+  border: 1px solid rgba(255, 210, 138, 0.12);
+  border-radius: 7px;
+  padding: 0.68rem 0.78rem;
+  background: rgba(255, 241, 204, 0.035);
+}
+
+.schedule-list li::before {
+  content: counter(schedule-item, decimal-leading-zero);
+  grid-column: 1 / -1;
+  margin-bottom: -0.35rem;
+  color: rgba(255, 210, 138, 0.42);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+}
+
+.schedule-list time {
+  color: var(--accent-strong);
+  font-family: "Courier New", Consolas, monospace;
+  font-size: 0.92rem;
+  white-space: nowrap;
+}
+
+.schedule-list p {
+  margin: 0;
+  color: #f4dfbd;
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.schedule-photo-pair {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 0.35rem 0 0;
+}
+
+.schedule-photo-pair img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border: 1px solid rgba(255, 210, 138, 0.16);
+  border-radius: 7px;
+  filter: saturate(0.92) contrast(0.98);
+}
+
+.schedule-photo-pair figcaption {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
 .article-actions {
   display: flex;
   flex-wrap: wrap;
