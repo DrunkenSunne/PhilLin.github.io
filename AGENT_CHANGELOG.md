@@ -1,5 +1,12 @@
 # AGENT_CHANGELOG
 
+## 2026-07-29 — Remove the global background frame
+
+- Traced the border visible around every page to inherited `body::after` styles in `assets/styles.css`: the current background overlay reset its inset but retained an earlier border, radius, and inset shadow.
+- Explicitly reset `border`, `border-radius`, and `box-shadow` on the current overlay while preserving its subtle background texture.
+- Refreshed public HTML stylesheet query strings to `bar-art-20260729-background-frame`.
+- Visual browser verification was skipped by project preference; verification used cascade inspection, reference searches, and Git diff checks.
+
 Last updated: 2026-07-29
 
 This file now stores only recent, high-value change records. Older detailed history was moved to `AGENT_CHANGELOG_ARCHIVE.md` on 2026-07-04 to reduce default Codex token usage.

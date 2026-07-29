@@ -4366,9 +4366,12 @@ body::after {
   position: fixed;
   inset: 0;
   z-index: -1;
+  border: 0;
+  border-radius: 0;
   background:
     radial-gradient(circle at 12% 22%, rgba(234, 215, 181, 0.05) 0 1px, transparent 1.4px) 0 0 / 43px 47px,
     linear-gradient(90deg, rgba(255, 255, 255, 0.018), transparent 16%, rgba(0, 0, 0, 0.02) 72%, transparent);
+  box-shadow: none;
   content: "";
   opacity: 0.42;
   pointer-events: none;
