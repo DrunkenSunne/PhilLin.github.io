@@ -7,7 +7,7 @@
 - Refreshed public HTML stylesheet query strings to `bar-art-20260729-background-frame`.
 - Visual browser verification was skipped by project preference; verification used cascade inspection, reference searches, and Git diff checks.
 
-Last updated: 2026-07-30
+Last updated: 2026-07-31
 
 This file now stores only recent, high-value change records. Older detailed history was moved to `AGENT_CHANGELOG_ARCHIVE.md` on 2026-07-04 to reduce default Codex token usage.
 
@@ -251,3 +251,5 @@ Rollback:
 2026-07-29 article: Published `7.29日程` from `7.29日程.docx` as `article-july-29-schedule.html`, preserving the user's original schedule wording and presenting the 40 items as morning/afternoon/evening schedule cards. Follow-up added two embedded dinner photos under the `18:00 晚饭` section from the DOCX. Updated `assets/content.js`, `assets/styles.css`, asset query strings, `AGENT_BRIEF.md`, and `AGENT_HANDOFF.md`. Visual verification skipped by project preference.
 
 2026-07-30 article: Published `好饿。` from `D:\Download\好饿.docx` as `article-gpt-says-eat-something.html`, preserving the 35 source paragraphs as article body text. Added metadata id `gpt-says-eat-something` to `assets/content.js`; the DOCX contained no embedded media. Refreshed public HTML asset query strings to `bar-art-20260730-hungry`. Visual verification skipped by project preference.
+
+2026-07-31 article: Published `我管不住我自己。` from `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\我管不住我自己。.docx` as `article-cannot-control-myself.html`. Classified it as `一些思绪` rather than `吧台札记` because it is a full reflective essay, not a short fragment. Preserved 79 extracted paragraphs as body text; the DOCX contained no embedded media. Added metadata id `cannot-control-myself` to `assets/content.js` and refreshed public HTML asset query strings to `bar-art-20260731-cannot-control`. Visual verification skipped by project preference.

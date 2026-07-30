@@ -2,6 +2,14 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利", "吧台札记
 
 window.BAR_POSTS = [
   {
+    id: "cannot-control-myself",
+    title: "我管不住我自己。",
+    tag: "一些思绪",
+    publishedAt: "2026-07-31",
+    summary: "一篇关于计划、失控、自由和自我厌恶的思绪：不是喜欢把所有事排好，而是已经离不开这道防洪堤；明明羡慕自由，却连自由都要先排进日程表里。",
+    url: "article-cannot-control-myself.html",
+  },
+  {
     id: "gpt-says-eat-something",
     title: "好饿。",
     tag: "生活日志",

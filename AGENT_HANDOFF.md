@@ -1,6 +1,8 @@
 # AGENT_HANDOFF
 
-Last updated: 2026-07-30
+Last updated: 2026-07-31
+
+2026-07-31 article: user provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\我管不住我自己。.docx` and asked whether it should be `一些思绪` or `吧台札记`. Classified it as `一些思绪` because it is a complete reflective essay, around 1,945 Chinese characters across 79 extracted paragraphs, centered on planning, loss of control, freedom, and self-disgust rather than a short fragment. Published it as `article-cannot-control-myself.html`, title `我管不住我自己。`, metadata id `cannot-control-myself`, publication date `2026-07-31`, with no embedded media. Refreshed public HTML asset query strings to `bar-art-20260731-cannot-control`. Visual verification was skipped by project preference.
 
 2026-07-30 article: user provided `D:\Download\好饿.docx` and asked to upload it as `生活日志`, with Codex choosing the title. Initially published it as `article-gpt-says-eat-something.html`; user disliked the title and chose final title `好饿。`. Tag is `生活日志`, metadata id `gpt-says-eat-something`, publication date `2026-07-30`. The DOCX contained 35 text paragraphs and no embedded media. Body text was preserved as paragraph content, with only article title, summary, sidebar metadata, and cup-bottom note added. Refreshed public HTML asset query strings to `bar-art-20260730-hungry`. Visual verification was skipped by project preference.
 
