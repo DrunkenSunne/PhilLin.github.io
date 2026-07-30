@@ -1,6 +1,6 @@
 # AGENT_BRIEF
 
-Last updated: 2026-07-29
+Last updated: 2026-07-30
 
 This is the lightweight startup file for Codex work in this repository. Read this file first, then read only the operation file and source files required by the task type.
 
@@ -39,7 +39,7 @@ This is the lightweight startup file for Codex work in this repository. Read thi
 
 ## Current State To Remember
 
-- Current general asset query string is `bar-art-20260729-clean-background`; verify current files before changing cache strings.
+- Current general asset query string is `bar-art-20260730-hungry`; verify current files before changing cache strings.
 - `BAR_PLACES` exists and powers the `reviews.html` / private-place map flow.
 - Sober Company-Ash, Making Gelato, Q Taro, ZOOMINN, and DEMO have place/visit structures.
 - `gallery.html` now renders 38 location-group photos from `assets/gallery.js`, with optimized images under `assets/gallery/<place-slug>/` and generated `gallery-*.html` detail pages for each retained photo.

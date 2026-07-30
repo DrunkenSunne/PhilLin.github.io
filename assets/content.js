@@ -2,6 +2,14 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利", "吧台札记
 
 window.BAR_POSTS = [
   {
+    id: "gpt-says-eat-something",
+    title: "好饿。",
+    tag: "生活日志",
+    publishedAt: "2026-07-30",
+    summary: "一篇关于减肥第三天、运动之后、科目一题库和饥饿感全面接管大脑的生活日志：体重秤交了 PPT，镜子拒绝配合，胃准备起诉，连 GPT 都开始担心生命体征。",
+    url: "article-gpt-says-eat-something.html",
+  },
+  {
     id: "july-29-schedule",
     title: "7.29日程",
     tag: "生活日志",

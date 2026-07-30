@@ -1,6 +1,8 @@
 # AGENT_HANDOFF
 
-Last updated: 2026-07-29
+Last updated: 2026-07-30
+
+2026-07-30 article: user provided `D:\Download\好饿.docx` and asked to upload it as `生活日志`, with Codex choosing the title. Initially published it as `article-gpt-says-eat-something.html`; user disliked the title and chose final title `好饿。`. Tag is `生活日志`, metadata id `gpt-says-eat-something`, publication date `2026-07-30`. The DOCX contained 35 text paragraphs and no embedded media. Body text was preserved as paragraph content, with only article title, summary, sidebar metadata, and cup-bottom note added. Refreshed public HTML asset query strings to `bar-art-20260730-hungry`. Visual verification was skipped by project preference.
 
 2026-07-29 clean-background follow-up: removed the two cross-page frames reported on `posts.html`. The page-sized `.drink-page::before` border is now disabled, and `.drink-portrait` no longer draws a bordered, shaded background box. The existing borderless `body::after` texture remains. Refreshed all public HTML asset query strings to `bar-art-20260729-clean-background`. Local browser verification was blocked because the in-app browser does not permit `file:` URLs; verification used the supplied screenshot, full-page selector/reference audits, cache-string checks, and static CSS cascade reasoning. The current online site still reflects the prior committed version until these local changes are committed and deployed.
 
