@@ -1,6 +1,8 @@
 # AGENT_HANDOFF
 
-Last updated: 2026-07-31
+Last updated: 2026-08-09
+
+2026-08-09 article: user provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\Not in the mood-20260809.docx` and asked to upload it as `一些思绪`. Published it as `article-not-in-the-mood-20260809.html`, title `Not in the mood`, metadata id `not-in-the-mood-20260809`, publication date `2026-08-09`, with 62 extracted paragraphs and no embedded media. Refreshed public HTML asset query strings to `bar-art-20260809-not-in-the-mood`. Visual verification was skipped by project preference.
 
 2026-07-31 article: user provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\我管不住我自己。.docx` and asked whether it should be `一些思绪` or `吧台札记`. Classified it as `一些思绪` because it is a complete reflective essay, around 1,945 Chinese characters across 79 extracted paragraphs, centered on planning, loss of control, freedom, and self-disgust rather than a short fragment. Published it as `article-cannot-control-myself.html`, title `我管不住我自己。`, metadata id `cannot-control-myself`, publication date `2026-07-31`, with no embedded media. Refreshed public HTML asset query strings to `bar-art-20260731-cannot-control`. Visual verification was skipped by project preference.
 

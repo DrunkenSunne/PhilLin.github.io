@@ -2,6 +2,14 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利", "吧台札记
 
 window.BAR_POSTS = [
   {
+    id: "not-in-the-mood-20260809",
+    title: "Not in the mood",
+    tag: "一些思绪",
+    publishedAt: "2026-08-09",
+    summary: "一篇关于告白之后、理解落空和想象退潮的思绪：有些关系像期待很久的酒吧，菜单、灯光和杯子都没有骗人，只是真正坐到吧台前，才发现它并不属于自己。",
+    url: "article-not-in-the-mood-20260809.html",
+  },
+  {
     id: "cannot-control-myself",
     title: "我管不住我自己。",
     tag: "一些思绪",
