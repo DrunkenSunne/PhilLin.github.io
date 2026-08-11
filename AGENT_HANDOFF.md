@@ -1,6 +1,8 @@
 # AGENT_HANDOFF
 
-Last updated: 2026-08-09
+Last updated: 2026-08-11
+
+2026-08-11 article: user provided `D:\Download\Fallback.docx` and asked to upload it as `一些思绪`. Published it as `article-fallback-20260811.html`, title `Fallback`, metadata id `fallback-20260811`, publication date `2026-08-11`, with 229 extracted paragraphs, treating the first paragraph as the title and preserving the remaining 228 paragraphs as body text. The DOCX contained no embedded media. Refreshed public HTML asset query strings to `bar-art-20260811-fallback`. Visual verification was skipped by project preference.
 
 2026-08-09 article: user provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\Not in the mood-20260809.docx` and asked to upload it as `一些思绪`. Published it as `article-not-in-the-mood-20260809.html`, title `Not in the mood`, metadata id `not-in-the-mood-20260809`, publication date `2026-08-09`, with 62 extracted paragraphs and no embedded media. Refreshed public HTML asset query strings to `bar-art-20260809-not-in-the-mood`. Visual verification was skipped by project preference.
 

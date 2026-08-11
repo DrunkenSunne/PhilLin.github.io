@@ -255,3 +255,5 @@ Rollback:
 2026-07-31 article: Published `我管不住我自己。` from `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\我管不住我自己。.docx` as `article-cannot-control-myself.html`. Classified it as `一些思绪` rather than `吧台札记` because it is a full reflective essay, not a short fragment. Preserved 79 extracted paragraphs as body text; the DOCX contained no embedded media. Added metadata id `cannot-control-myself` to `assets/content.js` and refreshed public HTML asset query strings to `bar-art-20260731-cannot-control`. Visual verification skipped by project preference.
 
 2026-08-09: Published `article-not-in-the-mood-20260809.html` from `Not in the mood-20260809.docx` as `一些思绪`, added `not-in-the-mood-20260809` to `assets/content.js`, refreshed HTML asset query strings to `bar-art-20260809-not-in-the-mood`, and skipped visual verification by project preference.
+
+2026-08-11: Published `article-fallback-20260811.html` from `D:\Download\Fallback.docx` as `一些思绪`, added `fallback-20260811` to `assets/content.js`, refreshed HTML asset query strings to `bar-art-20260811-fallback`, and skipped visual verification by project preference.

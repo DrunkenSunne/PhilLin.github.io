@@ -2,6 +2,14 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利", "吧台札记
 
 window.BAR_POSTS = [
   {
+    id: "fallback-20260811",
+    title: "Fallback",
+    tag: "一些思绪",
+    publishedAt: "2026-08-11",
+    summary: "一篇关于父母、信任、自由和后路的思绪：很多时候以为自己只是还能重来，后来才发现，是一直有人替自己把下一次留着。",
+    url: "article-fallback-20260811.html",
+  },
+  {
     id: "not-in-the-mood-20260809",
     title: "Not in the mood",
     tag: "一些思绪",
