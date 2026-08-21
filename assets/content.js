@@ -2,6 +2,14 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利", "吧台札记
 
 window.BAR_POSTS = [
   {
+    id: "one-seventeen-20260821",
+    title: "117.",
+    tag: "一些思绪",
+    publishedAt: "2026-08-21",
+    summary: "一篇关于一家酒吧、歌单、边界、想喝和想留下的思绪：越清楚它现在不能给什么，反而越清楚自己为什么还会想来。",
+    url: "article-117-20260821.html",
+  },
+  {
     id: "fallback-20260811",
     title: "Fallback",
     tag: "一些思绪",

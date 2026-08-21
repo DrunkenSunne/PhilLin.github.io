@@ -257,3 +257,9 @@ Rollback:
 2026-08-09: Published `article-not-in-the-mood-20260809.html` from `Not in the mood-20260809.docx` as `一些思绪`, added `not-in-the-mood-20260809` to `assets/content.js`, refreshed HTML asset query strings to `bar-art-20260809-not-in-the-mood`, and skipped visual verification by project preference.
 
 2026-08-11: Published `article-fallback-20260811.html` from `D:\Download\Fallback.docx` as `一些思绪`, added `fallback-20260811` to `assets/content.js`, refreshed HTML asset query strings to `bar-art-20260811-fallback`, and skipped visual verification by project preference.
+
+2026-08-21: Published `article-117-20260821.html` from `117.docx` as `一些思绪`, added `one-seventeen-20260821` to `assets/content.js`, refreshed HTML asset query strings to `bar-art-20260821-117`, and skipped visual verification by project preference.
+
+2026-08-21 update: Re-extracted latest `117.docx` and updated `article-117-20260821.html` to 291 body paragraphs, updated the `assets/content.js` summary, refreshed HTML asset query strings to `bar-art-20260821-117-v2`, and skipped visual verification by project preference.
+
+2026-08-21 update: Restored 19 Word separator lines in `article-117-20260821.html` as semantic `<hr class="article-break">` elements, added stable `.article-break` styling in `assets/styles.css`, refreshed HTML asset query strings to `bar-art-20260821-117-v3`, and skipped visual verification by project preference.

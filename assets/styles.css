@@ -4474,6 +4474,17 @@ body::after {
   background: linear-gradient(90deg, rgba(184, 137, 71, 0.62), transparent);
 }
 
+.article hr.article-break {
+  display: block;
+  width: clamp(5.5rem, 22%, 9rem);
+  min-width: 5.5rem;
+  max-width: 9rem;
+  height: 1px;
+  margin: 2.25rem 0;
+  border: 0;
+  background: linear-gradient(90deg, rgba(184, 137, 71, 0.64), rgba(184, 137, 71, 0.2) 58%, transparent);
+}
+
 .article blockquote {
   border-left-color: rgba(184, 137, 71, 0.62);
   background: rgba(234, 215, 181, 0.026);

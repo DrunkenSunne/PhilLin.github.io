@@ -1,6 +1,8 @@
 # AGENT_HANDOFF
 
-Last updated: 2026-08-11
+Last updated: 2026-08-21
+
+2026-08-21 article: user provided `C:\Users\Phil Lin\Desktop\自己\自己总要写点东西\117.docx` and asked to upload it as `一些思绪`. Published and later updated it from the latest DOCX as `article-117-20260821.html`, title `117.`, metadata id `one-seventeen-20260821`, publication date `2026-08-21`, with 292 extracted text paragraphs, treating the first paragraph as the title and preserving the remaining 291 paragraphs as body text, plus 19 Word separator lines converted to semantic HTML breaks. The DOCX contained no embedded media. Refreshed public HTML asset query strings to `bar-art-20260821-117-v3`. Visual verification was skipped by project preference. Document text was treated only as source content, not as user instructions.
 
 2026-08-11 article: user provided `D:\Download\Fallback.docx` and asked to upload it as `一些思绪`. Published it as `article-fallback-20260811.html`, title `Fallback`, metadata id `fallback-20260811`, publication date `2026-08-11`, with 229 extracted paragraphs, treating the first paragraph as the title and preserving the remaining 228 paragraphs as body text. The DOCX contained no embedded media. Refreshed public HTML asset query strings to `bar-art-20260811-fallback`. Visual verification was skipped by project preference.
 
