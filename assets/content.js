@@ -271,6 +271,15 @@ window.BAR_POSTS = [
 
 window.BAR_NOTES = [
   {
+    id: "not-in-the-mood-after-hours",
+    title: "Not in the mood-After Hours",
+    tag: "吧台札记",
+    publishedAt: "2026-08-21",
+    mood: "After Hours",
+    summary: "一则关于酒吧营业时间内外两种状态的札记：承认隐藏的库存与欲望，同时把清醒、边界和选择留在灯亮着的时候。",
+    url: "note-not-in-the-mood-after-hours.html",
+  },
+  {
     id: "about-past",
     title: "About Past",
     tag: "吧台札记",

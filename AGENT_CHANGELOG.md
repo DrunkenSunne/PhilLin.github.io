@@ -1,5 +1,7 @@
 # AGENT_CHANGELOG
 
+- 2026-08-21: Published `Not in the mood-After Hours` as a bar note with 184 verbatim body paragraphs and all 14 Word horizontal-rule shapes preserved as semantic article breaks; added `BAR_NOTES` metadata and refreshed public asset cache strings to `bar-art-20260821-after-hours`.
+
 ## 2026-07-29 — Remove the global background frame
 
 - Traced the border visible around every page to inherited `body::after` styles in `assets/styles.css`: the current background overlay reset its inset but retained an earlier border, radius, and inset shadow.
