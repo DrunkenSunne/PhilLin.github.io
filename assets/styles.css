@@ -1698,6 +1698,18 @@ body::after {
   transform-origin: center;
 }
 
+.drink-icon-link {
+  display: grid;
+  color: inherit;
+  place-items: center;
+  text-decoration: none;
+}
+
+.drink-icon-link:focus-visible {
+  outline: 2px solid var(--accent-strong);
+  outline-offset: 0.2rem;
+}
+
 .drink-page {
   position: relative;
 }
@@ -2821,6 +2833,10 @@ body::after {
 
 .collins-glyph > span {
   --drink-label: url("drink-labels/collins.svg");
+}
+
+.cat-collins-glyph > span {
+  --drink-label: url("drink-labels/cat-collins.svg");
 }
 
 .last-word-glyph > span {
