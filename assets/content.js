@@ -2,6 +2,14 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利", "吧台札记
 
 window.BAR_POSTS = [
   {
+    id: "one-seventeen-one-20260823",
+    title: "117.1",
+    tag: "一些思绪",
+    publishedAt: "2026-08-23",
+    summary: "一篇关于一扇突然关上的门、被重新划定的距离和仍然放不下的喜欢的思绪：理解规则为什么改变，并不等于关门的时候不会疼。",
+    url: "article-117-1-20260823.html",
+  },
+  {
     id: "one-seventeen-20260821",
     title: "117.",
     tag: "一些思绪",
