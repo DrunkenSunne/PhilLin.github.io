@@ -1,5 +1,7 @@
 # AGENT_CHANGELOG
 
+- 2026-08-24: Published `Not in the mood-On the House` from the DOCX first line as `一些思绪`, preserving 229 body paragraphs and 40 Word horizontal rules; added post metadata and refreshed public asset cache strings to `bar-art-20260824-on-the-house`.
+
 - 2026-08-24: Published `117.1` from the 2026-08-23 DOCX as `一些思绪`, preserving 196 body paragraphs and 20 Word horizontal rules; added post metadata and refreshed public asset cache strings to `bar-art-20260823-117-1`.
 
 - 2026-08-21: Published `Not in the mood-After Hours` as a bar note with 184 verbatim body paragraphs and all 14 Word horizontal-rule shapes preserved as semantic article breaks; added `BAR_NOTES` metadata and refreshed public asset cache strings to `bar-art-20260821-after-hours`.

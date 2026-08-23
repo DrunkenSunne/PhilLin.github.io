@@ -2,6 +2,14 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利", "吧台札记
 
 window.BAR_POSTS = [
   {
+    id: "not-in-the-mood-on-the-house-20260824",
+    title: "Not in the mood-On the House",
+    tag: "一些思绪",
+    publishedAt: "2026-08-24",
+    summary: "一篇关于熟客、纵容、边界和耗尽的思绪：看见一张长期 on the house 的单如何消耗一家店以后，终于承认那不是自己的 shift。",
+    url: "article-not-in-the-mood-on-the-house-20260824.html",
+  },
+  {
     id: "one-seventeen-one-20260823",
     title: "117.1",
     tag: "一些思绪",
