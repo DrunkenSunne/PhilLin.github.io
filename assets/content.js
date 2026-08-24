@@ -2,6 +2,14 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利", "吧台札记
 
 window.BAR_POSTS = [
   {
+    id: "ten-pm-20260824",
+    title: "晚上十点",
+    tag: "一些思绪",
+    publishedAt: "2026-08-24",
+    summary: "一篇写在晚上十点实验室里的思绪：被十二小时周期、待办列表和关系边界切碎的生活，既是自己的选择，也真的很累。",
+    url: "article-ten-pm-20260824.html",
+  },
+  {
     id: "not-in-the-mood-on-the-house-20260824",
     title: "Not in the mood-On the House",
     tag: "一些思绪",
