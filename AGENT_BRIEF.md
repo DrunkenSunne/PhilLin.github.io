@@ -20,7 +20,9 @@ This is the lightweight startup file for Codex work in this repository. Read thi
 
 ## Current Operating Rules
 
-- Default to low-token recovery: read this file, `AGENT_HANDOFF.md`, and `AGENT_TODO.md` first.
+- Default to low-token startup: read this file, check Git status/stat, and then read the matching operation file.
+- Read `AGENT_HANDOFF.md` only for unfinished work, dirty-worktree recovery, or compacted/uncertain sessions.
+- Read `AGENT_TODO.md` only for planning, phase selection, or pending-work audits.
 - Then choose the matching operation file:
   - `AGENT_OP_CONTENT_PUBLISH.md`
   - `AGENT_OP_PLAYLISTS.md`
@@ -33,13 +35,14 @@ This is the lightweight startup file for Codex work in this repository. Read thi
 - Do not read `AGENT_CONTEXT.md`, `AGENT_CHANGELOG.md`, or `AGENT_CHANGELOG_ARCHIVE.md` by default.
 - Before reading `AGENT_CONTEXT.md`, `AGENT_CHANGELOG.md`, or `AGENT_CHANGELOG_ARCHIVE.md`, ask the user for confirmation and name the exact file plus reason.
 - Skip visual browser verification by project preference unless the user explicitly asks for it or a higher-priority instruction requires it.
-- Keep using `git status --short`, `git diff --stat`, and `git diff -- .` for recovery/diff checks.
+- Keep using `git status --short`, `git diff --stat`, and `git diff --check`; inspect targeted diffs and use allowlist audits for large mechanical changes.
 - Run `node --check assets/site.js`, `node --check assets/content.js`, and `node --check assets/gripes.js` when those files are relevant.
 - Do not use Node REPL as a routine fallback for blocked `node --check` or browser verification.
 
 ## Current State To Remember
 
-- Current general asset query string is `bar-art-20260824-ten-pm`; verify current files before changing cache strings.
+- Asset cache versions are scoped by resource. Shared CSS, badge, site logic, and gripe data currently retain `bar-art-20260824-ten-pm`; update only the asset that changed.
+- `assets/content.js` uses `bar-content-20260824-ten-pm` only on its eight real consumer pages: `article.html`, `index.html`, `notes.html`, `posts.html`, `reviews.html`, and the three tag pages.
 - `BAR_PLACES` exists and powers the `reviews.html` / private-place map flow.
 - Sober Company-Ash, Making Gelato, Q Taro, ZOOMINN, and DEMO have place/visit structures.
 - `gallery.html` now renders 38 location-group photos from `assets/gallery.js`, with optimized images under `assets/gallery/<place-slug>/` and generated `gallery-*.html` detail pages for each retained photo.
@@ -50,14 +53,14 @@ This is the lightweight startup file for Codex work in this repository. Read thi
 
 ## Safe Default Workflow
 
-1. Read `AGENT_BRIEF.md`, `AGENT_HANDOFF.md`, and `AGENT_TODO.md`.
+1. Read `AGENT_BRIEF.md`.
 2. Check `git status --short` and `git diff --stat`.
 3. Choose and read the matching `AGENT_OP_*.md` file(s).
-4. Read target source files directly.
-5. Ask the user before any deeper state-file read.
+4. Read handoff/todo only when their routing conditions apply.
+5. Read target source files directly and ask before any deeper state-file read.
 6. Make the smallest relevant change.
-7. Run only relevant checks.
-8. Write one concise `AGENT_CHANGELOG.md` entry after all operations finish when the project state actually changed.
+7. Run relevant checks with compact success output and detailed failure output.
+8. Write one concise `AGENT_CHANGELOG.md` entry after all operations finish when project state changed.
 
 ## Current Known Risks
 

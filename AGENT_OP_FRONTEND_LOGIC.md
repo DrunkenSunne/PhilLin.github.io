@@ -16,12 +16,12 @@ Use this operation file for JavaScript rendering, data behavior, and frontend lo
 Read only:
 
 - `AGENT_BRIEF.md`
-- `AGENT_HANDOFF.md`
-- `AGENT_TODO.md`
 - this file
 - `assets/site.js`
 - the relevant data file: `assets/content.js` or `assets/gripes.js`
 - the relevant HTML page only if needed to inspect data attributes or containers
+
+Read `AGENT_HANDOFF.md` only for unfinished logic work or regression recovery. Read `AGENT_TODO.md` only for a requested behavior-planning audit.
 
 Do not default-read `AGENT_CONTEXT.md`, `AGENT_CHANGELOG.md`, or `AGENT_CHANGELOG_ARCHIVE.md`.
 

@@ -15,12 +15,12 @@ Use this operation file for private-place records and visit timelines.
 Read only:
 
 - `AGENT_BRIEF.md`
-- `AGENT_HANDOFF.md`
-- `AGENT_TODO.md`
 - this file
 - `assets/content.js`
 - the relevant `place-*.html` and `article-*.html` files
 - `assets/site.js` / `assets/styles.css` only if rendering or styling must change
+
+Read `AGENT_HANDOFF.md` only for unfinished place/visit continuation. Read `AGENT_TODO.md` only for place planning or a pending-work audit.
 
 Do not default-read `AGENT_CONTEXT.md`, `AGENT_CHANGELOG.md`, or `AGENT_CHANGELOG_ARCHIVE.md`.
 
@@ -51,6 +51,7 @@ Allowed only when:
 - Run `node --check assets/content.js` when place or post metadata changes.
 - Run `node --check assets/site.js` when place-card rendering changes.
 - Search for matching `placeId`, `visitId`, URLs, scores, drinks, and dishes.
+- When `assets/content.js` changes, refresh only its query on the eight documented content-consumer pages; do not bump unrelated assets.
 - Skip visual browser verification by project preference unless the user explicitly asks.
 
 ## State Logging

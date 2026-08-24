@@ -7,18 +7,18 @@ Use this operation file for maintaining the public playlist section.
 - Adding, removing, or replacing playlist pages.
 - Updating `playlist.html` and any `playlist-*.html` detail pages.
 - Updating homepage references that describe the playlist section.
-- Refreshing shared HTML asset query strings when playlist-facing HTML changes.
+- Refreshing only the specific shared-asset query string whose underlying asset changed.
 
 ## Default Read Set
 
 Read only:
 
 - `AGENT_BRIEF.md`
-- `AGENT_HANDOFF.md`
-- `AGENT_TODO.md`
 - this file
 - the target playlist HTML files
 - shared HTML pages that link to or describe the playlist section
+
+Read `AGENT_HANDOFF.md` only for unfinished playlist continuation. Read `AGENT_TODO.md` only for playlist planning or a pending-work audit.
 
 Do not default-read `AGENT_CONTEXT.md`, `AGENT_CHANGELOG.md`, or `AGENT_CHANGELOG_ARCHIVE.md`.
 

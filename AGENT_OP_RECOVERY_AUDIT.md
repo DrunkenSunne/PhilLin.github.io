@@ -16,9 +16,10 @@ Read only:
 
 - `AGENT_BRIEF.md`
 - `AGENT_HANDOFF.md`
-- `AGENT_TODO.md`
 - this file
 - current target files and git diff/status
+
+Read `AGENT_TODO.md` only when unresolved work or phase selection is part of the audit.
 
 Do not default-read `AGENT_CONTEXT.md`, `AGENT_CHANGELOG.md`, or `AGENT_CHANGELOG_ARCHIVE.md`.
 
@@ -42,7 +43,8 @@ This is the only operation type where `AGENT_CHANGELOG_ARCHIVE.md` is commonly r
 
 ## Verification
 
-- Use `git status --short`, `git diff --stat`, and `git diff -- .`.
+- Use `git status --short`, `git diff --stat`, and `git diff --check`.
+- Inspect targeted semantic diffs. For large history or mechanical diffs, summarize counts and print only unmatched entries or unexpected changed lines.
 - Run JS syntax checks only if JS files change.
 - Do not use destructive git commands unless the user explicitly requests them.
 - Clearly separate confirmed facts, assumptions, risks, and next safe action.

@@ -1,5 +1,7 @@
 # AGENT_CHANGELOG
 
+- 2026-08-24: Reduced default Codex context usage by compacting low-token state, routing handoff/todo reads by task need, limiting successful verification output, and scoping `assets/content.js` loading/cache refreshes to its eight actual consumer pages. Historical handoff entries were checked against the recent and archived changelogs before removal; no unique entry required migration.
+
 - 2026-08-24: Published `article-ten-pm-20260824.html` from `晚上十点.docx` as `一些思绪`, preserving 120 body paragraphs and 16 semantic separator lines; added article metadata and refreshed HTML asset cache strings to `bar-art-20260824-ten-pm`.
 
 - 2026-08-24: Published `Not in the mood-On the House` from the DOCX first line as `一些思绪`, preserving 229 body paragraphs and 40 Word horizontal rules; added post metadata and refreshed public asset cache strings to `bar-art-20260824-on-the-house`.

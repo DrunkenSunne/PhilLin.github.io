@@ -17,10 +17,10 @@ Use this operation file for project rules, Codex state files, and token-usage po
 Read only:
 
 - `AGENT_BRIEF.md`
-- `AGENT_HANDOFF.md`
-- `AGENT_TODO.md`
 - this file
 - the specific project-state files being edited
+
+Read `AGENT_HANDOFF.md` when continuity/recovery is involved and `AGENT_TODO.md` when pending-work organization is involved.
 
 Do not default-read `AGENT_CONTEXT.md`, `AGENT_CHANGELOG.md`, or `AGENT_CHANGELOG_ARCHIVE.md`.
 
@@ -50,7 +50,8 @@ Allowed only when:
 
 ## Verification
 
-- Run `git diff --stat`, `git diff -- .`, and `git diff --check`.
+- Run `git status --short`, `git diff --stat`, and `git diff --check`.
+- Inspect targeted state-file diffs; for a large archival rewrite, report line/byte counts and unexpected content rather than dumping the full historical diff.
 - No JS syntax check is needed unless JS files change.
 - Skip visual browser verification because state files do not affect page rendering.
 

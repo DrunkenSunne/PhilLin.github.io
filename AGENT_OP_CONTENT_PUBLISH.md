@@ -16,10 +16,10 @@ Use this operation file for publishing new site content.
 Read only:
 
 - `AGENT_BRIEF.md`
-- `AGENT_HANDOFF.md`
-- `AGENT_TODO.md`
 - this file
 - the target content/data files needed for the task
+
+Read `AGENT_HANDOFF.md` only for unfinished or dirty-worktree continuation. Read `AGENT_TODO.md` only when category/phase planning is genuinely needed.
 
 Do not default-read `AGENT_CONTEXT.md`, `AGENT_CHANGELOG.md`, or `AGENT_CHANGELOG_ARCHIVE.md`.
 
@@ -43,7 +43,7 @@ Allowed only when:
 - `article-*.html`
 - `note-*.html`
 - `gripe-*.html`
-- public HTML files when asset query strings must refresh
+- the eight `assets/content.js` consumer pages when content-data cache strings must refresh: `article.html`, `index.html`, `notes.html`, `posts.html`, `reviews.html`, `tag-lab.html`, `tag-recommendations.html`, and `tag-thoughts.html`
 - `assets/posts/` or `assets/gripes/` when media is involved
 
 ## Verification
@@ -52,6 +52,9 @@ Allowed only when:
 - Run `node --check assets/gripes.js` when `assets/gripes.js` changes.
 - Run `node --check assets/site.js` only when rendering logic changes.
 - Use file-level checks and searches for links, ids, and asset query strings.
+- Cache-bust only the resource that changed. A post/note/place metadata change updates only the `assets/content.js` query on its eight consumer pages; do not refresh CSS, badge, gripe, or site-script queries unless those assets changed.
+- Static article, note, place, gallery, playlist, and detail pages must not load `assets/content.js` unless they contain a documented `BAR_*` rendering hook.
+- Extract DOCX content once. Preserve paragraph and semantic separator order, compare source-to-HTML locally, and report counts plus mismatches instead of printing the full extraction repeatedly.
 - Skip visual browser verification by project preference unless the user explicitly asks.
 
 ## State Logging

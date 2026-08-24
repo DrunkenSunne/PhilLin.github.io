@@ -15,12 +15,12 @@ Use this operation file for page copy, markup, style, layout, and responsive adj
 Read only:
 
 - `AGENT_BRIEF.md`
-- `AGENT_HANDOFF.md`
-- `AGENT_TODO.md`
 - this file
 - the target HTML file(s)
 - `assets/styles.css`
 - `assets/site.js` only if the visual change depends on JS-created markup
+
+Read `AGENT_HANDOFF.md` only for unfinished visual work or regression recovery. Read `AGENT_TODO.md` only for a requested visual-planning audit.
 
 Do not default-read `AGENT_CONTEXT.md`, `AGENT_CHANGELOG.md`, or `AGENT_CHANGELOG_ARCHIVE.md`.
 

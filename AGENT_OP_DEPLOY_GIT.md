@@ -16,11 +16,11 @@ Use this operation file for Git, GitHub Pages, and deployment work.
 Read only:
 
 - `AGENT_BRIEF.md`
-- `AGENT_HANDOFF.md`
-- `AGENT_TODO.md`
 - this file
 - Git status and diff output
 - deployment files directly involved in the task
+
+Read `AGENT_HANDOFF.md` for unfinished deployment continuation and `AGENT_TODO.md` only for deployment planning.
 
 Do not default-read `AGENT_CONTEXT.md`, `AGENT_CHANGELOG.md`, or `AGENT_CHANGELOG_ARCHIVE.md`.
 
@@ -45,7 +45,8 @@ Allowed only when:
 
 ## Verification
 
-- Use `git status --short`, `git diff --stat`, and `git diff -- .`.
+- Use `git status --short`, `git diff --stat`, and `git diff --check`.
+- Inspect targeted semantic diffs. If a diff exceeds 400 changed lines, use deterministic allowlist/count audits for mechanical edits and print only unexpected lines or failing hunks.
 - Inspect workflow YAML when changed.
 - Do not claim remote deployment success unless the relevant remote check was actually inspected.
 - Skip visual browser verification unless the user asks.

@@ -12,13 +12,9 @@ This project uses repository-level state files to prevent loss of important info
 
 Codex must not send optional commentary. Only send user-facing messages when they are necessary for clarification, blocker reporting, or final completion.
 
-Before starting any non-trivial work in this project, Codex must first read the low-token state entry:
+Before starting non-trivial work, Codex must read `AGENT_BRIEF.md` as the low-token state entry. Read `AGENT_HANDOFF.md` only when continuing unfinished work, recovering a compacted/uncertain session, or investigating a dirty worktree. Read `AGENT_TODO.md` only for planning, phase selection, or an explicit pending-work audit.
 
-- `AGENT_BRIEF.md`
-- `AGENT_HANDOFF.md`
-- `AGENT_TODO.md`
-
-Codex must treat these files as the durable project memory. Chat history alone is not a reliable source of truth.
+Codex must treat these files as durable project memory while avoiding repeated reads within the same uncompacted task. Chat history alone is not a reliable source of truth.
 
 After reading the low-token state entry, Codex must choose the matching operation file(s) and read only those operation files before task-specific source files:
 
@@ -47,11 +43,11 @@ At the beginning of a new session, before modifying code, Codex must:
 
 1. Read this project instruction file.
 2. Read `AGENT_BRIEF.md`.
-3. Read `AGENT_HANDOFF.md`.
-4. Read `AGENT_TODO.md`.
-5. Check `git status`.
-6. Check the current diff.
-7. Choose and read the matching `AGENT_OP_*.md` file(s).
+3. Check `git status --short` and `git diff --stat`.
+4. Choose and read the matching `AGENT_OP_*.md` file(s).
+5. Read `AGENT_HANDOFF.md` only when the worktree is dirty, prior work is unfinished, or the task is a continuation/recovery.
+6. Read `AGENT_TODO.md` only for planning, phase selection, or pending-work audits.
+7. Inspect targeted diffs for files already changed; use the large-diff policy below instead of dumping an unbounded full diff.
 8. Decide whether any deeper state file is needed; if yes, ask the user before reading it.
 9. Summarize:
    - confirmed project state
@@ -69,9 +65,11 @@ If Codex suspects that the conversation was compacted, summarized, truncated, or
 - this project instruction file
 - `AGENT_BRIEF.md`
 - `AGENT_HANDOFF.md`
-- `AGENT_TODO.md`
-- `git status`
-- `git diff`
+- `git status --short`
+- `git diff --stat`
+- targeted diffs for changed semantic files
+
+Read `AGENT_TODO.md` during recovery only when unresolved scope or phase selection is part of the uncertainty.
 
 If the recovered brief/handoff/todo state is insufficient, Codex must then read the smallest deeper file that resolves the uncertainty:
 
@@ -121,7 +119,11 @@ If a future instruction conflicts with this preference, Codex must mention the c
 
 For this project, keep attempting Git and JavaScript syntax checks when relevant:
 
-- Keep `git status --short`, `git diff --stat`, and `git diff -- .` as project recovery/diff checks.
+- Keep `git status --short`, `git diff --stat`, and `git diff --check` as baseline project checks.
+- Inspect `git diff -- .` directly when the changed-line count is at most 400 lines.
+- For larger diffs, inspect semantic files with targeted `git diff -- <paths>` calls. Audit bulk mechanical edits with deterministic counts and an allowlist of permitted changed-line patterns; print only unexpected lines or failing hunks.
+- Do not dump successful full-file reads, complete DOCX extraction output, or multi-thousand-line diffs into the conversation. Return counts, exit codes, and mismatches; expand only the evidence needed to diagnose a failure.
+- Read long source content only once per uncompacted task. Perform exact source-to-output comparisons locally and report counts plus differing nodes.
 - Keep `node --check assets/site.js`, `node --check assets/content.js`, and `node --check assets/gripes.js` as JavaScript syntax checks when those files are relevant.
 - If `git` or `node` is unavailable, record the exact limitation and continue with file-level checks.
 - Do not use Node REPL as a routine fallback for blocked `node --check` or browser verification. Use Node REPL only if the user explicitly requests deeper runtime debugging or a higher-priority instruction requires it.
