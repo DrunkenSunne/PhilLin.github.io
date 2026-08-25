@@ -2,6 +2,14 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利", "吧台札记
 
 window.BAR_POSTS = [
   {
+    id: "collapse-20260825",
+    title: "Collapse.",
+    tag: "一些思绪",
+    publishedAt: "2026-08-25",
+    summary: "一篇关于十二小时实验日、频繁切换和未知结果的思绪：在 timer、第一次操作和一个人做决定之间被压到快要崩溃，最后唯一确定的是终于走出了实验室。",
+    url: "article-collapse-20260825.html",
+  },
+  {
     id: "ten-pm-20260824",
     title: "晚上十点",
     tag: "一些思绪",

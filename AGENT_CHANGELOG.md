@@ -1,5 +1,7 @@
 # AGENT_CHANGELOG
 
+- 2026-08-25: Published `Collapse.docx` as `article-collapse-20260825.html` under “一些思绪,” added its `BAR_POSTS` metadata, and refreshed only the eight `assets/content.js` consumer cache keys to `bar-content-20260825-collapse`.
+
 - 2026-08-24: Reduced default Codex context usage by compacting low-token state, routing handoff/todo reads by task need, limiting successful verification output, and scoping `assets/content.js` loading/cache refreshes to its eight actual consumer pages. Historical handoff entries were checked against the recent and archived changelogs before removal; no unique entry required migration.
 
 - 2026-08-24: Published `article-ten-pm-20260824.html` from `晚上十点.docx` as `一些思绪`, preserving 120 body paragraphs and 16 semantic separator lines; added article metadata and refreshed HTML asset cache strings to `bar-art-20260824-ten-pm`.
