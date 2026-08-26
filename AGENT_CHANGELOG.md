@@ -1,5 +1,7 @@
 # AGENT_CHANGELOG
 
+- 2026-08-26: Published `还有什么更好的-20260826.docx` locally as `article-what-could-be-better-20260826.html` under “一些思绪,” added its `BAR_POSTS` metadata, and refreshed only the eight `assets/content.js` consumer cache keys to `bar-content-20260826-better`.
+
 - 2026-08-25: Published `Collapse.docx` as `article-collapse-20260825.html` under “一些思绪,” added its `BAR_POSTS` metadata, and refreshed only the eight `assets/content.js` consumer cache keys to `bar-content-20260825-collapse`.
 
 - 2026-08-24: Reduced default Codex context usage by compacting low-token state, routing handoff/todo reads by task need, limiting successful verification output, and scoping `assets/content.js` loading/cache refreshes to its eight actual consumer pages. Historical handoff entries were checked against the recent and archived changelogs before removal; no unique entry required migration.

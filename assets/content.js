@@ -2,6 +2,14 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利", "吧台札记
 
 window.BAR_POSTS = [
   {
+    id: "what-could-be-better-20260826",
+    title: "还有什么更好的",
+    tag: "一些思绪",
+    publishedAt: "2026-08-26",
+    summary: "一篇关于从崩溃的实验日缓过来、重新拆解明天和捡起小小好运的思绪：多出来的四十分钟、意外得到的咖啡和刚好响起的歌，让今晚可以先不替未来难受。",
+    url: "article-what-could-be-better-20260826.html",
+  },
+  {
     id: "collapse-20260825",
     title: "Collapse.",
     tag: "一些思绪",
