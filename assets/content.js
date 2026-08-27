@@ -2,6 +2,14 @@ window.BAR_TAGS = ["生活日志", "一些思绪", "种草安利", "吧台札记
 
 window.BAR_POSTS = [
   {
+    id: "no-pending-tasks-20260827",
+    title: "No Pending Tasks",
+    tag: "一些思绪",
+    publishedAt: "2026-08-27",
+    summary: "一篇关于任务全部清空以后仍无法立刻休息的思绪：实验一再提前、试剂失而复得，九点五十终于没有下一步，但疲惫和对未来的预演还没有同步停下。",
+    url: "article-no-pending-tasks-20260827.html",
+  },
+  {
     id: "what-could-be-better-20260826",
     title: "还有什么更好的",
     tag: "一些思绪",

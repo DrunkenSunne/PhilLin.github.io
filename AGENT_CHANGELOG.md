@@ -1,5 +1,7 @@
 # AGENT_CHANGELOG
 
+- 2026-08-27: Published `No Pending Tasks.docx` locally as `article-no-pending-tasks-20260827.html` under “一些思绪,” added its `BAR_POSTS` metadata, and refreshed only the eight `assets/content.js` consumer cache keys to `bar-content-20260827-no-pending`.
+
 - 2026-08-26: Published `还有什么更好的-20260826.docx` locally as `article-what-could-be-better-20260826.html` under “一些思绪,” added its `BAR_POSTS` metadata, and refreshed only the eight `assets/content.js` consumer cache keys to `bar-content-20260826-better`.
 
 - 2026-08-25: Published `Collapse.docx` as `article-collapse-20260825.html` under “一些思绪,” added its `BAR_POSTS` metadata, and refreshed only the eight `assets/content.js` consumer cache keys to `bar-content-20260825-collapse`.
