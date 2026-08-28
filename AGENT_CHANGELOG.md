@@ -1,5 +1,11 @@
 # AGENT_CHANGELOG
 
+## 2026-08-28 — Added Sober Company-Ash and Zoom inN gallery photos
+
+- Imported 18 optimized photos: DSC04390–DSC04398 as Sober Company-Ash and DSC04401–DSC04409 as Zoom inN; expanded the gallery to 56 photos, added 18 static detail pages, synchronized downstream photo numbers/navigation, and refreshed only the `assets/gallery.js` cache key on `gallery.html`.
+- Verification: `node --check assets/gallery.js`, a 56-photo source/detail/title/index/navigation audit, an 18-image dimension audit, `git diff --check`, targeted diffs, and final status/stat checks. Browser visual verification was skipped by project preference.
+- Rollback: remove the two new photo ranges and 18 detail pages, restore the previous Zoom inN note/navigation and downstream indices, revert the gallery cache key, and restore the 38-photo count in `AGENT_BRIEF.md`.
+
 - 2026-08-27: Published `No Pending Tasks.docx` locally as `article-no-pending-tasks-20260827.html` under “一些思绪,” added its `BAR_POSTS` metadata, and refreshed only the eight `assets/content.js` consumer cache keys to `bar-content-20260827-no-pending`.
 
 - 2026-08-26: Published `还有什么更好的-20260826.docx` locally as `article-what-could-be-better-20260826.html` under “一些思绪,” added its `BAR_POSTS` metadata, and refreshed only the eight `assets/content.js` consumer cache keys to `bar-content-20260826-better`.

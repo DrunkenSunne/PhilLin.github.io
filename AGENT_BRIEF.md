@@ -42,11 +42,11 @@ This is the lightweight startup file for Codex work in this repository. Read thi
 ## Current State To Remember
 
 - Asset cache versions are scoped by resource. Shared CSS, badge, site logic, and gripe data currently retain `bar-art-20260824-ten-pm`; update only the asset that changed.
-- `assets/content.js` uses `bar-content-20260828-ash-2` only on its eight real consumer pages: `article.html`, `index.html`, `notes.html`, `posts.html`, `reviews.html`, and the three tag pages.
-- `assets/gallery.js` uses `bar-gallery-20260828-zoom-inn` on `gallery.html`.
+- `assets/content.js` uses `bar-content-20260828-two-visits` only on its eight real consumer pages: `article.html`, `index.html`, `notes.html`, `posts.html`, `reviews.html`, and the three tag pages.
+- `assets/gallery.js` uses `bar-gallery-20260828-ash-zoom-inn` on `gallery.html`.
 - `BAR_PLACES` exists and powers the `reviews.html` / private-place map flow.
 - Sober Company-Ash, Making Gelato, Q Taro, Zoom inN, and DEMO have place/visit structures.
-- `gallery.html` now renders 38 location-group photos from `assets/gallery.js`, with optimized images under `assets/gallery/<place-slug>/` and generated `gallery-*.html` detail pages for each retained photo.
+- `gallery.html` now renders 56 location-group photos from `assets/gallery.js`, with optimized images under `assets/gallery/<place-slug>/` and generated `gallery-*.html` detail pages for each retained photo.
 - `playlist.html` must remain a playlist index page; currently only `playlist-writing.html` is kept as a playlist detail page.
 - The explicit GitHub Pages workflow exists at `.github/workflows/pages.yml`, with `.nojekyll` at the root.
 - Word publishing tooling was removed on 2026-07-01; future publishing is direct static file editing unless the user asks to restore tooling.
