@@ -154,7 +154,7 @@ window.BAR_POSTS = [
   },
   {
     id: "zoominn-20260703",
-    title: "ZOOMINN：老地方、五杯酒和一碗面",
+    title: "Zoom inN：老地方、五杯酒和一碗面",
     tag: "种草安利",
     publishedAt: "2026-07-03",
     placeId: "zoominn",
@@ -165,7 +165,7 @@ window.BAR_POSTS = [
     visitScore: 9.2,
     drinks: ["杨桃撞墙", "岩X菲仕", "Whisky Sour", "Pina Colada", "荔枝+带气泡私人订制"],
     dishes: ["一碗面"],
-    summary: "ZOOMINN 的到访记录：外场新酒单、内场经典、Whisky Sour 开头，Pina Colada 接上，再用荔枝气泡私人订制收尾。酒好喝，氛围舒服，是市中心的稳定起点和终点。",
+    summary: "Zoom inN 的到访记录：外场新酒单、内场经典、Whisky Sour 开头，Pina Colada 接上，再用荔枝气泡私人订制收尾。酒好喝，氛围舒服，是市中心的稳定起点和终点。",
     url: "article-zoominn-20260703.html",
   },
   {
@@ -414,7 +414,7 @@ window.BAR_PLACES = [
   },
   {
     id: "zoominn",
-    name: "ZOOMINN",
+    name: "Zoom inN",
     type: "酒吧",
     area: "市中心",
     firstVisitedAt: "2026-07-03",
@@ -431,7 +431,7 @@ window.BAR_PLACES = [
       revisit: 10,
     },
     oneLine: "市中心稳定的起点和终点：外场适合试新，内场经典可靠，酒好喝，氛围也不会让人有被冒犯的感觉。",
-    notes: "这张卡先作为 ZOOMINN 的长期档案。之后每一次去都单独追加 visit receipt；酒吧到访必须列出当次喝到的酒，避免不同夜晚的判断混在一起。",
+    notes: "这张卡先作为 Zoom inN 的长期档案。之后每一次去都单独追加 visit receipt；酒吧到访必须列出当次喝到的酒，避免不同夜晚的判断混在一起。",
     recommended: ["Whisky Sour", "Pina Colada", "荔枝+带气泡私人订制", "外场新酒单"],
     goodFor: ["市中心开喝第一站", "喝完一轮之后收尾", "想要稳定好喝又能试新酒"],
     notFor: ["只想喝无酒精饮品", "完全不能接受偏攻击性的风味", "希望每杯都保守安全"],
@@ -439,7 +439,7 @@ window.BAR_PLACES = [
       {
         id: "zoominn-20260703-night",
         no: 1,
-        title: "ZOOMINN：老地方、五杯酒和一碗面",
+        title: "Zoom inN：老地方、五杯酒和一碗面",
         label: "老地方夜场",
         date: "2026-07-03",
         score: 9.2,
@@ -454,7 +454,7 @@ window.BAR_PLACES = [
     id: "q-taro",
     name: "Q太郎",
     type: "餐厅",
-    area: "市中心 / ZOOMINN 附近",
+    area: "市中心 / Zoom inN 附近",
     firstVisitedAt: "2026-07-03",
     latestVisitAt: "2026-07-03",
     visitCount: 1,
@@ -471,7 +471,7 @@ window.BAR_PLACES = [
     oneLine: "一家像会慢慢把常客记住的小日料店：东西好吃，人温柔，音乐和柜台细节都有旧时代的安静感。",
     notes: "这张卡记录 Q太郎 的长期印象；第一次写入的是 2026-07-03 抵用券到期前的第二次到访，之后再去就继续往下追加，不覆盖这次乌冬面和烧鸟的判断。",
     recommended: ["奶油明太子乌冬面", "盐烤烧鸟", "一个人安静吃饭"],
-    goodFor: ["去 ZOOMINN 前先吃点东西", "一个人坐下来吃日料", "喜欢温柔熟人店氛围"],
+    goodFor: ["去 Zoom inN 前先吃点东西", "一个人坐下来吃日料", "喜欢温柔熟人店氛围"],
     notFor: ["赶时间但要求大店效率", "想吃游客热门店", "不喜欢安静旧时代感的空间"],
     visits: [
       {

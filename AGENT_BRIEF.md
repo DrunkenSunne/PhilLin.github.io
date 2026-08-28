@@ -1,6 +1,6 @@
 # AGENT_BRIEF
 
-Last updated: 2026-08-24
+Last updated: 2026-08-28
 
 This is the lightweight startup file for Codex work in this repository. Read this file first, then read only the operation file and source files required by the task type.
 
@@ -42,9 +42,10 @@ This is the lightweight startup file for Codex work in this repository. Read thi
 ## Current State To Remember
 
 - Asset cache versions are scoped by resource. Shared CSS, badge, site logic, and gripe data currently retain `bar-art-20260824-ten-pm`; update only the asset that changed.
-- `assets/content.js` uses `bar-content-20260824-ten-pm` only on its eight real consumer pages: `article.html`, `index.html`, `notes.html`, `posts.html`, `reviews.html`, and the three tag pages.
+- `assets/content.js` uses `bar-content-20260828-zoom-inn` only on its eight real consumer pages: `article.html`, `index.html`, `notes.html`, `posts.html`, `reviews.html`, and the three tag pages.
+- `assets/gallery.js` uses `bar-gallery-20260828-zoom-inn` on `gallery.html`.
 - `BAR_PLACES` exists and powers the `reviews.html` / private-place map flow.
-- Sober Company-Ash, Making Gelato, Q Taro, ZOOMINN, and DEMO have place/visit structures.
+- Sober Company-Ash, Making Gelato, Q Taro, Zoom inN, and DEMO have place/visit structures.
 - `gallery.html` now renders 38 location-group photos from `assets/gallery.js`, with optimized images under `assets/gallery/<place-slug>/` and generated `gallery-*.html` detail pages for each retained photo.
 - `playlist.html` must remain a playlist index page; currently only `playlist-writing.html` is kept as a playlist detail page.
 - The explicit GitHub Pages workflow exists at `.github/workflows/pages.yml`, with `.nojekyll` at the root.

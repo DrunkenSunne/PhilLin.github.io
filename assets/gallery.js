@@ -35,10 +35,10 @@
     },
     {
       id: "zoominn",
-      title: "ZOOMINN",
+      title: "Zoom inN",
       type: "酒吧",
-      note: "杯垫、玻璃和吧台灯，把 ZOOMINN 留成几张冷静的近景。",
-      tags: ["酒吧", "ZOOMINN", "杯子"],
+      note: "杯垫、玻璃和吧台灯，把 Zoom inN 留成几张冷静的近景。",
+      tags: ["酒吧", "Zoom inN", "杯子"],
       photos: [
         photo("zoominn", "zoominn-01.jpg", "tall", "泡沫停在杯口", "杯子立在圆形杯垫上，泡沫细细铺开，吧台的光在背后低着。"),
         photo("zoominn", "zoominn-02.jpg", "tall", "倒入杯中的光", "细流落进杯中，玻璃边缘被灯照亮，动作比人声更清楚。"),
