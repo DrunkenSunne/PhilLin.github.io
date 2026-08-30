@@ -1,20 +1,21 @@
 # AGENT_HANDOFF
 
-Last updated: 2026-08-24
+Last updated: 2026-08-30
 
 Use this file only for unfinished-work continuity, dirty-worktree recovery, or compacted/uncertain sessions. Completed history belongs in `AGENT_CHANGELOG.md` and `AGENT_CHANGELOG_ARCHIVE.md`.
 
 ## Current Handoff State
 
 - `Phil Lin的Bar` is a static GitHub Pages site with root HTML pages and shared files under `assets/`.
-- No content-publication task is currently unfinished.
-- The 2026-08-24 token-reduction pass changed project instructions, state routing, verification-output policy, and `assets/content.js` loading scope.
-- The pass is intentionally uncommitted and unpushed unless the user separately requests Git publication.
+- A new gripe about workload changes and not wanting to enter the cell room is committed locally as `6189616`.
+- Publishing is unfinished: `git push origin main` failed because HTTPS credentials were unavailable, and SSH authentication was also unavailable.
+- The working tree was clean immediately after commit `6189616`; only durable state files changed afterward to document the blocked push.
 
 ## Current Cache Policy
 
 - Cache versions are asset-scoped; do not refresh every asset when only one changes.
-- Shared CSS, badge, `assets/site.js`, and `assets/gripes.js` currently retain `bar-art-20260824-ten-pm` unless that specific resource changes.
+- Shared CSS, badge, and `assets/site.js` retain `bar-art-20260824-ten-pm`.
+- `assets/gripes.js` uses `bar-gripe-20260830-cell-room` on all 120 current HTML consumers.
 - `assets/content.js` uses `bar-content-20260824-ten-pm` on exactly eight consumer pages:
   - `article.html`
   - `index.html`
@@ -38,11 +39,10 @@ Use this file only for unfinished-work continuity, dirty-worktree recovery, or c
 
 ## Known Risks
 
-- The current cache/script cleanup changes many HTML files once; static allowlist verification is required before completion.
 - Visual layout is not browser-verified by default.
-- Online GitHub Pages freshness still requires a push followed by remote deployment verification.
+- Local `main` is ahead by the gripe publication commit plus the state follow-up commit once created; online GitHub Pages remains unchanged until authenticated push succeeds.
 - Some old state text may contain inherited mojibake; do not perform broad encoding cleanup without a separate request.
 
 ## Next Safe Step
 
-If resuming this exact pass, check Git status/stat, run the structured content-script audit, inspect targeted instruction/state diffs, and finish the relevant syntax/reference checks. For later ordinary publishing, start from `AGENT_BRIEF.md` and `AGENT_OP_CONTENT_PUBLISH.md`; do not read historical state unless its gate is satisfied.
+Restore GitHub authentication, push local `main` to `origin/main`, then verify the GitHub Pages deployment. The content and cache-reference changes already passed local syntax, diff, and deterministic reference checks.

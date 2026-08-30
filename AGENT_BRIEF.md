@@ -41,7 +41,7 @@ This is the lightweight startup file for Codex work in this repository. Read thi
 
 ## Current State To Remember
 
-- Asset cache versions are scoped by resource. Shared CSS, badge, site logic, and gripe data currently retain `bar-art-20260824-ten-pm`; update only the asset that changed.
+- Asset cache versions are scoped by resource. Shared CSS, badge, and site logic retain `bar-art-20260824-ten-pm`; gripe data uses `bar-gripe-20260830-cell-room`. Update only the asset that changed.
 - `assets/content.js` uses `bar-content-20260828-two-visits` only on its eight real consumer pages: `article.html`, `index.html`, `notes.html`, `posts.html`, `reviews.html`, and the three tag pages.
 - `assets/gallery.js` uses `bar-gallery-20260828-ash-zoom-inn` on `gallery.html`.
 - `BAR_PLACES` exists and powers the `reviews.html` / private-place map flow.
