@@ -1,5 +1,11 @@
 # AGENT_CHANGELOG
 
+## 2026-08-30 — Published a new gripe about avoiding the cell room
+
+- Added the user-provided gripe to `assets/gripes.js` with mood `逃避`, emoji `🙈`, and publication time `2026-08-30 12:15:53`.
+- Refreshed the `assets/gripes.js` cache key to `bar-gripe-20260830-cell-room` on all 120 current HTML consumers.
+- Verification: `node --check assets/gripes.js`, reference-count checks, `git diff --check`, targeted diff inspection, and status/stat review.
+
 ## 2026-08-28 — Added Sober Company-Ash and Zoom inN gallery photos
 
 - Imported 18 optimized photos: DSC04390–DSC04398 as Sober Company-Ash and DSC04401–DSC04409 as Zoom inN; expanded the gallery to 56 photos, added 18 static detail pages, synchronized downstream photo numbers/navigation, and refreshed only the `assets/gallery.js` cache key on `gallery.html`.
