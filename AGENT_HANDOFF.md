@@ -1,21 +1,21 @@
 # AGENT_HANDOFF
 
-Last updated: 2026-08-30
+Last updated: 2026-09-01
 
 Use this file only for unfinished-work continuity, dirty-worktree recovery, or compacted/uncertain sessions. Completed history belongs in `AGENT_CHANGELOG.md` and `AGENT_CHANGELOG_ARCHIVE.md`.
 
 ## Current Handoff State
 
 - `Phil Lin的Bar` is a static GitHub Pages site with root HTML pages and shared files under `assets/`.
-- A new gripe about workload changes and not wanting to enter the cell room is committed locally as `6189616`.
-- Publishing is unfinished: `git push origin main` failed because HTTPS credentials were unavailable, and SSH authentication was also unavailable.
-- The working tree was clean immediately after commit `6189616`; only durable state files changed afterward to document the blocked push.
+- The workload/cell-room gripe is committed locally as `6189616`, with deployment state in `97537a7`.
+- A new screenshot-backed gripe about a lighter experiment schedule and being roasted is committed locally as `ef8dc28`.
+- No content-publication task is unfinished. The user explicitly requested local-only deployment, so the pending commits must not be pushed to `origin` unless they later ask.
 
 ## Current Cache Policy
 
 - Cache versions are asset-scoped; do not refresh every asset when only one changes.
 - Shared CSS, badge, and `assets/site.js` retain `bar-art-20260824-ten-pm`.
-- `assets/gripes.js` uses `bar-gripe-20260830-cell-room` on all 120 current HTML consumers.
+- `assets/gripes.js` uses `bar-gripe-20260901-schedule-roast` on all 121 current HTML consumers.
 - `assets/content.js` uses `bar-content-20260824-ten-pm` on exactly eight consumer pages:
   - `article.html`
   - `index.html`
@@ -40,9 +40,9 @@ Use this file only for unfinished-work continuity, dirty-worktree recovery, or c
 ## Known Risks
 
 - Visual layout is not browser-verified by default.
-- Local `main` is ahead by the gripe publication commit plus the state follow-up commit once created; online GitHub Pages remains unchanged until authenticated push succeeds.
+- Local `main` is two commits ahead of the locally tracked `origin/main`; these two commits remain local by explicit user request.
 - Some old state text may contain inherited mojibake; do not perform broad encoding cleanup without a separate request.
 
 ## Next Safe Step
 
-Restore GitHub authentication, push local `main` to `origin/main`, then verify the GitHub Pages deployment. The content and cache-reference changes already passed local syntax, diff, and deterministic reference checks.
+For later ordinary publishing, start from `AGENT_BRIEF.md` and the matching operation file. Do not push the two current local commits unless the user explicitly changes the local-only instruction.

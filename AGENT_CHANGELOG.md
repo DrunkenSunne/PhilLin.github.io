@@ -1,10 +1,11 @@
 # AGENT_CHANGELOG
 
-## 2026-09-01 — Prepared an experiment-schedule gripe with screenshot
+## 2026-09-01 — Published an experiment-schedule gripe locally with screenshot
 
 - Added the user-provided gripe about the lighter experiment schedule and being roasted, with mood `被锐评`, emoji `😶`, and publication time `2026-09-01 11:09:24`.
 - Added `gripe-experiment-schedule-roast.html` and the supplied screenshot at `assets/gripes/experiment-schedule-roast.png`.
 - Refreshed the `assets/gripes.js` cache key to `bar-gripe-20260901-schedule-roast` on all 121 current HTML consumers.
+- Committed the change locally as `ef8dc28`; the user explicitly requested local-only deployment, so `origin` was not updated.
 
 ## 2026-08-30 — Prepared a new gripe about avoiding the cell room
 
