@@ -1,5 +1,10 @@
 # AGENT_CHANGELOG
 
+## 2026-09-01 — Made all website work local-only by default
+
+- Added a durable rule to `AGENTS.md`: publishing, deployment, and ordinary site-change requests authorize local file edits and local verification only.
+- Updated `AGENT_BRIEF.md`, `AGENT_OP_DEPLOY_GIT.md`, and `AGENT_HANDOFF.md` so Codex must not stage, commit, push, authenticate, troubleshoot remote credentials, or inspect remote deployment state unless the user explicitly requests the exact Git/remote operation.
+
 ## 2026-09-01 — Published an experiment-schedule gripe locally with screenshot
 
 - Added the user-provided gripe about the lighter experiment schedule and being roasted, with mood `被锐评`, emoji `😶`, and publication time `2026-09-01 11:09:24`.

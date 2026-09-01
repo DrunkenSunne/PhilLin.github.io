@@ -102,6 +102,15 @@ Codex must not:
 - start a new phase before the handoff and context files are current
 - read `AGENT_CONTEXT.md`, `AGENT_CHANGELOG.md`, or `AGENT_CHANGELOG_ARCHIVE.md` without user confirmation
 
+### Local-only website change policy
+
+All website changes are local-only by default. Completing a request means editing the local workspace files and running relevant local verification.
+
+- Do not stage or commit changes, push or otherwise update `origin`, authenticate with GitHub, inspect GitHub Pages or CI deployment state, or perform any other remote Git/GitHub operation unless the user explicitly requests that exact Git or remote operation in the current request.
+- Treat requests such as “发布”, “发吐槽”, “发文章”, “部署”, or “更新网站” as authorization to update local site files only. These terms do not authorize a commit, push, or remote deployment.
+- Do not spend tool calls or tokens troubleshooting remote credentials, checking remote freshness, or attempting alternate push methods during ordinary website work.
+- A later explicit user instruction may authorize a specific Git or remote operation for that request only; it does not change this project default.
+
 ### Project-level verification preference
 
 For this project, skip visual verification by default. Do not open browser visual checks unless the user explicitly asks for them later or a higher-priority instruction makes them mandatory.

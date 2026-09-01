@@ -10,6 +10,7 @@ Use this file only for unfinished-work continuity, dirty-worktree recovery, or c
 - The workload/cell-room gripe is committed locally as `6189616`, with deployment state in `97537a7`.
 - A new screenshot-backed gripe about a lighter experiment schedule and being roasted is committed locally as `ef8dc28`.
 - No content-publication task is unfinished. The user explicitly requested local-only deployment, so the pending commits must not be pushed to `origin` unless they later ask.
+- The durable project rule now makes every website change local-file-only by default; do not stage, commit, push, authenticate, or check remote deployment state unless the user explicitly requests that exact Git/remote operation.
 
 ## Current Cache Policy
 
@@ -45,4 +46,4 @@ Use this file only for unfinished-work continuity, dirty-worktree recovery, or c
 
 ## Next Safe Step
 
-For later ordinary publishing, start from `AGENT_BRIEF.md` and the matching operation file. Do not push the two current local commits unless the user explicitly changes the local-only instruction.
+For later ordinary publishing, start from `AGENT_BRIEF.md` and the matching operation file, edit and verify local files only, and stop. Do not perform Git writes or remote operations unless the user explicitly requests the exact operation.

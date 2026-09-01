@@ -38,6 +38,7 @@ This is the lightweight startup file for Codex work in this repository. Read thi
 - Keep using `git status --short`, `git diff --stat`, and `git diff --check`; inspect targeted diffs and use allowlist audits for large mechanical changes.
 - Run `node --check assets/site.js`, `node --check assets/content.js`, and `node --check assets/gripes.js` when those files are relevant.
 - Do not use Node REPL as a routine fallback for blocked `node --check` or browser verification.
+- All website changes, including requests phrased as publishing or deployment, are local-file-only by default. Do not stage, commit, push, authenticate, or check remote deployment state unless the user explicitly requests that exact Git/remote operation in the current request.
 
 ## Current State To Remember
 
@@ -67,4 +68,4 @@ This is the lightweight startup file for Codex work in this repository. Read thi
 
 - Some existing state files contain mojibake text inherited from earlier Windows/encoding issues; do not fix broad text encoding unless the user asks.
 - Visual layout risk remains whenever CSS or frontend markup changes because visual verification is skipped by default.
-- The online GitHub Pages deployment still needs confirmation after pushes.
+- Local files may intentionally differ from the online GitHub Pages site; do not inspect or reconcile the remote site unless the user explicitly requests it.
