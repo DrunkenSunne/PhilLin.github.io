@@ -1,5 +1,11 @@
 # AGENT_CHANGELOG
 
+## 2026-09-01 — Prepared an experiment-schedule gripe with screenshot
+
+- Added the user-provided gripe about the lighter experiment schedule and being roasted, with mood `被锐评`, emoji `😶`, and publication time `2026-09-01 11:09:24`.
+- Added `gripe-experiment-schedule-roast.html` and the supplied screenshot at `assets/gripes/experiment-schedule-roast.png`.
+- Refreshed the `assets/gripes.js` cache key to `bar-gripe-20260901-schedule-roast` on all 121 current HTML consumers.
+
 ## 2026-08-30 — Prepared a new gripe about avoiding the cell room
 
 - Added the user-provided gripe to `assets/gripes.js` with mood `逃避`, emoji `🙈`, and publication time `2026-08-30 12:15:53`.

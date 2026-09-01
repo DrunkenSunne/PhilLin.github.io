@@ -102,4 +102,11 @@ window.BAR_GRIPES = [
     emoji: "🙈",
     publishedAt: "2026-08-30 12:15:53",
   },
+  {
+    text: "最近这几天给自己安排的实验稍微少了一点，相比于前几天8:00-21:30的神秘日程。本来挺开心的，结果被锐评。",
+    mood: "被锐评",
+    emoji: "😶",
+    publishedAt: "2026-09-01 11:09:24",
+    detailUrl: "gripe-experiment-schedule-roast.html",
+  },
 ];
