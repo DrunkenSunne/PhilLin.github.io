@@ -109,4 +109,10 @@ window.BAR_GRIPES = [
     publishedAt: "2026-09-01 11:09:24",
     detailUrl: "gripe-experiment-schedule-roast.html",
   },
+  {
+    text: "刚才本来再等一小时或者明早起来发今晚写的文章就好了，还能顺便把PPT整理好，省一次重置。但因为忍不了任务没有完成或者是不在那个时间完成，遂浪费一次完整重置去重置5h的额度。还是这个老毛病。",
+    mood: "老毛病",
+    emoji: "😮‍💨",
+    publishedAt: "2026-09-02 00:51:05",
+  },
 ];

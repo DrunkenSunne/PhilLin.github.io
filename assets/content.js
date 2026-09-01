@@ -347,6 +347,15 @@ window.BAR_POSTS = [
 
 window.BAR_NOTES = [
   {
+    id: "none-of-the-above",
+    title: "None of the Above",
+    tag: "吧台札记",
+    publishedAt: "2026-09-02",
+    mood: "不想选",
+    summary: "一则写在深夜的吧台札记：从偷懒后的内疚、相册里被筛选过的过去，写到任务、价值感与被需要的证明；过去、现在、未来都不太想选。",
+    url: "note-none-of-the-above.html",
+  },
+  {
     id: "sober-company-ash-20260828",
     title: "Sober Company-Ash #02：久违的两杯酒",
     tag: "吧台札记",
